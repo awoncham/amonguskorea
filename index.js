@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.token;
-const welcomeChannelName = "👋：환영합니다";
+const welcomeChannelName = "👋｜환영합니다";
 
 client.on('ready', () => {
     console.log('켰다.');
