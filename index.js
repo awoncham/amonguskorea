@@ -14,53 +14,32 @@ client.on("guildMemberAdd", (member) => {
     const welcomeChannel = guild.channels.find(channel => channel.name == welcomeChannelName);
     let embed = new Discord.RichEmbed()
       .setColor('#F08080')
-      .setDescription(`${user.tag} 님이 **\`어몽어스 코리아 디스코드\`** 서버에 입장하셨습니다`)
+      .setDescription(`<@${newUser.id}> 님이 **\`어몽어스 코리아 디스코드\`** 서버에 입장하셨습니다`)
       
     welcomeChannel.send(embed);
 });
+
+if(message.content == '.역할받기') {
+  let embed = new Discord.RichEmbed()
+    .setTitle('역할 받기')
+    .setDescription('자신이 주로 이용하는 전자기기를 선택해주세요')
+    .addField('**```🖥️ : 컴퓨터**```')
+    .addField('**```📱 : 핸드폰**```')
+
+    message.channel.send(embed)
+}
 
 client.on('messageReactionAdd', (reaction, user) => {
   const { name } = reaction.emoji;
   const member = reaction.message.guild.members.cache.get(user.id);
   if (reaction.message.id === '759623973792120842') {
     switch (name) {
-      case ':Red:':
-        member.roles.add('752475160707072021');
+      case '🖥️':
+        member.roles.add('759635270131253248');
         break;
-      case ':Orange:':
-        member.roles.add('752493678194327632');
+      case '📱':
+        member.roles.add('759635312452042762');
         break;
-      case ':Yellow:':
-        member.roles.add('752493680517972008');
-        break;
-      case ':Green:':
-        member.roles.add('752493630933041203');
-        break;
-      case ':Lime:':
-        member.roles.add('752493739276238918');
-        break;
-      case ':Blue:':
-        member.roles.add('752493413244338189');
-        break;
-      case ':Cyan:':
-        member.roles.add('752493735878721536');
-        break;
-      case ':Pink:':
-        member.roles.add('752493633625784331');
-        break;
-      case ':Purple:':
-        member.roles.add('752493688302731324');
-        break;
-      case ':White:':
-        member.roles.add('752493685198946374');
-        break;
-      case ':Brown:':
-        member.roles.add('752493732519084095');
-        break;
-      case ':Black:':
-        member.roles.add('752493682711724043');
-        break;
-    
     }
   }
 });
@@ -70,43 +49,12 @@ client.on('messageReactionRemove', (reaction, user) => {
   const member = reaction.message.guild.members.cache.get(user.id);
   if (reaction.message.id === '759623973792120842') {
     switch (name) {
-      case ':Red:':
-        member.roles.remove('752475160707072021');
+      case '🖥️':
+        member.roles.remove('759635270131253248');
         break;
-      case ':Orange:':
-        member.roles.remove('752493678194327632');
+      case '📱':
+        member.roles.remove('759635312452042762');
         break;
-      case ':Yellow:':
-        member.roles.remove('752493680517972008');
-        break;
-      case ':Green:':
-        member.roles.remove('752493630933041203');
-        break;
-      case ':Lime:':
-        member.roles.remove('752493739276238918');
-        break;
-      case ':Blue:':
-        member.roles.remove('752493413244338189');
-        break;
-      case ':Cyan:':
-        member.roles.remove('752493735878721536');
-        break;
-      case ':Pink:':
-        member.roles.remove('752493633625784331');
-        break;
-      case ':Purple:':
-        member.roles.remove('752493688302731324');
-        break;
-      case ':White:':
-        member.roles.remove('752493685198946374');
-        break;
-      case ':Brown:':
-        member.roles.remove('752493732519084095');
-        break;
-      case ':Black:':
-        member.roles.remove('752493682711724043');
-        break;
-    
     }
   }
 });
