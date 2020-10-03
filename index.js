@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-const token = "NzU5NjIwODc1ODMzNDQyMzI2.X3AKEQ.1_x-yEq5SHrahgf4ZjBtJtR7xxM";
+const token = precess.env.token;
 
 client.on('ready', () => {
     console.log('켰다.');
