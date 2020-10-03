@@ -1,62 +1,339 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-const token = process.env.token;
-const welcomeChannelName = "👋｜환영합니다";
+const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
+const token = "NzU5NjIwODc1ODMzNDQyMzI2.X3AKEQ.1_x-yEq5SHrahgf4ZjBtJtR7xxM";
 
 client.on('ready', () => {
     console.log('켰다.');
-    client.user.setPresence({ game: { name: '모든 우주선 | 접두사: .' }, status: 'online' })
+    client.user.setActivity('모든 우주선 | 접두사: .', { type: 'WATCHING' });
 });
       
-client.on("guildMemberAdd", (member) => {
-    const guild = member.guild;
-    const newUser = member.user;
-    const welcomeChannel = guild.channels.find(channel => channel.name == welcomeChannelName);
-    let embed = new Discord.RichEmbed()
-      .setColor('#F08080')
-      .setDescription(`<@${newUser.id}> 님이 **\`어몽어스 코리아 디스코드\`** 서버에 입장하셨습니다`)
-      
-    welcomeChannel.send(embed);
+client.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.cache.find(ch => ch.id === '758141493553659924');
+  if(!channel) return;
+  const embed = new Discord.MessageEmbed()
+    .setColor('#F08080')
+    .setDescription(`${member} 님이 **\`어몽어스 코리아 디스코드\`** 서버에 입장하셨습니다`)
+    channel.send(embed)
 });
 
-if(message.content == '.역할받기') {
-  let embed = new Discord.RichEmbed()
-    .setTitle('역할 받기')
-    .setDescription('자신이 주로 이용하는 전자기기를 선택해주세요')
-    .addField('**```🖥️ : 컴퓨터**```')
-    .addField('**```📱 : 핸드폰**```')
-
-    message.channel.send(embed)
-}
-
-client.on('messageReactionAdd', (reaction, user) => {
-  const { name } = reaction.emoji;
-  const member = reaction.message.guild.members.cache.get(user.id);
-  if (reaction.message.id === '759623973792120842') {
-    switch (name) {
-      case '🖥️':
-        member.roles.add('759635270131253248');
-        break;
-      case '📱':
-        member.roles.add('759635312452042762');
-        break;
+client.on('messageReactionAdd', async (reaction, user) => { 
+    // 해당 메시지의 이모트를 추가하면 역할을 부여함.
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Red") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747249671307265')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
     }
-  }
-});
-
-client.on('messageReactionRemove', (reaction, user) => {
-  const { name } = reaction.emoji;
-  const member = reaction.message.guild.members.cache.get(user.id);
-  if (reaction.message.id === '759623973792120842') {
-    switch (name) {
-      case '🖥️':
-        member.roles.remove('759635270131253248');
-        break;
-      case '📱':
-        member.roles.remove('759635312452042762');
-        break;
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Orange") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747252871692309')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
     }
-  }
-});
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Yellow") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747255212113943')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Green") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747258478821406')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Lime") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747261863755837')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Blue") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747264753762304')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Cyan") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747267568271401')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Pink") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747270906937384')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Purple") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747274032087052')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "White") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747277810630656')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Brown") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747280839311381')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Black") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.add('761747283624198144')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+client.on('messageReactionRemove', async (reaction, user) => { 
+    // 해당 메시지의 이모트를 제거하면 역할을 제거함.
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Red") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747249671307265')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Orange") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747252871692309')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Yellow") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747255212113943')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Green") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747258478821406')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Lime") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747261863755837')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Blue") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747264753762304')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Cyan") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747267568271401')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Pink") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747270906937384')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Purple") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747274032087052')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "White") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747277810630656')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Brown") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747280839311381')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    try {
+        if(reaction.message.id === '761780394533978132') {
+            await reaction.fetch()
+            if(reaction._emoji.name === "Black") {
+                reaction.message.guild.members.fetch(user.id).then(member => {
+                    member.roles.remove('761747283624198144')
+                })
+        
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 client.login(token);
