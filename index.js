@@ -571,6 +571,26 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    if (message.content === '샤디스 비온') { // 양식님 설명
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Bion 2467')
+        .setColor('#2EFEF7')
+        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/731/317/059/92274b5dfe8fb21f81f378ca0b583e49.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/762993031141916712/766218421364326400/IMG_20200716_080107_323.jpg')
+        .setDescription('민트초코를 너무 좋아한 나머지 민트초코보충제를 먹는 사람')
+        .addFields(
+            { name: '• 나이', value: '`15살`', inline: true },
+            { name: '• 출생', value: '`월 마리아 시간시나구`', inline: true },
+            { name: '• 신장', value: '`186cm`', inline: true },
+            { name: '• 체중', value: '`73kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
+            { name: '• 가치관', value: '`태산보다 무거운 죽음도 있고 겻털만큼 가벼운 죽음도 있다`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`아버지: 24 어머니: 67`', inline: true },
+            { name: '• 절친', value: '`시간시나구에서 암살당함`', inline: true }
+        )
+        message.channel.send(embed)
+    }
 });
 
 client.login(process.env.token);
