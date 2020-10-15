@@ -576,7 +576,7 @@ client.on('message', message => {
         .setTitle('Bion 2467')
         .setColor('#2EFEF7')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/731/317/059/92274b5dfe8fb21f81f378ca0b583e49.gif')
-        .setThumbnail('https://cdn.discordapp.com/attachments/762993031141916712/766218421364326400/IMG_20200716_080107_323.jpg')
+        .setThumbnail('https://cdn.discordapp.com/attachments/762993031141916712/766219663440740352/FB_IMG_1602575325195.jpg')
         .setDescription('민트초코를 너무 좋아한 나머지 민트초코보충제를 먹는 사람')
         .addFields(
             { name: '• 나이', value: '`15살`', inline: true },
