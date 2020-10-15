@@ -47,6 +47,16 @@ client.on('message', message => {
         .setDescription('**https://discord.gg/SZeXuZ5**')
         message.channel.send(embed)
     }
+    if (message.content === '샤디스 조사병단 유니폼') { // 조사병단 유니폼
+        const embed = new Discord.MessageEmbed()
+        .setDescription('**`조사병단 공식 유니폼`**')
+        .addFields(
+            { name: '• 망토', value: 'https://i.imgur.com/HQjo5mK.png', inline: false },
+            { name: '• 남성 제복', value: 'https://i.imgur.com/555gO79.png', inline: false },
+            { name: '• 여성 제복', value: 'https://i.imgur.com/SIEizIT.png', inline: false }
+        )
+        message.channel.send(embed)
+    }
     if (message.content === '샤디스 다운로드') { //AOTTG 게임 다운로드
         const embed = new Discord.MessageEmbed()
         .addFields(
@@ -296,6 +306,7 @@ client.on('message', message => {
             { name: '**`샤디스 조사병단`**', value: '조사병단 각 반의 반장들입니다', inline: true },
             { name: '**`샤디스 분단(진형)`**', value: '각 반의 맞게 자신의 진형으로 보고 가세요', inline: true },
             { name: '**`샤디스 연막탄`**', value: '어떻게 연막을 써야 하는 지 나와있습니다', inline: true },
+            { name: '**`샤디스 조사병단 유니폼**', value: '조사병단 공식 유니폼들이 있어요!', inline: true },
             { name: '**`샤디스 (인물)`**', value: '인물칸에다가 조사병단 디스코드에 있는 보좌관들의 닉네임을 적어보세요!', inline: true }
         )
         message.channel.send(embed)
@@ -480,33 +491,13 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 미카사') { // 미카사 설명
-        const embed = new Discord.MessageEmbed()
-        .setTitle('미카사 아커만')
-        .setColor('#424242')
-        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/233/698/061/79479656c630fbe1dc57733acd90bcc5.gif')
-        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766178234055917609/f1.png')
-        .setDescription('조사병단의 리바이 아커만의 첫째 아들')
-        .addFields(
-            { name: '• 나이', value: '`19살`', inline: true },
-            { name: '• 출생', value: '`월 마리아 시간시나 구 근처 산골짜기 마을`', inline: true },
-            { name: '• 신장', value: '`176cm (854년)`', inline: true },
-            { name: '• 체중', value: '`68kg (850년)`', inline: true },
-            { name: '• 소속 직책', value: '`조사병단 특별작전반`', inline: true },
-            { name: '• 가치관', value: '`오직 에렌 바보`', inline: true },
-            { name: '• 거주지', value: '`파라디 섬 월 로제 트로스트 구`', inline: true },
-            { name: '• 가족', value: '`(입양) 아버지: 그리샤 예거 어머니: 카를라 예거`', inline: true },
-            { name: '• 절친', value: '`엘런 예거, 아르민 알레르토`', inline: true }
-        )
-        message.channel.send(embed)
-    }
     if (message.content === '샤디스 미카사 아커만') { // 미카사 설명
         const embed = new Discord.MessageEmbed()
         .setTitle('미카사 아커만')
         .setColor('#424242')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/233/698/061/79479656c630fbe1dc57733acd90bcc5.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766178234055917609/f1.png')
-        .setDescription('조사병단의 리바이 아커만의 첫째 아들')
+        .setDescription('리바이와 함께 조사병단 내 전투력 투톱을 달리는 초인')
         .addFields(
             { name: '• 나이', value: '`19살`', inline: true },
             { name: '• 출생', value: '`월 마리아 시간시나 구 근처 산골짜기 마을`', inline: true },
@@ -526,7 +517,7 @@ client.on('message', message => {
         .setColor('#424242')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/233/698/061/79479656c630fbe1dc57733acd90bcc5.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766178234055917609/f1.png')
-        .setDescription('조사병단의 리바이 아커만의 첫째 아들')
+        .setDescription('리바이와 함께 조사병단 내 전투력 투톱을 달리는 초인')
         .addFields(
             { name: '• 나이', value: '`19살`', inline: true },
             { name: '• 출생', value: '`월 마리아 시간시나 구 근처 산골짜기 마을`', inline: true },
@@ -557,6 +548,26 @@ client.on('message', message => {
             { name: '• 거주지', value: '`파라디 섬 월 로제 트로스트 구`', inline: true },
             { name: '• 가족', value: '`아버지: 개 어머니: 개`', inline: true },
             { name: '• 절친', value: '`친구 따윈 없다`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 어택') { // 양식님 설명
+        const embed = new Discord.MessageEmbed()
+        .setTitle('MASKSLAVE')
+        .setColor('#FA5858')
+        .setImage('https://cdn.discordapp.com/attachments/752828433834180628/766205899576311808/1530219802_Leviackerman1.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/752828433834180628/766204472467652608/image0.jpg')
+        .setDescription('TOP 3 안에 드는 진격거 게임 고인물')
+        .addFields(
+            { name: '• 나이', value: '`18살`', inline: true },
+            { name: '• 출생', value: '`파라디 섬 월 로제`', inline: true },
+            { name: '• 신장', value: '`176cm`', inline: true },
+            { name: '• 체중', value: '`60kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 병사장`', inline: true },
+            { name: '• 가치관', value: '`노력하면 안되는건 없다`', inline: true },
+            { name: '• 거주지', value: '`단장의 책상 밑`', inline: true },
+            { name: '• 가족', value: '`비공개`', inline: true },
+            { name: '• 절친', value: '`책상 밑에 있는 먼지`', inline: true }
         )
         message.channel.send(embed)
     }
