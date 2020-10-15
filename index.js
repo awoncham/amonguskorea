@@ -1,13 +1,25 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
-client.on('ready', () => {
+client.on('ready', function() {
+    
     console.log('심장을 바치는 것을 성공하였다');
     client.user.setActivity('심장을 바쳐라', { type: 'WATCHING' });
+
 });
 
+client.on('message', message => {
+    var channel = client.channels.cache.get('758884038962053133');
+    var answers = ["리하이는 잘생겼다", "단장은 잘생겼다", "나물은 나물하다", "리하이는 귀엽다", "리하이는 깜찍하다"]
+    var randomAnswer = answers[Math.floor(Math.random() * answers.length)]
+
+    setInterval(() => {
+        channel.send(randomAnswer);
+    }, 2000);
+})
+
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
+  const channel = member.guild.channels.find(ch => ch.id === '702744515802300466');
   if(!channel) return;
   const embed = new Discord.MessageEmbed()
     .setDescription(`${member} 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
@@ -306,7 +318,7 @@ client.on('message', message => {
             { name: '**`샤디스 조사병단`**', value: '조사병단 각 반의 반장들입니다', inline: true },
             { name: '**`샤디스 분단(진형)`**', value: '각 반의 맞게 자신의 진형으로 보고 가세요', inline: true },
             { name: '**`샤디스 연막탄`**', value: '어떻게 연막을 써야 하는 지 나와있습니다', inline: true },
-            { name: '**`샤디스 조사병단 유니폼**', value: '조사병단 공식 유니폼들이 있어요!', inline: true },
+            { name: '**`샤디스 조사병단 유니폼`**', value: '조사병단 공식 유니폼들이 있어요!', inline: true },
             { name: '**`샤디스 (인물)`**', value: '인물칸에다가 조사병단 디스코드에 있는 보좌관들의 닉네임을 적어보세요!', inline: true }
         )
         message.channel.send(embed)
@@ -535,7 +547,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('양식')
         .setColor('#F781F3')
-        .setImage('https://file3.instiz.net/data/file3/2018/10/22/a/e/7/ae7ceeb2fa9c01e2d0040de5c28357a1.gif')
+        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766447361735917578/1602747124.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/752784966475055138/766181849822920704/61f45102a97c69113d7f501c93d4eee0.png')
         .setDescription('한국 조사병단 분대장')
         .addFields(
@@ -551,7 +563,7 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 어택') { // 양식님 설명
+    if (message.content === '샤디스 어택') { // 어택님 설명
         const embed = new Discord.MessageEmbed()
         .setTitle('MASKSLAVE')
         .setColor('#FA5858')
@@ -571,7 +583,7 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 비온') { // 양식님 설명
+    if (message.content === '샤디스 비온') { // 비온님 설명
         const embed = new Discord.MessageEmbed()
         .setTitle('Bion 2467')
         .setColor('#2EFEF7')
@@ -593,4 +605,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.exDQ7RFee_MS-erRlfKiAIxjPKg");
