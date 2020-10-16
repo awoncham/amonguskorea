@@ -2,8 +2,66 @@ const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
 client.on('ready', function() {   
+
     console.log('심장을 바치는 것을 성공하였다');
     client.user.setActivity('심장을 바쳐라', { type: 'WATCHING' });
+
+    setInterval(() => {
+        let foods = ["**`현재 공개 가능한 정보`**\n #대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
+                     "**`현재 공개 가능한 정보`**\n 장거리 수색 진형을 도입한 이후로 생존율이 비약적으로 상승했습니다.", 
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef95be2cebca4949526ee51764f", 
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef951e1ccbdfd90957bee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef903b393e9f6c69775ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef952b79ebff4c69272ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef906e2ceeaf593927bee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef950be9ab4f294c672ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef950be9eefa0c8c475ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef901b2cfeef4c9927bee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef956e1ccbdf1c39573ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef900b192b4f2949727ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef901b3cbeea7c2c276ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef906b49fbdf0c3c125ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef901b5cceff0c2c273ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef950e192b8fdc79077ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef903b2cfbba6c39120ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef951b09abda0c8cc27ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef906b09cbbf6c99076ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef956e1cceffd92cc72ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef956e1cceffd92cc72ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef957b49abaa0c29174ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef957b693bef1c19572ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef903b49ee9a7c79272ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef954b39eb9a4c2c37bee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef904beccbea1c69674ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef904b29ab9a7c89171ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef957e49ceef4c4c07aee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef957bfcceff092c720ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef950b2c8eaf1c59026ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef903b2ccb8a0c49775ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef957b7c9baf6c3c675ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef956b19cb9a493c574ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef901bfccbcfdc69277ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef950bfceb4f6c8c726ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef906b5ccb8f2c89572ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef903e1c9e9a0c29073ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef95abfc9efa6c2c271ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef952e499bca1c29525ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef904b7cfb8f3979225ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef95bb09cbcf7c1cc72ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef900b29fb5a4909277ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef900b29fb5a4909277ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068e5f8b49f2f33d57540dfcefb04611c14c08606a09d8e31ef953e59feaf5c2c421ee51764f",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068f5f8b49f2f33d5778bad22f3de66dc4d7e9fa161f39eb08b31e138fa9bb27f45958c3836c",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068f5f8b49f2f33d5778bad22f3de66dc4d7e9fa161f39eb08b31e138fa9bb27f45958c3836c",
+                     "https://dcimg1.dcinside.com/viewimage.php?id=3eb5d928e2d733af&no=29bcc427b68a77a16fb3dab004c86b6ff7ec112515503c068f5f8b49f2f33d5778bad22f3de66dc4d7e9fa161f39eb08b314158caeec22f05e58c3836c",
+                     "**`현재 공개 가능한 정보`**\n벽외조사에서 거인의 목을 한 번에 도려내지 못한다면 거인의 목은 다시 재생됩니다"
+                    ]
+        let rand = foods[Math.floor(Math.random() * foods.length)]
+        var channel = client.channels.cache.get('742051945472065546');
+
+        channel.send(rand);
+    }, 720000);
+
 });
 
 client.on('guildMemberAdd', member => {
