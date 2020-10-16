@@ -1,11 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
-client.on('ready', function() {
-    
+client.on('ready', function() {   
     console.log('심장을 바치는 것을 성공하였다');
     client.user.setActivity('심장을 바쳐라', { type: 'WATCHING' });
-
 });
 
 client.on('guildMemberAdd', member => {
@@ -596,6 +594,26 @@ client.on('message', message => {
             { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
             { name: '• 가족', value: '`아버지: 24 어머니: 67`', inline: true },
             { name: '• 절친', value: '`시간시나구에서 암살당함`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 애플') { // 애플님 설명
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G')
+        .setColor('#FF0000')
+        .setImage('https://acegif.com/wp-content/uploads/apple.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/763956033789886505/766225257924263936/20200801_231259.jpg')
+        .setDescription('항상 거인의 뒷태를 사랑스럽게 바라본다')
+        .addFields(
+            { name: '• 나이', value: '`14살`', inline: true },
+            { name: '• 출생', value: '`월 시나 스토헤스 구`', inline: true },
+            { name: '• 신장', value: '`169`', inline: true },
+            { name: '• 체중', value: '`60kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
+            { name: '• 가치관', value: '`재밌으면 되`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지`', inline: true },
+            { name: '• 절친', value: '`셀 수 없이 많음`', inline: true }
         )
         message.channel.send(embed)
     }
