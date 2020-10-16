@@ -60,7 +60,7 @@ client.on('ready', function() {
         var channel = client.channels.cache.get('742051945472065546');
 
         channel.send(rand);
-    }, 720000);
+    }, 7200000);
 
 });
 
