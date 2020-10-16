@@ -68,12 +68,185 @@ client.on('guildMemberAdd', member => {
     channel.send(embed)
 })
 
+//음식추천
+client.on('message', message => {
+    
+    let foods = ["족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
+
+    if (message.content.startsWith(`샤디스 음식추천`)) {
+        let rand = Math.floor(Math.random() * foods.length);
+        const embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setDescription(`${foods[rand]} 먹고 진격거 게임해라!`)
+        message.channel.send(embed)
+    }
+});
+
 client.on('message', message => {
     if (message.content === '샤디스 안녕') { // 샤디스 인사(반말)
-        message.channel.send('어디서 반말이냐!');
+        const embed = new Discord.MessageEmbed()
+        .setDescription('어디서 반말이냐! 빨리 대가리 박아!')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 사랑해') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('나도 너 사랑해 ❤️')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 박아줘') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('못으로 박아줄까?')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 세상에서 제일 잘생긴 사람은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('옆에서 봐도 앞에서 봐도 모두가 인정하는 리하이')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 나물님은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('리하이보다 키가 작다')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 어택님은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('개쌉고인물')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 리하이는?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('세계에서 제일 귀엽고 깜찍하고 잘생긴 사람')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 진격의 거인') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('나도 너 사랑해 ❤️')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 단장님은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('모델 출신 조사병단 외모 1등 ph6400')
+        message.channel.send(embed)
     }
     if (message.content === '샤디스 안녕하세요') { // 샤디스 인사(존댓말)
-        message.channel.send('그래');
+        const embed = new Discord.MessageEmbed()
+        .setDescription('너가 인사를 제대로 하는 날도 오는구나')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 놀아줘') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('난 너같은 사람하고는 놀지 않아!')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 게임하자') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('나랑 게임하지 말고 너 혼자 AOTTG 해!')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 섹스') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('너가 미쳤구나')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 죽어') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('너는 벽외조사에서 총 10번을 모든 거인에게 밟혀 고통을 느끼고 죽게 될꺼야')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 충고좀') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('뭔충고')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 할 게임') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('AOTTG 갓겜')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 AOTTG 망겜') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('?')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 넣어줘') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('입 벌려라 칼 들어간다')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 넣을께') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('너의 콧구멍 두개에 내 칼자루 두개를 쑤셔 넣어줄께')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 양식님은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('그저 로리콘')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 1+1은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('귀요미')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 1 더하기 1은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('귀요미')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 애플님은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('깨물어주고 싶다')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 사과님은?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('바삭바삭')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 바보') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('날 좋아해서 바보?')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 좋아해') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('미안하지만 난 너의 고백을 받아줄 수 없어..')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 나랑 사귀자') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('이 고철 덩어리랑 뭐하러 사귀어! 난 고백을 받아줄 수 없어')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 간지') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('겐지')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 어몽어스') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('크루원')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 요종도') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('요종도~~')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 욕') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('난 그런거 몰라..')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 ㅇㅈㅇㅇ') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('너가 그냥 깝쳐버리길래 죽여버렸어 이게 나야')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 요롱롱') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('요롱롱 이게 나야')
+        message.channel.send(embed)
     }
     if(message.content == '샤디스 명령어') {
         const embed = new Discord.MessageEmbed()
@@ -330,18 +503,21 @@ client.on('message', message => {
         .setFooter('출처: 나무위키', 'https://w.namu.la/s/895d8eaf4bbb3b9b2ca614bbf22cc8229ce77b2e780d3b63abac8f04510493038affe6e8be4eea6e33a6d1fb5c50733697da8edec268c09b1a585af1df7d11fbbe38a3baf46539fb7bb758df2ff55466fa504381ba1fdfc64cfa430961feed5d927b4574b2f43b6710f91806bcd58b40');
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 도움말') { // 샤디스 이용 방법
+    // 샤디스 이용 방법
+    if (message.content === '샤디스 도움말') { 
         const embed = new Discord.MessageEmbed()
         .setAuthor('샤디스 명령어 모음', 'https://media.discordapp.net/attachments/758884038962053133/766105918991106048/unknown.png')
         .setDescription('모든 샤디스 명령어의 접두사는 \'샤디스\' 입니다')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766105918991106048/unknown.png')
         .addFields(
+            { name: '**대화**', value: '`샤디스 도움말 대화`', inline: true },
             { name: '**진격의 거인**', value: '`샤디스 도움말 진격의 거인`', inline: true },
             { name: '**조사병단**', value: '`샤디스 도움말 조사병단`', inline: true }
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 도움말 진격의 거인') { // 모든 진격의 거인 명령어 모음
+    // 모든 진격의 거인 명령어 모음
+    if (message.content === '샤디스 도움말 진격의 거인') { 
         const embed = new Discord.MessageEmbed()
         .setAuthor('샤디스 진격의 거인 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
@@ -355,7 +531,18 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 도움말 조사병단') { // 모든 조사병단 명령어 모음
+        // 모든 대화 명령어 모음
+        if (message.content === '샤디스 도움말 진격의 거인') { 
+            const embed = new Discord.MessageEmbed()
+            .setAuthor('샤디스 진격의 거인 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
+            .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
+            .addFields(
+                { name: '**`샤디스 (할말)`**', value: '여러분들이 샤디스와 대화를 하고 싶으면 대화해보세요!', inline: true }
+            )
+            message.channel.send(embed)
+        }
+    // 모든 조사병단 명령어 모음
+    if (message.content === '샤디스 도움말 조사병단') { 
         const embed = new Discord.MessageEmbed()
         .setAuthor('샤디스 조사병단 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
@@ -371,7 +558,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 엘빈') { // 엘빈 스미스 설명
+    // 엘빈 스미스 설명
+    if (message.content === '샤디스 엘빈') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
@@ -391,7 +579,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 엘빈 스미스') { // 엘빈 스미스 설명
+    // 엘빈 스미스 설명
+    if (message.content === '샤디스 엘빈 스미스') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
@@ -411,7 +600,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 에르빈') { // 엘빈 스미스 설명
+    // 엘빈 스미스 설명
+    if (message.content === '샤디스 에르빈') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
@@ -431,7 +621,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 에르빈 스미스') { // 엘빈 스미스 설명
+    // 엘빈 스미스 설명
+    if (message.content === '샤디스 에르빈 스미스') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
@@ -451,7 +642,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 ph6400') { // ph6400 설명
+    // ph6400 설명
+    if (message.content === '샤디스 ph6400') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('ph6400')
         .setColor('#11A52F')
@@ -471,7 +663,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 나물') { // 나물 설명
+    // 나물 설명
+    if (message.content === '샤디스 나물') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('나물')
         .setColor('#973AE8')
@@ -491,7 +684,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 namull') { // 나물 설명
+    // 나물 설명
+    if (message.content === '샤디스 namull') {
         const embed = new Discord.MessageEmbed()
         .setTitle('나물')
         .setColor('#973AE8')
@@ -511,7 +705,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 리하이') { // 리하이 설명
+    // 리하이 설명
+    if (message.content === '샤디스 리하이') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('리하이 아커만')
         .setColor('#EA6B6B')
@@ -531,7 +726,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 리하이 아커만') { // 리하이 설명
+    // 리하이 설명
+    if (message.content === '샤디스 리하이 아커만') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('리하이 아커만')
         .setColor('#EA6B6B')
@@ -551,7 +747,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 미카사 아커만') { // 미카사 설명
+    // 미카사 설명
+    if (message.content === '샤디스 미카사 아커만') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('미카사 아커만')
         .setColor('#424242')
@@ -571,7 +768,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 미카사') { // 미카사 설명
+    // 미카사 설명
+    if (message.content === '샤디스 미카사') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('미카사 아커만')
         .setColor('#424242')
@@ -591,7 +789,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 양식') { // 양식님 설명
+    // 양식님 설명
+    if (message.content === '샤디스 양식') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('양식')
         .setColor('#F781F3')
@@ -611,7 +810,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 어택') { // 어택님 설명
+    // 어택님 설명
+    if (message.content === '샤디스 어택') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('MASKSLAVE')
         .setColor('#FA5858')
@@ -631,7 +831,8 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 비온') { // 비온님 설명
+    // 비온님 설명
+    if (message.content === '샤디스 비온') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('Bion 2467')
         .setColor('#2EFEF7')
@@ -651,11 +852,12 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 애플') { // 애플님 설명
+    // 애플님 설명
+    if (message.content === '샤디스 애플') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G')
         .setColor('#FF0000')
-        .setImage('https://acegif.com/wp-content/uploads/apple.gif')
+        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766582015217893386/aaacf25274896c8a031047909b8a7603.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/763956033789886505/766225257924263936/20200801_231259.jpg')
         .setDescription('항상 거인의 뒷태를 사랑스럽게 바라본다')
         .addFields(
@@ -666,16 +868,17 @@ client.on('message', message => {
             { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
             { name: '• 가치관', value: '`재밌으면 되`', inline: true },
             { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
-            { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지`', inline: true },
+            { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지Q`', inline: true },
             { name: '• 절친', value: '`셀 수 없이 많음`', inline: true }
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 사과') { // 애플님 설명
+    // 애플님 설명 
+    if (message.content === '샤디스 사과') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G')
         .setColor('#FF0000')
-        .setImage('https://acegif.com/wp-content/uploads/apple.gif')
+        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766582015217893386/aaacf25274896c8a031047909b8a7603.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/763956033789886505/766225257924263936/20200801_231259.jpg')
         .setDescription('항상 거인의 뒷태를 사랑스럽게 바라본다')
         .addFields(
@@ -686,7 +889,7 @@ client.on('message', message => {
             { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
             { name: '• 가치관', value: '`재밌으면 되`', inline: true },
             { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
-            { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지`', inline: true },
+            { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지Q`', inline: true },
             { name: '• 절친', value: '`셀 수 없이 많음`', inline: true }
         )
         message.channel.send(embed)
