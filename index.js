@@ -49,6 +49,11 @@ client.on('message', message => {
         .setDescription('**https://discord.gg/SZeXuZ5**')
         message.channel.send(embed)
     }
+    if (message.content === '샤디스 심장을 바쳐라') { // 심장을 바쳐라
+        const embed = new Discord.MessageEmbed()
+        .setImage('https://i.pinimg.com/originals/d1/72/3d/d1723dc033cfece00342e567d15b7c30.gif')
+        message.channel.send(embed)
+    }
     if (message.content === '샤디스 조사병단 유니폼') { // 조사병단 유니폼
         const embed = new Discord.MessageEmbed()
         .setDescription('**`조사병단 공식 유니폼`**')
@@ -293,6 +298,7 @@ client.on('message', message => {
             { name: '**`샤디스 에렌`**', value: '진격의 거인 에렌의 대해 자세히 나옵니다', inline: true },
             { name: '**`샤디스 미카사`**', value: '진격의 거인 미카사의 대해 자세히 나옵니다', inline: true },
             { name: '**`샤디스 엘빈`**', value: '진격의 거인 엘빈의 대해 자세히 나옵니다', inline: true },
+            { name: '**`샤디스 (명대사)`**', value: '진격의 거인에서 나온 명장면을 붙혀 넣으시면 해당 장면에 GIF가 나옵니다!', inline: true },
             { name: '**`샤디스 (진격거 캐릭터 닉네임)`**', value: '진격의 거인 캐릭터 닉네임을 적어보시면 거의 다 나와있어요!', inline: true }
         )
         message.channel.send(embed)
@@ -317,7 +323,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
-        .setImage('https://imgur.com/w4zmGaw')
+        .setImage('https://data.whicdn.com/images/320839514/original.gif')
         .setThumbnail('https://pbs.twimg.com/profile_images/378800000541320457/d7ff9e8e8aa6d4b395d6a92e03dd8864_400x400.jpeg')
         .setDescription('인류의 미래를 책임지고 있는 조사병단의 지휘관으로서 그 책임이 막중한 인물')
         .addFields(
@@ -337,7 +343,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
-        .setImage('https://imgur.com/w4zmGaw')
+        .setImage('https://data.whicdn.com/images/320839514/original.gif')
         .setThumbnail('https://pbs.twimg.com/profile_images/378800000541320457/d7ff9e8e8aa6d4b395d6a92e03dd8864_400x400.jpeg')
         .setDescription('인류의 미래를 책임지고 있는 조사병단의 지휘관으로서 그 책임이 막중한 인물')
         .addFields(
@@ -357,7 +363,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
-        .setImage('https://imgur.com/w4zmGaw')
+        .setImage('https://data.whicdn.com/images/320839514/original.gif')
         .setThumbnail('https://pbs.twimg.com/profile_images/378800000541320457/d7ff9e8e8aa6d4b395d6a92e03dd8864_400x400.jpeg')
         .setDescription('인류의 미래를 책임지고 있는 조사병단의 지휘관으로서 그 책임이 막중한 인물')
         .addFields(
@@ -377,7 +383,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
-        .setImage('https://imgur.com/w4zmGaw')
+        .setImage('https://data.whicdn.com/images/320839514/original.gif')
         .setThumbnail('https://pbs.twimg.com/profile_images/378800000541320457/d7ff9e8e8aa6d4b395d6a92e03dd8864_400x400.jpeg')
         .setDescription('인류의 미래를 책임지고 있는 조사병단의 지휘관으로서 그 책임이 막중한 인물')
         .addFields(
