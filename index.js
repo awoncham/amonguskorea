@@ -8,16 +8,6 @@ client.on('ready', function() {
 
 });
 
-client.on('message', message => {
-    var channel = client.channels.cache.get('758884038962053133');
-    var answers = ["리하이는 잘생겼다", "단장은 잘생겼다", "나물은 나물하다", "리하이는 귀엽다", "리하이는 깜찍하다"]
-    var randomAnswer = answers[Math.floor(Math.random() * answers.length)]
-
-    setInterval(() => {
-        channel.send(randomAnswer);
-    }, 2000);
-})
-
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.id === '702744515802300466');
   if(!channel) return;
