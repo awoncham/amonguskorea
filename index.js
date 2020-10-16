@@ -140,7 +140,7 @@ client.on('message', message => {
     if (message.content === '샤디스 연막탄') { //연막탄 설명
         const embed = new Discord.MessageEmbed()
         .setDescription('**`연막탄 가이드`**')
-        .setImage('https://lh3.googleusercontent.com/proxy/jsd62v6ekQBqFHlEFmArtoRbjTH4yqsEcTdUobgB1IyBXG1cJx2FUnqVV2087qd8uYRHYlATGJrgXzZyW5N8_z9XFDgqDPiFJXdXrw')
+        .setImage('https://64.media.tumblr.com/332f73e473e6b60b377937f68e117b87/tumblr_oqmcwoxf4U1tzew82o1_500.gif')
         .addFields(
             { name: '• 초록색', value: '진형의 방향을 결정하는 연막탄이며, 단장이 발사한 방향대로 각 반장들은 전부 발사한다. ', inline: false },
             { name: '• 적색', value: '거인이 접근할 시 오는 방향으로 발사해야할 연막탄이다. 거인을 단순히 발견했을 때는 지나치고 거인이 진형으로 접근중일때만 발사하여 지휘분대에 알린다.', inline: false },
@@ -598,6 +598,26 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 애플') { // 애플님 설명
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G')
+        .setColor('#FF0000')
+        .setImage('https://acegif.com/wp-content/uploads/apple.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/763956033789886505/766225257924263936/20200801_231259.jpg')
+        .setDescription('항상 거인의 뒷태를 사랑스럽게 바라본다')
+        .addFields(
+            { name: '• 나이', value: '`14살`', inline: true },
+            { name: '• 출생', value: '`월 시나 스토헤스 구`', inline: true },
+            { name: '• 신장', value: '`169`', inline: true },
+            { name: '• 체중', value: '`60kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
+            { name: '• 가치관', value: '`재밌으면 되`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지`', inline: true },
+            { name: '• 절친', value: '`셀 수 없이 많음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 사과') { // 애플님 설명
         const embed = new Discord.MessageEmbed()
         .setTitle('Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G')
         .setColor('#FF0000')
