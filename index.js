@@ -532,9 +532,9 @@ client.on('message', message => {
         message.channel.send(embed)
     }
         // 모든 대화 명령어 모음
-        if (message.content === '샤디스 도움말 진격의 거인') { 
+        if (message.content === '샤디스 도움말 대화') { 
             const embed = new Discord.MessageEmbed()
-            .setAuthor('샤디스 진격의 거인 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
+            .setAuthor('샤디스 대화 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
             .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
             .addFields(
                 { name: '**`샤디스 (할말)`**', value: '여러분들이 샤디스와 대화를 하고 싶으면 대화해보세요!', inline: true }
