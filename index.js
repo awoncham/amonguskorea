@@ -93,9 +93,29 @@ client.on('message', message => {
         .setDescription('나도 너 사랑해 ❤️')
         message.channel.send(embed)
     }
+    // 연결한 정도를 알려줍니다
+    if(message.content.startsWith('샤디스 핑')) {
+        const embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setDescription(`현재 너의 핑은 ${Date.now() - message.createdTimestamp} ms 다 `)
+        message.channel.send(embed)
+    }
+    if (message.content.startsWith('샤디스 아바타')) {
+        const user = message.mentions.users.first() || message.author;
+        const avatarEmbed = new Discord.MessageEmbed()
+            .setColor("RANDOM")
+            .setDescription(user.username + '님의 프로필입니다')
+            .setImage(user.displayAvatarURL());
+        message.channel.send(avatarEmbed);
+    }
     if (message.content === '샤디스 뭐해') { 
         const embed = new Discord.MessageEmbed()
         .setDescription('지금 너랑 대화하는거 안보여?')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 머리카락') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('죽고 싶니?')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 헬로우!') { 
@@ -1193,6 +1213,48 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    // 한별님 설명
+    if (message.content === '샤디스 한별') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Han_byul_kirstein')
+        .setColor('#151515')
+        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/392/869/061/d85e59bbaaa13525104b934c21787e77.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/766924018347409428/766926915667492874/tenor.gif')
+        .setDescription('삼성의 3번째 동생')
+        .addFields(
+            { name: '• 나이', value: '`18살`', inline: true },
+            { name: '• 출생', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 신장', value: '`174cm`', inline: true },
+            { name: '• 체중', value: '`61kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
+            { name: '• 가치관', value: '`선빵필승`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`부모님, 동생`', inline: true },
+            { name: '• 절친', value: '`친구 자체가 없음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 Han_byul_kirstein') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Han_byul_kirstein')
+        .setColor('#151515')
+        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/392/869/061/d85e59bbaaa13525104b934c21787e77.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/766924018347409428/766926915667492874/tenor.gif')
+        .setDescription('삼성의 3번째 동생')
+        .addFields(
+            { name: '• 나이', value: '`18살`', inline: true },
+            { name: '• 출생', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 신장', value: '`174cm`', inline: true },
+            { name: '• 체중', value: '`61kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
+            { name: '• 가치관', value: '`선빵필승`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`부모님, 동생`', inline: true },
+            { name: '• 절친', value: '`친구 자체가 없음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+
 });
 
-client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.cfoBgHO4qkK6GJVvsV8t7l5FH5Q");
+client.login(process.env.token);
