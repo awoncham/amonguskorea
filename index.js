@@ -178,10 +178,113 @@ client.on('message', message => {
         .setDescription('나랑 게임하지 말고 너 혼자 AOTTG 해!')
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 섹스') { 
+    if (message.content === '알씨') { 
         const embed = new Discord.MessageEmbed()
-        .setDescription('너가 미쳤구나')
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '시발') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '씨발') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '섹스') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === 'Sex') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === 'sex') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '병신') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === 'ㅅㅂ') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === 'ㅂㅅ') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === 'ARCE') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '자지') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '보지') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '새끼') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '개새끼') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === 'ㅅㄲ') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '개새끼') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '쎅스') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
+    }
+    if (message.content === '빨아') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
+        message.channel.send(embed)
+        message.delete();
     }
     if (message.content === '샤디스 죽어') { 
         const embed = new Discord.MessageEmbed()
@@ -1092,4 +1195,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.cfoBgHO4qkK6GJVvsV8t7l5FH5Q");
