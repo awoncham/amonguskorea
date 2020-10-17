@@ -199,112 +199,112 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '알씨') { 
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '시발') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '씨발') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '섹스') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === 'Sex') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === 'sex') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '병신') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === 'ㅅㅂ') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === 'ㅂㅅ') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === 'ARCE') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '자지') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '보지') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '새끼') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '개새끼') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === 'ㅅㄲ') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '개새끼') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '쎅스') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '빨아') {
+        message.delete()
         const embed = new Discord.MessageEmbed()
         .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
         message.channel.send(embed)
-        message.delete();
     }
     if (message.content === '샤디스 죽어') { 
         const embed = new Discord.MessageEmbed()
@@ -1257,4 +1257,4 @@ client.on('message', message => {
 
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.uZFgyyUsiQ67ghsR1U8bKUCkGoE");
