@@ -319,6 +319,7 @@ client.on('message', message => {
         .setDescription('**`조사병단 공식 유니폼`**')
         .addFields(
             { name: '• 망토', value: 'https://i.imgur.com/HQjo5mK.png', inline: false },
+            { name: '• 가스', value: 'https://i.imgur.com/luEXJBS.png', inline: false },
             { name: '• 남성 제복', value: 'https://i.imgur.com/555gO79.png', inline: false },
             { name: '• 여성 제복', value: 'https://i.imgur.com/SIEizIT.png', inline: false }
         )
@@ -837,6 +838,90 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    // 아르민 설명
+    if (message.content === '샤디스 아르민') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('아르민 알레르토')
+        .setColor('#F3F781')
+        .setImage('https://thumbs.gfycat.com/ImpeccableDemandingArgentinehornedfrog-size_restricted.gif')
+        .setThumbnail('https://media.tenor.com/images/96afc0ae181ec93cecfdf5e6afc84609/tenor.gif')
+        .setDescription('베르톨트의 초대형 거인의 힘 계승자')
+        .addFields(
+            { name: '• 나이', value: '`19살`', inline: true },
+            { name: '• 출생', value: '`월마리아 시간시나구`', inline: true },
+            { name: '• 신장', value: '`168 (854년)`', inline: true },
+            { name: '• 체중', value: '`55kg (850년)`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 특수작전반`', inline: true },
+            { name: '• 가치관', value: '`평화주의, 자유`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`아버지, 어머니, 할아버지 (세 분 다 846년 사망)`', inline: true },
+            { name: '• 절친', value: '`엘런 예거, 미카사 아커만등`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 아르민 설명
+    if (message.content === '샤디스 아르민 알레르토') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('아르민 알레르토')
+        .setColor('#F3F781')
+        .setImage('https://thumbs.gfycat.com/ImpeccableDemandingArgentinehornedfrog-size_restricted.gif')
+        .setThumbnail('https://media.tenor.com/images/96afc0ae181ec93cecfdf5e6afc84609/tenor.gif')
+        .setDescription('베르톨트의 초대형 거인의 힘 계승자')
+        .addFields(
+            { name: '• 나이', value: '`19살`', inline: true },
+            { name: '• 출생', value: '`월마리아 시간시나구`', inline: true },
+            { name: '• 신장', value: '`168 (854년)`', inline: true },
+            { name: '• 체중', value: '`55kg (854년)`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 특수작전반`', inline: true },
+            { name: '• 가치관', value: '`평화주의, 자유`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`아버지, 어머니, 할아버지 (세 분 다 846년 사망)`', inline: true },
+            { name: '• 절친', value: '`엘런 예거, 미카사 아커만등`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 한지 설명
+    if (message.content === '샤디스 한지') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('한지 조에')
+        .setColor('#4F3535')
+        .setImage('https://i.pinimg.com/originals/71/87/9b/71879b75130f7aa697161d8fa0766047.gif')
+        .setThumbnail('https://data.whicdn.com/images/255803002/original.gif')
+        .setDescription('머리는 좋은 망할 안경')
+        .addFields(
+            { name: '• 나이', value: '`30대 중반 (854년)`', inline: true },
+            { name: '• 출생', value: '`파라디 왕국`', inline: true },
+            { name: '• 신장', value: '`170 (850년)`', inline: true },
+            { name: '• 체중', value: '`60kg (850년)`', inline: true },
+            { name: '• 소속 직책', value: '`파라디 섬 조사병단 간부`', inline: true },
+            { name: '• 가치관', value: '`평화주의`', inline: true },
+            { name: '• 거주지', value: '`파라디 섬 월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`어머니, 아버지 (두분 다 불명)`', inline: true },
+            { name: '• 부하', value: '`모블릿 베이너 제4분대 부대장 및 직속 보좌관, 니파, 케이지 등`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 한지 설명
+    if (message.content === '샤디스 한지 조에') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('한지 조에')
+        .setColor('#4F3535')
+        .setImage('https://i.pinimg.com/originals/71/87/9b/71879b75130f7aa697161d8fa0766047.gif')
+        .setThumbnail('https://data.whicdn.com/images/255803002/original.gif')
+        .setDescription('머리는 좋은 망할 안경')
+        .addFields(
+            { name: '• 나이', value: '`30대 중반 (854년)`', inline: true },
+            { name: '• 출생', value: '`파라디 왕국`', inline: true },
+            { name: '• 신장', value: '`170 (850년)`', inline: true },
+            { name: '• 체중', value: '`60kg (850년)`', inline: true },
+            { name: '• 소속 직책', value: '`파라디 섬 조사병단 간부`', inline: true },
+            { name: '• 가치관', value: '`평화주의`', inline: true },
+            { name: '• 거주지', value: '`파라디 섬 월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`어머니, 아버지 (두분 다 불명)`', inline: true },
+            { name: '• 부하', value: '`모블릿 베이너 제4분대 부대장 및 직속 보좌관, 니파, 케이지 등`', inline: true }
+        )
+        message.channel.send(embed)
+    }
     // 양식님 설명
     if (message.content === '샤디스 양식') { 
         const embed = new Discord.MessageEmbed()
@@ -942,27 +1027,28 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-        // 애플님 설명 
-        if (message.content === '샤디스 Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G') { 
-            const embed = new Discord.MessageEmbed()
-            .setTitle('Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G')
-            .setColor('#FF0000')
-            .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766582015217893386/aaacf25274896c8a031047909b8a7603.gif')
-            .setThumbnail('https://cdn.discordapp.com/attachments/763956033789886505/766225257924263936/20200801_231259.jpg')
-            .setDescription('항상 거인의 뒷태를 사랑스럽게 바라본다')
-            .addFields(
-                { name: '• 나이', value: '`14살`', inline: true },
-                { name: '• 출생', value: '`월 시나 스토헤스 구`', inline: true },
-                { name: '• 신장', value: '`169cm`', inline: true },
-                { name: '• 체중', value: '`60kg`', inline: true },
-                { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
-                { name: '• 가치관', value: '`재밌으면 되`', inline: true },
-                { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
-                { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지Q`', inline: true },
-                { name: '• 절친', value: '`셀 수 없이 많음`', inline: true }
-            )
-            message.channel.send(embed)
-        }
+    // 애플님 설명 
+    if (message.content === '샤디스 Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G')
+        .setColor('#FF0000')
+        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766582015217893386/aaacf25274896c8a031047909b8a7603.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/763956033789886505/766225257924263936/20200801_231259.jpg')
+        .setDescription('항상 거인의 뒷태를 사랑스럽게 바라본다')
+        .addFields(
+            { name: '• 나이', value: '`14살`', inline: true },
+            { name: '• 출생', value: '`월 시나 스토헤스 구`', inline: true },
+            { name: '• 신장', value: '`169cm`', inline: true },
+            { name: '• 체중', value: '`60kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
+            { name: '• 가치관', value: '`재밌으면 되`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지Q`', inline: true },
+            { name: '• 절친', value: '`셀 수 없이 많음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 홍시 설명
     if (message.content === '샤디스 홍시') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('Hongshi')
@@ -983,6 +1069,7 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    // 홍시 설명
     if (message.content === '샤디스 Hongshi') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('Hongshi')
