@@ -7,7 +7,7 @@ client.on('ready', function() {
     client.user.setActivity('심장을 바쳐라', { type: 'WATCHING' });
 
     setInterval(() => {
-        let foods = ["> **`현재 공개 가능한 정보`** \n > #대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
+        let tips = ["> **`현재 공개 가능한 정보`** \n > #대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
                      "> **`현재 공개 가능한 정보`** \n > 장거리 수색 진형을 도입한 이후로 생존율이 비약적으로 상승했습니다.", 
                      "> **`현재 공개 가능한 정보`** \n > 인류는 세 겹의 벽으로 둘러싸 생활하고 있다 첫 번 바깥벽은 월 마리아 두 번째가 월 로제 그리고 중앙 벽이 월 시나다", 
                      "> **`현재 공개 가능한 정보`** \n > 벽에 대해서 벽과 벽 사이 구역은 거의 같다 마리아와 로제 사이가 100km 로제와 시나 사이가 약 130km 시나에서 중앙까지가 약 250km이다",
@@ -52,7 +52,7 @@ client.on('ready', function() {
                      "> **`현재 공개 가능한 정보`** \n > 대 특정 목표 구속병기) 적재한 통 안에는 일곱 자루 철관이 깔려, 그 관에는 화살촉을 양 끝에 단 와이어가 나선 모양으로 들어있다"
 
                     ]
-        let rand = foods[Math.floor(Math.random() * foods.length)]
+        let rand = tips[Math.floor(Math.random() * tips.length)]
         var channel = client.channels.cache.get('742051945472065546');
 
         channel.send(rand);
@@ -91,6 +91,41 @@ client.on('message', message => {
     if (message.content === '샤디스 사랑해') { 
         const embed = new Discord.MessageEmbed()
         .setDescription('나도 너 사랑해 ❤️')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 뭐해') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('지금 너랑 대화하는거 안보여?')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 헬로우!') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('Hello World!')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 지식') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('내 아이큐는 150을 넘지')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 친구') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('내 친구는 많다!')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 나는?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('너 지금 반말했니?')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 인도는몇시?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('인도네시아')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 우주는 어디에 있어?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('숲에 있어! (Space -> 수페이스 -> 숲에있으)')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 박아줘') { 
@@ -511,11 +546,24 @@ client.on('message', message => {
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766105918991106048/unknown.png')
         .addFields(
             { name: '**대화**', value: '`샤디스 도움말 대화`', inline: true },
+            { name: '**놀이**', value: '`샤디스 도움말 놀이`', inline: true },
             { name: '**진격의 거인**', value: '`샤디스 도움말 진격의 거인`', inline: true },
             { name: '**조사병단**', value: '`샤디스 도움말 조사병단`', inline: true }
         )
         message.channel.send(embed)
     }
+        // 샤디스 놀이 방법
+        if (message.content === '샤디스 도움말 놀이') { 
+            const embed = new Discord.MessageEmbed()
+            .setAuthor('샤디스 놀이 명령어 모음', 'https://media.discordapp.net/attachments/758884038962053133/766105918991106048/unknown.png')
+            .setDescription('심심할 땐 언제나 샤디스와 놀아요!')
+            .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766105918991106048/unknown.png')
+            .addFields(
+                { name: '**음식추천**', value: '`오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!`', inline: true },
+                { name: '**넌센스**', value: '`크시야 뒤에 넌센스 퀴즈를 물어보세요!`', inline: true }
+            )
+            message.channel.send(embed)
+        }
     // 모든 진격의 거인 명령어 모음
     if (message.content === '샤디스 도움말 진격의 거인') { 
         const embed = new Discord.MessageEmbed()
@@ -863,7 +911,7 @@ client.on('message', message => {
         .addFields(
             { name: '• 나이', value: '`14살`', inline: true },
             { name: '• 출생', value: '`월 시나 스토헤스 구`', inline: true },
-            { name: '• 신장', value: '`169`', inline: true },
+            { name: '• 신장', value: '`169cm`', inline: true },
             { name: '• 체중', value: '`60kg`', inline: true },
             { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
             { name: '• 가치관', value: '`재밌으면 되`', inline: true },
@@ -884,13 +932,74 @@ client.on('message', message => {
         .addFields(
             { name: '• 나이', value: '`14살`', inline: true },
             { name: '• 출생', value: '`월 시나 스토헤스 구`', inline: true },
-            { name: '• 신장', value: '`169`', inline: true },
+            { name: '• 신장', value: '`169cm`', inline: true },
             { name: '• 체중', value: '`60kg`', inline: true },
             { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
             { name: '• 가치관', value: '`재밌으면 되`', inline: true },
             { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
             { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지Q`', inline: true },
             { name: '• 절친', value: '`셀 수 없이 많음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+        // 애플님 설명 
+        if (message.content === '샤디스 Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G') { 
+            const embed = new Discord.MessageEmbed()
+            .setTitle('Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G')
+            .setColor('#FF0000')
+            .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766582015217893386/aaacf25274896c8a031047909b8a7603.gif')
+            .setThumbnail('https://cdn.discordapp.com/attachments/763956033789886505/766225257924263936/20200801_231259.jpg')
+            .setDescription('항상 거인의 뒷태를 사랑스럽게 바라본다')
+            .addFields(
+                { name: '• 나이', value: '`14살`', inline: true },
+                { name: '• 출생', value: '`월 시나 스토헤스 구`', inline: true },
+                { name: '• 신장', value: '`169cm`', inline: true },
+                { name: '• 체중', value: '`60kg`', inline: true },
+                { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
+                { name: '• 가치관', value: '`재밌으면 되`', inline: true },
+                { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+                { name: '• 가족', value: '`아버지: 죠셉 죠스타 어머니: 수지Q`', inline: true },
+                { name: '• 절친', value: '`셀 수 없이 많음`', inline: true }
+            )
+            message.channel.send(embed)
+        }
+    if (message.content === '샤디스 홍시') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Hongshi')
+        .setColor('#2EFEF7')
+        .setImage('https://i.pinimg.com/originals/60/bc/26/60bc268b002a5daf97e413887a532a9e.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/742051945472065546/766864631716773888/e7806fae43f8b058d9a4a9478e108a15.png')
+        .setDescription('홍시를 먹으면 몸이 건강해져요!')
+        .addFields(
+            { name: '• 나이', value: '`13살`', inline: true },
+            { name: '• 출생', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 신장', value: '`150cm`', inline: true },
+            { name: '• 체중', value: '`40kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 벽의 수호자`', inline: true },
+            { name: '• 가치관', value: '`홍시가 제일 맛있다`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`아버지: 홍삼 어머니: 냉동음식`', inline: true },
+            { name: '• 절친', value: '`없음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 Hongshi') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Hongshi')
+        .setColor('#2EFEF7')
+        .setImage('https://i.pinimg.com/originals/60/bc/26/60bc268b002a5daf97e413887a532a9e.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/742051945472065546/766864631716773888/e7806fae43f8b058d9a4a9478e108a15.png')
+        .setDescription('홍시를 먹으면 몸이 건강해져요!')
+        .addFields(
+            { name: '• 나이', value: '`13살`', inline: true },
+            { name: '• 출생', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 신장', value: '`150cm`', inline: true },
+            { name: '• 체중', value: '`40kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 벽의 수호자`', inline: true },
+            { name: '• 가치관', value: '`홍시가 제일 맛있다`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`아버지: 홍삼 어머니: 냉동음식`', inline: true },
+            { name: '• 절친', value: '`없음`', inline: true }
         )
         message.channel.send(embed)
     }
