@@ -1240,7 +1240,7 @@ client.on('message', message => {
         .setURL('https://www.teamspeak3.com/')
         .setTitle('클릭 시 팀스피크 사이트 이동')
         .setThumbnail('https://blog.kakaocdn.net/dn/chQxE4/btqEuzi5x7x/cAsLdBkS0OZtjx4ofe23ak/img.png')
-        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
+        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 \n **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 \n **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
         message.channel.send(embed)
     }
 
