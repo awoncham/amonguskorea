@@ -68,6 +68,24 @@ client.on('guildMemberAdd', member => {
     channel.send(embed)
 })
 
+//금지어
+client.on('message', async message => {
+    let blacklisted = ['ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex','씹새끼', '새끼', '시발련', '야매때', '히토미', '폰허브', 'Hitomi', 'Pornhub'];
+
+    let foundInText = false;
+    for (var i in blacklisted) { 
+      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+    }
+
+    if (foundInText) {
+        message.delete();
+        const embed = new Discord.MessageEmbed()
+        .setDescription('미안하지만 너가 한 말엔 금지어가 들어가있어');
+        message.channel.send(embed)
+    }
+    }
+);
+
 //음식추천
 client.on('message', message => {
     
@@ -197,60 +215,6 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setDescription('나랑 게임하지 말고 너 혼자 AOTTG 해!')
         message.channel.send(embed)
-    }
-    if (message.content === '알씨') { 
-        message.delete();
-    }
-    if (message.content === '시발') {
-        message.delete();
-    }
-    if (message.content === '씨발') {
-        message.delete();
-    }
-    if (message.content === '섹스') {
-        message.delete();
-    }
-    if (message.content === 'Sex') {
-        message.delete();
-    }
-    if (message.content === 'sex') {
-        message.delete();
-    }
-    if (message.content === '병신') {
-        message.delete();
-    }
-    if (message.content === 'ㅅㅂ') {
-        message.delete();
-    }
-    if (message.content === 'ㅂㅅ') {
-        message.delete();
-    }
-    if (message.content === 'ARCE') {
-        message.delete();
-    }
-    if (message.content === '자지') {
-        message.delete();
-    }
-    if (message.content === '보지') {
-        message.delete();
-    }
-    if (message.content === '새끼') {
-        message.delete();
-    }
-    if (message.content === '개새끼') {
-        message.delete();
-    }
-    if (message.content === 'ㅅㄲ') {
-        message.delete();
-    }
-    if (message.content === '개새끼') {
-        message.delete();
-    }
-    if (message.content === '쎅스') {
-        message.delete();
-    }
-    if (message.content === '빨아') {
-        message.delete();
     }
     if (message.content === '샤디스 죽어') { 
         const embed = new Discord.MessageEmbed()
@@ -1000,7 +964,7 @@ client.on('message', message => {
         .setColor('#F781F3')
         .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766447361735917578/1602747124.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/752784966475055138/766181849822920704/61f45102a97c69113d7f501c93d4eee0.png')
-        .setDescription('한국 조사병단 분대장')
+        .setDescription('그저 로리콘')
         .addFields(
             { name: '• 나이', value: '`18살`', inline: true },
             { name: '• 출생', value: '`파라디 섬 월 로제`', inline: true },
@@ -1009,7 +973,7 @@ client.on('message', message => {
             { name: '• 소속 직책', value: '`4반 분대장`', inline: true },
             { name: '• 가치관', value: '`귀여우면 다 좋아`', inline: true },
             { name: '• 거주지', value: '`파라디 섬 월 로제 트로스트 구`', inline: true },
-            { name: '• 가족', value: '`아버지: 개 어머니: 개`', inline: true },
+            { name: '• 가족', value: '`아버지: 히토미 어머니: 히요비`', inline: true },
             { name: '• 절친', value: '`친구 따윈 없다`', inline: true }
         )
         message.channel.send(embed)
@@ -1205,4 +1169,4 @@ client.on('message', message => {
 
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.2mId3TMY3ogrIFFOBs_sqWOMf7A");
