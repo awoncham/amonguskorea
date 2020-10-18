@@ -70,7 +70,7 @@ client.on('guildMemberAdd', member => {
 
 //금지어
 client.on('message', async message => {
-    let blacklisted = ['ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex','씹새끼', '새끼', '시발련', '야매때', '히토미', '폰허브', 'Hitomi', 'Pornhub'];
+    let blacklisted = ['ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex','씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub'];
 
     let foundInText = false;
     for (var i in blacklisted) { 
@@ -596,7 +596,7 @@ client.on('message', message => {
                 { name: '**음식추천**', value: '`오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!`', inline: true },
                 { name: '**아바타**', value: '`해당 유저를 태그하여 프로필을 따오세요!`', inline: true },
                 { name: '**핑**', value: '`자신의 연결 속도를 확인해보세요!`', inline: true },
-                { name: '**넌센스**', value: '`크시야 뒤에 넌센스 퀴즈를 물어보세요!`', inline: true }
+                { name: '**넌센스**', value: '`샤디스 뒤에 넌센스 퀴즈를 물어보세요!`', inline: true }
             )
             message.channel.send(embed)
         }
@@ -754,7 +754,7 @@ client.on('message', message => {
         .setColor('#973AE8')
         .setImage('https://cdn.discordapp.com/attachments/752784966475055138/766162966478848000/5a4fd668044bb896.png')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766163117767655445/afdsf1.png')
-        .setDescription('한국 조사병단의 대표 여성')
+        .setDescription('거인과 소통을 시도하는 사람')
         .addFields(
             { name: '• 나이', value: '`15살`', inline: true },
             { name: '• 출생', value: '`836년 1월 2일 월 시나 출신`', inline: true },
@@ -775,7 +775,7 @@ client.on('message', message => {
         .setColor('#973AE8')
         .setImage('https://cdn.discordapp.com/attachments/752784966475055138/766162966478848000/5a4fd668044bb896.png')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766163117767655445/afdsf1.png')
-        .setDescription('한국 조사병단의 대표 여성')
+        .setDescription('거인과 소통을 시도하는 사람')
         .addFields(
             { name: '• 나이', value: '`15살`', inline: true },
             { name: '• 출생', value: '`836년 1월 2일 월 시나 출신`', inline: true },
@@ -1013,10 +1013,10 @@ client.on('message', message => {
             { name: '• 신장', value: '`186cm`', inline: true },
             { name: '• 체중', value: '`73kg`', inline: true },
             { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
-            { name: '• 가치관', value: '`태산보다 무거운 죽음도 있고 겻털만큼 가벼운 죽음도 있다`', inline: true },
+            { name: '• 가치관', value: '`태산보다 무거운 죽음도 있고 깃털만큼 가벼운 죽음도 있다`', inline: true },
             { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
             { name: '• 가족', value: '`아버지: 24 어머니: 67`', inline: true },
-            { name: '• 절친', value: '`시간시나구에서 암살당함`', inline: true }
+            { name: '• 절친', value: '`시간시나구에서 거인에게 잡아먹힘`', inline: true }
         )
         message.channel.send(embed)
     }
@@ -1142,7 +1142,7 @@ client.on('message', message => {
             { name: '• 가치관', value: '`선빵필승`', inline: true },
             { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
             { name: '• 가족', value: '`부모님, 동생`', inline: true },
-            { name: '• 절친', value: '`친구 자체가 없음`', inline: true }
+            { name: '• 절친', value: '`거인에게 사망`', inline: true }
         )
         message.channel.send(embed)
     }
