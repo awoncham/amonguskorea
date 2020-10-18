@@ -200,111 +200,57 @@ client.on('message', message => {
     }
     if (message.content === '알씨') { 
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '시발') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '씨발') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '섹스') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === 'Sex') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === 'sex') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '병신') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === 'ㅅㅂ') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === 'ㅂㅅ') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === 'ARCE') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '자지') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '보지') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '새끼') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '개새끼') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === 'ㅅㄲ') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '개새끼') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '쎅스') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '빨아') {
         message.delete();
-        const embed = new Discord.MessageEmbed()
-        .setDescription('감히 욕을 해? 경찰서 가고 싶어?')
-        message.channel.send(embed)
     }
     if (message.content === '샤디스 죽어') { 
         const embed = new Discord.MessageEmbed()
@@ -684,6 +630,8 @@ client.on('message', message => {
             .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766105918991106048/unknown.png')
             .addFields(
                 { name: '**음식추천**', value: '`오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!`', inline: true },
+                { name: '**아바타**', value: '`해당 유저를 태그하여 프로필을 따오세요!`', inline: true },
+                { name: '**핑**', value: '`자신의 연결 속도를 확인해보세요!`', inline: true },
                 { name: '**넌센스**', value: '`크시야 뒤에 넌센스 퀴즈를 물어보세요!`', inline: true }
             )
             message.channel.send(embed)
