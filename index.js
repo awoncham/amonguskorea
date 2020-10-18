@@ -4,7 +4,7 @@ const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 client.on('ready', function() {   
 
     console.log('심장을 바치는 것을 성공하였다');
-    client.user.setActivity('심장을 바쳐라', { type: 'WATCHING' });
+    client.user.setActivity('\'샤디스 도움말\' 이라고 검색해서 샤디스 이용 방법을 알아보세요!', { type: 'WATCHING' });
 
     setInterval(() => {
         let tips = ["> **`현재 공개 가능한 정보`** \n > #대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
@@ -49,8 +49,12 @@ client.on('ready', function() {
                      "> **`현재 공개 가능한 정보`** \n > 신호탄) 화약의 힘으로 신호탄을 사출할 수 있는 소형 권총 신호탄이 들어있는 작은 관을 한발씩 교환해서 사용한다",
                      "> **`현재 공개 가능한 정보`** \n > 신호탄) 전달 내용에 따라, 쏘는 연막의 색이 바뀐다 빨강: 거인 발견, 초록: 진형의 진로 결정, 검정: 기행종 발견 등",
                      "> **`현재 공개 가능한 정보`** \n > 대 특정 목표 구속병기) 특정 거인을 구속하는 것을 목적으로 해, 새로이 개발한 조사병단의 병기",
-                     "> **`현재 공개 가능한 정보`** \n > 대 특정 목표 구속병기) 적재한 통 안에는 일곱 자루 철관이 깔려, 그 관에는 화살촉을 양 끝에 단 와이어가 나선 모양으로 들어있다"
-
+                     "> **`현재 공개 가능한 정보`** \n > 대 특정 목표 구속병기) 적재한 통 안에는 일곱 자루 철관이 깔려, 그 관에는 화살촉을 양 끝에 단 와이어가 나선 모양으로 들어있다",
+                     "> **`현재 공개 가능한 정보`** \n > 양식은 로리콘이다",
+                     "> **`현재 공개 가능한 정보`** \n > 리하이는 잘생겼다",
+                     "> **`현재 공개 가능한 정보`** \n > 단장님의 전직은 모델이였다",
+                     "> **`현재 공개 가능한 정보`** \n > Q 와 E는 와이어이다"
+                     
                     ]
         let rand = tips[Math.floor(Math.random() * tips.length)]
         var channel = client.channels.cache.get('742051945472065546');
@@ -80,7 +84,9 @@ client.on('guildMemberRemove', member => {
 
 //금지어
 client.on('message', async message => {
-    let blacklisted = ['ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex','씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub'];
+    let blacklisted = [
+        'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex','씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨'
+    ];
 
     let foundInText = false;
     for (var i in blacklisted) { 
@@ -110,7 +116,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
 });
-
+   
 client.on('message', message => {
     if (message.content === '샤디스 안녕') { // 샤디스 인사(반말)
         const embed = new Discord.MessageEmbed()
@@ -147,6 +153,16 @@ client.on('message', message => {
         .setDescription('죽고 싶니?')
         message.channel.send(embed)
     }
+    if (message.content === '샤디스 대머리') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('샤디스 대머리라고 치는 순간 너의 아들은 샤디스 바로 내가 될꺼야')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 빡빡이') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('지금 대머리 무시하나')
+        message.channel.send(embed)
+    }
     if (message.content === '샤디스 헬로우!') { 
         const embed = new Discord.MessageEmbed()
         .setDescription('Hello World!')
@@ -175,6 +191,26 @@ client.on('message', message => {
     if (message.content === '샤디스 우주는 어디에 있어?') { 
         const embed = new Discord.MessageEmbed()
         .setDescription('숲에 있어! (Space -> 수페이스 -> 숲에있으)')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 왕이 넘어지면?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('킹콩')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 탈모') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('선 넘네')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 이건 뭐야?') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('니 얼굴이야')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 ') { 
+        const embed = new Discord.MessageEmbed()
+        .setDescription('')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 박아줘') { 
@@ -1177,7 +1213,37 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    // 팀스피크 다운
+    if (message.content === '샤디스 팀스피크') { 
+        const embed = new Discord.MessageEmbed()
+        .setColor('#5080F8')
+        .setURL('https://www.teamspeak3.com/')
+        .setTitle('클릭 시 팀스피크 사이트 이동')
+        .setThumbnail('https://blog.kakaocdn.net/dn/chQxE4/btqEuzi5x7x/cAsLdBkS0OZtjx4ofe23ak/img.png')
+        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
+        message.channel.send(embed)
+    }
+    // 팀스피크 다운
+    if (message.content === '샤디스 팀스피크 다운') { 
+        const embed = new Discord.MessageEmbed()
+        .setColor('#5080F8')
+        .setURL('https://www.teamspeak3.com/')
+        .setTitle('클릭 시 팀스피크 사이트 이동')
+        .setThumbnail('https://blog.kakaocdn.net/dn/chQxE4/btqEuzi5x7x/cAsLdBkS0OZtjx4ofe23ak/img.png')
+        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
+        message.channel.send(embed)
+    }
+    // 팀스피크 다운
+    if (message.content === '샤디스 팀스피크 다운로드') { 
+        const embed = new Discord.MessageEmbed()
+        .setColor('#5080F8')
+        .setURL('https://www.teamspeak3.com/')
+        .setTitle('클릭 시 팀스피크 사이트 이동')
+        .setThumbnail('https://blog.kakaocdn.net/dn/chQxE4/btqEuzi5x7x/cAsLdBkS0OZtjx4ofe23ak/img.png')
+        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
+        message.channel.send(embed)
+    }
 
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.jTc2e8tPuiFp67gc0t0rc0Jd2P4");
