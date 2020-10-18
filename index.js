@@ -65,8 +65,18 @@ client.on('guildMemberAdd', member => {
   if(!channel) return;
   const embed = new Discord.MessageEmbed()
     .setDescription(`${member} 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
+    .setColor('#00FF00')
     channel.send(embed)
 })
+
+client.on('guildMemberRemove', member => {
+    const channel = member.guild.channels.find(ch => ch.id === '702744515802300466');
+    if(!channel) return;
+    const embed = new Discord.MessageEmbed()
+      .setDescription(`${member} 님이 조사병단을 떠나셨습니다`)
+      .setColor('#FF0000')
+      channel.send(embed)
+  })
 
 //금지어
 client.on('message', async message => {
@@ -79,6 +89,7 @@ client.on('message', async message => {
 
     if (foundInText) {
         message.delete();
+        
         const embed = new Discord.MessageEmbed()
         .setDescription('미안하지만 너가 한 말엔 금지어가 들어가있어');
         message.channel.send(embed)
