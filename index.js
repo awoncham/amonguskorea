@@ -87,8 +87,7 @@ client.on('message', async message => {
     const member = message.mentions.users.first() || message.author;
 
     let blacklisted = [
-        'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex','씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨',
-        '알_씨', '또라이', 'ㄸㄹㅇ'
+        'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ'
     ];
 
     let foundInText = false;
