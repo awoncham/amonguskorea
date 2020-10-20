@@ -100,7 +100,8 @@ client.on('message', async message => {
         message.delete();
         
         const embed = new Discord.MessageEmbed()
-        .setDescription(`${member} 미안하지만 너가 한 말엔 금지어가 들어가있어`);
+        .setColor('#FF0000')
+        .setDescription(`잠깐, 방금 ${member} 가 한말엔 금지어가 포함되어 있어!`);
         message.channel.send(embed)
 }
 }
