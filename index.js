@@ -84,15 +84,14 @@ client.on('guildMemberRemove', member => {
 
 //금지어
 client.on('message', async message => {
-    const member = message.mentions.users.first() || message.author;
 
     let blacklisted = [
         'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ'
-    ];
+    ]
 
     let foundInText = false;
     for (var i in blacklisted) { 
-      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true
     }
 
     if (foundInText) {
@@ -100,7 +99,7 @@ client.on('message', async message => {
         
         const embed = new Discord.MessageEmbed()
         .setColor('#FF0000')
-        .setDescription(`잠깐, 방금 ${member} 가 한말엔 금지어가 포함되어 있어!`);
+        .setDescription(`잠깐, 방금 <@${message.author.id}> 가 한말엔 금지어가 포함되어 있어!`);
         message.channel.send(embed)
 }
 }
@@ -1243,4 +1242,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.-zm0uwhoSUvKsJR7sIsgeCWdhyY");
