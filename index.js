@@ -4,8 +4,8 @@ const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 client.on('ready', function() {   
 
     console.log('심장을 바치는 것을 성공하였다');
-    client.user.setActivity('\'샤디스 도움말\' 이라고 검색해서 샤디스 이용 방법을 알아보세요!', { type: 'WATCHING' });
-
+    client.user.setActivity('모두 심장을 바쳐라!', { url: 'https://discord.gg/SZeXuZ5' });
+    
     setInterval(() => {
         let tips = ["> **`현재 공개 가능한 정보`** \n > #대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
                      "> **`현재 공개 가능한 정보`** \n > 장거리 수색 진형을 도입한 이후로 생존율이 비약적으로 상승했습니다.", 
@@ -84,8 +84,11 @@ client.on('guildMemberRemove', member => {
 
 //금지어
 client.on('message', async message => {
+    const member = message.mentions.users.first() || message.author;
+
     let blacklisted = [
-        'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex','씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨'
+        'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex','씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨',
+        '알_씨', '또라이', 'ㄸㄹㅇ'
     ];
 
     let foundInText = false;
@@ -97,10 +100,10 @@ client.on('message', async message => {
         message.delete();
         
         const embed = new Discord.MessageEmbed()
-        .setDescription('미안하지만 너가 한 말엔 금지어가 들어가있어');
+        .setDescription(`${member} 미안하지만 너가 한 말엔 금지어가 들어가있어`);
         message.channel.send(embed)
-    }
-    }
+}
+}
 );
 
 //음식추천
@@ -1215,7 +1218,7 @@ client.on('message', message => {
         .setURL('https://www.teamspeak3.com/')
         .setTitle('클릭 시 팀스피크 사이트 이동')
         .setThumbnail('https://blog.kakaocdn.net/dn/chQxE4/btqEuzi5x7x/cAsLdBkS0OZtjx4ofe23ak/img.png')
-        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
+        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 \n **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 \n **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
         message.channel.send(embed)
     }
     // 팀스피크 다운
@@ -1225,7 +1228,7 @@ client.on('message', message => {
         .setURL('https://www.teamspeak3.com/')
         .setTitle('클릭 시 팀스피크 사이트 이동')
         .setThumbnail('https://blog.kakaocdn.net/dn/chQxE4/btqEuzi5x7x/cAsLdBkS0OZtjx4ofe23ak/img.png')
-        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
+        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 \n **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 \n **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
         message.channel.send(embed)
     }
     // 팀스피크 다운
@@ -1235,9 +1238,9 @@ client.on('message', message => {
         .setURL('https://www.teamspeak3.com/')
         .setTitle('클릭 시 팀스피크 사이트 이동')
         .setThumbnail('https://blog.kakaocdn.net/dn/chQxE4/btqEuzi5x7x/cAsLdBkS0OZtjx4ofe23ak/img.png')
-        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 \n **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 \n\n **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
+        .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 \n **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 \n **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
         message.channel.send(embed)
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.2PhHLkhF2w5QVrcS8peq1c4lWZU");
