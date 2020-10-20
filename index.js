@@ -65,20 +65,20 @@ client.on('ready', function() {
 });
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(ch => ch.id === '702744515802300466');
+  const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
   if(!channel) return;
   const embed = new Discord.MessageEmbed()
-    .setDescription(`${member} 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
     .setColor('#00FF00')
+    .setDescription(`${member} 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
     channel.send(embed)
 })
 
 client.on('guildMemberRemove', member => {
-    const channel = member.guild.channels.find(ch => ch.id === '702744515802300466');
+    const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
-      .setDescription(`${member} 님이 조사병단을 떠나셨습니다`)
       .setColor('#FF0000')
+      .setDescription(`${member} 님이 거인이 무서워 조사병단을 떠났습니다`)
       channel.send(embed)
   })
 
@@ -208,14 +208,14 @@ client.on('message', message => {
         .setDescription('니 얼굴이야')
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 ') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('')
-        message.channel.send(embed)
-    }
     if (message.content === '샤디스 박아줘') { 
         const embed = new Discord.MessageEmbed()
         .setDescription('못으로 박아줄까?')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 나물 처형식') { 
+        const embed = new Discord.MessageEmbed()
+        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/767352103134953472/2342484E5869E3A62A.png')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 세상에서 제일 잘생긴 사람은?') { 
@@ -236,11 +236,6 @@ client.on('message', message => {
     if (message.content === '샤디스 리하이는?') { 
         const embed = new Discord.MessageEmbed()
         .setDescription('세계에서 제일 귀엽고 깜찍하고 잘생긴 사람')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 진격의 거인') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('나도 너 사랑해 ❤️')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 단장님은?') { 
@@ -1243,7 +1238,6 @@ client.on('message', message => {
         .setDescription('**`1)`** 왼쪽 상단에 connections에서 serverlist를 클릭한다 \n **`2)`** 서버 중 [NPIX] Public Teamspeack server를 찾아서 더블클릭한다 \n **`3)`** 창을 close하면 서버를 들어와져 있는데 맨밑에 Survey Corps를 더블클릭한다 \n\n **`4)`** 다시 상단 위에 tools가 있는데 들어가서 Capture에 들어가 push to talk를 설정한다')
         message.channel.send(embed)
     }
-
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.u1Y-ZWv5bh6EITmVsfedGyWHPHs");
