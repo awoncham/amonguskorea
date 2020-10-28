@@ -69,7 +69,8 @@ client.on('guildMemberAdd', member => {
   if(!channel) return;
   const embed = new Discord.MessageEmbed()
     .setColor('#00FF00')
-    .setDescription(`${member} 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
+    .setDescription(`${member} 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 #필독-규칙 을 확인해라!`)
+    .setImage('https://images-ext-2.discordapp.net/external/A2x6lxfRqkSHvy2adeLzpsM91vmZ4KhrXDHdxweteQA/https/i.pinimg.com/originals/d1/72/3d/d1723dc033cfece00342e567d15b7c30.gif')
     channel.send(embed)
 })
 
@@ -79,6 +80,7 @@ client.on('guildMemberRemove', member => {
     const embed = new Discord.MessageEmbed()
       .setColor('#FF0000')
       .setDescription(`${member} 님이 거인이 무서워 조사병단을 떠났습니다`)
+      .setImage('https://media2.giphy.com/media/fnZxNdBZWbcv5mmFhY/giphy.gif')
       channel.send(embed)
   })
 
@@ -86,7 +88,8 @@ client.on('guildMemberRemove', member => {
 client.on('message', async message => {
 
     let blacklisted = [
-        'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ'
+        'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ',
+        '씹년', '년', '알쒸', '알C'
     ]
 
     let foundInText = false;
@@ -111,7 +114,7 @@ client.on('message', message => {
     
     let foods = ["족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
 
-    if (message.content.startsWith(`샤디스 음식추천`)) {
+    if (message.content === `샤디스 음식추천`) {
         let rand = Math.floor(Math.random() * foods.length);
         const embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
@@ -406,24 +409,23 @@ client.on('message', message => {
     if (message.content === '샤디스 다운로드') { //AOTTG 게임 다운로드
         const embed = new Discord.MessageEmbed()
         .addFields(
-            { name: '• EM 모드', value: 'http://asq.kr/I8ODb1WKVZbK', inline: false },
-            { name: '• RC 모드', value: 'https://tinyurl.com/yax2omx6', inline: false },
-            { name: '• RRC 모드', value: 'http://asq.kr/wCTW34208gOa', inline: false },
-            { name: '• ANARCHY 모드', value: 'https://url.kr/Ne7YZ5', inline: false },
-            { name: '• RC83 모드', value: 'https://rc83.rocks/', inline: false },
+            { name: '• EM 모드', value: '**https://discord.gg/SZeXuZ5**', inline: false },
+            { name: '• RC 모드', value: '**https://tinyurl.com/yax2omx6**', inline: false },
+            { name: '• RRC 모드', value: '**http://asq.kr/wCTW34208gOa**', inline: false },
+            { name: '• ANARCHY 모드', value: '**https://url.kr/Ne7YZ5**', inline: false },
+            { name: '• RC83 모드', value: '**https://rc83.rocks/**', inline: false },
         )
         message.channel.send(embed)
     }
     if (message.content === '샤디스 맵') { //맵 파일 다운로드
         const embed = new Discord.MessageEmbed()
-        .addField('• 카라네스', '다운로드 : https://url.kr/TV8sFR', false)
+        .addField('• 카라네스', '다운로드 : **https://discord.gg/SZeXuZ5**', false)
         .setImage('https://cdn.discordapp.com/attachments/760381117634314280/765823400551645214/-1.png')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 계급') { //조사병단 기본적인 계급
         const embed = new Discord.MessageEmbed()
-        .setTitle('조사병단 계급 배치도')
-        .setDescription('조사병단의 계급 시스템이다')
+        .setDescription('**`조사병단 계급 배치도`**\n조사병단의 계급 시스템이다')
         .addFields(
             { name: '• @단장', value: '조사병단의 총괄 책임자 및 최고 지휘관이다. 장거리 수색 진형 전체를 컨트롤하며 작전 목표 수행을 위한 모든 책임을 진다. 2~40명 또는 합동 조사에서는 6~70명까지 통솔해야 하는 만큼 뛰어난 통솔력을 가지고 전반적인 벽외조사의 이해도를 가지고 있어야 한다.', inline: false },
             { name: '• @분대장', value: '벽외조사 섹션 책임자 및 지휘권 2인자이다. 단장의 부재시 진형의 지휘권을 이어받는다. 반장이 한 반만을 통제할 수 있다면 분대장은 반장들을 통제하고 좌익이나 우익등 전체를 컨트롤한다. ', inline: false },
@@ -483,11 +485,11 @@ client.on('message', message => {
         .setDescription('**`연막탄 가이드`**')
         .setImage('https://64.media.tumblr.com/332f73e473e6b60b377937f68e117b87/tumblr_oqmcwoxf4U1tzew82o1_500.gif')
         .addFields(
-            { name: '• 초록색', value: '진형의 방향을 결정하는 연막탄이며, 단장이 발사한 방향대로 각 반장들은 전부 발사한다. ', inline: false },
-            { name: '• 적색', value: '거인이 접근할 시 오는 방향으로 발사해야할 연막탄이다. 거인을 단순히 발견했을 때는 지나치고 거인이 진형으로 접근중일때만 발사하여 지휘분대에 알린다.', inline: false },
-            { name: '• 흑색', value: '기행종을 발견할 시 발사해야할 연막탄이다. 적색과 달리 발견하자마자 발사해야하며, 크롤러나 특이행동을 보이는 거인일때 발사하여 알린다.', inline: false },
-            { name: '• 보라색', value: '진형이 어느정도 흐트려졌을 때 단장이 진형을 다시 맞추기 위해서 발사하는 연막탄. 이 연막탄이 발사된다면 전부 보라색 연막탄의 위치를 확인하고 각자의 포메이션 위치로 이동해야 한다. 교전 중이거나 먼저 앞에 있더라도 즉시 진형으로 복귀', inline: false },
-            { name: '• 노란색', value: '거인과 교전할 수 없거나 굉장히 어려운 상황에 봉착했을 때 발사하는 연막탄. 노란 연막탄을 확인한다면 인근분대가 지원해줄 것이다.', inline: false },
+            { name: '• 초록색 🟢', value: '진형의 방향을 결정하는 연막탄이며, 단장이 발사한 방향대로 각 반장들은 전부 발사한다. ', inline: false },
+            { name: '• 적색 🔴', value: '거인이 접근할 시 오는 방향으로 발사해야할 연막탄이다. 거인을 단순히 발견했을 때는 지나치고 거인이 진형으로 접근중일때만 발사하여 지휘분대에 알린다.', inline: false },
+            { name: '• 흑색 🟤', value: '기행종을 발견할 시 발사해야할 연막탄이다. 적색과 달리 발견하자마자 발사해야하며, 크롤러나 특이행동을 보이는 거인일때 발사하여 알린다.', inline: false },
+            { name: '• 보라색 🟣', value: '진형이 어느정도 흐트려졌을 때 단장이 진형을 다시 맞추기 위해서 발사하는 연막탄. 이 연막탄이 발사된다면 전부 보라색 연막탄의 위치를 확인하고 각자의 포메이션 위치로 이동해야 한다. 교전 중이거나 먼저 앞에 있더라도 즉시 진형으로 복귀', inline: false },
+            { name: '• 노란색 🟡', value: '거인과 교전할 수 없거나 굉장히 어려운 상황에 봉착했을 때 발사하는 연막탄. 노란 연막탄을 확인한다면 인근분대가 지원해줄 것이다.', inline: false },
         )
         message.channel.send(embed)
     }
