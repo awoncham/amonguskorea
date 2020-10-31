@@ -71,7 +71,7 @@ client.on('guildMemberAdd', member => {
     const embed = new Discord.MessageEmbed()
     .setColor('#00FF00')
     .setDescription(`${member} 님이 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
-	channel.send(embed);
+	mesesage.channel.send(embed);
 });
 
 // 서버 퇴장 메시지
@@ -81,7 +81,7 @@ client.on('guildMemberRemove', member => {
     const embed = new Discord.MessageEmbed()
     .setColor('#FF0000')
     .setDescription(`${member} 님께서 거인이 무서워 조사병단을 떠나셨습니다`)
-    channel.send(embed);
+    message.channel.send(embed);
 })
 
 //금지어
