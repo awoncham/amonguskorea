@@ -105,7 +105,7 @@ client.on('message', async message => {
         const user = message.author;
         const embed = new Discord.MessageEmbed()
         .setColor('#FF0000')
-        .setDescription(`잠깐, 방금 ${user.tag} 가 한말엔 금지어가 포함되어 있어!`);
+        .setDescription(`잠깐, 방금 <@${user.tag}> 가 한말엔 금지어가 포함되어 있어!`);
         message.channel.send(embed)
 }
 }
