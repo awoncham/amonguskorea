@@ -113,13 +113,27 @@ client.on('message', async message => {
 //음식추천
 client.on('message', message => {
     
-    let foods = ["어택님 혓바닥", "지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
+    let foods = ["지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
 
     if (message.content === `샤디스 음식추천`) {
         let rand = Math.floor(Math.random() * foods.length);
         const embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
         .setDescription(`${foods[rand]} 먹고 진격거 게임해라!`)
+        message.channel.send(embed)
+    }
+});
+
+//게임추천
+client.on('message', message => {
+    
+    let games = ["AOTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치"]
+
+    if (message.content === `샤디스 게임추천`) {
+        let rand = Math.floor(Math.random() * games.length);
+        const embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setDescription(`${games[rand]} 딱 한판만 하고 진격거 게임해라!`)
         message.channel.send(embed)
     }
 });
@@ -1245,4 +1259,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.jHCAx8_pPx1D7QwvyqWr_WZ8kFE");
