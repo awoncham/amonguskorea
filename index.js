@@ -70,6 +70,7 @@ client.on('guildMemberAdd', member => {
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
       .setDescription(`${member} 조사병단의 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
+      .setImage('https://cdn.discordapp.com/attachments/754267474639454259/771904980047233064/unnamed.gif')
       channel.send(embed)
   });
 
@@ -79,6 +80,7 @@ client.on('guildMemberRemove', member => {
     const embed = new Discord.MessageEmbed()
       .setColor('#FF0000')
       .setDescription(`${member} 님께서 거인이 무서워 조사병단을 떠나셨습니다`)
+      .setImage('https://media2.giphy.com/media/fnZxNdBZWbcv5mmFhY/giphy.gif')
       channel.send(embed)
   });
 
