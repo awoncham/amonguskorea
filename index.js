@@ -1242,4 +1242,4 @@ client.on('message', message => {
     }
 });
 
-client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.uYJZ_QyWHrICLMcl6n01ZMYo1Bs");
+client.login(preocess.env.token);
