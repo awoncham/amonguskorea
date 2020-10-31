@@ -64,22 +64,22 @@ client.on('ready', function() {
 
 });
 
-client.on('GUILD_MEMBER_ADD', member => {
+client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
       .setDescription(`${member} 조사병단의 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
-      message.channel.send(embed)
+      channel.send(embed)
   });
 
-client.on('GUILD_MEMBER_REMOVE', member => {
+client.on('guildMemberRemove', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#FF0000')
       .setDescription(`${member} 님께서 거인이 무서워 조사병단을 떠나셨습니다`)
-      message.channel.send(embed)
+      channel.send(embed)
   });
 
 //금지어
