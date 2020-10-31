@@ -4,7 +4,7 @@ const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 client.on('ready', function() {   
 
     console.log('심장을 바치는 것을 성공하였다');
-    client.user.setActivity('모두 심장을 바쳐라!', { url: 'https://discord.gg/SZeXuZ5' });
+    client.user.setActivity('모두 심장을 바쳐라!');
     
     setInterval(() => {
         let tips = ["> **`현재 공개 가능한 정보`** \n > #대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
@@ -64,32 +64,30 @@ client.on('ready', function() {
 
 });
 
-// 서버 환영 메시지
-client.on('guildMemberAdd', member => {
-	const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
-    if (!channel) return;
-    const embed = new Discord.MessageEmbed()
-    .setColor('#00FF00')
-    .setDescription(`${member} 님이 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
-	mesesage.channel.send(embed);
-});
-
-// 서버 퇴장 메시지
-client.on('guildMemberRemove', member => {
+client.on('GUILD_MEMBER_ADD', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
-    if (!channel) return;
+    if(!channel) return;
     const embed = new Discord.MessageEmbed()
-    .setColor('#FF0000')
-    .setDescription(`${member} 님께서 거인이 무서워 조사병단을 떠나셨습니다`)
-    message.channel.send(embed);
-})
+      .setColor('#00FF00')
+      .setDescription(`${member} 조사병단의 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
+      message.channel.send(embed)
+  });
+
+client.on('GUILD_MEMBER_REMOVE', member => {
+    const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
+    if(!channel) return;
+    const embed = new Discord.MessageEmbed()
+      .setColor('#FF0000')
+      .setDescription(`${member} 님께서 거인이 무서워 조사병단을 떠나셨습니다`)
+      message.channel.send(embed)
+  });
 
 //금지어
 client.on('message', async message => {
 
     let blacklisted = [
         'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ',
-        '씹년', '년', '알쒸', '알C', 'ㅈㄴ', '존나'
+        '씹년', '알쒸', '알C', 'ㅈㄴ', '존나'
     ]
 
     let foundInText = false;
@@ -103,7 +101,7 @@ client.on('message', async message => {
         const user = message.author;
         const embed = new Discord.MessageEmbed()
         .setColor('#FF0000')
-        .setDescription(`잠깐, 방금 <@${user.tag}> 가 한말엔 금지어가 포함되어 있어!`);
+        .setDescription(`잠깐, 방금 ${user.tag} 가 한말엔 금지어가 포함되어 있어!`);
         message.channel.send(embed)
 }
 }
@@ -1244,4 +1242,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.uYJZ_QyWHrICLMcl6n01ZMYo1Bs");
