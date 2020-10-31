@@ -64,25 +64,27 @@ client.on('ready', function() {
 
 });
 
+// 서버 환영 메시지
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
-  if(!channel) return;
-  const embed = new Discord.MessageEmbed()
-    .setColor('#00FF00')
-    .setDescription(`${member} 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 #필독-규칙 을 확인해라!`)
-    .setImage('https://images-ext-2.discordapp.net/external/A2x6lxfRqkSHvy2adeLzpsM91vmZ4KhrXDHdxweteQA/https/i.pinimg.com/originals/d1/72/3d/d1723dc033cfece00342e567d15b7c30.gif')
-    channel.send(embed)
-})
-
-client.on('guildMemberRemove', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
-    if(!channel) return;
+	const channel = member.guild.channels.cache.find(ch => ch.name === '신병소식');
+    if (!channel) return;
     const embed = new Discord.MessageEmbed()
-      .setColor('#FF0000')
-      .setDescription(`${member} 님이 거인이 무서워 조사병단을 떠났습니다`)
-      .setImage('https://media2.giphy.com/media/fnZxNdBZWbcv5mmFhY/giphy.gif')
-      channel.send(embed)
-  })
+    .setColor('#00FF00')
+    .setDescription(`${member} 님이 조사병단에 입단 한 걸 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
+    .setImage('https://cdn.discordapp.com/attachments/754267474639454259/771904980047233064/unnamed.gif')
+	channel.send(embed);
+});
+
+// 서버 퇴장 메시지
+client.on('guildMemberRemove', member => {
+    const channel = member.guild.channels.cache.find(ch => ch.name === '신병소식');
+    if (!channel) return;
+    const embed = new Discord.MessageEmbed()
+    .setColor('#FF0000')
+    .setDescription(`${member} 님께서 거인이 무서워 조사병단을 떠나셨습니다`)
+    .setImage('https://media2.giphy.com/media/fnZxNdBZWbcv5mmFhY/giphy.gif')
+    channel.send(embed);
+})
 
 //금지어
 client.on('message', async message => {
@@ -112,7 +114,7 @@ client.on('message', async message => {
 //음식추천
 client.on('message', message => {
     
-    let foods = ["족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
+    let foods = ["지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
 
     if (message.content === `샤디스 음식추천`) {
         let rand = Math.floor(Math.random() * foods.length);
@@ -622,9 +624,8 @@ client.on('message', message => {
     // 샤디스 이용 방법
     if (message.content === '샤디스 도움말') { 
         const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 명령어 모음', 'https://media.discordapp.net/attachments/758884038962053133/766105918991106048/unknown.png')
-        .setDescription('모든 샤디스 명령어의 접두사는 \'샤디스\' 입니다')
-        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766105918991106048/unknown.png')
+        .setAuthor('샤디스 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
+        .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
         .addFields(
             { name: '**대화**', value: '`샤디스 도움말 대화`', inline: true },
             { name: '**놀이**', value: '`샤디스 도움말 놀이`', inline: true },
@@ -636,9 +637,9 @@ client.on('message', message => {
         // 샤디스 놀이 방법
         if (message.content === '샤디스 도움말 놀이') { 
             const embed = new Discord.MessageEmbed()
-            .setAuthor('샤디스 놀이 명령어 모음', 'https://media.discordapp.net/attachments/758884038962053133/766105918991106048/unknown.png')
+            .setAuthor('샤디스 놀이 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
             .setDescription('심심할 땐 언제나 샤디스와 놀아요!')
-            .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766105918991106048/unknown.png')
+            .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
             .addFields(
                 { name: '**음식추천**', value: '`오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!`', inline: true },
                 { name: '**아바타**', value: '`해당 유저를 태그하여 프로필을 따오세요!`', inline: true },
