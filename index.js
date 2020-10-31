@@ -66,7 +66,7 @@ client.on('ready', function() {
 
 // 서버 환영 메시지
 client.on('guildMemberAdd', member => {
-	const channel = message.guild.channels.find(ch => ch.name === '신병소식');
+	const channel = guild.channels.find(ch => ch.name === '신병소식');
     if (!channel) return;
     const embed = new Discord.MessageEmbed()
     .setColor('#00FF00')
@@ -77,7 +77,7 @@ client.on('guildMemberAdd', member => {
 
 // 서버 퇴장 메시지
 client.on('guildMemberRemove', member => {
-    const channel = message.guild.channels.find(ch => ch.name === '신병소식');
+    const channel = guild.channels.find(ch => ch.name === '신병소식');
     if (!channel) return;
     const embed = new Discord.MessageEmbed()
     .setColor('#FF0000')
