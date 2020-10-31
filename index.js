@@ -66,7 +66,7 @@ client.on('ready', function() {
 
 // 서버 환영 메시지
 client.on('guildMemberAdd', member => {
-	const channel = member.guild.channels.cache.find(channel => channel.id === '702744515802300466');
+	const channel = member.guild.channels.cache.find(ch => ch.id === '742051945472065546');
     if (!channel) return;
     const embed = new Discord.MessageEmbed()
     .setColor('#00FF00')
@@ -76,7 +76,7 @@ client.on('guildMemberAdd', member => {
 
 // 서버 퇴장 메시지
 client.on('guildMemberRemove', member => {
-    const channel = member.guild.channels.cache.find(channel => channel.id === '702744515802300466');
+    const channel = member.guild.channels.cache.find(ch => ch.id === '742051945472065546');
     if (!channel) return;
     const embed = new Discord.MessageEmbed()
     .setColor('#FF0000')
