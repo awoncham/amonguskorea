@@ -127,7 +127,7 @@ client.on('message', message => {
 //게임추천
 client.on('message', message => {
     
-    let games = ["AOTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치"]
+    let games = ["AOTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "리하이랑 놀아주기"]
 
     if (message.content === `샤디스 게임추천`) {
         let rand = Math.floor(Math.random() * games.length);
