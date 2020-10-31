@@ -53,6 +53,7 @@ client.on('ready', function() {
                      "> **`현재 공개 가능한 정보`** \n > 양식은 로리콘이다",
                      "> **`현재 공개 가능한 정보`** \n > 리하이는 잘생겼다",
                      "> **`현재 공개 가능한 정보`** \n > 단장님의 전직은 모델이였다",
+                     "> **`현재 공개 가능한 정보`** \n > 어택님은 리하이의 따까리다",
                      "> **`현재 공개 가능한 정보`** \n > Q 와 E는 와이어이다"
                      
                     ]
@@ -89,7 +90,7 @@ client.on('message', async message => {
 
     let blacklisted = [
         'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ',
-        '씹년', '알쒸', '알C', 'ㅈㄴ', '존나'
+        '씹년', '알쒸', '알C', 'ㅈㄴ', '존나', '자지', '보지'
     ]
 
     let foundInText = false;
@@ -112,7 +113,7 @@ client.on('message', async message => {
 //음식추천
 client.on('message', message => {
     
-    let foods = ["지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
+    let foods = ["어택님 혓바닥", "지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
 
     if (message.content === `샤디스 음식추천`) {
         let rand = Math.floor(Math.random() * foods.length);
@@ -804,7 +805,7 @@ client.on('message', message => {
         .addFields(
             { name: '• 나이', value: '`15살`', inline: true },
             { name: '• 출생', value: '`836년 1월 2일 월 시나 출신`', inline: true },
-            { name: '• 신장', value: '`156cm`', inline: true },
+            { name: '• 신장', value: '`157cm`', inline: true },
             { name: '• 체중', value: '`44kg`', inline: true },
             { name: '• 소속 직책', value: '`한국 조사병단 숙련병`', inline: true },
             { name: '• 가치관', value: '`내 몸 내가 알아서 챙기자`', inline: true },
@@ -825,7 +826,7 @@ client.on('message', message => {
         .addFields(
             { name: '• 나이', value: '`15살`', inline: true },
             { name: '• 출생', value: '`836년 1월 2일 월 시나 출신`', inline: true },
-            { name: '• 신장', value: '`156cm`', inline: true },
+            { name: '• 신장', value: '`157cm`', inline: true },
             { name: '• 체중', value: '`44kg`', inline: true },
             { name: '• 소속 직책', value: '`한국 조사병단 숙련병`', inline: true },
             { name: '• 가치관', value: '`내 몸 내가 알아서 챙기자`', inline: true },
