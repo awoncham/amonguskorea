@@ -1,9 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client({
-    ws: {
-        intents: ['GUILD_MEMBERS']
-    }
-});
+const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
 client.on('ready', function() {   
 
@@ -68,7 +64,7 @@ client.on('ready', function() {
 
 });
 
-client.on('GUILD_MEMBER_ADD', member => {
+client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
@@ -77,7 +73,7 @@ client.on('GUILD_MEMBER_ADD', member => {
       channel.send(embed)
   });
 
-client.on('GUILD_MEMBER_REMOVE', member => {
+client.on('guildMemberRemove', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
