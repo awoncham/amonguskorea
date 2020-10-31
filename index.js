@@ -1242,4 +1242,4 @@ client.on('message', message => {
     }
 });
 
-client.login(preocess.env.token);
+client.login(process.env.token);
