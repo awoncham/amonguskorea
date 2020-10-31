@@ -70,7 +70,7 @@ client.on('guildMemberAdd', member => {
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
       .setDescription(`${member} 조사병단의 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 규칙을 확인해라!`)
-      .setImage('https://cdn.discordapp.com/attachments/754267474639454259/771904980047233064/unnamed.gif')
+      .setImage('https://i.pinimg.com/originals/d1/72/3d/d1723dc033cfece00342e567d15b7c30.gif')
       channel.send(embed)
   });
 
