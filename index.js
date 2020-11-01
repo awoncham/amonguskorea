@@ -79,7 +79,7 @@ client.on('guildMemberAdd', member => {
         .setTitle('심장을 바쳐라!')
         .setColor('#298A08')
         .setDescription(`**You Have to check the English manual**\n\n<@${member.id}>, 조사병단 디스코드 채널에 온 걸 환영한다.\n\n질문사항이 있다면 단장의 개인 DM보단 디스코드 내의 질문채널을 이용하도록.\n\n질문을 하기 전에는 #자주하는-질문들 채널에서 먼저 확인 후에 질문을 하도록.\n\n필독 규칙을 읽은 후에, **http://asq.kr/j1Bq93F9HMGmV** 에 들어가 입단신청서를 작성해라!\n\n입단신청서를 작성 완료한 후 입단신청 채널에 아래 내용을 기재하면 심사후에 입단허가 할 예정이다`)
-        .addField('입단신청서 작성 방법', '입단신청서 작성여부: O\n인게임 닉네임:\n디스코드 내 지인:', true)
+        .addField('입단신청서 작성 방법', '`입단신청서 작성여부: O\n인게임 닉네임:\n디스코드 내 지인:`', true)
         .setImage('https://cdn.discordapp.com/attachments/758884038962053133/772258324808597504/2.PNG')
         .setFooter('입단신청서를 보낸후 신청서 메세지를 제거하지 말아주세요');
         member.user.send(embed1)
