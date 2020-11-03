@@ -54,7 +54,8 @@ client.on('ready', function() {
                      "> **`현재 공개 가능한 정보`** \n > 리하이는 잘생겼다",
                      "> **`현재 공개 가능한 정보`** \n > 단장님의 전직은 모델이였다",
                      "> **`현재 공개 가능한 정보`** \n > 어택님은 리하이의 따까리다",
-                     "> **`현재 공개 가능한 정보`** \n > Q 와 E는 와이어이다"
+                     "> **`현재 공개 가능한 정보`** \n > Q 와 E는 와이어이다",
+                     "> **`현재 공개 가능한 정보`** \n > 와이어를 박은 뒤 부스트를 사용하면 속도를 더 빠르게 할 수 있다"
                      
                     ]
         let rand = tips[Math.floor(Math.random() * tips.length)]
@@ -71,7 +72,7 @@ client.on('guildMemberAdd', member => {
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
       .setDescription(`<@${member.id}> 조사병단의 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 <#701406223999959062>을 확인해라!`)
-      .setImage('https://i.pinimg.com/originals/d1/72/3d/d1723dc033cfece00342e567d15b7c30.gif')
+      .setImage('https://cdn.discordapp.com/attachments/758884038962053133/772983024542547978/VOekA12C.png')
       channel.send(embed)
     });
 
@@ -90,7 +91,7 @@ client.on('message', async message => {
 
     let blacklisted = [
         'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ',
-        '씹년', '알쒸', '알C', 'ㅈㄴ', '존나', '자지', '보지', 'dick', '애미', '애비', 'ㅇㅁ', 'ㅇㅂ'
+        '씹년', '알쒸', '알C', 'ㅈㄴ', '존나', '자지', '보지', 'dick', '애미', '애비', 'ㅇㅁ', 'ㅇㅂ','^^ㅣ발', 'ㅆㅂ', '비치', 'bitch'
     ]
 
     let foundInText = false;
@@ -139,26 +140,6 @@ client.on('message', message => {
 });
    
 client.on('message', message => {
-    if (message.content === '샤디스 안녕') { // 샤디스 인사(반말)
-        const embed = new Discord.MessageEmbed()
-        .setDescription('어디서 반말이냐! 빨리 대가리 박아!')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 민머리') {
-        message.delete()
-        message.react('🤔')
-        .then(message => {
-            const embed = new Discord.MessageEmbed()
-            .setDescription('입수')
-            console.log('해당 유저를 입수시켰다!')
-        message.channel.send(embed);
-        })
-    }
-    if (message.content === '샤디스 사랑해') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('나도 너 사랑해 ❤️')
-        message.channel.send(embed)
-    }
     // 연결한 정도를 알려줍니다
     if(message.content.startsWith('샤디스 핑')) {
         const embed = new Discord.MessageEmbed()
@@ -166,6 +147,7 @@ client.on('message', message => {
         .setDescription(`현재 너의 핑은 ${Date.now() - message.createdTimestamp} ms 다 `)
         message.channel.send(embed)
     }
+    // 해당 유저의 프로필을 보여줍니다
     if (message.content.startsWith('샤디스 아바타')) {
         const user = message.mentions.users.first() || message.author;
         const avatarEmbed = new Discord.MessageEmbed()
@@ -174,219 +156,9 @@ client.on('message', message => {
             .setImage(user.displayAvatarURL());
         message.channel.send(avatarEmbed);
     }
-    if (message.content === '샤디스 뭐해') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('지금 너랑 대화하는거 안보여?')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 머리카락') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('죽고 싶니?')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 대머리') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('샤디스 대머리라고 치는 순간 너의 아들은 샤디스 바로 내가 될꺼야')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 빡빡이') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('지금 대머리 무시하나')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 헬로우!') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('Hello World!')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 지식') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('내 아이큐는 150을 넘지')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 친구') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('내 친구는 많다!')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 나는?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('너 지금 반말했니?')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 인도는몇시?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('인도네시아')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 우주는 어디에 있어?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('숲에 있어! (Space -> 수페이스 -> 숲에있으)')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 왕이 넘어지면?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('킹콩')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 탈모') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('선 넘네')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 이건 뭐야?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('니 얼굴이야')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 박아줘') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('못으로 박아줄까?')
-        message.channel.send(embed)
-    }
     if (message.content === '샤디스 나물 처형식') { 
         const embed = new Discord.MessageEmbed()
         .setImage('https://cdn.discordapp.com/attachments/742051945472065546/767352103134953472/2342484E5869E3A62A.png')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 세상에서 제일 잘생긴 사람은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('옆에서 봐도 앞에서 봐도 모두가 인정하는 리하이')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 나물님은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('리하이보다 키가 작다')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 어택님은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('개쌉고인물')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 리하이는?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('세계에서 제일 귀엽고 깜찍하고 잘생긴 사람')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 단장님은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('모델 출신 조사병단 외모 1등 ph6400')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 안녕하세요') { // 샤디스 인사(존댓말)
-        const embed = new Discord.MessageEmbed()
-        .setDescription('너가 인사를 제대로 하는 날도 오는구나')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 놀아줘') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('난 너같은 사람하고는 놀지 않아!')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 게임하자') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('나랑 게임하지 말고 너 혼자 AOTTG 해!')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 죽어') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('너는 벽외조사에서 총 10번을 모든 거인에게 밟혀 고통을 느끼고 죽게 될꺼야')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 충고좀') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('뭔충고')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 할 게임') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('AOTTG 갓겜')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 AOTTG 망겜') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('?')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 넣어줘') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('입 벌려라 칼 들어간다')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 넣을께') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('너의 콧구멍 두개에 내 칼자루 두개를 쑤셔 넣어줄께')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 양식님은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('그저 로리콘')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 1+1은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('귀요미')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 1 더하기 1은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('귀요미')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 애플님은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('깨물어주고 싶다')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 사과님은?') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('바삭바삭')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 바보') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('날 좋아해서 바보?')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 좋아해') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('미안하지만 난 너의 고백을 받아줄 수 없어..')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 나랑 사귀자') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('이 고철 덩어리랑 뭐하러 사귀어! 난 고백을 받아줄 수 없어')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 간지') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('겐지')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 어몽어스') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('크루원')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 요종도') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('요종도~~')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 욕') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('난 그런거 몰라..')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 ㅇㅈㅇㅇ') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('너가 그냥 깝쳐버리길래 죽여버렸어 이게 나야')
-        message.channel.send(embed)
-    }
-    if (message.content === '샤디스 요롱롱') { 
-        const embed = new Discord.MessageEmbed()
-        .setDescription('요롱롱 이게 나야')
         message.channel.send(embed)
     }
     if(message.content == '샤디스 명령어') {
@@ -422,13 +194,14 @@ client.on('message', message => {
     }
     if (message.content === '샤디스 조사병단 유니폼') { // 조사병단 유니폼
         const embed = new Discord.MessageEmbed()
-        .setDescription('**`조사병단 공식 유니폼`**')
+        .setDescription('**`조사병단 공식 유니폼`** \n\n※주의사항 : 벽외조사 때에 착용을 안하면 처벌이 있습니다')
         .addFields(
             { name: '• 망토', value: 'https://i.imgur.com/HQjo5mK.png', inline: false },
             { name: '• 가스', value: 'https://i.imgur.com/luEXJBS.png', inline: false },
             { name: '• 남성 제복', value: 'https://i.imgur.com/555gO79.png', inline: false },
             { name: '• 여성 제복', value: 'https://i.imgur.com/SIEizIT.png', inline: false }
         )
+        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/772984418020098088/unknown.png')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 다운로드') { //AOTTG 게임 다운로드
@@ -442,7 +215,30 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    if (message.content === '샤디스 다운') { //AOTTG 게임 다운로드
+        const embed = new Discord.MessageEmbed()
+        .addFields(
+            { name: '• EM 모드', value: '**https://discord.gg/SZeXuZ5**', inline: false },
+            { name: '• RC 모드', value: '**https://tinyurl.com/yax2omx6**', inline: false },
+            { name: '• RRC 모드', value: '**http://asq.kr/wCTW34208gOa**', inline: false },
+            { name: '• ANARCHY 모드', value: '**https://url.kr/Ne7YZ5**', inline: false },
+            { name: '• RC83 모드', value: '**https://rc83.rocks/**', inline: false },
+        )
+        message.channel.send(embed)
+    }
     if (message.content === '샤디스 맵') { //맵 파일 다운로드
+        const embed = new Discord.MessageEmbed()
+        .addField('• 카라네스', '다운로드 : **https://discord.gg/SZeXuZ5**', false)
+        .setImage('https://cdn.discordapp.com/attachments/760381117634314280/765823400551645214/-1.png')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 맵 다운로드') { //맵 파일 다운로드
+        const embed = new Discord.MessageEmbed()
+        .addField('• 카라네스', '다운로드 : **https://discord.gg/SZeXuZ5**', false)
+        .setImage('https://cdn.discordapp.com/attachments/760381117634314280/765823400551645214/-1.png')
+        message.channel.send(embed)
+    }
+    if (message.content === '샤디스 맵 다운') { //맵 파일 다운로드
         const embed = new Discord.MessageEmbed()
         .addField('• 카라네스', '다운로드 : **https://discord.gg/SZeXuZ5**', false)
         .setImage('https://cdn.discordapp.com/attachments/760381117634314280/765823400551645214/-1.png')
@@ -466,7 +262,6 @@ client.on('message', message => {
     }
     if (message.content === '샤디스 조사병단') { //조사병단 단장님들 태그
         const embed = new Discord.MessageEmbed()
-        .setTitle('조사병단 편성도')
         .setDescription('각 반에 반장님이십니다')
         .addFields(
             { name: '• 지휘 분대', value: '`ph6400#4243`', inline: false },
@@ -478,6 +273,7 @@ client.on('message', message => {
             { name: '• 6반', value: '`Red_Orange_Green_Purple_apple_G#2412`', inline: false },
             { name: '• 7반', value: '`이한별#6657`', inline: false }
         )
+        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/772986247865434122/IvFxLe.gif')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 분단') { //분대 및 반 설명
@@ -508,12 +304,12 @@ client.on('message', message => {
     }
     if (message.content === '샤디스 연막탄') { //연막탄 설명
         const embed = new Discord.MessageEmbed()
-        .setDescription('**`연막탄 가이드`**')
+        .setDescription('**`연막탄 가이드`**\n\n상황에 따라 연막탄을 어쩔 때 사용해야 하는지 자세히 나옵니다')
         .setImage('https://64.media.tumblr.com/332f73e473e6b60b377937f68e117b87/tumblr_oqmcwoxf4U1tzew82o1_500.gif')
         .addFields(
             { name: '• 초록색 🟢', value: '진형의 방향을 결정하는 연막탄이며, 단장이 발사한 방향대로 각 반장들은 전부 발사한다. ', inline: false },
             { name: '• 적색 🔴', value: '거인이 접근할 시 오는 방향으로 발사해야할 연막탄이다. 거인을 단순히 발견했을 때는 지나치고 거인이 진형으로 접근중일때만 발사하여 지휘분대에 알린다.', inline: false },
-            { name: '• 흑색 🟤', value: '기행종을 발견할 시 발사해야할 연막탄이다. 적색과 달리 발견하자마자 발사해야하며, 크롤러나 특이행동을 보이는 거인일때 발사하여 알린다.', inline: false },
+            { name: '• 흑색 ⚫', value: '기행종을 발견할 시 발사해야할 연막탄이다. 적색과 달리 발견하자마자 발사해야하며, 크롤러나 특이행동을 보이는 거인일때 발사하여 알린다.', inline: false },
             { name: '• 보라색 🟣', value: '진형이 어느정도 흐트려졌을 때 단장이 진형을 다시 맞추기 위해서 발사하는 연막탄. 이 연막탄이 발사된다면 전부 보라색 연막탄의 위치를 확인하고 각자의 포메이션 위치로 이동해야 한다. 교전 중이거나 먼저 앞에 있더라도 즉시 진형으로 복귀', inline: false },
             { name: '• 노란색 🟡', value: '거인과 교전할 수 없거나 굉장히 어려운 상황에 봉착했을 때 발사하는 연막탄. 노란 연막탄을 확인한다면 인근분대가 지원해줄 것이다.', inline: false },
         )
@@ -521,7 +317,7 @@ client.on('message', message => {
     }
     if (message.content === '샤디스 리바이') { // 리바이 아커만 설명
         const embed = new Discord.MessageEmbed()
-        .setTitle('리바이 아커만 ')
+        .setTitle('리바이 아커만')
         .setURL('https://namu.wiki/w/%EB%A6%AC%EB%B0%94%EC%9D%B4(%EC%A7%84%EA%B2%A9%EC%9D%98%20%EA%B1%B0%EC%9D%B8)')
         .setThumbnail('https://lh3.googleusercontent.com/EijOaLeJS_g_uixx8oU_mBtvNlEklrteinrWeaU6jnkttj4dOEyjhJlH2RA6C3ou7W23M09X-rkKcNZGxkJVAw=s640-c')
         .setImage('https://thumbs.gfycat.com/ElasticEmptyDairycow-size_restricted.gif')
@@ -542,7 +338,7 @@ client.on('message', message => {
     }
     if (message.content === '샤디스 리바이 아커만') { // 리바이 아커만 설명
         const embed = new Discord.MessageEmbed()
-        .setTitle('리바이 아커만 ')
+        .setTitle('리바이 아커만')
         .setURL('https://namu.wiki/w/%EB%A6%AC%EB%B0%94%EC%9D%B4(%EC%A7%84%EA%B2%A9%EC%9D%98%20%EA%B1%B0%EC%9D%B8)')
         .setThumbnail('https://lh3.googleusercontent.com/EijOaLeJS_g_uixx8oU_mBtvNlEklrteinrWeaU6jnkttj4dOEyjhJlH2RA6C3ou7W23M09X-rkKcNZGxkJVAw=s640-c')
         .setImage('https://thumbs.gfycat.com/ElasticEmptyDairycow-size_restricted.gif')
@@ -649,68 +445,60 @@ client.on('message', message => {
     if (message.content === '샤디스 도움말') { 
         const embed = new Discord.MessageEmbed()
         .setAuthor('샤디스 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
+        .setColor('#3B240B')
         .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
         .addFields(
-            { name: '**대화**', value: '`샤디스 도움말 대화`', inline: true },
             { name: '**놀이**', value: '`샤디스 도움말 놀이`', inline: true },
             { name: '**진격의 거인**', value: '`샤디스 도움말 진격의 거인`', inline: true },
             { name: '**조사병단**', value: '`샤디스 도움말 조사병단`', inline: true }
         )
         message.channel.send(embed)
     }
-        // 샤디스 놀이 방법
-        if (message.content === '샤디스 도움말 놀이') { 
-            const embed = new Discord.MessageEmbed()
-            .setAuthor('샤디스 놀이 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
-            .setDescription('심심할 땐 언제나 샤디스와 놀아요!')
-            .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
-            .addFields(
-                { name: '**음식추천**', value: '`오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!`', inline: true },
-                { name: '**아바타**', value: '`해당 유저를 태그하여 프로필을 따오세요!`', inline: true },
-                { name: '**핑**', value: '`자신의 연결 속도를 확인해보세요!`', inline: true },
-                { name: '**넌센스**', value: '`샤디스 뒤에 넌센스 퀴즈를 물어보세요!`', inline: true }
-            )
-            message.channel.send(embed)
-        }
-    // 모든 진격의 거인 명령어 모음
-    if (message.content === '샤디스 도움말 진격의 거인') { 
+    // 샤디스 놀이 방법
+    if (message.content === '샤디스 도움말 놀이') { 
         const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 진격의 거인 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
-        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
+        .setAuthor('샤디스 놀이 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
+        .setColor('#3B240B')
+        .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
         .addFields(
-            { name: '**`샤디스 리바이`**', value: '진격의 거인 리바이의 대해 자세히 나옵니다', inline: true },
-            { name: '**`샤디스 에렌`**', value: '진격의 거인 에렌의 대해 자세히 나옵니다', inline: true },
-            { name: '**`샤디스 미카사`**', value: '진격의 거인 미카사의 대해 자세히 나옵니다', inline: true },
-            { name: '**`샤디스 엘빈`**', value: '진격의 거인 엘빈의 대해 자세히 나옵니다', inline: true },
-            { name: '**`샤디스 (명대사)`**', value: '진격의 거인에서 나온 명장면을 붙혀 넣으시면 해당 장면에 GIF가 나옵니다!', inline: true },
-            { name: '**`샤디스 (진격거 캐릭터 닉네임)`**', value: '진격의 거인 캐릭터 닉네임을 적어보시면 거의 다 나와있어요!', inline: true }
+            { name: '**음식추천**', value: '`오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!`', inline: true },
+            { name: '**게임추천**', value: '`샤디스가 추천하는 게임을 한번 해보시는것도 나쁘지 않아요`', inline: true },
+            { name: '**아바타**', value: '`해당 유저를 태그하여 프로필을 따오세요!`', inline: true },
+            { name: '**핑**', value: '`자신의 연결 속도를 확인해보세요!`', inline: true }
         )
         message.channel.send(embed)
     }
-        // 모든 대화 명령어 모음
-        if (message.content === '샤디스 도움말 대화') { 
-            const embed = new Discord.MessageEmbed()
-            .setAuthor('샤디스 대화 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
-            .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
-            .addFields(
-                { name: '**`샤디스 (할말)`**', value: '여러분들이 샤디스와 대화를 하고 싶으면 대화해보세요!', inline: true }
-            )
-            message.channel.send(embed)
-        }
+    // 모든 진격의 거인 명령어 모음
+    if (message.content === '샤디스 도움말 진격의 거인') { 
+        const embed = new Discord.MessageEmbed()
+        .setAuthor('샤디스 진격의 거인 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/772993602053079110/2ed956ea7e3e518470b3f87b69b7b8fa.png')
+        .setColor('#FF0000')
+        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/772993602053079110/2ed956ea7e3e518470b3f87b69b7b8fa.png')
+        .addFields(
+            { name: '샤디스 리바이', value: '`진격의 거인 리바이의 대해 자세히 나옵니다`', inline: true },
+            { name: '샤디스 에렌', value: '`진격의 거인 에렌의 대해 자세히 나옵니다`', inline: true },
+            { name: '샤디스 미카사', value: '`진격의 거인 미카사의 대해 자세히 나옵니다`', inline: true },
+            { name: '샤디스 엘빈', value: '`진격의 거인 엘빈의 대해 자세히 나옵니다`', inline: true },
+            { name: '샤디스 (명대사)', value: '`진격의 거인에서 나온 명장면을 붙혀 넣으시면 해당 장면에 GIF가 나옵니다!`', inline: true },
+            { name: '샤디스 (진격거 캐릭터 닉네임)', value: '`진격의 거인 캐릭터 닉네임을 적어보시면 거의 다 나와있어요!`', inline: true }
+        )
+        message.channel.send(embed)
+    }
     // 모든 조사병단 명령어 모음
     if (message.content === '샤디스 도움말 조사병단') { 
         const embed = new Discord.MessageEmbed()
         .setAuthor('샤디스 조사병단 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
+        .setColor('#11A52F')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
         .addFields(
-            { name: '**`샤디스 다운로드`**', value: '진격의 거인 게임 모음집입니다 (벽외조사에 참여하실려면 EM모드 다운하세요)', inline: true },
-            { name: '**`샤디스 맵`**', value: '벽외조사를 하기 위해 꼭 다운로드 해야하는 카라네스 맵입니다', inline: true },
-            { name: '**`샤디스 계급`**', value: '한국 조사병단 보좌관 역할 모음', inline: true },
-            { name: '**`샤디스 조사병단`**', value: '조사병단 각 반의 반장들입니다', inline: true },
-            { name: '**`샤디스 분단(진형)`**', value: '각 반의 맞게 자신의 진형으로 보고 가세요', inline: true },
-            { name: '**`샤디스 연막탄`**', value: '어떻게 연막을 써야 하는 지 나와있습니다', inline: true },
-            { name: '**`샤디스 조사병단 유니폼`**', value: '조사병단 공식 유니폼들이 있어요!', inline: true },
-            { name: '**`샤디스 (인물)`**', value: '인물칸에다가 조사병단 디스코드에 있는 보좌관들의 닉네임을 적어보세요!', inline: true }
+            { name: '샤디스 다운로드', value: '`진격의 거인 게임 모음집입니다 (벽외조사에 참여하실려면 EM모드 다운하세요)`', inline: true },
+            { name: '샤디스 맵', value: '`벽외조사를 하기 위해 꼭 다운로드 해야하는 카라네스 맵입니다`', inline: true },
+            { name: '샤디스 계급', value: '`한국 조사병단 보좌관 역할 모음`', inline: true },
+            { name: '샤디스 조사병단', value: '`조사병단 각 반의 반장들입니다`', inline: true },
+            { name: '샤디스 분단(진형)', value: '`각 반의 맞게 자신의 진형으로 보고 가세요`', inline: true },
+            { name: '샤디스 연막탄', value: '`어떻게 연막을 써야 하는 지 나와있습니다`', inline: true },
+            { name: '샤디스 조사병단 유니폼', value: '`조사병단 공식 유니폼들이 있어요!`', inline: true },
+            { name: '샤디스 (인물)', value: '`인물칸에다가 조사병단 디스코드에 있는 보좌관들의 닉네임을 적어보세요!`', inline: true }
         )
         message.channel.send(embed)
     }
@@ -1238,6 +1026,48 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    // 코니 설명
+    if (message.content === '샤디스 코니') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('코니 스프링거')
+        .setColor('#6E6E6E')
+        .setImage('https://i.pinimg.com/originals/2f/80/aa/2f80aa5d5c99e5582d89a8a608317c58.gif')
+        .setThumbnail('https://tenor.com/view/aot-connie-attack-on-titan-bored-sleepy-gif-15666161')
+        .setDescription('그러니까...곤경에 처한 사람을 구하러 가자')
+        .addFields(
+            { name: '• 나이', value: '`19살`', inline: true },
+            { name: '• 출생', value: '`월 로제 외지 남부 라가코 마을`', inline: true },
+            { name: '• 신장', value: '`180cm`', inline: true },
+            { name: '• 체중', value: '`58kg`', inline: true },
+            { name: '• 소속 직책', value: '`파라디 섬 조사병단 특별작전반 병사`', inline: true },
+            { name: '• 가치관', value: '`훌륭하고 의젓한 병사가 되는 것`', inline: true },
+            { name: '• 거주지', value: '`방벽 월 로제 남구 라가코 마을`', inline: true },
+            { name: '• 가족', value: '`아버지, 어머니, 여동생, 남동생`', inline: true },
+            { name: '• 절친', value: '`사샤 브라우스, 유미르, 장 키르슈타인 등`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+        // 코니 설명
+        if (message.content === '샤디스 코니 스프링거') { 
+            const embed = new Discord.MessageEmbed()
+            .setTitle('코니 스프링거')
+            .setColor('#6E6E6E')
+            .setImage('https://i.pinimg.com/originals/2f/80/aa/2f80aa5d5c99e5582d89a8a608317c58.gif')
+            .setThumbnail('https://tenor.com/view/aot-connie-attack-on-titan-bored-sleepy-gif-15666161')
+            .setDescription('그러니까...곤경에 처한 사람을 구하러 가자')
+            .addFields(
+                { name: '• 나이', value: '`19살`', inline: true },
+                { name: '• 출생', value: '`월 로제 외지 남부 라가코 마을`', inline: true },
+                { name: '• 신장', value: '`180cm`', inline: true },
+                { name: '• 체중', value: '`58kg`', inline: true },
+                { name: '• 소속 직책', value: '`파라디 섬 조사병단 특별작전반 병사`', inline: true },
+                { name: '• 가치관', value: '`훌륭하고 의젓한 병사가 되는 것`', inline: true },
+                { name: '• 거주지', value: '`방벽 월 로제 남구 라가코 마을`', inline: true },
+                { name: '• 가족', value: '`아버지, 어머니, 여동생, 남동생`', inline: true },
+                { name: '• 절친', value: '`사샤 브라우스, 유미르, 장 키르슈타인 등`', inline: true }
+            )
+            message.channel.send(embed)
+        }
     // 팀스피크 다운
     if (message.content === '샤디스 팀스피크') { 
         const embed = new Discord.MessageEmbed()
