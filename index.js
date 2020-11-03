@@ -487,9 +487,9 @@ client.on('message', message => {
     // 모든 조사병단 명령어 모음
     if (message.content === '샤디스 도움말 조사병단') { 
         const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 조사병단 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
+        .setAuthor('샤디스 조사병단 명령어 모음', 'https://24.media.tumblr.com/65a381f1c63697d7591d08d894e47c80/tumblr_ms01tgLPw51r8hunoo1_400.gif')
         .setColor('#11A52F')
-        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766172466271092776/fd1.png')
+        .setThumbnail('https://24.media.tumblr.com/65a381f1c63697d7591d08d894e47c80/tumblr_ms01tgLPw51r8hunoo1_400.gif')
         .addFields(
             { name: '샤디스 다운로드', value: '`진격의 거인 게임 모음집입니다 (벽외조사에 참여하실려면 EM모드 다운하세요)`', inline: true },
             { name: '샤디스 맵', value: '`벽외조사를 하기 위해 꼭 다운로드 해야하는 카라네스 맵입니다`', inline: true },
@@ -1032,7 +1032,7 @@ client.on('message', message => {
         .setTitle('코니 스프링거')
         .setColor('#6E6E6E')
         .setImage('https://i.pinimg.com/originals/2f/80/aa/2f80aa5d5c99e5582d89a8a608317c58.gif')
-        .setThumbnail('https://tenor.com/view/aot-connie-attack-on-titan-bored-sleepy-gif-15666161')
+        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/773003027429720074/tenor.gif')
         .setDescription('그러니까...곤경에 처한 사람을 구하러 가자')
         .addFields(
             { name: '• 나이', value: '`19살`', inline: true },
@@ -1053,7 +1053,7 @@ client.on('message', message => {
             .setTitle('코니 스프링거')
             .setColor('#6E6E6E')
             .setImage('https://i.pinimg.com/originals/2f/80/aa/2f80aa5d5c99e5582d89a8a608317c58.gif')
-            .setThumbnail('https://tenor.com/view/aot-connie-attack-on-titan-bored-sleepy-gif-15666161')
+            .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/773003027429720074/tenor.gif')
             .setDescription('그러니까...곤경에 처한 사람을 구하러 가자')
             .addFields(
                 { name: '• 나이', value: '`19살`', inline: true },
