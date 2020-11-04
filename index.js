@@ -138,7 +138,60 @@ client.on('message', message => {
         message.channel.send(embed)
     }
 });
-   
+
+// 샤디스 대화 명령어
+client.on('message', message => {
+    if(message.content === '샤디스 뭐해') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('새로운 훈련병들을 관리하고 있다.')
+        .setImage('https://d.wattpad.com/story_parts/403848389/images/14b8de5f8ed7895e996227645651.gif')
+        message.channel.send(embed)
+    }
+    if(message.content === '샤디스 안녕') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('어디서 반말이냐!')
+        .setImage('https://i.pinimg.com/originals/36/18/7f/36187f12b8c5559a1efb26d2d3b9e26a.gif')
+        message.channel.send(embed)
+    }
+    if(message.content === '샤디스 빡빡이') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('ㅁㅓ. 머. 뭐라고..?')
+        .setImage('https://cdn.myanimelist.net/s/common/uploaded_files/1447622185-b5d34997eea62a4d994fa850e12a9f63.jpeg')
+        message.channel.send(embed)
+    }
+    if(message.content === '샤디스 대머리') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('다시 한번 말해보거라!')
+        .setImage('https://i.ytimg.com/vi/eycwmBjHCGI/maxresdefault.jpg')
+        message.channel.send(embed)
+    }
+    if(message.content === '샤디스 죽어') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('너는 벽외조사 때에 연속으로 기행종에게 밟혀 죽게 될것이다!')
+        .setImage('https://cdn.myanimelist.net/s/common/uploaded_files/1446788269-dacaaa9a2cdeb3fa7ae3121587934976.gif')
+        message.channel.send(embed)
+    }
+    if(message.content === '샤디스 실력') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('너의 실력은 형편없구나..')
+        .setImage('https://i.ytimg.com/vi/xSl6KIwFJfg/maxresdefault.jpg')
+        message.channel.send(embed)
+    }
+    if(message.content === '샤디스 학교') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('그것은 그저 \'감옥\' 이다..')
+        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/773336497683562536/tumblr_nvq23kylG91ts2cfmo4_540.gif')
+        message.channel.send(embed)
+    }
+    if(message.content === '샤디스 죽음') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('죽음이라는 것은 누구나 무서워 하는 것이다..')
+        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/773337341741236264/tenor_2.gif')
+        message.channel.send(embed)
+    }
+})
+
+// 조사병단 관련 명령어
 client.on('message', message => {
     // 연결한 정도를 알려줍니다
     if(message.content.startsWith('샤디스 핑')) {
@@ -361,7 +414,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
-        .setThumbnail('https://pbs.twimg.com/profile_images/344513261568320220/c391d25327a78e4af17d973a04356520_400x400.png')
+        .setThumbnail('https://i.gifer.com/2BbC.gif')
         .setImage('https://images-ext-1.discordapp.net/external/AgzlCyvy2IO5W07O0C9NcQsOqzZ5Pfm7q0ATW4D-17g/https/i.imgur.com/XbkOPQ8.gif')
         .setDescription('エレン・イェーガー / Eren Yaeger \n 거인화의 능력을 소유하고 있으며 죽고 싶어 안달하는 녀석이다')
         .addFields(
@@ -382,7 +435,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
-        .setThumbnail('https://pbs.twimg.com/profile_images/344513261568320220/c391d25327a78e4af17d973a04356520_400x400.png')
+        .setThumbnail('https://i.gifer.com/2BbC.gif')
         .setImage('https://images-ext-1.discordapp.net/external/AgzlCyvy2IO5W07O0C9NcQsOqzZ5Pfm7q0ATW4D-17g/https/i.imgur.com/XbkOPQ8.gif')
         .setDescription('エレン・イェーガー / Eren Yaeger \n 거인화의 능력을 소유하고 있으며 죽고 싶어 안달하는 녀석이다')
         .addFields(
@@ -403,7 +456,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
-        .setThumbnail('https://pbs.twimg.com/profile_images/344513261568320220/c391d25327a78e4af17d973a04356520_400x400.png')
+        .setThumbnail('https://i.gifer.com/2BbC.gif')
         .setImage('https://images-ext-1.discordapp.net/external/AgzlCyvy2IO5W07O0C9NcQsOqzZ5Pfm7q0ATW4D-17g/https/i.imgur.com/XbkOPQ8.gif')
         .setDescription('エレン・イェーガー / Eren Yaeger \n 거인화의 능력을 소유하고 있으며 죽고 싶어 안달하는 녀석이다')
         .addFields(
@@ -424,7 +477,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
-        .setThumbnail('https://pbs.twimg.com/profile_images/344513261568320220/c391d25327a78e4af17d973a04356520_400x400.png')
+        .setThumbnail('https://i.gifer.com/2BbC.gif')
         .setImage('https://images-ext-1.discordapp.net/external/AgzlCyvy2IO5W07O0C9NcQsOqzZ5Pfm7q0ATW4D-17g/https/i.imgur.com/XbkOPQ8.gif')
         .setDescription('エレン・イェーガー / Eren Yaeger \n 거인화의 능력을 소유하고 있으며 죽고 싶어 안달하는 녀석이다')
         .addFields(
@@ -448,9 +501,9 @@ client.on('message', message => {
         .setColor('#3B240B')
         .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
         .addFields(
-            { name: '**놀이**', value: '`샤디스 도움말 놀이`', inline: true },
-            { name: '**진격의 거인**', value: '`샤디스 도움말 진격의 거인`', inline: true },
-            { name: '**조사병단**', value: '`샤디스 도움말 조사병단`', inline: true }
+            { name: '놀이', value: '`샤디스 도움말 놀이`', inline: true },
+            { name: '진격의 거인', value: '`샤디스 도움말 진격의 거인`', inline: true },
+            { name: '조사병단', value: '`샤디스 도움말 조사병단`', inline: true }
         )
         message.channel.send(embed)
     }
@@ -461,10 +514,10 @@ client.on('message', message => {
         .setColor('#3B240B')
         .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
         .addFields(
-            { name: '**음식추천**', value: '`오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!`', inline: true },
-            { name: '**게임추천**', value: '`샤디스가 추천하는 게임을 한번 해보시는것도 나쁘지 않아요`', inline: true },
-            { name: '**아바타**', value: '`해당 유저를 태그하여 프로필을 따오세요!`', inline: true },
-            { name: '**핑**', value: '`자신의 연결 속도를 확인해보세요!`', inline: true }
+            { name: '`샤디스 음식추천`', value: '오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!', inline: true },
+            { name: '`샤디스 게임추천`', value: '샤디스가 추천하는 게임을 한번 해보시는것도 나쁘지 않아요', inline: true },
+            { name: '`샤디스 아바타`', value: '해당 유저를 태그하여 프로필을 획득하세요', inline: true },
+            { name: '`샤디스 핑`', value: '자신의 연결 속도를 확인해보세요', inline: true }
         )
         message.channel.send(embed)
     }
@@ -475,30 +528,30 @@ client.on('message', message => {
         .setColor('#FF0000')
         .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/772993602053079110/2ed956ea7e3e518470b3f87b69b7b8fa.png')
         .addFields(
-            { name: '샤디스 리바이', value: '`진격의 거인 리바이의 대해 자세히 나옵니다`', inline: true },
-            { name: '샤디스 에렌', value: '`진격의 거인 에렌의 대해 자세히 나옵니다`', inline: true },
-            { name: '샤디스 미카사', value: '`진격의 거인 미카사의 대해 자세히 나옵니다`', inline: true },
-            { name: '샤디스 엘빈', value: '`진격의 거인 엘빈의 대해 자세히 나옵니다`', inline: true },
-            { name: '샤디스 (명대사)', value: '`진격의 거인에서 나온 명장면을 붙혀 넣으시면 해당 장면에 GIF가 나옵니다!`', inline: true },
-            { name: '샤디스 (진격거 캐릭터 닉네임)', value: '`진격의 거인 캐릭터 닉네임을 적어보시면 거의 다 나와있어요!`', inline: true }
+            { name: '`샤디스 리바이`', value: '진격의 거인 리바이의 대해 자세히 나옵니다', inline: true },
+            { name: '`샤디스 에렌`', value: '진격의 거인 에렌의 대해 자세히 나옵니다', inline: true },
+            { name: '`샤디스 미카사`', value: '진격의 거인 미카사의 대해 자세히 나옵니다', inline: true },
+            { name: '`샤디스 엘빈`', value: '진격의 거인 엘빈의 대해 자세히 나옵니다', inline: true },
+            { name: '`샤디스 (명대사)`', value: '진격의 거인에서 나온 명장면을 붙혀 넣으시면 해당 장면에 GIF가 나옵니다', inline: true },
+            { name: '`샤디스 (진격거 캐릭터 닉네임)`', value: '진격의 거인 캐릭터 닉네임을 적어보시면 거의 다 나와있어요', inline: true }
         )
         message.channel.send(embed)
     }
     // 모든 조사병단 명령어 모음
     if (message.content === '샤디스 도움말 조사병단') { 
         const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 조사병단 명령어 모음', 'https://24.media.tumblr.com/65a381f1c63697d7591d08d894e47c80/tumblr_ms01tgLPw51r8hunoo1_400.gif')
+        .setAuthor('샤디스 조사병단 명령어 모음', 'https://data.whicdn.com/images/178206720/original.gif')
         .setColor('#11A52F')
-        .setThumbnail('https://24.media.tumblr.com/65a381f1c63697d7591d08d894e47c80/tumblr_ms01tgLPw51r8hunoo1_400.gif')
+        .setThumbnail('https://data.whicdn.com/images/178206720/original.gif')
         .addFields(
-            { name: '샤디스 다운로드', value: '`진격의 거인 게임 모음집입니다 (벽외조사에 참여하실려면 EM모드 다운하세요)`', inline: true },
-            { name: '샤디스 맵', value: '`벽외조사를 하기 위해 꼭 다운로드 해야하는 카라네스 맵입니다`', inline: true },
-            { name: '샤디스 계급', value: '`한국 조사병단 보좌관 역할 모음`', inline: true },
-            { name: '샤디스 조사병단', value: '`조사병단 각 반의 반장들입니다`', inline: true },
-            { name: '샤디스 분단(진형)', value: '`각 반의 맞게 자신의 진형으로 보고 가세요`', inline: true },
-            { name: '샤디스 연막탄', value: '`어떻게 연막을 써야 하는 지 나와있습니다`', inline: true },
-            { name: '샤디스 조사병단 유니폼', value: '`조사병단 공식 유니폼들이 있어요!`', inline: true },
-            { name: '샤디스 (인물)', value: '`인물칸에다가 조사병단 디스코드에 있는 보좌관들의 닉네임을 적어보세요!`', inline: true }
+            { name: '`샤디스 다운로드`', value: '진격의 거인 게임 모음집입니다 (벽외조사에 참여하실려면 EM모드 다운하세요)', inline: true },
+            { name: '`샤디스 맵`', value: '벽외조사를 하기 위해 꼭 다운로드 해야하는 카라네스 맵입니다', inline: true },
+            { name: '`샤디스 계급`', value: '한국 조사병단 보좌관 역할 모음', inline: true },
+            { name: '`샤디스 조사병단`', value: '조사병단 각 반의 반장들입니다', inline: true },
+            { name: '샤디스 분단(진형)`', value: '각 반의 맞게 자신의 진형으로 보고 가세요', inline: true },
+            { name: '`샤디스 연막탄`', value: '어떻게 연막을 써야 하는 지 나와있습니다', inline: true },
+            { name: '`샤디스 조사병단 유니폼`', value: '조사병단 공식 유니폼들이 있어요!', inline: true },
+            { name: '`샤디스 (인물)`', value: '인물칸에다가 조사병단 디스코드에 있는 보좌관들의 닉네임을 적어보세요', inline: true }
         )
         message.channel.send(embed)
     }
@@ -696,8 +749,8 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('미카사 아커만')
         .setColor('#424242')
-        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/233/698/061/79479656c630fbe1dc57733acd90bcc5.gif')
-        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766178234055917609/f1.png')
+        .setImage('https://i.pinimg.com/originals/34/f6/9e/34f69ec72ae4f3d891e949afa5663a46.gif')
+        .setThumbnail('https://media.tenor.com/images/11e7c86b0a3f51c0be654235c0db8282/tenor.gif')
         .setDescription('리바이와 함께 조사병단 내 전투력 투톱을 달리는 초인')
         .addFields(
             { name: '• 나이', value: '`19살`', inline: true },
@@ -717,8 +770,8 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('미카사 아커만')
         .setColor('#424242')
-        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/233/698/061/79479656c630fbe1dc57733acd90bcc5.gif')
-        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/766178234055917609/f1.png')
+        .setImage('https://i.pinimg.com/originals/34/f6/9e/34f69ec72ae4f3d891e949afa5663a46.gif')
+        .setThumbnail('https://media.tenor.com/images/11e7c86b0a3f51c0be654235c0db8282/tenor.gif')
         .setDescription('리바이와 함께 조사병단 내 전투력 투톱을 달리는 초인')
         .addFields(
             { name: '• 나이', value: '`19살`', inline: true },
