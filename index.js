@@ -51,9 +51,9 @@ client.on('ready', function() {
                      "> **`현재 공개 가능한 정보`** \n > 대 특정 목표 구속병기) 특정 거인을 구속하는 것을 목적으로 해, 새로이 개발한 조사병단의 병기",
                      "> **`현재 공개 가능한 정보`** \n > 대 특정 목표 구속병기) 적재한 통 안에는 일곱 자루 철관이 깔려, 그 관에는 화살촉을 양 끝에 단 와이어가 나선 모양으로 들어있다",
                      "> **`현재 공개 가능한 정보`** \n > 양식은 로리콘이다",
-                     "> **`현재 공개 가능한 정보`** \n > 리하이는 잘생겼다",
+                     "> **`현재 공개 가능한 정보`** \n > 아프란는 잘생겼다",
                      "> **`현재 공개 가능한 정보`** \n > 단장님의 전직은 모델이였다",
-                     "> **`현재 공개 가능한 정보`** \n > 어택님은 리하이의 따까리다",
+                     "> **`현재 공개 가능한 정보`** \n > 어택님은 아프란의 따까리다",
                      "> **`현재 공개 가능한 정보`** \n > Q 와 E는 와이어이다",
                      "> **`현재 공개 가능한 정보`** \n > 와이어를 박은 뒤 부스트를 사용하면 속도를 더 빠르게 할 수 있다"
                      
@@ -128,7 +128,7 @@ client.on('message', message => {
 //게임추천
 client.on('message', message => {
     
-    let games = ["AOTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "리하이랑 놀아주기"]
+    let games = ["AOTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "아프란랑 놀아주기"]
 
     if (message.content === `샤디스 게임추천`) {
         let rand = Math.floor(Math.random() * games.length);
@@ -702,10 +702,10 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    // 리하이 설명
-    if (message.content === '샤디스 리하이') { 
+    // 아프란 설명
+    if (message.content === '샤디스 아프란') { 
         const embed = new Discord.MessageEmbed()
-        .setTitle('리하이 아커만')
+        .setTitle('아프란 아커만')
         .setColor('#EA6B6B')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/883/868/110/d6423213dba049e41f15cae002f25d7b.gif')
         .setThumbnail('https://p16-sg-default.akamaized.net/aweme/720x720/tiktok-obj/1659396893307906.jpeg')
@@ -723,10 +723,52 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    // 리하이 설명
-    if (message.content === '샤디스 리하이 아커만') { 
+    // 아프란 설명
+    if (message.content === '샤디스 아프란 아커만') { 
         const embed = new Discord.MessageEmbed()
-        .setTitle('리하이 아커만')
+        .setTitle('아프란 아커만')
+        .setColor('#EA6B6B')
+        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/883/868/110/d6423213dba049e41f15cae002f25d7b.gif')
+        .setThumbnail('https://p16-sg-default.akamaized.net/aweme/720x720/tiktok-obj/1659396893307906.jpeg')
+        .setDescription('조사병단의 리바이 아커만의 첫째 아들')
+        .addFields(
+            { name: '• 나이', value: '`14살`', inline: true },
+            { name: '• 출생', value: '`837년 파라디 섬 월 로제`', inline: true },
+            { name: '• 신장', value: '`162cm`', inline: true },
+            { name: '• 체중', value: '`47kg`', inline: true },
+            { name: '• 소속 직책', value: '`한국 조사병단 신병`', inline: true },
+            { name: '• 가치관', value: '`현실주의`', inline: true },
+            { name: '• 거주지', value: '`파라디 섬 월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`아버지: 리바이 어머니: 미공개`', inline: true },
+            { name: '• 절친들', value: '`친구 자체가 없음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 아프란 설명
+    if (message.content === '샤디스 Afran') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('아프란 아커만')
+        .setColor('#EA6B6B')
+        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/883/868/110/d6423213dba049e41f15cae002f25d7b.gif')
+        .setThumbnail('https://p16-sg-default.akamaized.net/aweme/720x720/tiktok-obj/1659396893307906.jpeg')
+        .setDescription('조사병단의 리바이 아커만의 첫째 아들')
+        .addFields(
+            { name: '• 나이', value: '`14살`', inline: true },
+            { name: '• 출생', value: '`837년 파라디 섬 월 로제`', inline: true },
+            { name: '• 신장', value: '`162cm`', inline: true },
+            { name: '• 체중', value: '`47kg`', inline: true },
+            { name: '• 소속 직책', value: '`한국 조사병단 신병`', inline: true },
+            { name: '• 가치관', value: '`현실주의`', inline: true },
+            { name: '• 거주지', value: '`파라디 섬 월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`아버지: 리바이 어머니: 미공개`', inline: true },
+            { name: '• 절친들', value: '`친구 자체가 없음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 아프란 설명
+    if (message.content === '샤디스 Afran Ackerman') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('아프란 아커만')
         .setColor('#EA6B6B')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/883/868/110/d6423213dba049e41f15cae002f25d7b.gif')
         .setThumbnail('https://p16-sg-default.akamaized.net/aweme/720x720/tiktok-obj/1659396893307906.jpeg')
