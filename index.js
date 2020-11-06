@@ -91,22 +91,14 @@ client.on('guildMemberRemove', member => {
 
 //메시지 삭제
 client.on('messageDelete', async message => {
-    const channel = member.guild.channels.cache.find(ch => ch.id === '774226754062909440');
+    const channel = client.channels.cache.find(channel => channel.name === '로그')
     const embed = new Discord.MessageEmbed()
-    .setTitle('삭제 로그 ❌')
-    .setDescription(`<@!${message.author.id}> 님이 \`${message.contnet}\` 을(를) 삭제하셨습니다`)
+    .setTitle('❌ 삭제 로그')
+    .setColor('#FF0000')
+    .setDescription(`<@!${message.author.id}> 님이 \`${message.content}\` 을(를) 삭제하셨습니다`)
+    .setTimestamp()
     channel.send(embed)
-  })
-
-//메시지 수정
-client.on('messageUpdate', async(oldMessage, newMessage) => {
-    if(oldMessage.content === newMessage.content) return // 임베드로 인한 수정같은 경우
-    const channel = member.guild.channels.cache.find(ch => ch.id === '774226754062909440');
-    const embed = new Discord.MessageEmbed()
-    .setTitle('수정 로그 📈')
-    .setDescription(`<@!${oldMessage.author.id}> 님이 \`${oldMessage.content}\` 을(를) \`${newMessage.content}\` 로 수정했습니다.`)
-    channel.send(embed)
-  }) 
+});
 
 //금지어
 client.on('message', async message => {
@@ -125,7 +117,7 @@ client.on('message', async message => {
         const user = message.author.id;
         const embed = new Discord.MessageEmbed()
         .setColor('#FF0000')
-        .setDescription(`잠깐, <@${user}> 지금 너는 금지어의 포함되어 있는 단어를 말했다!`);
+        .setDescription(`잠깐, <@${user}> 지금 너는 금지어에 포함되어 있는 단어를 말했다!`);
         message.channel.send(embed)
 }
 }
@@ -1275,4 +1267,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.paXw-_JW0HEonTeP2Q3DfuBgm_c");
