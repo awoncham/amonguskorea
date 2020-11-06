@@ -7,61 +7,64 @@ client.on('ready', function() {
     client.user.setActivity('모두 심장을 바쳐라!');
     
     setInterval(() => {
-        let tips = ["> **`현재 공개 가능한 정보`** \n > #대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
-                     "> **`현재 공개 가능한 정보`** \n > 장거리 수색 진형을 도입한 이후로 생존율이 비약적으로 상승했습니다.", 
-                     "> **`현재 공개 가능한 정보`** \n > 인류는 세 겹의 벽으로 둘러싸 생활하고 있다 첫 번 바깥벽은 월 마리아 두 번째가 월 로제 그리고 중앙 벽이 월 시나다", 
-                     "> **`현재 공개 가능한 정보`** \n > 벽에 대해서 벽과 벽 사이 구역은 거의 같다 마리아와 로제 사이가 100km 로제와 시나 사이가 약 130km 시나에서 중앙까지가 약 250km이다",
-                     "> **`현재 공개 가능한 정보`** \n > 인류 활동 영역의 댉적인 규모 도식 이 도식은 인류에게 남은 영역의 넓이를 감각적으로 표시한 것이다 월 마리아 밖은 여전히 의문인 채로다",
-                     "> **`현재 공개 가능한 정보`** \n > 인류 활동 영역의 대략적인 규모 도식 인류 영역의 중심일수록 표고는 높다 인류 영역 내는 물과 광물자원과 천연가스 같은 자원이 풍부하다",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동 장치 훈련) 입체기동 장치 훈련은, 인간이란 2차원적인 움직임을 하는 생물을, 3차원으로 적응시키는 가혹한 것이다",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동 장치 훈련) 강건한 체력과 각력, 공간파악능력, 그리고 패닉에 빠지지 않기 위한 정신력이 필요하다",
-                     "> **`현재 공개 가능한 정보`** \n > 제 104기 훈련병단 성적 상위 10위 (10 등 크리스타 렌즈, 9등 사샤 브라우스, 8등 코니 스프링거, 7등 마르코 보트, 6등 쟝 키르슈타인",
-                     "> **`현재 공개 가능한 정보`** \n > 벽외조사에서 거인의 목을 한 번에 도려내지 못한다면 거인의 목은 다시 재생됩니다",
-                     "> **`현재 공개 가능한 정보`** \n > 제 104기 훈련병단 성적 상위 10명 (5등 에렌 예거, 4등 애니 레온하트, 3등 베르톨트 후버, 2등 라이너 브라운 1등, 미카사 아커만",
-                     "> **`현재 공개 가능한 정보`** \n > 벽상고정포) 대포는 입체기동 장비 등장 이전 대 거인 주력병기다 기동력 부족을 채우기 위해 고정포가 벽에 배치돼 방위용 개량을 했다",
-                     "> **`현재 공개 가능한 정보`** \n > 벽상고정포) 포도탄: 살상효과는 낮지만, 거인의 움직임이 정체하는 효과가 있다, 유탄: 위력은 높지만 명중 정밀도가 매우 낮아, 노려서 맞추는 것은 매우 곤란하다",
-                     "> **`현재 공개 가능한 정보`** \n > 초경질 스틸) 강인함과 부드러움을 함께 가진 소재이며 거인의 육질을 베어낼 수 있다 이것을 이용해 제조한 외날도신은 대 거인 병기로써 널리 알려졌다",
-                     "> **`현재 공개 가능한 정보`** \n > 초경질 스틸) 초경질 스틸 정련에는 공장도시에 있는 고로가 필요불가결하여 공장도시 이외에서는 제조할 수 없다",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동장치 정보) 입체 기동 본체 본체 부분에 철선을 수납 축이 둘 있어, 독립해서 회전",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동장치 정보 조작 장치) 조작 장치가 작용하는 부분은 블랙박스(기공과가 비밀리에 관리, 개량) 봄베 본체 가스는 봄베에 압축해 주입돼 있다",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동장치 정보 팬 부분) 가스는 팬에 직접 뿜어서 회전 가스의 압력을 조정해서 조작",
-                     "> **`현재 공개 가능한 정보`** \n > 거인의 체격 차 도식",
-                     "> **`현재 공개 가능한 정보`** \n > 현재의 조사병단) 조사병단이란, 벽 밖의 탐색활동이 주된 목적이지만, 월 마리아 함락 이전과 이후는 활동내용이 다르다",
-                     "> **`현재 공개 가능한 정보`** \n > 현재의 조사병단) 함락 이후의 활동은 올 월 마리아 탈환작전 두 번째를 위해 병참 거점을 만들어, 대부대가 이동할 길을 작성하는 것이다",
-                     "> **`현재 공개 가능한 정보`** \n > 효모) 월 시나 안에서만 생산되는 특수한 효모 효모를 키워 잎이나 밀, 대두 등이 든 창고나 텐트에 두는 걸로 부패가 매우 느려지는 것을 알았다",
-                     "> **`현재 공개 가능한 정보`** \n > 효모를 넣는 저장 플랜트를 각지에 전개하는 걸로 월 마리아ㅏ 탈환을 위한 보금물자를 비축하는 것이 지금까지 인류 쪽의 전략이었다",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동 장치의 체중이동 장비) 입체기동을 가능하게 하려면 전신을 감은 고정벨트를 이용한 까다로운 체중 이동 기술이 필요하게 된다",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동 장치의 체중이동 장비) 입체적으로 고속 기동이 목적인 장비는 철저히 경량화의 한계를 다했다",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동 장치의 체중이동 장비) 양 허리 한쪽에 모든 체중을 걸게 된다 허공을 춤추는 듯한 기동이라도, 전신의 근육을 혹사하는 걸로 이루어진다",
-                     "> **`현재 공개 가능한 정보`** \n > 입체기동 장치의 훈련) 그걸 위해 교관이 구명줄을 고의로 잘라, 그 대응을 보는 훈련을 한다 안전한 훈련이라고 하기 어렵지만, 훈련 중에 죽을 사람이 거인과 싸우는 건 어찌 됐든 불가능하다",
-                     "> **`현재 공개 가능한 정보`** \n > 거인과 싸움의 역사) 확인할 수 있는 가장 옛 기록에는 107년 전 거인이 출현했다고 한다 대부분 인류는 거인에게 잡아먹혔다",
-                     "> **`현재 공개 가능한 정보`** \n > 거인과 싸움의 역사) 인류는 대포로 거인에게 대항하려 했지만, 경이적인 생명력을 가진 거인 앞에 어떻게 할 방도가 없었다",
-                     "> **`현재 공개 가능한 정보`** \n > 특별 군사회의) 병사, 군속을 재판하기 위한 형사재판 판사, 검찰, 변호인, 모두 군속이 맡는다",
-                     "> **`현재 공개 가능한 정보`** \n > 특별 군사회의) 통상 군법회의보다 정치색이 짙고, 결정권은 세 병단의 톱 다리스 작클레 총통이 맡는다",
-                     "> **`현재 공개 가능한 정보`** \n > 월교) 벽 안 지역에서 포교활동 하는 종교 조직 벽을 신으로 숭상하고 비록 방어를 위해서라도 벽에 손대는 것을 일절 인정하지 않는다",
-                     "> **`현재 공개 가능한 정보`** \n > 월교) 월 마리아 함락 이후 급속히 신자 수를 늘리고 있고 또한 그 발언력도 커졌다",
-                     "> **`현재 공개 가능한 정보`** \n > 병단 선택) 3년의 조련 과정을 끝낸 병사가 헌병단, 주둔병단, 조사병단, 어느 병과를 선탁하는 의식",
-                     "> **`현재 공개 가능한 정보`** \n > 병단 선택) 하지만 헌병단에 입단할 수 있는 것은 성적 상위 10명뿐이며, 실질적으로는 주둔병단인지 조사병단인지 두 선택이며, 많은 사람이 주둔병단을 선택하게 된다",
-                     "> **`현재 공개 가능한 정보`** \n > 장거리 탐색 진형) 조사병단 단장 앨빈 스미스가 고안한 이론이며 이 진형을 조직해서 벽 밖에서 생존율이 비약적으로 향상했다",
-                     "> **`현재 공개 가능한 정보`** \n > 장거리 탐색 진형) 간단히 말하면, 인력 레이더다 진형 중앙에 위치한 앨빈이 빨리 거인 발견을 아는 것으로 조우 전에 진영 진로 변경이 가능하게 됬다",
-                     "> **`현재 공개 가능한 정보`** \n > 거대수의 숲) 벽 안, 벽 밖에 흩어져 있는 거목군 어떤 지구를 경계로 국지적으로 자생해, 나무 높이는 80m가 넘는다",
-                     "> **`현재 공개 가능한 정보`** \n > 거대수의 숲) 월 마리아 붕괴 전은, 관광지로 했었지만, 현재 조사병단에게는 벽 밖 원정에서 거인의 위협에서 몸을 지키는 중요한 거점이 됐다",
-                     "> **`현재 공개 가능한 정보`** \n > 신호탄) 화약의 힘으로 신호탄을 사출할 수 있는 소형 권총 신호탄이 들어있는 작은 관을 한발씩 교환해서 사용한다",
-                     "> **`현재 공개 가능한 정보`** \n > 신호탄) 전달 내용에 따라, 쏘는 연막의 색이 바뀐다 빨강: 거인 발견, 초록: 진형의 진로 결정, 검정: 기행종 발견 등",
-                     "> **`현재 공개 가능한 정보`** \n > 대 특정 목표 구속병기) 특정 거인을 구속하는 것을 목적으로 해, 새로이 개발한 조사병단의 병기",
-                     "> **`현재 공개 가능한 정보`** \n > 대 특정 목표 구속병기) 적재한 통 안에는 일곱 자루 철관이 깔려, 그 관에는 화살촉을 양 끝에 단 와이어가 나선 모양으로 들어있다",
-                     "> **`현재 공개 가능한 정보`** \n > 양식은 로리콘이다",
-                     "> **`현재 공개 가능한 정보`** \n > 아프란는 잘생겼다",
-                     "> **`현재 공개 가능한 정보`** \n > 단장님의 전직은 모델이였다",
-                     "> **`현재 공개 가능한 정보`** \n > 어택님은 아프란의 따까리다",
-                     "> **`현재 공개 가능한 정보`** \n > Q 와 E는 와이어이다",
-                     "> **`현재 공개 가능한 정보`** \n > 와이어를 박은 뒤 부스트를 사용하면 속도를 더 빠르게 할 수 있다"
+        let tips = [ "**`현재 공개 가능한 정보`** \n\n#대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
+                     "**`현재 공개 가능한 정보`** \n\n장거리 수색 진형을 도입한 이후로 생존율이 비약적으로 상승했습니다.", 
+                     "**`현재 공개 가능한 정보`** \n\n인류는 세 겹의 벽으로 둘러싸 생활하고 있다 첫 번 바깥벽은 월 마리아 두 번째가 월 로제 그리고 중앙 벽이 월 시나다", 
+                     "**`현재 공개 가능한 정보`** \n\n벽에 대해서 벽과 벽 사이 구역은 거의 같다 마리아와 로제 사이가 100km 로제와 시나 사이가 약 130km 시나에서 중앙까지가 약 250km이다",
+                     "**`현재 공개 가능한 정보`** \n\n인류 활동 영역의 댉적인 규모 도식 이 도식은 인류에게 남은 영역의 넓이를 감각적으로 표시한 것이다 월 마리아 밖은 여전히 의문인 채로다",
+                     "**`현재 공개 가능한 정보`** \n\n인류 활동 영역의 대략적인 규모 도식 인류 영역의 중심일수록 표고는 높다 인류 영역 내는 물과 광물자원과 천연가스 같은 자원이 풍부하다",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동 장치 훈련) 입체기동 장치 훈련은, 인간이란 2차원적인 움직임을 하는 생물을, 3차원으로 적응시키는 가혹한 것이다",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동 장치 훈련) 강건한 체력과 각력, 공간파악능력, 그리고 패닉에 빠지지 않기 위한 정신력이 필요하다",
+                     "**`현재 공개 가능한 정보`** \n\n제 104기 훈련병단 성적 상위 10위 (10 등 크리스타 렌즈, 9등 사샤 브라우스, 8등 코니 스프링거, 7등 마르코 보트, 6등 쟝 키르슈타인",
+                     "**`현재 공개 가능한 정보`** \n\n벽외조사에서 거인의 목을 한 번에 도려내지 못한다면 거인의 목은 다시 재생됩니다",
+                     "**`현재 공개 가능한 정보`** \n\n제 104기 훈련병단 성적 상위 10명 (5등 에렌 예거, 4등 애니 레온하트, 3등 베르톨트 후버, 2등 라이너 브라운 1등, 미카사 아커만",
+                     "**`현재 공개 가능한 정보`** \n\n벽상고정포) 대포는 입체기동 장비 등장 이전 대 거인 주력병기다 기동력 부족을 채우기 위해 고정포가 벽에 배치돼 방위용 개량을 했다",
+                     "**`현재 공개 가능한 정보`** \n\n벽상고정포) 포도탄: 살상효과는 낮지만, 거인의 움직임이 정체하는 효과가 있다, 유탄: 위력은 높지만 명중 정밀도가 매우 낮아, 노려서 맞추는 것은 매우 곤란하다",
+                     "**`현재 공개 가능한 정보`** \n\n초경질 스틸) 강인함과 부드러움을 함께 가진 소재이며 거인의 육질을 베어낼 수 있다 이것을 이용해 제조한 외날도신은 대 거인 병기로써 널리 알려졌다",
+                     "**`현재 공개 가능한 정보`** \n\n초경질 스틸) 초경질 스틸 정련에는 공장도시에 있는 고로가 필요불가결하여 공장도시 이외에서는 제조할 수 없다",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동장치 정보) 입체 기동 본체 본체 부분에 철선을 수납 축이 둘 있어, 독립해서 회전",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동장치 정보 조작 장치) 조작 장치가 작용하는 부분은 블랙박스(기공과가 비밀리에 관리, 개량) 봄베 본체 가스는 봄베에 압축해 주입돼 있다",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동장치 정보 팬 부분) 가스는 팬에 직접 뿜어서 회전 가스의 압력을 조정해서 조작",
+                     "**`현재 공개 가능한 정보`** \n\n거인의 체격 차 도식",
+                     "**`현재 공개 가능한 정보`** \n\n현재의 조사병단) 조사병단이란, 벽 밖의 탐색활동이 주된 목적이지만, 월 마리아 함락 이전과 이후는 활동내용이 다르다",
+                     "**`현재 공개 가능한 정보`** \n\n현재의 조사병단) 함락 이후의 활동은 올 월 마리아 탈환작전 두 번째를 위해 병참 거점을 만들어, 대부대가 이동할 길을 작성하는 것이다",
+                     "**`현재 공개 가능한 정보`** \n\n효모) 월 시나 안에서만 생산되는 특수한 효모 효모를 키워 잎이나 밀, 대두 등이 든 창고나 텐트에 두는 걸로 부패가 매우 느려지는 것을 알았다",
+                     "**`현재 공개 가능한 정보`** \n\n효모를 넣는 저장 플랜트를 각지에 전개하는 걸로 월 마리아ㅏ 탈환을 위한 보금물자를 비축하는 것이 지금까지 인류 쪽의 전략이었다",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동 장치의 체중이동 장비) 입체기동을 가능하게 하려면 전신을 감은 고정벨트를 이용한 까다로운 체중 이동 기술이 필요하게 된다",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동 장치의 체중이동 장비) 입체적으로 고속 기동이 목적인 장비는 철저히 경량화의 한계를 다했다",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동 장치의 체중이동 장비) 양 허리 한쪽에 모든 체중을 걸게 된다 허공을 춤추는 듯한 기동이라도, 전신의 근육을 혹사하는 걸로 이루어진다",
+                     "**`현재 공개 가능한 정보`** \n\n입체기동 장치의 훈련) 그걸 위해 교관이 구명줄을 고의로 잘라, 그 대응을 보는 훈련을 한다 안전한 훈련이라고 하기 어렵지만, 훈련 중에 죽을 사람이 거인과 싸우는 건 어찌 됐든 불가능하다",
+                     "**`현재 공개 가능한 정보`** \n\n거인과 싸움의 역사) 확인할 수 있는 가장 옛 기록에는 107년 전 거인이 출현했다고 한다 대부분 인류는 거인에게 잡아먹혔다",
+                     "**`현재 공개 가능한 정보`** \n\n거인과 싸움의 역사) 인류는 대포로 거인에게 대항하려 했지만, 경이적인 생명력을 가진 거인 앞에 어떻게 할 방도가 없었다",
+                     "**`현재 공개 가능한 정보`** \n\n특별 군사회의) 병사, 군속을 재판하기 위한 형사재판 판사, 검찰, 변호인, 모두 군속이 맡는다",
+                     "**`현재 공개 가능한 정보`** \n\n특별 군사회의) 통상 군법회의보다 정치색이 짙고, 결정권은 세 병단의 톱 다리스 작클레 총통이 맡는다",
+                     "**`현재 공개 가능한 정보`** \n\n월교) 벽 안 지역에서 포교활동 하는 종교 조직 벽을 신으로 숭상하고 비록 방어를 위해서라도 벽에 손대는 것을 일절 인정하지 않는다",
+                     "**`현재 공개 가능한 정보`** \n\n월교) 월 마리아 함락 이후 급속히 신자 수를 늘리고 있고 또한 그 발언력도 커졌다",
+                     "**`현재 공개 가능한 정보`** \n\n병단 선택) 3년의 조련 과정을 끝낸 병사가 헌병단, 주둔병단, 조사병단, 어느 병과를 선탁하는 의식",
+                     "**`현재 공개 가능한 정보`** \n\n병단 선택) 하지만 헌병단에 입단할 수 있는 것은 성적 상위 10명뿐이며, 실질적으로는 주둔병단인지 조사병단인지 두 선택이며, 많은 사람이 주둔병단을 선택하게 된다",
+                     "**`현재 공개 가능한 정보`** \n\n장거리 탐색 진형) 조사병단 단장 앨빈 스미스가 고안한 이론이며 이 진형을 조직해서 벽 밖에서 생존율이 비약적으로 향상했다",
+                     "**`현재 공개 가능한 정보`** \n\n장거리 탐색 진형) 간단히 말하면, 인력 레이더다 진형 중앙에 위치한 앨빈이 빨리 거인 발견을 아는 것으로 조우 전에 진영 진로 변경이 가능하게 됬다",
+                     "**`현재 공개 가능한 정보`** \n\n거대수의 숲) 벽 안, 벽 밖에 흩어져 있는 거목군 어떤 지구를 경계로 국지적으로 자생해, 나무 높이는 80m가 넘는다",
+                     "**`현재 공개 가능한 정보`** \n\n거대수의 숲) 월 마리아 붕괴 전은, 관광지로 했었지만, 현재 조사병단에게는 벽 밖 원정에서 거인의 위협에서 몸을 지키는 중요한 거점이 됐다",
+                     "**`현재 공개 가능한 정보`** \n\n신호탄) 화약의 힘으로 신호탄을 사출할 수 있는 소형 권총 신호탄이 들어있는 작은 관을 한발씩 교환해서 사용한다",
+                     "**`현재 공개 가능한 정보`** \n\n신호탄) 전달 내용에 따라, 쏘는 연막의 색이 바뀐다 빨강: 거인 발견, 초록: 진형의 진로 결정, 검정: 기행종 발견 등",
+                     "**`현재 공개 가능한 정보`** \n\n대 특정 목표 구속병기) 특정 거인을 구속하는 것을 목적으로 해, 새로이 개발한 조사병단의 병기",
+                     "**`현재 공개 가능한 정보`** \n\n대 특정 목표 구속병기) 적재한 통 안에는 일곱 자루 철관이 깔려, 그 관에는 화살촉을 양 끝에 단 와이어가 나선 모양으로 들어있다",
+                     "**`현재 공개 가능한 정보`** \n\n양식은 로리콘이다",
+                     "**`현재 공개 가능한 정보`** \n\n아프란는 잘생겼다",
+                     "**`현재 공개 가능한 정보`** \n\n단장님의 전직은 모델이였다",
+                     "**`현재 공개 가능한 정보`** \n\n어택님은 아프란의 따까리다",
+                     "**`현재 공개 가능한 정보`** \n\nQ 와 E는 와이어이다",
+                     "**`현재 공개 가능한 정보`** \n\n와이어를 박은 뒤 부스트를 사용하면 속도를 더 빠르게 할 수 있다"
                      
                     ]
         let rand = tips[Math.floor(Math.random() * tips.length)]
         var channel = client.channels.cache.get('742051945472065546');
-
-        channel.send(rand);
+        
+        const embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setDescription(`${tips[rand]}`)
+        channel.send(embed);
     }, 7200000);
 
 });
@@ -100,12 +103,10 @@ client.on('message', async message => {
     }
 
     if (foundInText) {
-        message.delete();
-        
-        const user = message.author;
+        const user = message.author.id;
         const embed = new Discord.MessageEmbed()
         .setColor('#FF0000')
-        .setDescription(`잠깐, 방금 ${user.tag} 가 한말엔 금지어가 포함되어 있어!`);
+        .setDescription(`잠깐, <@${user}> 지금 너는 금지어의 포함되어 있는 단어를 말했다!`);
         message.channel.send(embed)
 }
 }
@@ -128,7 +129,10 @@ client.on('message', message => {
 //오늘의 운세
 client.on('message', message => {
     
-    let luck = ["오늘은 스피드런 신기록을 찍을 것이다", "오늘은 데미지런 신기록을 찍을 것이다", "기행종이 많이 나타날 것이다", "펑크가 너를 기달리고 있다", "죽음이 따라오는 날", "와이어가 잘 안 쏴지는 날", "와이어를 잘 발사하는 날", "거의 안 죽는 날", "게임이 많이 튕길 것이다"]
+    let luck = [
+        "리하이보다 기록이 안 나올 것이다","오늘은 스피드런 신기록을 찍을 것이다", "오늘은 데미지런 신기록을 찍을 것이다", "기행종이 많이 나타날 것이다", "펑크가 너를 기달리고 있다", "죽음이 따라오는 날", 
+        "와이어가 잘 안 쏴지는 날", "와이어를 잘 발사하는 날", "거의 안 죽는 날", "게임이 많이 튕길 것이다"
+            ]
 
     if (message.content === `샤디스 오늘의 운세`) {
         let rand = Math.floor(Math.random() * luck.length);
@@ -155,53 +159,45 @@ client.on('message', message => {
 
 // 샤디스 대화 명령어
 client.on('message', message => {
-    if(message.content === '샤디스 뭐해') {
-        const embed = new Discord.MessageEmbed()
-        .setDescription('새로운 훈련병들을 관리하고 있다.')
-        .setImage('https://d.wattpad.com/story_parts/403848389/images/14b8de5f8ed7895e996227645651.gif')
-        message.channel.send(embed)
+    let chats = ["어디서 반말인것이냐", "왜 불렀나!", "선은 넘지 말자!"]
+    if (message.content === `샤디스`) {
+        let rand = Math.floor(Math.random() * chats.length);
+        message.channel.send(`${chats[rand]}`)
     }
-    if(message.content === '샤디스 안녕') {
-        const embed = new Discord.MessageEmbed()
-        .setDescription('어디서 반말이냐!')
-        .setImage('https://i.pinimg.com/originals/36/18/7f/36187f12b8c5559a1efb26d2d3b9e26a.gif')
-        message.channel.send(embed)
+    let chats = ["너랑 지금 대화 중인거 안 보이냐?!", "훈련병들을 위해 훈련 준비를 하고 있다", "훈련병들 훈련시키는거 안보이나"]
+    if (message.content === `샤디스 뭐해`) {
+        let rand = Math.floor(Math.random() * chats.length);
+        message.channel.send(`${chats[rand]}`)
     }
-    if(message.content === '샤디스 빡빡이') {
-        const embed = new Discord.MessageEmbed()
-        .setDescription('ㅁㅓ. 머. 뭐라고..?')
-        .setImage('https://cdn.myanimelist.net/s/common/uploaded_files/1447622185-b5d34997eea62a4d994fa850e12a9f63.jpeg')
-        message.channel.send(embed)
+    let chats = ["지금 뭐라고 했나", "그만해라", "조용히 해라!"]
+    if (message.content === `샤디스 죽어`) {
+        let rand = Math.floor(Math.random() * chats.length);
+        message.channel.send(`${chats[rand]}`)
     }
-    if(message.content === '샤디스 대머리') {
-        const embed = new Discord.MessageEmbed()
-        .setDescription('다시 한번 말해보거라!')
-        .setImage('https://i.ytimg.com/vi/eycwmBjHCGI/maxresdefault.jpg')
-        message.channel.send(embed)
+    let chats = ["ㅈ..지금 뭐라고 했나..!", "멈머라고?!", "..."]
+    if (message.content === `샤디스 대머리`) {
+        let rand = Math.floor(Math.random() * chats.length);
+        message.channel.send(`${chats[rand]}`)
     }
-    if(message.content === '샤디스 죽어') {
-        const embed = new Discord.MessageEmbed()
-        .setDescription('너는 벽외조사 때에 연속으로 기행종에게 밟혀 죽게 될것이다!')
-        .setImage('https://cdn.myanimelist.net/s/common/uploaded_files/1446788269-dacaaa9a2cdeb3fa7ae3121587934976.gif')
-        message.channel.send(embed)
+    let chats = ["ㅇ?", "운동장에서 10바퀴 실시!!", "..."]
+    if (message.content === `샤디스 민머리`) {
+        let rand = Math.floor(Math.random() * chats.length);
+        message.channel.send(`${chats[rand]}`)
     }
-    if(message.content === '샤디스 실력') {
-        const embed = new Discord.MessageEmbed()
-        .setDescription('너의 실력은 형편없구나..')
-        .setImage('https://i.ytimg.com/vi/xSl6KIwFJfg/maxresdefault.jpg')
-        message.channel.send(embed)
+    let chats = ["ㅈ..지금 뭐라고 했나..!", "멈머라고?!", "죽어라!"]
+    if (message.content === `샤디스 빡빡이`) {
+        let rand = Math.floor(Math.random() * chats.length);
+        message.channel.send(`${chats[rand]}`)
     }
-    if(message.content === '샤디스 학교') {
-        const embed = new Discord.MessageEmbed()
-        .setDescription('그것은 그저 \'감옥\' 이다..')
-        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/773336497683562536/tumblr_nvq23kylG91ts2cfmo4_540.gif')
-        message.channel.send(embed)
+    let chats = ["어디서 반말이냐!", "인사를 제대로 하는 날이 오지 않구나", "다시 한번 말해보거라"]
+    if (message.content === `샤디스 안녕`) {
+        let rand = Math.floor(Math.random() * chats.length);
+        message.channel.send(`${chats[rand]}`)
     }
-    if(message.content === '샤디스 죽음') {
-        const embed = new Discord.MessageEmbed()
-        .setDescription('죽음이라는 것은 누구나 무서워 하는 것이다..')
-        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/773337341741236264/tenor_2.gif')
-        message.channel.send(embed)
+    let chats = ["너가 제대로 인사하는 날도 오는구나..", "무슨 일인가?", "그래"]
+    if (message.content === `샤디스 안녕하세요`) {
+        let rand = Math.floor(Math.random() * chats.length);
+        message.channel.send(`${chats[rand]}`)
     }
 })
 
@@ -222,11 +218,6 @@ client.on('message', message => {
             .setDescription(user.username + '님의 프로필입니다')
             .setImage(user.displayAvatarURL());
         message.channel.send(avatarEmbed);
-    }
-    if (message.content === '샤디스 나물 처형식') { 
-        const embed = new Discord.MessageEmbed()
-        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/767352103134953472/2342484E5869E3A62A.png')
-        message.channel.send(embed)
     }
     if(message.content == '샤디스 명령어') {
         const embed = new Discord.MessageEmbed()
@@ -515,6 +506,7 @@ client.on('message', message => {
         .setColor('#3B240B')
         .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
         .addFields(
+            { name: '대화', value: '`샤디스 도움말 대화`', inline: true },
             { name: '놀이', value: '`샤디스 도움말 놀이`', inline: true },
             { name: '진격의 거인', value: '`샤디스 도움말 진격의 거인`', inline: true },
             { name: '조사병단', value: '`샤디스 도움말 조사병단`', inline: true }
@@ -530,8 +522,21 @@ client.on('message', message => {
         .addFields(
             { name: '`샤디스 음식추천`', value: '오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!', inline: true },
             { name: '`샤디스 게임추천`', value: '샤디스가 추천하는 게임을 한번 해보시는것도 나쁘지 않아요', inline: true },
+            { name: '`샤디스 오늘의 운세`', value: '오늘은 어떤 일이 일어날 지 예상을 해요!', inline: true },
             { name: '`샤디스 아바타`', value: '해당 유저를 태그하여 프로필을 획득하세요', inline: true },
             { name: '`샤디스 핑`', value: '자신의 연결 속도를 확인해보세요', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 샤디스 대화 방법
+    if (message.content === '샤디스 도움말 대화') { 
+        const embed = new Discord.MessageEmbed()
+        .setAuthor('샤디스 놀이 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
+        .setColor('#3B240B')
+        .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
+        .addFields(
+            { name: '`샤디스 (할말)`', value: '여러분들이 한 말에 샤디스가 대답할 수 있어요!', inline: true },
+            { name: '`샤디스 레벨`', value: '아직 미완성입니다', inline: true }
         )
         message.channel.send(embed)
     }
@@ -1099,7 +1104,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('Han_byul_kirstein')
         .setColor('#151515')
-        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/392/869/061/d85e59bbaaa13525104b934c21787e77.gif')
+        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/774205684698447872/unnamed-1.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/766924018347409428/766926915667492874/tenor.gif')
         .setDescription('삼성의 3번째 동생')
         .addFields(
@@ -1119,7 +1124,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('Han_byul_kirstein')
         .setColor('#151515')
-        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/392/869/061/d85e59bbaaa13525104b934c21787e77.gif')
+        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/774205684698447872/unnamed-1.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/766924018347409428/766926915667492874/tenor.gif')
         .setDescription('삼성의 3번째 동생')
         .addFields(
@@ -1132,6 +1137,48 @@ client.on('message', message => {
             { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
             { name: '• 가족', value: '`부모님, 동생`', inline: true },
             { name: '• 절친', value: '`친구 자체가 없음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 레프콘 설명
+    if (message.content === '샤디스 레프콘') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Lefcon')
+        .setColor('#2E2E2E')
+        .setImage('https://media3.giphy.com/media/S0zHxjax3DbJm/giphy.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/774199939591831573/774204403347095552/1564392cc40e49d5.png')
+        .setDescription('거인 학살자')
+        .addFields(
+            { name: '• 나이', value: '`18살`', inline: true },
+            { name: '• 출생', value: '`지하도시`', inline: true },
+            { name: '• 신장', value: '`165cm`', inline: true },
+            { name: '• 체중', value: '`46kg`', inline: true },
+            { name: '• 소속 직책', value: '`한국 조사병단 보좌관`', inline: true },
+            { name: '• 가치관', value: '`자유주의`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`태어나자마자 버려짐`', inline: true },
+            { name: '• 절친', value: '`거인에게 먹힘`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 레프콘 설명
+    if (message.content === '샤디스 Lefcon') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Lefcon')
+        .setColor('#2E2E2E')
+        .setImage('https://media3.giphy.com/media/S0zHxjax3DbJm/giphy.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/774199939591831573/774204403347095552/1564392cc40e49d5.png')
+        .setDescription('거인 학살자')
+        .addFields(
+            { name: '• 나이', value: '`18살`', inline: true },
+            { name: '• 출생', value: '`지하도시`', inline: true },
+            { name: '• 신장', value: '`165cm`', inline: true },
+            { name: '• 체중', value: '`46kg`', inline: true },
+            { name: '• 소속 직책', value: '`한국 조사병단 보좌관`', inline: true },
+            { name: '• 가치관', value: '`자유주의`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`태어나자마자 버려짐`', inline: true },
+            { name: '• 절친', value: '`거인에게 먹힘`', inline: true }
         )
         message.channel.send(embed)
     }
