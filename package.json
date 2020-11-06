@@ -8,9 +8,6 @@
   },
   "dependencies": {
     "12": "^1.0.2",
-    "canvacord": "^5.0.7",
-    "discord-leveling": "^1.1.0",
-    "discord-xp": "^1.0.6",
     "discord.js": "^12.3.1",
     "discord.js-v11": "^12.1.1",
     "reaction-role": "^2.1.6"
