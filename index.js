@@ -89,6 +89,25 @@ client.on('guildMemberRemove', member => {
       channel.send(embed)
   });
 
+//메시지 삭제
+client.on('messageDelete', async message => {
+    const channel = member.guild.channels.cache.find(ch => ch.id === '774226754062909440');
+    const embed = new Discord.MessageEmbed()
+    .setTitle('삭제 로그 ❌')
+    .setDescription(`<@!${message.author.id}> 님이 \`${message.contnet}\` 을(를) 삭제하셨습니다`)
+    channel.send(embed)
+  })
+
+//메시지 수정
+client.on('messageUpdate', async(oldMessage, newMessage) => {
+    if(oldMessage.content === newMessage.content) return // 임베드로 인한 수정같은 경우
+    const channel = member.guild.channels.cache.find(ch => ch.id === '774226754062909440');
+    const embed = new Discord.MessageEmbed()
+    .setTitle('수정 로그 📈')
+    .setDescription(`<@!${oldMessage.author.id}> 님이 \`${oldMessage.content}\` 을(를) \`${newMessage.content}\` 로 수정했습니다.`)
+    channel.send(embed)
+  }) 
+
 //금지어
 client.on('message', async message => {
 
