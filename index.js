@@ -91,7 +91,7 @@ client.on('message', async message => {
 
     let blacklisted = [
         'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ',
-        '씹년', '알쒸', '알C', 'ㅈㄴ', '존나', '자지', '보지', 'dick', '애미', '애비', 'ㅇㅁ', 'ㅇㅂ','^^ㅣ발', 'ㅆㅂ', '비치', 'bitch'
+        '씹년', '알쒸', '알C', 'ㅈㄴ', '존나', '자지', '보지', 'dick', '애미', '애비', 'ㅇㅁ', 'ㅇㅂ','^^ㅣ발', 'ㅆㅂ', '비치', 'bitch', 'tlqkf', 'TLQKF', 'doal', 'doql', 'tprtm'
     ]
 
     let foundInText = false;
@@ -121,6 +121,20 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
         .setDescription(`${foods[rand]} 먹고 진격거 게임해라!`)
+        message.channel.send(embed)
+    }
+});
+
+//오늘의 운세
+client.on('message', message => {
+    
+    let luck = ["오늘은 스피드런 신기록을 찍을 것이다", "오늘은 데미지런 신기록을 찍을 것이다", "기행종이 많이 나타날 것이다", "펑크가 너를 기달리고 있다", "죽음이 따라오는 날", "와이어가 잘 안 쏴지는 날", "와이어를 잘 발사하는 날", "거의 안 죽는 날", "게임이 많이 튕길 것이다"]
+
+    if (message.content === `샤디스 오늘의 운세`) {
+        let rand = Math.floor(Math.random() * luck.length);
+        const embed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setDescription(`**\`오늘의 운세\`**\n\n${luck[rand]}`)
         message.channel.send(embed)
     }
 });
@@ -703,7 +717,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     // 아프란 설명
-    if (message.content === '샤디스 아프란') { 
+    if (message.content === '샤디스 리하이') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('아프란 아커만')
         .setColor('#EA6B6B')
@@ -724,7 +738,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     // 아프란 설명
-    if (message.content === '샤디스 아프란 아커만') { 
+    if (message.content === '샤디스 리하이 아커만') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('아프란 아커만')
         .setColor('#EA6B6B')
@@ -745,7 +759,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     // 아프란 설명
-    if (message.content === '샤디스 Afran') { 
+    if (message.content === '샤디스 Lehi') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('아프란 아커만')
         .setColor('#EA6B6B')
@@ -766,7 +780,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     // 아프란 설명
-    if (message.content === '샤디스 Afran Ackerman') { 
+    if (message.content === '샤디스 Lehi Ackerman') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('아프란 아커만')
         .setColor('#EA6B6B')
