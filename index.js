@@ -164,40 +164,40 @@ client.on('message', message => {
         let rand = Math.floor(Math.random() * chats.length);
         message.channel.send(`${chats[rand]}`)
     }
-    let chats = ["너랑 지금 대화 중인거 안 보이냐?!", "훈련병들을 위해 훈련 준비를 하고 있다", "훈련병들 훈련시키는거 안보이나"]
+    let chats1 = ["너랑 지금 대화 중인거 안 보이냐?!", "훈련병들을 위해 훈련 준비를 하고 있다", "훈련병들 훈련시키는거 안보이나"]
     if (message.content === `샤디스 뭐해`) {
         let rand = Math.floor(Math.random() * chats.length);
-        message.channel.send(`${chats[rand]}`)
+        message.channel.send(`${chats1[rand]}`)
     }
-    let chats = ["지금 뭐라고 했나", "그만해라", "조용히 해라!"]
+    let chats2 = ["지금 뭐라고 했나", "그만해라", "시끄럽다!"]
     if (message.content === `샤디스 죽어`) {
         let rand = Math.floor(Math.random() * chats.length);
-        message.channel.send(`${chats[rand]}`)
+        message.channel.send(`${chats2[rand]}`)
     }
-    let chats = ["ㅈ..지금 뭐라고 했나..!", "멈머라고?!", "..."]
+    let chats3 = ["ㅈ..지금 뭐라고 했나..!", "멈머라고?!", "..."]
     if (message.content === `샤디스 대머리`) {
         let rand = Math.floor(Math.random() * chats.length);
-        message.channel.send(`${chats[rand]}`)
+        message.channel.send(`${chats3[rand]}`)
     }
-    let chats = ["ㅇ?", "운동장에서 10바퀴 실시!!", "..."]
+    let chats4 = ["ㅇ?", "운동장에서 10바퀴 실시!!", "..."]
     if (message.content === `샤디스 민머리`) {
         let rand = Math.floor(Math.random() * chats.length);
-        message.channel.send(`${chats[rand]}`)
+        message.channel.send(`${chats4[rand]}`)
     }
-    let chats = ["ㅈ..지금 뭐라고 했나..!", "멈머라고?!", "죽어라!"]
+    let chats5 = ["ㅈ..지금 뭐라고 했나..!", "멈머라고?!", "죽어라!"]
     if (message.content === `샤디스 빡빡이`) {
         let rand = Math.floor(Math.random() * chats.length);
-        message.channel.send(`${chats[rand]}`)
+        message.channel.send(`${chats5[rand]}`)
     }
-    let chats = ["어디서 반말이냐!", "인사를 제대로 하는 날이 오지 않구나", "다시 한번 말해보거라"]
+    let chats6 = ["어디서 반말이냐!", "인사를 제대로 하는 날이 오지 않구나", "다시 한번 말해보거라"]
     if (message.content === `샤디스 안녕`) {
         let rand = Math.floor(Math.random() * chats.length);
-        message.channel.send(`${chats[rand]}`)
+        message.channel.send(`${chats6[rand]}`)
     }
-    let chats = ["너가 제대로 인사하는 날도 오는구나..", "무슨 일인가?", "그래"]
+    let chats7 = ["너가 제대로 인사하는 날도 오는구나..", "무슨 일인가?", "그래"]
     if (message.content === `샤디스 안녕하세요`) {
         let rand = Math.floor(Math.random() * chats.length);
-        message.channel.send(`${chats[rand]}`)
+        message.channel.send(`${chats7[rand]}`)
     }
 })
 
@@ -559,15 +559,15 @@ client.on('message', message => {
     // 모든 조사병단 명령어 모음
     if (message.content === '샤디스 도움말 조사병단') { 
         const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 조사병단 명령어 모음', 'https://data.whicdn.com/images/178206720/original.gif')
+        .setAuthor('샤디스 조사병단 명령어 모음', 'https://i.pinimg.com/originals/57/ed/3b/57ed3b5c113d60d1fa0eced7e2e37357.png')
         .setColor('#11A52F')
-        .setThumbnail('https://data.whicdn.com/images/178206720/original.gif')
+        .setThumbnail('https://i.pinimg.com/originals/57/ed/3b/57ed3b5c113d60d1fa0eced7e2e37357.png')
         .addFields(
             { name: '`샤디스 다운로드`', value: '진격의 거인 게임 모음집입니다 (벽외조사에 참여하실려면 EM모드 다운하세요)', inline: true },
             { name: '`샤디스 맵`', value: '벽외조사를 하기 위해 꼭 다운로드 해야하는 카라네스 맵입니다', inline: true },
             { name: '`샤디스 계급`', value: '한국 조사병단 보좌관 역할 모음', inline: true },
             { name: '`샤디스 조사병단`', value: '조사병단 각 반의 반장들입니다', inline: true },
-            { name: '샤디스 분단(진형)`', value: '각 반의 맞게 자신의 진형으로 보고 가세요', inline: true },
+            { name: '`샤디스 분단(진형)`', value: '각 반의 맞게 자신의 진형으로 보고 가세요', inline: true },
             { name: '`샤디스 연막탄`', value: '어떻게 연막을 써야 하는 지 나와있습니다', inline: true },
             { name: '`샤디스 조사병단 유니폼`', value: '조사병단 공식 유니폼들이 있어요!', inline: true },
             { name: '`샤디스 (인물)`', value: '인물칸에다가 조사병단 디스코드에 있는 보좌관들의 닉네임을 적어보세요', inline: true }
@@ -1256,4 +1256,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.SpQqwoJhhQT1_EC8afHiLeYicTI");
