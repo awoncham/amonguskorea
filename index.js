@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
+const forbiddenWord = require('./forbiddenWord.json')
 
 client.on('ready', function() {   
 
@@ -7,7 +8,7 @@ client.on('ready', function() {
     client.user.setActivity('모두 심장을 바쳐라!');
     
     setInterval(() => {
-        let tips = [ "**`현재 공개 가능한 정보`** \n\n#대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
+        let tips = ["**`현재 공개 가능한 정보`** \n\n#대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
                      "**`현재 공개 가능한 정보`** \n\n장거리 수색 진형을 도입한 이후로 생존율이 비약적으로 상승했습니다.", 
                      "**`현재 공개 가능한 정보`** \n\n인류는 세 겹의 벽으로 둘러싸 생활하고 있다 첫 번 바깥벽은 월 마리아 두 번째가 월 로제 그리고 중앙 벽이 월 시나다", 
                      "**`현재 공개 가능한 정보`** \n\n벽에 대해서 벽과 벽 사이 구역은 거의 같다 마리아와 로제 사이가 100km 로제와 시나 사이가 약 130km 시나에서 중앙까지가 약 250km이다",
@@ -56,7 +57,6 @@ client.on('ready', function() {
                      "**`현재 공개 가능한 정보`** \n\n어택님은 아프란의 따까리다",
                      "**`현재 공개 가능한 정보`** \n\nQ 와 E는 와이어이다",
                      "**`현재 공개 가능한 정보`** \n\n와이어를 박은 뒤 부스트를 사용하면 속도를 더 빠르게 할 수 있다"
-                     
                     ]
         let rand = tips[Math.floor(Math.random() * tips.length)]
         var channel = client.channels.cache.get('742051945472065546');
@@ -103,10 +103,7 @@ client.on('messageDelete', async message => {
 //금지어
 client.on('message', async message => {
 
-    let blacklisted = [
-        'ㅅㅅ', 'ARCE', '알씨', '시발', 'ㅅㅂ', '병신', 'ㅄ', 'ㅂㅅ', '섹스', '쎅스', '씨발', 'Sex', '씹새끼', '새끼', '시발련', '야매때', '폰허브', 'Pornhub', '알1씨', '알_씨', '또라이', 'ㄸㄹㅇ',
-        '씹년', '알쒸', '알C', 'ㅈㄴ', '존나', '자지', '보지', 'dick', '애미', '애비', 'ㅇㅁ', 'ㅇㅂ','^^ㅣ발', 'ㅆㅂ', '비치', 'bitch', 'tlqkf', 'TLQKF', 'doal', 'doql', 'tprtm'
-    ]
+    let blacklisted = [forbiddenWord]
 
     let foundInText = false;
     for (var i in blacklisted) { 
