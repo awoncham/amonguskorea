@@ -231,7 +231,7 @@ client.on('message', message => {
     let replaceStr = message.content.replace(/[^0-9]/g, "")
     if(replaceStr === client.user.id) {
     let chats10 = ["왜 불렀나", "누구 마음대로 태그하래!!", "그래"]
-        let rand10 = Math.floor(Math.random() * chats9.length);
+        let rand10 = Math.floor(Math.random() * chats10.length);
         message.channel.send(`${chats10[rand10]}`)
     }
 })
@@ -1249,4 +1249,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.fg2NjYTHI_Z-EOqMqpZ3q_AXttg");
