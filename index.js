@@ -1249,4 +1249,4 @@ client.on('message', message => {
     }
 });
 
-client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.fg2NjYTHI_Z-EOqMqpZ3q_AXttg");
+client.login(process.env.token);
