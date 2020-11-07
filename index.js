@@ -225,8 +225,12 @@ client.on('message', message => {
         let rand9 = Math.floor(Math.random() * chats9.length);
         message.channel.send(`${chats9[rand9]}`)
     }
+})
+
+client.on('message', message => {
+    let replaceStr = message.content.replace(/[^0-9]/g, "")
+    if(replaceStr === client.user.id) {
     let chats10 = ["왜 불렀나", "누구 마음대로 태그하래!!", "그래"]
-    if (message.content === `<@!763967036409380904>`) {
         let rand10 = Math.floor(Math.random() * chats9.length);
         message.channel.send(`${chats10[rand10]}`)
     }
