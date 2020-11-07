@@ -221,9 +221,14 @@ client.on('message', message => {
         message.channel.send(`${chats8[rand8]}`)
     }
     let chats9 = ["지금 뭐라고 했나", "너처럼 나한테 말하는 사람은 처음이다..", "어디서 반말인가!"]
-    if (message.content === `샤디스 ㅎㅇ`) {
+    if (message.content === `샤디스 하이`) {
         let rand9 = Math.floor(Math.random() * chats9.length);
         message.channel.send(`${chats9[rand9]}`)
+    }
+    let chats10 = ["왜 불렀나", "누구 마음대로 태그하래!!", "그래"]
+    if (message.content === `${client.tag}`) {
+        let rand9 = Math.floor(Math.random() * chats9.length);
+        message.channel.send(`${chats9[rand10]}`)
     }
 })
 
