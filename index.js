@@ -106,7 +106,7 @@ client.on('messageDelete', async message => {
 client.on('message', async message => {
 
     let blacklisted = ["씨발", "시발", "ㅅㅂ", "ㅄ", "병신", "븅신", "지랄", "죠랄", "존나", "ㅈㄴ", "자지", "보지", "섹스", "sex", "Sex", "TLQKF", "tlqkf", "애미",
-                       "애비", "응디", "응디시티", "노무현", "이기", "새끼", "개새끼", "^^ㅣ발", "폰허브", "Pornhub", "좆", "ㅈ밥", "고추", "xvideo"]
+                       "애비", "응디", "응디시티", "노무현", "이기", "새끼", "개새끼", "^^ㅣ발", "폰허브", "Pornhub", "좆", "ㅈ밥", "고추", "xvideo", "알씨", "ARCE", "알1씨"]
 
     let foundInText = false;
     for (var i in blacklisted) { 
