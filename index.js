@@ -216,7 +216,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     let chats8 = ["날 왜 불렀나", "그래", "무슨 일인가?"]
-    if (message.content === '${client.user.tag}') {
+    if (message.content === `${client.user.tag}`) {
         let rand = Math.floor(Math.random() * chats8.length);
         message.channel.send(`${chats8[rand]}`)
     }
