@@ -74,7 +74,7 @@ client.on('guildMemberAdd', member => {
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
       .setDescription(`<@${member.id}> 조사병단의 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 <#701406223999959062>을 확인해라!`)
-      .setImage('https://cdn.discordapp.com/attachments/758884038962053133/772983024542547978/VOekA12C.png')
+      .setImage('https://i.pinimg.com/originals/d1/72/3d/d1723dc033cfece00342e567d15b7c30.gif')
       channel.send(embed)
     });
 
@@ -83,8 +83,8 @@ client.on('guildMemberRemove', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#FF0000')
-      .setDescription(`<@${member.id}> 님께서 거인이 무서워 조사병단을 떠나셨습니다`)
-      .setImage('https://media2.giphy.com/media/fnZxNdBZWbcv5mmFhY/giphy.gif')
+      .setDescription(`<@${member.id}> 님이 거인에 의해 쫒겨났습니다`)
+      .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774449593134874664/tenor_3.gif')
       channel.send(embed)
   });
 
@@ -1449,6 +1449,9 @@ client.on('message', async message => {
         "십팔",
         "십팔년",
         "십팔련",
+        "이기",
+        "응디",
+        "응디시티",
         "십팔연",
         "십할",
         "십할련",
@@ -1755,13 +1758,6 @@ client.on('message', async message => {
         "ac발",
         "x대가리",
         "노무",
-        "하이빅스비",
-        "하이 빅스비",
-        "헤이빅스비",
-        "헤이 빅스비",
-        "바이빅스비",
-        "바이 빅스비",
-        ";;",
         "^^ㅣ발",
         "人ㅣ발",
         "^ㅣ발",
