@@ -1287,7 +1287,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('redyager')
         .setColor('#FF0000')
-        .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774613571354492928/e1fa905892640209eb6ae7779cb118f4.gif')
+        .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774615370811572234/d47f41ca132fc7379a49e7dd4ec26c60.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/772381716413022259/774612195069788180/QH8j1tC9_400x400_1.png')
         .setDescription('교향인 사이버트론의 재건을 기다리고 있다')
         .addFields(
@@ -1308,7 +1308,7 @@ client.on('message', message => {
             const embed = new Discord.MessageEmbed()
             .setTitle('redyager')
             .setColor('#FF0000')
-            .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774613571354492928/e1fa905892640209eb6ae7779cb118f4.gif')
+            .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774615370811572234/d47f41ca132fc7379a49e7dd4ec26c60.gif')
             .setThumbnail('https://cdn.discordapp.com/attachments/772381716413022259/774612195069788180/QH8j1tC9_400x400_1.png')
             .setDescription('교향인 사이버트론의 재건을 기다리고 있다')
             .addFields(
@@ -1329,7 +1329,7 @@ client.on('message', message => {
         const embed = new Discord.MessageEmbed()
         .setTitle('redyager')
         .setColor('#FF0000')
-        .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774613571354492928/e1fa905892640209eb6ae7779cb118f4.gif')
+        .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774615370811572234/d47f41ca132fc7379a49e7dd4ec26c60.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/772381716413022259/774612195069788180/QH8j1tC9_400x400_1.png')
         .setDescription('교향인 사이버트론의 재건을 기다리고 있다')
         .addFields(
