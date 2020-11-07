@@ -51,9 +51,9 @@ client.on('ready', function() {
                      "`현재 공개 가능한 정보` \n\n대 특정 목표 구속병기) 특정 거인을 구속하는 것을 목적으로 해, 새로이 개발한 조사병단의 병기",
                      "`현재 공개 가능한 정보` \n\n대 특정 목표 구속병기) 적재한 통 안에는 일곱 자루 철관이 깔려, 그 관에는 화살촉을 양 끝에 단 와이어가 나선 모양으로 들어있다",
                      "`현재 공개 가능한 정보` \n\n양식은 로리콘이다",
-                     "`현재 공개 가능한 정보` \n\n아프란는 잘생겼다",
+                     "`현재 공개 가능한 정보` \n\n리하이는 잘생겼다",
                      "`현재 공개 가능한 정보` \n\n단장님의 전직은 모델이였다",
-                     "`현재 공개 가능한 정보` \n\n어택님은 아프란의 따까리다",
+                     "`현재 공개 가능한 정보` \n\n어택님은 리하이의 따까리다",
                      "`현재 공개 가능한 정보` \n\nQ 와 E는 와이어이다",
                      "`현재 공개 가능한 정보` \n\n와이어를 박은 뒤 부스트를 사용하면 속도를 더 빠르게 할 수 있다",
                      "`현재 공개 가능한 정보` \n\n리하이는 잘생겼다"
@@ -158,7 +158,7 @@ client.on('message', message => {
 //게임추천
 client.on('message', message => {
     
-    let games = ["AOTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "아프란랑 놀아주기"]
+    let games = ["AOTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "리하이랑 놀아주기"]
 
     if (message.content === `샤디스 게임추천`) {
         let rand = Math.floor(Math.random() * games.length);
@@ -758,10 +758,10 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    // 아프란 설명
+    // 리하이 설명
     if (message.content === '샤디스 리하이') { 
         const embed = new Discord.MessageEmbed()
-        .setTitle('아프란 아커만')
+        .setTitle('리하이 아커만')
         .setColor('#EA6B6B')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/883/868/110/d6423213dba049e41f15cae002f25d7b.gif')
         .setThumbnail('https://p16-sg-default.akamaized.net/aweme/720x720/tiktok-obj/1659396893307906.jpeg')
@@ -779,10 +779,10 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    // 아프란 설명
+    // 리하이 설명
     if (message.content === '샤디스 리하이 아커만') { 
         const embed = new Discord.MessageEmbed()
-        .setTitle('아프란 아커만')
+        .setTitle('리하이 아커만')
         .setColor('#EA6B6B')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/883/868/110/d6423213dba049e41f15cae002f25d7b.gif')
         .setThumbnail('https://p16-sg-default.akamaized.net/aweme/720x720/tiktok-obj/1659396893307906.jpeg')
@@ -800,10 +800,10 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    // 아프란 설명
+    // 리하이 설명
     if (message.content === '샤디스 Lehi') { 
         const embed = new Discord.MessageEmbed()
-        .setTitle('아프란 아커만')
+        .setTitle('리하이 아커만')
         .setColor('#EA6B6B')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/883/868/110/d6423213dba049e41f15cae002f25d7b.gif')
         .setThumbnail('https://p16-sg-default.akamaized.net/aweme/720x720/tiktok-obj/1659396893307906.jpeg')
@@ -821,10 +821,10 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    // 아프란 설명
+    // 리하이 설명
     if (message.content === '샤디스 Lehi Ackerman') { 
         const embed = new Discord.MessageEmbed()
-        .setTitle('아프란 아커만')
+        .setTitle('리하이 아커만')
         .setColor('#EA6B6B')
         .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/883/868/110/d6423213dba049e41f15cae002f25d7b.gif')
         .setThumbnail('https://p16-sg-default.akamaized.net/aweme/720x720/tiktok-obj/1659396893307906.jpeg')
@@ -971,7 +971,28 @@ client.on('message', message => {
     // 양식님 설명
     if (message.content === '샤디스 양식') { 
         const embed = new Discord.MessageEmbed()
-        .setTitle('양식')
+        .setTitle('YangSick')
+        .setColor('#F781F3')
+        .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766447361735917578/1602747124.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/752784966475055138/766181849822920704/61f45102a97c69113d7f501c93d4eee0.png')
+        .setDescription('그저 로리콘')
+        .addFields(
+            { name: '• 나이', value: '`18살`', inline: true },
+            { name: '• 출생', value: '`파라디 섬 월 로제`', inline: true },
+            { name: '• 신장', value: '`180cm`', inline: true },
+            { name: '• 체중', value: '`75kg`', inline: true },
+            { name: '• 소속 직책', value: '`4반 분대장`', inline: true },
+            { name: '• 가치관', value: '`귀여우면 다 좋아`', inline: true },
+            { name: '• 거주지', value: '`파라디 섬 월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`아버지: 히토미 어머니: 히요비`', inline: true },
+            { name: '• 절친', value: '`친구 따윈 없다`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 양식님 설명
+    if (message.content === '샤디스 YangSick') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('YangSick')
         .setColor('#F781F3')
         .setImage('https://cdn.discordapp.com/attachments/742051945472065546/766447361735917578/1602747124.gif')
         .setThumbnail('https://cdn.discordapp.com/attachments/752784966475055138/766181849822920704/61f45102a97c69113d7f501c93d4eee0.png')
@@ -1010,8 +1031,50 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    // 어택님 설명
+    if (message.content === '샤디스 maskslave') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('MASKSLAVE')
+        .setColor('#FA5858')
+        .setImage('https://cdn.discordapp.com/attachments/752828433834180628/766205899576311808/1530219802_Leviackerman1.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/752828433834180628/766204472467652608/image0.jpg')
+        .setDescription('TOP 3 안에 드는 진격거 게임 고인물')
+        .addFields(
+            { name: '• 나이', value: '`18살`', inline: true },
+            { name: '• 출생', value: '`파라디 섬 월 로제`', inline: true },
+            { name: '• 신장', value: '`176cm`', inline: true },
+            { name: '• 체중', value: '`60kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 병사장`', inline: true },
+            { name: '• 가치관', value: '`노력하면 안되는건 없다`', inline: true },
+            { name: '• 거주지', value: '`단장의 책상 밑`', inline: true },
+            { name: '• 가족', value: '`비공개`', inline: true },
+            { name: '• 절친', value: '`책상 밑에 있는 먼지`', inline: true }
+        )
+        message.channel.send(embed)
+    }
     // 비온님 설명
     if (message.content === '샤디스 비온') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Bion 2467')
+        .setColor('#2EFEF7')
+        .setImage('https://1.gall-gif.com/tdgall/files/attach/images/82/731/317/059/92274b5dfe8fb21f81f378ca0b583e49.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/762993031141916712/766219663440740352/FB_IMG_1602575325195.jpg')
+        .setDescription('민트초코를 너무 좋아한 나머지 민트초코보충제를 먹는 사람')
+        .addFields(
+            { name: '• 나이', value: '`15살`', inline: true },
+            { name: '• 출생', value: '`월 마리아 시간시나구`', inline: true },
+            { name: '• 신장', value: '`186cm`', inline: true },
+            { name: '• 체중', value: '`73kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 반장`', inline: true },
+            { name: '• 가치관', value: '`태산보다 무거운 죽음도 있고 깃털만큼 가벼운 죽음도 있다`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
+            { name: '• 가족', value: '`아버지: 24 어머니: 67`', inline: true },
+            { name: '• 절친', value: '`시간시나구에서 거인에게 잡아먹힘`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+    // 비온님 설명
+    if (message.content === '샤디스 Bion 2467') { 
         const embed = new Discord.MessageEmbed()
         .setTitle('Bion 2467')
         .setColor('#2EFEF7')
@@ -1219,6 +1282,69 @@ client.on('message', message => {
             )
             message.channel.send(embed)
         }
+    // 레예님 설명
+    if (message.content === '샤디스 레예') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('redyager')
+        .setColor('#FF0000')
+        .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774613571354492928/e1fa905892640209eb6ae7779cb118f4.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/772381716413022259/774612195069788180/QH8j1tC9_400x400_1.png')
+        .setDescription('교향인 사이버트론의 재건을 기다리고 있다')
+        .addFields(
+            { name: '• 나이', value: '`16살`', inline: true },
+            { name: '• 출생', value: '`사이버트론 백터시그마`', inline: true },
+            { name: '• 신장', value: '`175cm`', inline: true },
+            { name: '• 체중', value: '`64kg`', inline: true },
+            { name: '• 소속 직책', value: '`한국 조사병단 숙련병`', inline: true },
+            { name: '• 가치관', value: '`하나는 일어서고 하나는 쓰러진다`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`아버지 백터 프라임, 어머니 솔러스 프라임`', inline: true },
+            { name: '• 절친', value: '`친구 없음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
+        // 레예님 설명
+        if (message.content === '샤디스 레드예거') { 
+            const embed = new Discord.MessageEmbed()
+            .setTitle('redyager')
+            .setColor('#FF0000')
+            .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774613571354492928/e1fa905892640209eb6ae7779cb118f4.gif')
+            .setThumbnail('https://cdn.discordapp.com/attachments/772381716413022259/774612195069788180/QH8j1tC9_400x400_1.png')
+            .setDescription('교향인 사이버트론의 재건을 기다리고 있다')
+            .addFields(
+                { name: '• 나이', value: '`16살`', inline: true },
+                { name: '• 출생', value: '`사이버트론 백터시그마`', inline: true },
+                { name: '• 신장', value: '`175cm`', inline: true },
+                { name: '• 체중', value: '`64kg`', inline: true },
+                { name: '• 소속 직책', value: '`한국 조사병단 숙련병`', inline: true },
+                { name: '• 가치관', value: '`하나는 일어서고 하나는 쓰러진다`', inline: true },
+                { name: '• 거주지', value: '`월 로제 트로스트 구`', inline: true },
+                { name: '• 가족', value: '`아버지 백터 프라임, 어머니 솔러스 프라임`', inline: true },
+                { name: '• 절친', value: '`친구 없음`', inline: true }
+            )
+            message.channel.send(embed)
+        }
+    // 레예님 설명
+    if (message.content === '샤디스 redyager') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('redyager')
+        .setColor('#FF0000')
+        .setImage('https://cdn.discordapp.com/attachments/772381716413022259/774613571354492928/e1fa905892640209eb6ae7779cb118f4.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/772381716413022259/774612195069788180/QH8j1tC9_400x400_1.png')
+        .setDescription('교향인 사이버트론의 재건을 기다리고 있다')
+        .addFields(
+            { name: '• 나이', value: '`16살`', inline: true },
+            { name: '• 출생', value: '`사이버트론 백터시그마`', inline: true },
+            { name: '• 신장', value: '`175cm`', inline: true },
+            { name: '• 체중', value: '`64kg`', inline: true },
+            { name: '• 소속 직책', value: '`한국 조사병단 숙련병`', inline: true },
+            { name: '• 가치관', value: '`하나는 일어서고 하나는 쓰러진다`', inline: true },
+            { name: '• 거주지', value: '`월 로제 트로스트 구`', inline: true },
+            { name: '• 가족', value: '`아버지 백터 프라임, 어머니 솔러스 프라임`', inline: true },
+            { name: '• 절친', value: '`친구 없음`', inline: true }
+        )
+        message.channel.send(embed)
+    }
     // 팀스피크 다운
     if (message.content === '샤디스 팀스피크') { 
         const embed = new Discord.MessageEmbed()
