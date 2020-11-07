@@ -59,7 +59,7 @@ client.on('ready', function() {
                      "`현재 공개 가능한 정보` \n\n리하이는 잘생겼다"
                     ]
         let rand = Math.floor(Math.random() * tips.length);
-        const channel = client.channels.cache.find(channel => channel.name === '일반')
+        const channel = client.channels.cache.find(channel => channel.id === '742051945472065546')
         
         const embed = new Discord.MessageEmbed()
         .setDescription(`${tips[rand]}`)
