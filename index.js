@@ -2836,48 +2836,6 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    // 레프콘 설명
-    if (message.content === '샤디스 레프콘') { 
-        const embed = new Discord.MessageEmbed()
-        .setTitle('Lefcon')
-        .setColor('#2E2E2E')
-        .setImage('https://media3.giphy.com/media/S0zHxjax3DbJm/giphy.gif')
-        .setThumbnail('https://cdn.discordapp.com/attachments/774199939591831573/774204403347095552/1564392cc40e49d5.png')
-        .setDescription('거인 학살자')
-        .addFields(
-            { name: '• 나이', value: '`18살`', inline: true },
-            { name: '• 출생', value: '`지하도시`', inline: true },
-            { name: '• 신장', value: '`165cm`', inline: true },
-            { name: '• 체중', value: '`46kg`', inline: true },
-            { name: '• 소속 직책', value: '`한국 조사병단 보좌관`', inline: true },
-            { name: '• 가치관', value: '`자유주의`', inline: true },
-            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
-            { name: '• 가족', value: '`태어나자마자 버려짐`', inline: true },
-            { name: '• 절친', value: '`거인에게 먹힘`', inline: true }
-        )
-        message.channel.send(embed)
-    }
-    // 레프콘 설명
-    if (message.content === '샤디스 Lefcon') { 
-        const embed = new Discord.MessageEmbed()
-        .setTitle('Lefcon')
-        .setColor('#2E2E2E')
-        .setImage('https://media3.giphy.com/media/S0zHxjax3DbJm/giphy.gif')
-        .setThumbnail('https://cdn.discordapp.com/attachments/774199939591831573/774204403347095552/1564392cc40e49d5.png')
-        .setDescription('거인 학살자')
-        .addFields(
-            { name: '• 나이', value: '`18살`', inline: true },
-            { name: '• 출생', value: '`지하도시`', inline: true },
-            { name: '• 신장', value: '`165cm`', inline: true },
-            { name: '• 체중', value: '`46kg`', inline: true },
-            { name: '• 소속 직책', value: '`한국 조사병단 보좌관`', inline: true },
-            { name: '• 가치관', value: '`자유주의`', inline: true },
-            { name: '• 거주지', value: '`월 로제 트로스트구`', inline: true },
-            { name: '• 가족', value: '`태어나자마자 버려짐`', inline: true },
-            { name: '• 절친', value: '`거인에게 먹힘`', inline: true }
-        )
-        message.channel.send(embed)
-    }
     // 코니 설명
     if (message.content === '샤디스 코니') { 
         const embed = new Discord.MessageEmbed()
