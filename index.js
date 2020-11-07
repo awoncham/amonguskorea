@@ -226,7 +226,7 @@ client.on('message', message => {
         message.channel.send(`${chats9[rand9]}`)
     }
     let chats10 = ["왜 불렀나", "누구 마음대로 태그하래!!", "그래"]
-    if (message.content === `${client.tag}`) {
+    if (message.content === `<@${client.id}>`) {
         let rand10 = Math.floor(Math.random() * chats9.length);
         message.channel.send(`${chats10[rand10]}`)
     }
