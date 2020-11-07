@@ -227,8 +227,8 @@ client.on('message', message => {
     }
     let chats10 = ["왜 불렀나", "누구 마음대로 태그하래!!", "그래"]
     if (message.content === `${client.tag}`) {
-        let rand9 = Math.floor(Math.random() * chats9.length);
-        message.channel.send(`${chats9[rand10]}`)
+        let rand10 = Math.floor(Math.random() * chats9.length);
+        message.channel.send(`${chats10[rand10]}`)
     }
 })
 
@@ -1245,4 +1245,4 @@ client.on('message', message => {
     }
 });
 
-client.login(process.env.token);
+client.login("NzYzOTY3MDM2NDA5MzgwOTA0.X3_Zvw.Z38Wz_IGvj_ZfrEhz9U3uzbWOac");
