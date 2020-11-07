@@ -177,38 +177,48 @@ client.on('message', message => {
     }
     let chats1 = ["너랑 지금 대화 중인거 안 보이냐?!", "훈련병들을 위해 훈련 준비를 하고 있다", "훈련병들 훈련시키는거 안보이나"]
     if (message.content === `샤디스 뭐해`) {
-        let rand = Math.floor(Math.random() * chats.length);
+        let rand = Math.floor(Math.random() * chats1.length);
         message.channel.send(`${chats1[rand]}`)
     }
     let chats2 = ["지금 뭐라고 했나", "그만해라", "시끄럽다!"]
     if (message.content === `샤디스 죽어`) {
-        let rand = Math.floor(Math.random() * chats.length);
+        let rand = Math.floor(Math.random() * chats2.length);
         message.channel.send(`${chats2[rand]}`)
     }
     let chats3 = ["ㅈ..지금 뭐라고 했나..!", "멈머라고?!", "..."]
     if (message.content === `샤디스 대머리`) {
-        let rand = Math.floor(Math.random() * chats.length);
+        let rand = Math.floor(Math.random() * chats3.length);
         message.channel.send(`${chats3[rand]}`)
     }
     let chats4 = ["ㅇ?", "운동장에서 10바퀴 실시!!", "..."]
     if (message.content === `샤디스 민머리`) {
-        let rand = Math.floor(Math.random() * chats.length);
+        let rand = Math.floor(Math.random() * chats4.length);
         message.channel.send(`${chats4[rand]}`)
     }
     let chats5 = ["ㅈ..지금 뭐라고 했나..!", "멈머라고?!", "죽어라!"]
     if (message.content === `샤디스 빡빡이`) {
-        let rand = Math.floor(Math.random() * chats.length);
+        let rand = Math.floor(Math.random() * chats5.length);
         message.channel.send(`${chats5[rand]}`)
     }
     let chats6 = ["어디서 반말이냐!", "인사를 제대로 하는 날이 오지 않구나", "다시 한번 말해보거라"]
     if (message.content === `샤디스 안녕`) {
-        let rand = Math.floor(Math.random() * chats.length);
+        let rand = Math.floor(Math.random() * chats6.length);
         message.channel.send(`${chats6[rand]}`)
     }
     let chats7 = ["너가 제대로 인사하는 날도 오는구나..", "무슨 일인가?", "그래"]
     if (message.content === `샤디스 안녕하세요`) {
-        let rand = Math.floor(Math.random() * chats.length);
+        let rand = Math.floor(Math.random() * chats7.length);
         message.channel.send(`${chats7[rand]}`)
+    }
+    if (message.content === '샤디스 도와줘') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription('`샤디스 도움말` 이라고 검색해라!')
+        message.channel.send(embed)
+    }
+    let chats8 = ["날 왜 불렀나", "그래", "무슨 일인가?"]
+    if (message.content === '<@763967036409380904>') {
+        let rand = Math.floor(Math.random() * chats8.length);
+        message.channel.send(`${chats8[rand]}`)
     }
 })
 
