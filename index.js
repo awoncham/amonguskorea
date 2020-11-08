@@ -76,7 +76,7 @@ client.on('guildMemberAdd', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
-      .setDescription(`${member} 조사병단의 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 <#701406223999959062>을 확인해라!`)
+      .setDescription(`${member} 조사병단에 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 <#701406223999959062>을 확인해라!`)
       .setImage('https://i.pinimg.com/originals/d1/72/3d/d1723dc033cfece00342e567d15b7c30.gif')
       .setTimestamp()
       channel.send(embed)
@@ -108,8 +108,8 @@ client.on('messageDelete', async message => {
 //금지어
 client.on('message', async message => {
 
-    let blacklisted = ["씨발", "시발", "ㅅㅂ", "ㅄ", "병신", "븅신", "지랄", "죠랄", "존나", "ㅈㄴ", "자지", "보지", "섹스", "sex", "Sex", "TLQKF", "tlqkf", "애미",
-                       "애비", "응디", "응디시티", "노무현", "이기", "새끼", "개새끼", "^^ㅣ발", "폰허브", "Pornhub", "좆", "ㅈ밥", "고추", "xvideo", "알씨", "ARCE", "알1씨"]
+    let blacklisted = ["씨발", "시발", "ㅅㅂ", "ㅄ", "병신", "븅신", "지랄", "죠랄", "존나", "ㅈㄴ", "자지", "보지", "섹스", "sex", "Sex", "TLQKF", "tlqkf",
+                       "개새끼", "^^ㅣ발", "좆", "ㅈ밥", "알씨", "ARCE", "알1씨"]
 
     let foundInText = false;
     for (var i in blacklisted) { 
