@@ -4,7 +4,7 @@ const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 client.on('ready', function() {   
 
     console.log('심장을 바치는 것을 성공하였다');
-    client.user.setPresence({ watching: { name: '훈련병들이 잘 연습하고 있군..' }, status: 'online' })
+    client.user.setActivity('심장을 바쳐라!')
     
     setInterval(() => {
         let tips = ["`현재 공개 가능한 정보` \n\n#대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
@@ -359,7 +359,7 @@ client.on('message', message => {
     if (message.content === '샤디스 조사병단') { //조사병단 반장님들 태그
         const embed = new Discord.MessageEmbed()
         .setDescription('**`조사병단 반장 모음`**')
-        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774809375671189524/7c1a616b3166df6e6493cf2ae8614bebaec2a13f_hq.gif')
+        .setImage('https://i.makeagif.com/media/2-10-2014/IvFxLe.gif')
         .addFields(
             { name: '• 지휘 분대', value: '<@!271100288704839681>', inline: true },
             { name: '• 1반', value: '<@!263511886258110466>', inline: true },
