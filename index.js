@@ -359,6 +359,7 @@ client.on('message', message => {
     if (message.content === '샤디스 조사병단') { //조사병단 반장님들 태그
         const embed = new Discord.MessageEmbed()
         .setDescription('**`조사병단 반장 모음`**')
+        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774807924136214618/IvFxLe.gif')
         .addFields(
             { name: '• 지휘 분대', value: '<@!271100288704839681>', inline: true },
             { name: '• 1반', value: '<@!263511886258110466>', inline: true },
@@ -369,7 +370,6 @@ client.on('message', message => {
             { name: '• 6반', value: '<@!505697524913274900>', inline: true },
             { name: '• 7반', value: '<@!376197734576816130>', inline: true }
         )
-        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774807924136214618/IvFxLe.gif')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 분단') { //분대 및 반 설명
