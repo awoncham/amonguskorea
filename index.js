@@ -321,7 +321,7 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 행정부') //행정부 편성도
+    if (message.content === '샤디스 행정부') {//행정부 편성도
         const embed = new Discord.MessageEmbed()
         .setDescription('**`행정부 총지휘단`**')
         .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774879242353115136/114914e663de26ae51d0c6dd8a001d54.gif')
@@ -331,6 +331,7 @@ client.on('message', message => {
             { name: '벽외조사 진행 본부', value: '벽외조사 호스팅 팀: <@!703524055009198080> <@!505697524913274900>\n맵 메이커: <@!740778845480681544>', inline: false}
         )
         message.channel.send(embed)
+    }
     if (message.content === '샤디스 맵') { //맵 파일 다운로드
         const embed = new Discord.MessageEmbed()
         .addField('• 카라네스', '다운로드 : **https://discord.gg/SZeXuZ5**', false)
