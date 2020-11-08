@@ -125,7 +125,6 @@ client.on('message', async message => {
 }
 }
 );
-
 //음식추천
 client.on('message', message => {
     
@@ -322,6 +321,16 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    if (message.content === '샤디스 행정부') //행정부 편성도
+        const embed = new Discord.MessageEmbed()
+        .setDescription('**`행정부 총지휘단`**')
+        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774879242353115136/114914e663de26ae51d0c6dd8a001d54.gif')
+        .addFields(
+            { name: '행정부', value: '단장: <@!271100288704839681>\n보좌관: <@!389728196511268864> <@!675324638326292481>', inline: false},
+            { name: '서버 운영부', value: '서버 도움팀: <@!300210057621143562> <@!347712089542098944> \n서버 기술팀: <@!674590918703054849>\n서버 홍보팀: <@!173817207883563008>', inline: false},
+            { name: '벽외조사 진행 본부', value: '벽외조사 호스팅 팀: <@!703524055009198080> <@!505697524913274900>\n맵 메이커: <@!740778845480681544>', inline: false}
+        )
+        message.channel.send(embed)
     if (message.content === '샤디스 맵') { //맵 파일 다운로드
         const embed = new Discord.MessageEmbed()
         .addField('• 카라네스', '다운로드 : **https://discord.gg/SZeXuZ5**', false)
