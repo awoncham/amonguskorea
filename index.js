@@ -339,6 +339,7 @@ client.on('message', message => {
         .addFields(
             { name: '대검찰청', value: '강력범죄전담부 검사: <@!271100288704839681>\n검찰수사관: X\n\n형사 1부 검사: <@!703524055009198080>\n검찰수사관:\n\n형사정책부 검사: <@!688375427848470753>\n연구관: <@!271100096194543617>', inline:false}
         )
+        message.channel.send(embed)
     }
     if (message.content === '샤디스 맵') { //맵 파일 다운로드
         const embed = new Discord.MessageEmbed()
