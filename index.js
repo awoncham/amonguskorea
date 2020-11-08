@@ -359,7 +359,7 @@ client.on('message', message => {
     if (message.content === '샤디스 조사병단') { //조사병단 반장님들 태그
         const embed = new Discord.MessageEmbed()
         .setDescription('**`조사병단 반장 모음`**')
-        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774807924136214618/IvFxLe.gif')
+        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774809375671189524/7c1a616b3166df6e6493cf2ae8614bebaec2a13f_hq.gif')
         .addFields(
             { name: '• 지휘 분대', value: '<@!271100288704839681>', inline: true },
             { name: '• 1반', value: '<@!263511886258110466>', inline: true },
