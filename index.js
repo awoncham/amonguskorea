@@ -4,7 +4,7 @@ const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 client.on('ready', function() {   
 
     console.log('심장을 바치는 것을 성공하였다');
-    client.user.setActivity('모두 심장을 바쳐라!');
+    client.user.setPresence({ watching: { name: '훈련병들이 잘 연습하고 있군..' }, status: 'online' })
     
     setInterval(() => {
         let tips = ["`현재 공개 가능한 정보` \n\n#대규모-벽외조사 공지에서 현재 예정돼 있는 벽외조살르 확인할 수 있으며 #벽외조사-신청에서 벽외조사를 신청할 수 있습니다",
@@ -56,7 +56,9 @@ client.on('ready', function() {
                      "`현재 공개 가능한 정보` \n\n어택님은 리하이의 따까리다",
                      "`현재 공개 가능한 정보` \n\nQ 와 E는 와이어이다",
                      "`현재 공개 가능한 정보` \n\n와이어를 박은 뒤 부스트를 사용하면 속도를 더 빠르게 할 수 있다",
-                     "`현재 공개 가능한 정보` \n\n리하이는 잘생겼다"
+                     "`현재 공개 가능한 정보` \n\n리하이는 잘생겼다",
+                     "`현재 공개 가능한 정보` \n\n<#702873267345817600> 에서 현재 예정되어 있는 벽외조사를 확인하고 <#702873366373204019> 에서 신청할 수 있다",
+                     "`현재 공개 가능한 정보` \n\n조사병단에는 검찰청이 있습니다. 욕설, 비방, 유니폼 불착용 등 불법행위를 목격하시면 신고하세요"
                     ]
         let rand = Math.floor(Math.random() * tips.length);
         const channel = client.channels.cache.find(channel => channel.id === '742051945472065546')
@@ -143,7 +145,7 @@ client.on('message', message => {
     
     let luck = [
         "리하이보다 기록이 안 나올 것이다","오늘은 스피드런 신기록을 찍을 것이다", "오늘은 데미지런 신기록을 찍을 것이다", "기행종이 많이 나타날 것이다", "펑크가 너를 기달리고 있다", "죽음이 따라오는 날", 
-        "와이어가 잘 안 쏴지는 날", "와이어를 잘 발사하는 날", "거의 안 죽는 날", "게임이 많이 튕길 것이다", "어택님과 많이하게 될 것이다"
+        "와이어가 잘 안 쏴지는 날", "와이어를 잘 발사하는 날", "거의 안 죽는 날", "게임이 많이 튕길 것이다", "어택님과 많이하게 될 것이다", "엄청 못해지는 날"
             ]
 
     if (message.content === `샤디스 오늘의 운세`) {
@@ -158,7 +160,7 @@ client.on('message', message => {
 //게임추천
 client.on('message', message => {
     
-    let games = ["AOTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "리하이랑 놀아주기"]
+    let games = ["AoTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "리하이랑 놀아주기"]
 
     if (message.content === `샤디스 게임추천`) {
         let rand = Math.floor(Math.random() * games.length);
@@ -267,13 +269,12 @@ client.on('message', message => {
     }
     if (message.content === '샤디스 색상') { //인게임 닉네임 색상 코드
         const embed = new Discord.MessageEmbed()
-        .setTitle('인게임 닉네임 색상 코드')
-        .setDescription('벽외조사 할때 자신의 소속에 맞게 색상 코드를 적용해주세요')
+        .setDescription('**`인게임 닉네임 색상 코드`**\n\n벽외조사 할때 자신의 소속에 맞게 색상 코드를 적용해주세요')
         .addFields(
-            { name: '**• 단장 (Commander)**', value: '**`[3300FF]`**', inline: false },
-            { name: '**• 분대장 (SquadLeader)**', value: '**`[FFFF33]`**', inline: false },
-            { name: '**• 반장 (TeamLeader)**', value: '**`[FF0000]`**', inline: false },
-            { name: '**• 병사 (Soldier)**', value: '**`[FFFFFF]`**', inline: false }
+            { name: '**• 단장 (Commander)**', value: '`[3300FF]`', inline: false },
+            { name: '**• 분대장 (SquadLeader)**', value: '`[FFFF33]`', inline: false },
+            { name: '**• 반장 (TeamLeader)**', value: '`[FF0000]`', inline: false },
+            { name: '**• 병사 (Soldier)**', value: '`[FFFFFF]`', inline: false }
         )
         message.channel.send(embed)
     }
@@ -355,20 +356,20 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-    if (message.content === '샤디스 조사병단') { //조사병단 단장님들 태그
+    if (message.content === '샤디스 조사병단') { //조사병단 반장님들 태그
         const embed = new Discord.MessageEmbed()
-        .setDescription('각 반에 반장님이십니다')
+        .setDescription('**`조사병단 반장 모음`**')
         .addFields(
-            { name: '• 지휘 분대', value: '`ph6400#4243`', inline: false },
-            { name: '• 1반', value: '`심심해#4154`', inline: false },
-            { name: '• 2반', value: '`MASK#7165`', inline: false },
-            { name: '• 3반', value: '`덕소물주먹호형#5446`', inline: false },
-            { name: '• 4반', value: '`Yang Sick.me#9559`', inline: false },
-            { name: '• 5반', value: '`Bion2467#8719`', inline: false },
-            { name: '• 6반', value: '`Red_Orange_Green_Purple_apple_G#2412`', inline: false },
-            { name: '• 7반', value: '`이한별#6657`', inline: false }
+            { name: '• 지휘 분대', value: '<@!271100288704839681>', inline: true },
+            { name: '• 1반', value: '<@!263511886258110466>', inline: true },
+            { name: '• 특별작전반', value: '<@!740778845480681544>', inline: true },
+            { name: '• 3반', value: '<@!566852436275232768>', inline: true },
+            { name: '• 4반', value: '<@!300210057621143562>', inline: true },
+            { name: '• 5반', value: '<@!703524055009198080>', inline: true },
+            { name: '• 6반', value: '<@!505697524913274900>', inline: true },
+            { name: '• 7반', value: '<@!376197734576816130>', inline: true }
         )
-        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/772986247865434122/IvFxLe.gif')
+        .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774807924136214618/IvFxLe.gif')
         message.channel.send(embed)
     }
     if (message.content === '샤디스 분단') { //분대 및 반 설명
