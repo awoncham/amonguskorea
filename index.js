@@ -71,37 +71,63 @@ client.on('ready', function() {
 
 });
 
+// 서버 입장 메시지
 client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
+    const user = member.mentions.users.first() || member.author;
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
       .setDescription(`${member} 조사병단에 입단한 것을 환영한다, 벽외조사에서 살고 싶으면 <#701406223999959062>을 확인해라!`)
       .setImage('https://i.pinimg.com/originals/d1/72/3d/d1723dc033cfece00342e567d15b7c30.gif')
       .setTimestamp()
+      .setFooter(user.username, user.displayAvatarURL())
       channel.send(embed)
     });
 
+// 서버 퇴장 메시지
 client.on('guildMemberRemove', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
+    const user = member.mentions.users.first() || member.author;
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#FF0000')
       .setDescription(`${member} 님이 거인에 의해 쫒겨났습니다`)
       .setImage('https://cdn.discordapp.com/attachments/758884038962053133/774449593134874664/tenor_3.gif')
       .setTimestamp()
+      .setFooter(user.username, user.displayAvatarURL())
       channel.send(embed)
   });
+
+//메시지 수정
+client.on('messageUpdate', async(oldMessage, newMessage) => {
+  if(oldMessage.content === newMessage.content) return // 임베드로 인한 수정같은 경우 
+  const channel = client.channels.cache.find(channel => channel.name === '로그')
+  const user = oldMessage.mentions.users.first() || oldMessage.author;
+  const embed = new Discord.MessageEmbed()
+  .setTitle('📝 수정 로그')
+  .setColor('#6E81EE')
+  .setDescription(`<@!${oldMessage.author.id}> 님께서 메시지를 수정하셨습니다`)
+  .addFields(
+    { name: '수정 전', value: `\`${oldMessage.content}\``, inline: true },
+    { name: '수정 후', value: `\`${newMessage.content}\``, inline: true }
+)
+  .setTimestamp()
+  .setFooter(user.username, user.displayAvatarURL())
+  channel.send(embed)
+})
 
 //메시지 삭제
 client.on('messageDelete', async message => {
     const user = message.author.id
+    const user1 = oldMessage.mentions.users.first() || oldMessage.author;
     const channel = client.channels.cache.find(channel => channel.name === '로그')
     const embed = new Discord.MessageEmbed()
     .setTitle('❌ 삭제 로그')
     .setColor('#FF0000')
     .setDescription(`<@!${user}> 님이 \`${message.content}\` 을(를) 삭제하셨습니다`)
     .setTimestamp()
+    .setFooter(user1.username, user1.displayAvatarURL())
     channel.send(embed)
 });
 
@@ -144,7 +170,8 @@ client.on('message', message => {
     
     let luck = [
         "리하이보다 기록이 안 나올 것이다","오늘은 스피드런 신기록을 찍을 것이다", "오늘은 데미지런 신기록을 찍을 것이다", "기행종이 많이 나타날 것이다", "펑크가 너를 기달리고 있다", "죽음이 따라오는 날", 
-        "와이어가 잘 안 쏴지는 날", "와이어를 잘 발사하는 날", "거의 안 죽는 날", "게임이 많이 튕길 것이다", "어택님과 많이하게 될 것이다", "엄청 못해지는 날"
+        "와이어가 잘 안 쏴지는 날", "와이어를 잘 발사하는 날", "거의 안 죽는 날", "게임이 많이 튕길 것이다", "어택님과 많이하게 될 것이다", "엄청 못해지는 날", "거인에게 자주 잡힌다", "거인에게 10번 몸이 찢겨 나갈 것이다",
+        "나무에 많이 박을 것이다", "킬딸만 오지게 당할 것이다"
             ]
 
     if (message.content === `샤디스 오늘의 운세`) {
@@ -1357,6 +1384,111 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+        // 카인님 설명
+        if (message.content === '샤디스 카인') { 
+            const embed = new Discord.MessageEmbed()
+            .setTitle('Kain')
+            .setColor('#FF0000')
+            .setImage('https://cdn.discordapp.com/attachments/758884038962053133/775553229534396436/196CD1144AE974E835.gif')
+            .setThumbnail('https://cdn.discordapp.com/attachments/775553652587888700/775553850840449044/13.png')
+            .setDescription('목소리는 빵피스트')
+            .addFields(
+                { name: '• 나이', value: '`17살`', inline: true },
+                { name: '• 출생', value: '`미공개`', inline: true },
+                { name: '• 신장', value: '`176.5cm`', inline: true },
+                { name: '• 체중', value: '`52.3kg`', inline: true },
+                { name: '• 소속 직책', value: '`한국 조사병단 3반의 뽀시래기`', inline: true },
+                { name: '• 가치관', value: '`나는 잘생겼다`', inline: true },
+                { name: '• 거주지', value: '`미공개`', inline: true },
+                { name: '• 가족', value: '`미공개`', inline: true },
+                { name: '• 절친', value: '`없음`', inline: true }
+            )
+            message.channel.send(embed)
+        }
+        // 카인님 설명
+        if (message.content === '샤디스 Kain') { 
+            const embed = new Discord.MessageEmbed()
+            .setTitle('Kain')
+            .setColor('#FF0000')
+            .setImage('https://cdn.discordapp.com/attachments/758884038962053133/775553229534396436/196CD1144AE974E835.gif')
+            .setThumbnail('https://cdn.discordapp.com/attachments/775553652587888700/775553850840449044/13.png')
+            .setDescription('목소리는 빵피스트')
+            .addFields(
+                { name: '• 나이', value: '`17살`', inline: true },
+                { name: '• 출생', value: '`미공개`', inline: true },
+                { name: '• 신장', value: '`176.5cm`', inline: true },
+                { name: '• 체중', value: '`52.3kg`', inline: true },
+                { name: '• 소속 직책', value: '`한국 조사병단 3반의 뽀시래기`', inline: true },
+                { name: '• 가치관', value: '`나는 잘생겼다`', inline: true },
+                { name: '• 거주지', value: '`미공개`', inline: true },
+                { name: '• 가족', value: '`미공개`', inline: true },
+                { name: '• 절친', value: '`없음`', inline: true }
+            )
+            message.channel.send(embed)
+    }
+    // 파라유저님 설명
+    if (message.content === '샤디스 파라유저') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('PharahUser')
+        .setColor('#0040FF')
+        .setImage('https://cdn.discordapp.com/attachments/701710791350550568/775555336248754206/i15093910887.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/701710791350550568/775554883319103538/be698c7848b7482b41c76feeeb8be37e.png')
+        .setDescription('오버워치 접은 파라유저')
+        .addFields(
+            { name: '• 나이', value: '`19살`', inline: true },
+            { name: '• 출생', value: '`월 로제 트로스트 구`', inline: true },
+            { name: '• 신장', value: '`186cm`', inline: true },
+            { name: '• 체중', value: '`83kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 특별작전반`', inline: true },
+            { name: '• 가치관', value: '`가화만사성`', inline: true },
+            { name: '• 거주지', value: '`월 로제 지하도시`', inline: true },
+            { name: '• 가족', value: '`어머니 아나, 아버지 겐지`', inline: true },
+            { name: '• 절친', value: '`벽외조사 때에 사망`', inline: true }
+        )
+        message.channel.send(embed)
+   }
+    // 파라유저님 설명
+    if (message.content === '샤디스 PharahUser') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('PharahUser')
+        .setColor('#0040FF')
+        .setImage('https://cdn.discordapp.com/attachments/701710791350550568/775555336248754206/i15093910887.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/701710791350550568/775554883319103538/be698c7848b7482b41c76feeeb8be37e.png')
+        .setDescription('오버워치 접은 파라유저')
+        .addFields(
+            { name: '• 나이', value: '`19살`', inline: true },
+            { name: '• 출생', value: '`월 로제 트로스트 구`', inline: true },
+            { name: '• 신장', value: '`186cm`', inline: true },
+            { name: '• 체중', value: '`83kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 특별작전반`', inline: true },
+            { name: '• 가치관', value: '`가화만사성`', inline: true },
+            { name: '• 거주지', value: '`월 로제 지하도시`', inline: true },
+            { name: '• 가족', value: '`어머니 아나, 아버지 겐지`', inline: true },
+            { name: '• 절친', value: '`벽외조사 때에 사망`', inline: true }
+        )
+        message.channel.send(embed)
+   }
+    // 파라유저님 설명
+    if (message.content === '샤디스 파라') { 
+        const embed = new Discord.MessageEmbed()
+        .setTitle('PharahUser')
+        .setColor('#0040FF')
+        .setImage('https://cdn.discordapp.com/attachments/701710791350550568/775555336248754206/i15093910887.gif')
+        .setThumbnail('https://cdn.discordapp.com/attachments/701710791350550568/775554883319103538/be698c7848b7482b41c76feeeb8be37e.png')
+        .setDescription('오버워치 접은 파라유저')
+        .addFields(
+            { name: '• 나이', value: '`19살`', inline: true },
+            { name: '• 출생', value: '`월 로제 트로스트 구`', inline: true },
+            { name: '• 신장', value: '`186cm`', inline: true },
+            { name: '• 체중', value: '`83kg`', inline: true },
+            { name: '• 소속 직책', value: '`조사병단 특별작전반`', inline: true },
+            { name: '• 가치관', value: '`가화만사성`', inline: true },
+            { name: '• 거주지', value: '`월 로제 지하도시`', inline: true },
+            { name: '• 가족', value: '`어머니 아나, 아버지 겐지`', inline: true },
+            { name: '• 절친', value: '`벽외조사 때에 사망`', inline: true }
+        )
+        message.channel.send(embed)
+   }
     // 팀스피크 다운
     if (message.content === '샤디스 팀스피크') { 
         const embed = new Discord.MessageEmbed()
