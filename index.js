@@ -572,75 +572,16 @@ client.on('message', message => {
     // 샤디스 이용 방법
     if (message.content === '샤디스 도움말') { 
         const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
-        .setColor('#3B240B')
-        .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
-        .addFields(
-            { name: '대화', value: '`샤디스 도움말 대화`', inline: true },
-            { name: '놀이', value: '`샤디스 도움말 놀이`', inline: true },
-            { name: '진격의 거인', value: '`샤디스 도움말 진격의 거인`', inline: true },
-            { name: '조사병단', value: '`샤디스 도움말 조사병단`', inline: true }
+        .setAuthor('반갑다! 나는 키스 샤디스다!', 'https://cdn.discordapp.com/attachments/758884038962053133/777775810241101824/Keith_shadis_2.jpg')
+        .setColor('#61380B')
+        .setDescription(
+            "\n나를 이용하는 방법은 아래에 있다! 다 보고 한번 써봐라!\n만약 샤디스한테 오류가 생기면 <@674590918703054849> 한테 제보하도록.\n\n**심장을 바쳐라!**"
         )
-        message.channel.send(embed)
-    }
-    // 샤디스 놀이 방법
-    if (message.content === '샤디스 도움말 놀이') { 
-        const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 놀이 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
-        .setColor('#3B240B')
-        .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
         .addFields(
-            { name: '`샤디스 음식추천`', value: '오늘은 무슨 음식을 먹을지 고민되면 이용해보세요!', inline: true },
-            { name: '`샤디스 게임추천`', value: '샤디스가 추천하는 게임을 한번 해보시는것도 나쁘지 않아요', inline: true },
-            { name: '`샤디스 오늘의 운세`', value: '오늘은 어떤 일이 일어날 지 예상을 해요!', inline: true },
-            { name: '`샤디스 아바타`', value: '해당 유저를 태그하여 프로필을 획득하세요', inline: true },
-            { name: '`샤디스 핑`', value: '자신의 연결 속도를 확인해보세요', inline: true }
-        )
-        message.channel.send(embed)
-    }
-    // 샤디스 대화 방법
-    if (message.content === '샤디스 도움말 대화') { 
-        const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 놀이 명령어 모음', 'https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
-        .setColor('#3B240B')
-        .setThumbnail('https://pbs.twimg.com/profile_images/676598497873928192/vbiUNPq3_400x400.jpg')
-        .addFields(
-            { name: '`샤디스 (할말)`', value: '여러분들이 한 말에 샤디스가 대답할 수 있어요!', inline: true },
-            { name: '`샤디스 레벨`', value: '아직 미완성입니다', inline: true }
-        )
-        message.channel.send(embed)
-    }
-    // 모든 진격의 거인 명령어 모음
-    if (message.content === '샤디스 도움말 진격의 거인') { 
-        const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 진격의 거인 명령어 모음', 'https://cdn.discordapp.com/attachments/758884038962053133/772993602053079110/2ed956ea7e3e518470b3f87b69b7b8fa.png')
-        .setColor('#FF0000')
-        .setThumbnail('https://cdn.discordapp.com/attachments/758884038962053133/772993602053079110/2ed956ea7e3e518470b3f87b69b7b8fa.png')
-        .addFields(
-            { name: '`샤디스 리바이`', value: '진격의 거인 리바이의 대해 자세히 나옵니다', inline: true },
-            { name: '`샤디스 에렌`', value: '진격의 거인 에렌의 대해 자세히 나옵니다', inline: true },
-            { name: '`샤디스 미카사`', value: '진격의 거인 미카사의 대해 자세히 나옵니다', inline: true },
-            { name: '`샤디스 엘빈`', value: '진격의 거인 엘빈의 대해 자세히 나옵니다', inline: true },
-            { name: '`샤디스 (명대사)`', value: '진격의 거인에서 나온 명장면을 붙혀 넣으시면 해당 장면에 GIF가 나옵니다', inline: true },
-            { name: '`샤디스 (진격거 캐릭터 닉네임)`', value: '진격의 거인 캐릭터 닉네임을 적어보시면 거의 다 나와있어요', inline: true }
-        )
-        message.channel.send(embed)
-    }
-    // 모든 조사병단 명령어 모음
-    if (message.content === '샤디스 도움말 조사병단') { 
-        const embed = new Discord.MessageEmbed()
-        .setAuthor('샤디스 조사병단 명령어 모음', 'https://i.pinimg.com/originals/57/ed/3b/57ed3b5c113d60d1fa0eced7e2e37357.png')
-        .setColor('#11A52F')
-        .setThumbnail('https://i.pinimg.com/originals/57/ed/3b/57ed3b5c113d60d1fa0eced7e2e37357.png')
-        .addFields(
-            { name: '`샤디스 다운로드`', value: '진격의 거인 게임 모음집입니다 (벽외조사에 참여하실려면 EM모드 다운하세요)', inline: true },
-            { name: '`샤디스 맵`', value: '벽외조사를 하기 위해 꼭 다운로드 해야하는 카라네스 맵입니다', inline: true },
-            { name: '`샤디스 계급`', value: '한국 조사병단 보좌관 역할 모음', inline: true },
-            { name: '`샤디스 조사병단`', value: '조사병단 각 반의 반장들입니다', inline: true },
-            { name: '`샤디스 분단(진형)`', value: '각 반의 맞게 자신의 진형으로 보고 가세요', inline: true },
-            { name: '`샤디스 연막탄`', value: '어떻게 연막을 써야 하는 지 나와있습니다', inline: true },
-            { name: '`샤디스 조사병단 유니폼`', value: '조사병단 공식 유니폼들이 있어요!', inline: true },
-            { name: '`샤디스 (인물)`', value: '인물칸에다가 조사병단 디스코드에 있는 보좌관들의 닉네임을 적어보세요', inline: true }
+            { name: '놀이', value: '`오늘의 운세`, `음식추천`, `게임추천`, `핑`, `아바타`', inline: false },
+            { name: '조사병단', value: '`색상`, `초대코드`, `조사병단 유니폼`, `다운로드`, `다운`, `행정부`, `대검찰청`, `맵`, `맵 다운로드`, `맵 다운`, `계급`, `조사병단`, `분단`, `진형`, `연막탄`, `팀스피크`, `팀스피크 다운`, `팀스피크 다운로드`', inline: false },
+            { name: '진격의 거인', value: '`리바이`, `리바이 아커만`, `엘런`, `엘런 예거`, `에렌`, `에렌 예거`, `엘빈`, `엘빈 스미스`, `에르빈`, `에르빈 스미스`, `미카사 아커만`, `미카사`, `아르민`, `아르민 알레르토`, `한지`, `한지 조에`, `코니`, `코니 스프링거`', inline: false },
+            { name: '기타', value: '`심장을 바쳐라`\n\n**`샤디스 도움말 <카테고리>` 를 이용하세요**\n\n**예를 들면:**\n`샤디스 도움말 놀이` 라고 치면 놀이라는 카테고리의 도움말이 나옵니다\n\n**관련된 링크:**\n[샤디스 초대링크](https://discord.com/api/oauth2/authorize?client_id=763967036409380904&permissions=8&scope=bot), [조사병단](https://discord.gg/SZeXuZ5), [샤디스 개발자 길드](https://discord.gg/gXm8x428sj)', inline: false },
         )
         message.channel.send(embed)
     }
