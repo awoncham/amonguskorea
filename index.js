@@ -262,6 +262,9 @@ client.on('message', message => {
 
 // 조사병단 관련 명령어
 client.on('message', message => {
+    
+    if (message.channel.type === 'dm') return;
+        
     // 연결한 정도를 알려줍니다
     if(message.content.startsWith('샤디스 핑')) {
         const embed = new Discord.MessageEmbed()
@@ -465,6 +468,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 리바이 아커만') { // 리바이 아커만 설명
+        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('리바이 아커만')
         .setURL('https://namu.wiki/w/%EB%A6%AC%EB%B0%94%EC%9D%B4(%EC%A7%84%EA%B2%A9%EC%9D%98%20%EA%B1%B0%EC%9D%B8)')
@@ -486,6 +490,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 엘런') { // 엘런 예거 설명
+        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
@@ -507,6 +512,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 엘런 예거') { // 엘런 예거 설명
+        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
@@ -528,6 +534,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 에렌') { // 엘런 예거 설명
+        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
@@ -549,6 +556,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 에렌 예거') { // 엘런 예거 설명
+        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
@@ -571,6 +579,7 @@ client.on('message', message => {
     }
     // 샤디스 이용 방법
     if (message.content === '샤디스 도움말') { 
+        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setAuthor('반갑다! 나는 키스 샤디스다!', 'https://cdn.discordapp.com/attachments/758884038962053133/777775810241101824/Keith_shadis_2.jpg')
         .setColor('#61380B')
@@ -581,12 +590,13 @@ client.on('message', message => {
             { name: '놀이', value: '`오늘의 운세`, `음식추천`, `게임추천`, `핑`, `아바타`', inline: false },
             { name: '조사병단', value: '`색상`, `초대코드`, `조사병단 유니폼`, `다운로드`, `다운`, `행정부`, `대검찰청`, `맵`, `맵 다운로드`, `맵 다운`, `계급`, `조사병단`, `분단`, `진형`, `연막탄`, `팀스피크`, `팀스피크 다운`, `팀스피크 다운로드`', inline: false },
             { name: '진격의 거인', value: '`리바이`, `리바이 아커만`, `엘런`, `엘런 예거`, `에렌`, `에렌 예거`, `엘빈`, `엘빈 스미스`, `에르빈`, `에르빈 스미스`, `미카사 아커만`, `미카사`, `아르민`, `아르민 알레르토`, `한지`, `한지 조에`, `코니`, `코니 스프링거`', inline: false },
-            { name: '기타', value: '`심장을 바쳐라`\n\n**`샤디스 도움말 <카테고리>` 를 이용하세요**\n\n**예를 들면:**\n`샤디스 도움말 놀이` 라고 치면 놀이라는 카테고리의 도움말이 나옵니다\n\n**관련된 링크:**\n[샤디스 초대링크](https://discord.com/api/oauth2/authorize?client_id=763967036409380904&permissions=8&scope=bot), [조사병단](https://discord.gg/SZeXuZ5), [샤디스 개발자 길드](https://discord.gg/gXm8x428sj)', inline: false },
+            { name: '기타', value: '`심장을 바쳐라`\n\n**`샤디스 도움말 <카테고리>` 를 이용하세요**\n\n**예를 들면:**\n`샤디스 도움말 놀이` 라고 치면 놀이라는 카테고리의 도움말이 나옵니다\n\n**관련된 링크:**\n[조사병단](https://discord.gg/SZeXuZ5), [샤디스 개발자 길드](https://discord.gg/gXm8x428sj)', inline: false },
         )
         message.channel.send(embed)
     }
     // 엘빈 스미스 설명
     if (message.content === '샤디스 엘빈') { 
+        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
