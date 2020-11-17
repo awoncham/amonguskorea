@@ -127,6 +127,9 @@ client.on('messageDelete', async message => {
 
 //금지어
 client.on('message', async message => {
+    
+    if (message.channel.type === 'dm') return;
+        
 
     let blacklisted = ["씨발", "시발", "ㅅㅂ", "ㅄ", "병신", "븅신", "지랄", "죠랄", "존나", "ㅈㄴ", "자지", "보지", "섹스", "sex", "Sex", "TLQKF", "tlqkf",
                        "개새끼", "^^ㅣ발", "좆", "ㅈ밥", "알씨", "ARCE", "알1씨"]
@@ -147,6 +150,9 @@ client.on('message', async message => {
 );
 //음식추천
 client.on('message', message => {
+        
+    if (message.channel.type === 'dm') return;
+        
     
     let foods = ["지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
 
@@ -161,6 +167,9 @@ client.on('message', message => {
 
 //오늘의 운세
 client.on('message', message => {
+        
+    if (message.channel.type === 'dm') return;
+        
     
     let luck = [
         "리하이보다 기록이 안 나올 것이다","오늘은 스피드런 신기록을 찍을 것이다", "오늘은 데미지런 신기록을 찍을 것이다", "기행종이 많이 나타날 것이다", "펑크가 너를 기달리고 있다", "죽음이 따라오는 날", 
@@ -179,6 +188,9 @@ client.on('message', message => {
 
 //게임추천
 client.on('message', message => {
+        
+    if (message.channel.type === 'dm') return;
+        
     
     let games = ["AoTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "리하이랑 놀아주기"]
 
@@ -490,7 +502,6 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 엘런') { // 엘런 예거 설명
-        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
@@ -512,7 +523,6 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 엘런 예거') { // 엘런 예거 설명
-        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
@@ -534,7 +544,6 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 에렌') { // 엘런 예거 설명
-        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
@@ -556,7 +565,6 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     if (message.content === '샤디스 에렌 예거') { // 엘런 예거 설명
-        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('엘런 예거')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%9F%B0%20%EC%98%88%EA%B1%B0')
@@ -579,7 +587,6 @@ client.on('message', message => {
     }
     // 샤디스 이용 방법
     if (message.content === '샤디스 도움말') { 
-        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setAuthor('반갑다! 나는 키스 샤디스다!', 'https://cdn.discordapp.com/attachments/758884038962053133/777775810241101824/Keith_shadis_2.jpg')
         .setColor('#61380B')
@@ -594,9 +601,77 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+    // 샤디스 도움말 놀이
+    if (message.content === '샤디스 도움말 놀이') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription(
+            `\`오늘의 운세\` : 오늘은 어떤 일이 일어날 지 나옵니다
+            \`음식추천\` : 배고픈데 음식을 고를 수 없다면 이 명령어를 실행해보세요
+            \`게임추천\` : AOTTG를 너무 많이 했다면 쉴 수 있는 게임을 추천받아보세요
+            \`핑\` : 현재 자신의 연결속도를 확인할 수 있습니다
+            \`아바타\` : 해당 유저를 멘션하면 그 유저의 프로필을 획득하실 수 있습니다`
+        )
+        message.channel.send(embed)
+    }
+    // 샤디스 도움말 조사병단
+    if (message.content === '샤디스 도움말 조사병단') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription(
+            `\`색상\` : 벽외조사 때에 자신이 해당하는 역할은 무슨 색상인지 확인하실 수 있습니다
+            \`초대코드\` : 조사병단에 영구 초대 코드를 확인하고 싶으시면 한번 적어보세요
+            \`조사병단 유니폼\` : 벽외조사 때에 꼭 착용해야 하는 필수 유니폼이며 그것을 확인하실 수 있습니다
+            \`다운로드\` : 각 AOTTG를 즐길 수 있는 게임들이 거의 모아져 있습니다
+            \`다운\` : 각 AOTTG를 즐길 수 있는 게임들이 거의 모아져 있습니다
+            \`행정부\` : 조사병단 행정부 목록입니다.
+            \`대검찰청\` : 조사병단 대검찰청 목록입니다
+            \`맵\` : 벽외조사 때에 꼭 필요한 맵 파일입니다
+            \`맵 다운로드\` : 벽외조사 때에 꼭 필요한 맵 파일입니다
+            \`맵 다운\` : 벽외조사 때에 꼭 필요한 맵 파일입니다
+            \`계급\` : 조사병단에서 획득할 수 있는 역할과 그러지 않는 역할을 확인해보세요
+            \`조사병단\` : 조사병단 각 반 반장님들이십니다
+            \`분단\` : 벽외조사 때에 자신의 진형이 어디에 있는지 확인 하실 수 있습니다
+            \`진형\` : 벽외조사 때에 자신의 진형이 어디에 있는지 확인 하실 수 있습니다
+            \`연막탄\` : 언제 혹은 어떤 상황에서 연막탄을 사용해야 할 지 자세히 나와있습니다
+            \`팀스피크\` : 팀스피크 조사병단 통화 들어오는 방법, 다운로드 방법이 나와있습니다
+            \`팀스피크 다운\` : 팀스피크 조사병단 통화 들어오는 방법, 다운로드 방법이 나와있습니다
+            \`팀스피크 다운로드\` : 팀스피크 조사병단 통화 들어오는 방법, 다운로드 방법이 나와있습니다`
+        )
+        message.channel.send(embed)
+    }
+    // 샤디스 도움말 진격의 거인
+    if (message.content === '샤디스 도움말 진격의 거인') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription(
+            `\`리바이\` : 리바이 아커만에 대해 나와있습니다
+            \`리바이 아커만\` : 리바이 아커만에 대해 나와있습니다
+            \`엘런\` : 엘렌 예거에 대해 나와있습니다
+            \`엘런 예거\` : 엘런 예거에 대해 나와있습니다
+            \`에렌\` : 엘렌 예거에 대해 나와있습니다
+            \`에렌 예거\` : 엘렌 예거에 대해 나와있습니다
+            \`엘빈\` : 엘빈 스미스에 대해 나와있습니다
+            \`엘빈 스미스\` : 엘빈 스미스에 대해 나와있습니다
+            \`에르빈\` : 엘빈 스미스에 대해 나와있습니다
+            \`에르빈 스미스\` : 엘빈 스미스에 대해 나와있습니다
+            \`미카사 아커만\` : 미카사 아커만에 대해 나와있습니다
+            \`미카사\` : 미카사 아커만에 대해 나와있습니다
+            \`아르민\` : 아르민 알레르토에 대해 나와있습니다
+            \`아르민 알레르토\` : 아르민 알레르토에 대해 나와있습니다
+            \`한지\` : 한지 조에에 대해 나와있습니다
+            \`한지 조에\` : 한지 조에에 대해 나와있습니다
+            \`코니\` : 코니 스프링거에 대해 나와있습니다
+            \`코니 스프링거\` : 코니 스프링거에 대해 나와있습니다`
+        )
+    }
+    // 샤디스 도움말 기타
+    if (message.content === '샤디스 도움말 기타') {
+        const embed = new Discord.MessageEmbed()
+        .setDescription(
+            `\`심장을 바쳐라\` : 심장을 바치는 GIF가 나옵니다`
+        )
+        message.channel.send(embed)
+    }
     // 엘빈 스미스 설명
     if (message.content === '샤디스 엘빈') { 
-        if(message.type === 'dm') return;
         const embed = new Discord.MessageEmbed()
         .setTitle('에르빈 스미스')
         .setURL('https://namu.wiki/w/%EC%97%98%EB%B9%88%20%EC%8A%A4%EB%AF%B8%EC%8A%A4')
