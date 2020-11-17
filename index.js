@@ -661,6 +661,7 @@ client.on('message', message => {
             \`코니\` : 코니 스프링거에 대해 나와있습니다
             \`코니 스프링거\` : 코니 스프링거에 대해 나와있습니다`
         )
+        message.channel.send(embed)
     }
     // 샤디스 도움말 기타
     if (message.content === '샤디스 도움말 기타') {
