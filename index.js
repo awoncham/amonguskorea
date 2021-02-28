@@ -82,4 +82,4 @@ client.on('messageDelete', async message => {
 
 // })
 
-client.login("ODE1NDI5MDczNDc0OTQ1MDI1.YDsRgQ.o15pMarZvYzuUvzit3Jld6I18V4");
+client.login(process.env.token);
