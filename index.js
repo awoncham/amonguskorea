@@ -13,7 +13,7 @@ client.on('guildMemberAdd', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
-      .setDescription(`${member} 님께서 \`𝗚𝗔𝗠𝗝𝗔\` 길드 서버에 입장하셨습니다`)
+      .setDescription(`${member} 님께서 \`𝗚𝗔𝗠𝗝𝗔\` 서버에 입장하셨습니다`)
       channel.send(embed)
 			member.roles.add('815421166318649354')
 			member.roles.add('815422085932253204')
@@ -25,7 +25,7 @@ client.on('guildMemberRemove', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#FF0000')
-      .setDescription(`${member} 님께서 \`𝗚𝗔𝗠𝗝𝗔\` 길드 서버를 퇴장하셨습니다`)
+      .setDescription(`${member} 님께서 \`𝗚𝗔𝗠𝗝𝗔\` 서버를 퇴장하셨습니다`)
       channel.send(embed)
   });
 
