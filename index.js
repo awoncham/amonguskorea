@@ -4,6 +4,18 @@ const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 client.on('ready', function() {   
 
     console.log('히스토리아 봇 구동 성공');
+
+		setInterval(() => {
+			let tips = ["아직 규칙을 읽지 않으신 분들이 계신다면 <#815418719076876330> 에서 규칙을 확인하시고 아래에 있는 체크 표시를 클릭해주세요!",
+									"<#815420713644851240> 에서 가입조건을 확인하시고 <#815425180192735263> 채널을 통해 길드 가입해주세요!"]
+			let rand = Math.floor(Math.random() * tips.length);
+			const channel = client.channels.cache.find(channel => channel.id === '815432322467889164')
+			
+			const embed = new Discord.MessageEmbed()
+			.setDescription(`${tips[rand]}`)
+			.setColor('RANDOM')
+			channel.send(embed);
+	}, 7200000);
 		
 });
 
