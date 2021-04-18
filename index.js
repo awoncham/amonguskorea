@@ -302,7 +302,6 @@ client.on('message', message => {
 	if (message.content === `${prefix}인물정보 왁끼`) { // 왁끼님
 		const embed = new Discord.MessageEmbed()
 		.setTitle('왁끼 (Wakggi)')
-		.setURL('https://www.youtube.com/channel/UCP50mdWLVxMuwtQiaVQBA6A')
 		.setColor('#aee5e1')
 		.setDescription('든든한 왁갈통과 함께해요!')
 		.setThumbnail('https://media.discordapp.net/attachments/804966296088215563/833302082987098112/externalFile.gif')
