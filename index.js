@@ -90,27 +90,35 @@ client.on('messageUpdate', async(oldMessage, newMessage) => {
   const user = oldMessage.mentions.users.first() || oldMessage.author;
   const embed = new Discord.MessageEmbed()
   .setTitle('<:SurveyCorps:832772562123489280> 수정 로그')
-  .setDescription(`<@!${oldMessage.author.id}> 님께서 메시지를 수정하셨습니다`)
+	.setColor('#5665aa')
+	.addField('<:ph6400:832905025972994078> 수정한 사람', `<@!${oldMessage.author.id}>`, true)
+	.addField('<:ph6400:832905025972994078> 해당 채널', `<#${oldMessage.channel.id}>`, false)
   .addFields(
-    { name: 'Before', value: `\`${oldMessage.content}\``, inline: true },
-    { name: 'After', value: `\`${newMessage.content}\``, inline: true }
+    { name: '<:ph6400:832905025972994078> 수정 전', value: `\`\`\`${oldMessage.content}\`\`\``, inline: true },
+    { name: '<:ph6400:832905025972994078> 수정 후', value: `\`\`\`${newMessage.content}\`\`\``, inline: true }
 )
   .setTimestamp()
   .setFooter(user.username, user.displayAvatarURL())
   channel.send(embed)
 })
 
-//메시지 삭제
-client.on('messageDelete', async message => {
-    const user = message.mentions.users.first() || message.author;
-    const channel = client.channels.cache.find(channel => channel.id === '832482884127424543')
-    const embed = new Discord.MessageEmbed()
-    .setTitle('<:error:832821274719551529> 삭제 로그')
-		.setColor('#FF0000')
-    .setDescription(`<@!${message.author.id}> 님이 \`${message.content}\` 을(를) 삭제하셨습니다`)
-    .setTimestamp()
-    .setFooter(user.username, user.displayAvatarURL())
-    channel.send(embed)
+// 메시지 삭제
+client.on('messageDelete', message => {
+	if(!message.partial) {
+		const channel = client.channels.cache.find(channel => channel.id === '832482884127424543')
+		const user = message.mentions.users.first() || message.author;
+		if(channel) {
+			const embed = new Discord.MessageEmbed()
+			.setTitle('<:error:832821274719551529> 삭제 로그')
+			.setColor('#FF0000')
+			.addField('<:awoncham:832894731427643422> 메시지 주인', `<@${message.author.id}>`, true)
+			.addField('<:awoncham:832894731427643422> 해당 채널', `<#${message.channel.id}>`, true)
+			.addField('<:awoncham:832894731427643422> 삭제된 메시지', `\`\`\`${message.content}\`\`\``, false)
+			.setTimestamp()
+			.setFooter(user.username, user.displayAvatarURL())
+			channel.send(embed)
+		}
+	}
 });
 
 // //금지어
@@ -300,10 +308,10 @@ client.on('message', message => {
 		const embed = new Discord.MessageEmbed()
 		.setAuthor('조사병단 도움말', 'https://media.discordapp.net/attachments/832482884127424543/833185091613622302/7a1222a50c50bf3a14ec1c50721e74e5.png')
 		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/833185091613622302/7a1222a50c50bf3a14ec1c50721e74e5.png')
-		.addField('**조사병단**', '`!도움말 조사병단`', true)
 		.addField('**명령어**', '`!도움말 명령어`', true)
 		.addField('**놀이**', '`!도움말 놀이`', true)
 		.addField('**관리**', '`!도움말 관리`', true)
+		.addField('**기타**', '`!도움말 기타`', true)
 		message.channel.send(embed)
 	}
 	// 명령어 도움말
@@ -327,6 +335,32 @@ client.on('message', message => {
 		.setDescription('[여기](https://www.teamspeak3.com/)를 클릭하여 다운로드 **(일반 병사들 제외)**\n\n**1.** 왼쪽 상단에 connections에서 serverlist를 클릭\n**2.** 서버 중 [NPIX] Public Teamspeak server를 찾아서 더블클릭\n**3.** 창을 close하면 서버에 들어와져 있는데 맨 밑에 Survey Corps를 더블클릭\n**4.** 다시 상단 위에 tools가 있는데 들어가서 capture에 들어가 push to talk를 설정')
 		message.channel.send(embed)
 	}
+	// 명령어 놀이
+	if (message.content === `${prefix}도움말 놀이`) {
+		const embed = new Discord.MessageEmbed()
+		.setTitle('놀이 플러그인')
+		.addField('`!핑`', '자신의 디스코드 연결속도를 확인해보세요', false)
+		.addField('`!음식추천`', '음식 고르기가 힘들면 한 번 사용해보세요', false)
+		.addField('`!게임추천`', '할 게임이 없을 때 한 번 사용해보세요', false)
+		.addField('`!오늘의운세`', '오늘은 과연 어떤 일이 일어날 지 확인해보세요', false)
+		message.channel.send(embed)
+	}
+	// 명령어 관리
+	if (message.content === `${prefix}도움말 놀이`) {
+		const embed = new Discord.MessageEmbed()
+		.setTitle('관리 플러그인')
+		.addField('`!청소 (1 ~ 99)`', '1 ~ 99까지의 메시지를 삭제할 수 있습니다 (관리자만)', false)
+		message.channel.send(embed)
+	}
+	// 명령어 기타
+	if (message.content === `${prefix}도움말 기타`) {
+		const embed = new Discord.MessageEmbed()
+		.setTitle('기타 플러그인')
+		.addField('`!프로필 (@태그)`', '자신 혹은 다른 유저의 프로필을 확인하실 수 있습니다', false)
+		.addField('`!다운로드`', '많이 사용되는 Aottg 다운 사이트를 알려줍니다', false)
+		.addField('`!인물정보`', '조사병단의 있는 유저의 정보를 얻을 수 있어요', false)
+		message.channel.send(embed)
+	}
 })
 
 // 조사병단 관련 명령어
@@ -337,11 +371,11 @@ client.on('message', message => {
     // 연결한 정도를 알려줍니다
     if(message.content.startsWith(`${prefix}핑`)) {
         const embed = new Discord.MessageEmbed()
-        .setDescription(`현재 너의 핑은 ${Date.now() - message.createdTimestamp} ms 다 `)
+        .setDescription(`🏓 퐁, 당신의 핑：**${Date.now() - message.createdTimestamp}**ms`)
         message.channel.send(embed)
     }
     // 해당 유저의 프로필을 보여줍니다
-    if (message.content.startsWith(`${prefix}아바타`)) {
+    if (message.content.startsWith(`${prefix}프로필`)) {
         const user = message.mentions.users.first() || message.author;
         const avatarEmbed = new Discord.MessageEmbed()
             .setDescription('`' + user.username + '`' + ' 님의 프로필')
@@ -379,14 +413,14 @@ client.on('message', message => {
         message.channel.send(embed)
     }
 		// 조사병단 봇 정보
-		if(message.content === `${prefix}정보`){
-			const embed = new Discord.MessageEmbed()
-			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.2')
-			.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
-			.addField('추가된 명령어', '`청소`, `인물정보`, `도움말` 등', false)
-			.setTimestamp()
-		message.channel.send(embed)
-		}
+		// if(message.content === `${prefix}정보`){
+		// 	const embed = new Discord.MessageEmbed()
+		// 	.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.2')
+		// 	.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
+		// 	.addField('추가된 명령어', '`청소`, `인물정보`, `도움말` 등', false)
+		// 	.setTimestamp()
+		// message.channel.send(embed)
+		// }
 });
 
 client.login("ODE1NDI5MDczNDc0OTQ1MDI1.YDsRgQ.8kL2d0sbjdxD5LFx-dHm5HRv3pc");
