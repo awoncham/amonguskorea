@@ -423,4 +423,4 @@ client.on('message', message => {
 		// }
 });
 
-client.login("ODE1NDI5MDczNDc0OTQ1MDI1.YDsRgQ.8kL2d0sbjdxD5LFx-dHm5HRv3pc");
+client.login(process.env.token);
