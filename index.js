@@ -48,7 +48,7 @@ client.on('ready', function() {
 										"<@&746682677499002920>：27명 중 3명 생존이라는 극악의 난이도를 자랑했던 제 14회 벽외조사에 참여한 모든 병사들에게 수여되는 역할",
 										"<@&751703838477516910>：제 14회 벽외조사에서 **갑옷거인, 짐승거인, 초대형거인** 을 토벌한 병사에게 수여되는 역할"]
         let rand = Math.floor(Math.random() * tips.length);
-        const channel = client.channels.cache.find(channel => channel.id === '832482884127424543')
+        const channel = client.channels.cache.find(channel => channel.id === '742051945472065546')
         
         const embed = new Discord.MessageEmbed()
         .setDescription(`${tips[rand]}`)
@@ -59,7 +59,7 @@ client.on('ready', function() {
 
 // 서버 입장 메시지
 client.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.id === '832482884127424543');
+    const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#00FF00')
@@ -75,7 +75,7 @@ client.on('guildMemberAdd', member => {
 
 // 서버 퇴장 메시지
 client.on('guildMemberRemove', member => {
-    const channel = member.guild.channels.cache.find(ch => ch.id === '832482884127424543');
+    const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#FF0000')
@@ -197,15 +197,15 @@ client.on('message', message => {
     }
 });
 
-//태그 메시지
-client.on('message', message => {
-    let replaceStr = message.content.replace(/[^0-9]/g, "")
-    if(replaceStr === client.user.id) {
-		const embed = new Discord.MessageEmbed()
-		.setDescription
-        message.channel.send(embed)
-    }
-})
+// //태그 메시지
+// client.on('message', message => {
+//     let replaceStr = message.content.replace(/[^0-9]/g, "")
+//     if(replaceStr === client.user.id) {
+// 		const embed = new Discord.MessageEmbed()
+// 		.setDescription
+//         message.channel.send(embed)
+//     }
+// })
 
 // 인물 정보
 client.on('message', message => {
