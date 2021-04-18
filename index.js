@@ -346,7 +346,7 @@ client.on('message', message => {
 		message.channel.send(embed)
 	}
 	// 명령어 관리
-	if (message.content === `${prefix}도움말 놀이`) {
+	if (message.content === `${prefix}도움말 관리`) {
 		const embed = new Discord.MessageEmbed()
 		.setTitle('관리 플러그인')
 		.addField('`!청소 (1 ~ 99)`', '1 ~ 99까지의 메시지를 삭제할 수 있습니다 (관리자만)', false)
