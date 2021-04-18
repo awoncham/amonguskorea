@@ -86,7 +86,7 @@ client.on('guildMemberRemove', member => {
 //메시지 수정
 client.on('messageUpdate', async(oldMessage, newMessage) => {
   if(oldMessage.content === newMessage.content) return // 임베드로 인한 수정같은 경우 
-  const channel = client.channels.cache.find(channel => channel.id === '832482884127424543')
+  const channel = client.channels.cache.find(channel => channel.id === '833267835530641419')
   const user = oldMessage.mentions.users.first() || oldMessage.author;
   const embed = new Discord.MessageEmbed()
   .setTitle('<:SurveyCorps:832772562123489280> 수정 로그')
@@ -105,7 +105,7 @@ client.on('messageUpdate', async(oldMessage, newMessage) => {
 // 메시지 삭제
 client.on('messageDelete', message => {
 	if(!message.partial) {
-		const channel = client.channels.cache.find(channel => channel.id === '832482884127424543')
+		const channel = client.channels.cache.find(channel => channel.id === '833267835530641419')
 		const user = message.mentions.users.first() || message.author;
 		if(channel) {
 			const embed = new Discord.MessageEmbed()
@@ -156,7 +156,7 @@ client.on('message', message => {
     if (message.content === `${prefix}음식추천`) {
         let rand = Math.floor(Math.random() * foods.length);
         const embed = new Discord.MessageEmbed()
-        .setDescription(`${foods[rand]} 먹고 진격거 게임해라!`)
+        .setDescription(`${foods[rand]} 먹어보세요!`)
         message.channel.send(embed)
     }
 });
@@ -192,7 +192,7 @@ client.on('message', message => {
     if (message.content === `${prefix}게임추천`) {
         let rand = Math.floor(Math.random() * games.length);
         const embed = new Discord.MessageEmbed()
-        .setDescription(`${games[rand]} 딱 한판만 하고 진격거 게임해라!`)
+        .setDescription(`${games[rand]} 하는 거 어떤가요?`)
         message.channel.send(embed)
     }
 });
