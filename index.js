@@ -299,6 +299,24 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
+	if (message.content === `${prefix}인물정보 왁끼`) { // 왁끼님
+		const embed = new Discord.MessageEmbed()
+		.setTitle('왁끼 (Wakggi)')
+		.setURL('https://www.youtube.com/channel/UCP50mdWLVxMuwtQiaVQBA6A')
+		.setColor('#aee5e1')
+		.setDescription('든든한 왁갈통과 함께해요!')
+		.setThumbnail('https://media.discordapp.net/attachments/804966296088215563/833302082987098112/externalFile.gif')
+		.addField('<:bion:833312147424804954> 나이', '16', true)
+		.addField('<:bion:833312147424804954> 성별', '남자', true)
+		.addField('<:bion:833312147424804954> 신체', '187 | 77 | A형', true)
+		.addField('<:bion:833312147424804954> 출생', '836년 1월 10일, 시간시나구', true)
+		.addField('<:bion:833312147424804954> 직책', '조사병단 검사', true)
+		.addField('<:bion:833312147424804954> 훈장', '총 0개 보유', true)
+		.setImage('https://media.discordapp.net/attachments/804966296088215563/833313017667256320/1232-1.png?width=1203&height=676')
+		.setFooter('Wakggi', 'https://media.discordapp.net/attachments/804966296088215563/833302082987098112/externalFile.gif')
+		.setTimestamp()
+		message.channel.send(embed)
+	}
 })
 
 // 도움말
