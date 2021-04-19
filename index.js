@@ -338,7 +338,7 @@ client.on('message', message => {
 		const embed = new Discord.MessageEmbed()
 		.setTitle('거인TV (TitanTV)')
 		.setURL('https://www.youtube.com/channel/UCNd1xAYf28upEZYvIRsc6-Q')
-		.setColor('#FF6161')
+		.setColor('#FF6699')
 		.setDescription('한 때는 초절인기 유튜버, 지금은 씹퇴물련')
 		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/833605684859371520/734778676104790096.png')
 		.addField('<:TitanTV:833606765819723826> 나이', '27', true)
