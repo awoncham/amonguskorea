@@ -385,6 +385,7 @@ client.on('message', message => {
 		.addField('`!음식추천`', '음식 고르기가 힘들면 한 번 사용해보세요', false)
 		.addField('`!게임추천`', '할 게임이 없을 때 한 번 사용해보세요', false)
 		.addField('`!오늘의운세`', '오늘은 과연 어떤 일이 일어날 지 확인해보세요', false)
+		.addField('`!가위바위보`', '조사병단 봇과 가위바위보를 한번 해보세요', false)
 		message.channel.send(embed)
 	}
 	// 명령어 관리
@@ -455,14 +456,14 @@ client.on('message', message => {
         message.channel.send(embed)
     }
 		// 조사병단 봇 정보
-		if(message.content === `${prefix}정보`){
-			const embed = new Discord.MessageEmbed()
-			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.3')
-			.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
-			.addField('추가된 명령어', '`다양한 인물정보`, `초대` 등', false)
-			.setTimestamp()
-		message.channel.send(embed)
-		}
+		// if(message.content === `${prefix}정보`){
+		// 	const embed = new Discord.MessageEmbed()
+		// 	.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.3')
+		// 	.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
+		// 	.addField('추가된 명령어', '`다양한 인물정보`, `초대` 등', false)
+		// 	.setTimestamp()
+		// message.channel.send(embed)
+		// }
 });
 
 
