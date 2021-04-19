@@ -344,7 +344,7 @@ client.on('message', message => {
 		.addField('<:TitanTV:833606765819723826> 나이', '27', true)
 		.addField('<:TitanTV:833606765819723826> 성별', '남자', true)
 		.addField('<:TitanTV:833606765819723826> 신체', '177 | 58 | B형', true)
-		.addField('<:TitanTV:833606765819723826> 출생', '(검증불가) 5월 15일, 방송병단 단장', true)
+		.addField('<:TitanTV:833606765819723826> 출생', '895년 5월 15일, 월 시나 공작가', true)
 		.addField('<:TitanTV:833606765819723826> 직책', '조사병단 찐따', true)
 		.addField('<:TitanTV:833606765819723826> 훈장', 'AOTTG 역사상 최초로 시청자 300명 이상 기록 보유', true)
 		.setImage('https://media.discordapp.net/attachments/813307553307951115/833606236129460224/df9eb2efe9ac186b.png?width=1203&height=676')
