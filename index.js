@@ -334,6 +334,24 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
+	if (message.content === `${prefix}인물정보 거인TV` || message.content === `${prefix}인물정보 거인` || message.content === `${prefix}인물정보 TitanTV`) { // 거인TV님
+		const embed = new Discord.MessageEmbed()
+		.setTitle('거인TV (TitanTV)')
+		.setURL('https://www.youtube.com/channel/UCNd1xAYf28upEZYvIRsc6-Q')
+		.setColor('#FF6161')
+		.setDescription('한 때는 초절인기 유튜버, 지금은 씹퇴물련')
+		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/833605684859371520/734778676104790096.png')
+		.addField('<:TitanTV:833606765819723826> 나이', '27', true)
+		.addField('<:TitanTV:833606765819723826> 성별', '남자', true)
+		.addField('<:TitanTV:833606765819723826> 신체', '177 | 58 | B형', true)
+		.addField('<:TitanTV:833606765819723826> 출생', '(검증불가) 5월 15일, 방송병단 단장', true)
+		.addField('<:TitanTV:833606765819723826> 직책', '조사병단 찐따', true)
+		.addField('<:TitanTV:833606765819723826> 훈장', 'AOTTG 역사상 최초로 시청자 300명 이상 기록 보유', true)
+		.setImage('https://media.discordapp.net/attachments/813307553307951115/833606236129460224/df9eb2efe9ac186b.png?width=1203&height=676')
+		.setFooter('TitanTV', 'https://media.discordapp.net/attachments/832482884127424543/833605684859371520/734778676104790096.png')
+		.setTimestamp()
+		message.channel.send(embed)
+	}
 });
 
 // 도움말
