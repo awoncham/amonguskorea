@@ -209,7 +209,7 @@ client.on('message', message => {
 
 // 인물 정보
 client.on('message', message => {
-	if (message.content === `${prefix}인물정보 아원참` || `${prefix}인물정보 awoncham`) { // 아원참
+	if (message.content === `${prefix}인물정보 아원참` || message.content === `${prefix}인물정보 awoncham`) { // 아원참
 		const embed = new Discord.MessageEmbed()
 		.setTitle('아원참 (awoncham)')
 		.setURL('https://www.youtube.com/channel/UCDKwZRPOZ9YCnJDAO4GmPYA')
@@ -227,7 +227,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 파라유저` || `${prefix}인물정보 파라` || `${prefix}인물정보 PharahUser`) { // 파라유저
+	if (message.content === `${prefix}인물정보 파라유저` || message.content === `${prefix}인물정보 파라` || message.content === `${prefix}인물정보 PharahUser`) { // 파라유저
 		const embed = new Discord.MessageEmbed()
 		.setTitle('파라유저 (PharahUser)')
 		.setURL('https://www.youtube.com/channel/UCXYg94ladrdBG4HfFdBKmgw')
@@ -245,7 +245,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 애플` || `${prefix}인물정보 Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple` || `${prefix}인물정보 Red_Orange_Green_Purple_apple_G`) { // 애플
+	if (message.content === `${prefix}인물정보 애플` || message.content === `${prefix}인물정보 Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple` || message.content === `${prefix}인물정보 Red_Orange_Green_Purple_apple_G`) { // 애플
 		const embed = new Discord.MessageEmbed()
 		.setTitle('애플 (Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple)')
 		.setURL('https://www.youtube.com/channel/UCZTRt2K-MY3pB6WxfKQuGvg')
@@ -281,7 +281,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 나물` || `${prefix}인물정보 Namull`) { // 나물님
+	if (message.content === `${prefix}인물정보 나물` || message.content === `${prefix}인물정보 Namull`) { // 나물님
 		const embed = new Discord.MessageEmbed()
 		.setTitle('김나물 (Namull)')
 		.setURL('https://www.youtube.com/channel/UCP50mdWLVxMuwtQiaVQBA6A')
@@ -299,7 +299,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 왁끼` || `${prefix}인물정보 비온` || `${prefix}인물정보 Wakggi`) { // 왁끼님
+	if (message.content === `${prefix}인물정보 왁끼` || message.content === `${prefix}인물정보 비온` || message.content === `${prefix}인물정보 Wakggi`) { // 왁끼님
 		const embed = new Discord.MessageEmbed()
 		.setTitle('왁끼 (Wakggi)')
 		.setColor('#aee5e1')
@@ -316,10 +316,10 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 결백` || `${prefix}인물정보 GYEOL_BAEG`) { // 결백님
+	if (message.content === `${prefix}인물정보 결백` || message.content === `${prefix}인물정보 GYEOL_BAEG`) { // 결백님
 		const embed = new Discord.MessageEmbed()
 		.setTitle('결백 (GYEOL_BAEG)')
-		.setURL('https://www.youtube.com/channel/UCDKwZRPOZ9YCnJDAO4GmPYA')
+		.setURL('https://www.youtube.com/channel/UCen9uei3e4OletnPH8LMtDw')
 		.setColor('#FF6161')
 		.setDescription('나는 조사병단에서 허당을 맡고 있다')
 		.setThumbnail('https://media.discordapp.net/attachments/828203987185958912/833571140281827328/123213123123.png?width=676&height=676')
@@ -334,7 +334,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-})
+});
 
 // 도움말
 client.on('message', message => {
@@ -355,6 +355,7 @@ client.on('message', message => {
 		.setTitle('명령어 플러그인')
 		.addField('`!색깔`', '벽외조사 할 때에 사용해야 하는 닉네임 색깔코드', false)
 		.addField('`!팀스피크`', '팀스피크 다운 혹은 사용 방법', false)
+		.addField('`!초대`', '조사병단 영구 초대코드를 확인해보세요')
 		message.channel.send(embed)
 	}
 	// 명령어 색깔
@@ -368,6 +369,12 @@ client.on('message', message => {
 	if (message.content === `${prefix}팀스피크`) {
 		const embed = new Discord.MessageEmbed()
 		.setDescription('[여기](https://www.teamspeak3.com/)를 클릭하여 다운로드 **(일반 병사들 제외)**\n\n**1.** 왼쪽 상단에 connections에서 serverlist를 클릭\n**2.** 서버 중 [NPIX] Public Teamspeak server를 찾아서 더블클릭\n**3.** 창을 close하면 서버에 들어와져 있는데 맨 밑에 Survey Corps를 더블클릭\n**4.** 다시 상단 위에 tools가 있는데 들어가서 capture에 들어가 push to talk를 설정')
+		message.channel.send(embed)
+	}
+	// 조사병단 영구 초대 코드
+	if (message.content === `${prefix}초대`) {
+		const embed = new Discord.MessageEmbed()
+		.setDescription('**https://discord.gg/K9s7XpZaaM**')
 		message.channel.send(embed)
 	}
 	// 명령어 놀이
@@ -448,14 +455,14 @@ client.on('message', message => {
         message.channel.send(embed)
     }
 		// 조사병단 봇 정보
-		// if(message.content === `${prefix}정보`){
-		// 	const embed = new Discord.MessageEmbed()
-		// 	.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.2')
-		// 	.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
-		// 	.addField('추가된 명령어', '`청소`, `인물정보`, `도움말` 등', false)
-		// 	.setTimestamp()
-		// message.channel.send(embed)
-		// }
+		if(message.content === `${prefix}정보`){
+			const embed = new Discord.MessageEmbed()
+			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.3')
+			.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
+			.addField('추가된 명령어', '`다양한 인물정보`, `초대` 등', false)
+			.setTimestamp()
+		message.channel.send(embed)
+		}
 });
 
-client.login(process.env.token);
+client.login("ODE1NDI5MDczNDc0OTQ1MDI1.YDsRgQ.Fw2ziw6l8u1y1y_1IFkKTiJ-l98");
