@@ -209,9 +209,9 @@ client.on('message', message => {
 
 // 인물 정보
 client.on('message', message => {
-	if (message.content === `${prefix}인물정보 아원참`) { // 아원참
+	if (message.content === `${prefix}인물정보 아원참` || `${prefix}인물정보 awoncham`) { // 아원참
 		const embed = new Discord.MessageEmbed()
-		.setTitle('awoncham')
+		.setTitle('아원참 (awoncham)')
 		.setURL('https://www.youtube.com/channel/UCDKwZRPOZ9YCnJDAO4GmPYA')
 		.setColor('#FF6161')
 		.setDescription('조사병단 봇을 만든 인물이며, 벽외조사에서도 뛰어난 활약을 하고 있다')
@@ -227,7 +227,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 파라유저`) { // 파라유저
+	if (message.content === `${prefix}인물정보 파라유저` || `${prefix}인물정보 파라` || `${prefix}인물정보 PharahUser`) { // 파라유저
 		const embed = new Discord.MessageEmbed()
 		.setTitle('파라유저 (PharahUser)')
 		.setURL('https://www.youtube.com/channel/UCXYg94ladrdBG4HfFdBKmgw')
@@ -245,7 +245,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 애플`) { // 애플
+	if (message.content === `${prefix}인물정보 애플` || `${prefix}인물정보 Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple` || `${prefix}인물정보 Red_Orange_Green_Purple_apple_G`) { // 애플
 		const embed = new Discord.MessageEmbed()
 		.setTitle('애플 (Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple)')
 		.setURL('https://www.youtube.com/channel/UCZTRt2K-MY3pB6WxfKQuGvg')
@@ -281,7 +281,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 나물`) { // 나물님
+	if (message.content === `${prefix}인물정보 나물` || `${prefix}인물정보 Namull`) { // 나물님
 		const embed = new Discord.MessageEmbed()
 		.setTitle('김나물 (Namull)')
 		.setURL('https://www.youtube.com/channel/UCP50mdWLVxMuwtQiaVQBA6A')
@@ -299,7 +299,7 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 왁끼`) { // 왁끼님
+	if (message.content === `${prefix}인물정보 왁끼` || `${prefix}인물정보 비온` || `${prefix}인물정보 Wakggi`) { // 왁끼님
 		const embed = new Discord.MessageEmbed()
 		.setTitle('왁끼 (Wakggi)')
 		.setColor('#aee5e1')
@@ -313,6 +313,24 @@ client.on('message', message => {
 		.addField('<:bion:833312147424804954> 훈장', '총 0개 보유', true)
 		.setImage('https://media.discordapp.net/attachments/804966296088215563/833313017667256320/1232-1.png?width=1203&height=676')
 		.setFooter('Wakggi', 'https://media.discordapp.net/attachments/804966296088215563/833302082987098112/externalFile.gif')
+		.setTimestamp()
+		message.channel.send(embed)
+	}
+	if (message.content === `${prefix}인물정보 결백` || `${prefix}인물정보 GYEOL_BAEG`) { // 결백님
+		const embed = new Discord.MessageEmbed()
+		.setTitle('결백 (GYEOL_BAEG)')
+		.setURL('https://www.youtube.com/channel/UCDKwZRPOZ9YCnJDAO4GmPYA')
+		.setColor('#FF6161')
+		.setDescription('나는 조사병단에서 허당을 맡고 있다')
+		.setThumbnail('https://media.discordapp.net/attachments/828203987185958912/833571140281827328/123213123123.png?width=676&height=676')
+		.addField('<:awoncham:832894731427643422> 나이', '15', true)
+		.addField('<:awoncham:832894731427643422> 성별', '남자', true)
+		.addField('<:awoncham:832894731427643422> 신체', '167 | 63 | B형', true)
+		.addField('<:awoncham:832894731427643422> 출생', '807년대 11월 2일, 월 마리아', true)
+		.addField('<:awoncham:832894731427643422> 직책', '조사병단 숙련병', true)
+		.addField('<:awoncham:832894731427643422> 훈장', '총 1개 보유', true)
+		.setImage('https://media.discordapp.net/attachments/828203987185958912/833560769173651486/1231233.PNG?width=1203&height=676')
+		.setFooter('GYEOL_BAEG', 'https://media.discordapp.net/attachments/828203987185958912/833571140281827328/123213123123.png?width=676&height=676')
 		.setTimestamp()
 		message.channel.send(embed)
 	}
