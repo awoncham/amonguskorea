@@ -237,7 +237,7 @@ client.on('message', message => {
 		.addField('<:pharahuser:832900205837680640> 나이', '20', true)
 		.addField('<:pharahuser:832900205837680640> 성별', '남자', true)
 		.addField('<:pharahuser:832900205837680640> 신체', '186 | 82 | AB형', true)
-		.addField('<:pharahuser:832900205837680640> 출생', '830년대 11월 30일, 월로제 크로르바 구', true)
+		.addField('<:pharahuser:832900205837680640> 출생', '830년 11월 30일, 월로제 크로르바 구', true)
 		.addField('<:pharahuser:832900205837680640> 직책', '조사병단 분대장', true)
 		.addField('<:pharahuser:832900205837680640> 훈장', '총 0개 보유', true)
 		.setImage('https://media.discordapp.net/attachments/809302876445868072/832898106424426496/maxresdefault.png?width=926&height=521')
