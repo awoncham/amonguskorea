@@ -370,6 +370,23 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
+	if (message.content === `${prefix}인물정보 나메` || message.content === `${prefix}인물정보 NoName`) { // 나메님
+		const embed = new Discord.MessageEmbed()
+		.setTitle('나메 (NoName))')
+		.setColor('#fff990')
+		.setDescription('네임 말고 나메다')
+		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/833975455325093898/93b40f5e447856a093ab37dbc8451eb0.gif')
+		.addField('<:NoName:833974404223336468> 나이', '16', true)
+		.addField('<:NoName:833974404223336468> 성별', '남자', true)
+		.addField('<:NoName:833974404223336468> 신체', '173 | 80 | A형', true)
+		.addField('<:NoName:833974404223336468> 출생', '834년 3월 8일, 월 로제', true)
+		.addField('<:NoName:833974404223336468> 직책', '조사병단 보좌관', true)
+		.addField('<:NoName:833974404223336468> 훈장', '총 0개 보유', true)
+		.setImage('https://media.discordapp.net/attachments/832482884127424543/833975624287911996/91c20793962c3cbb0b97ca4f7692911f.gif')
+		.setFooter('NoName', 'https://media.discordapp.net/attachments/832482884127424543/833975455325093898/93b40f5e447856a093ab37dbc8451eb0.gif')
+		.setTimestamp()
+		message.channel.send(embed)
+	}
 });
 
 // 도움말
