@@ -352,6 +352,24 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
+	if (message.content === `${prefix}인물정보 카인` || message.content === `${prefix}인물정보 A.Kain` || message.content === `${prefix}인물정보 Kain`) { // 카인님
+		const embed = new Discord.MessageEmbed()
+		.setTitle('카인 (A.Kain)')
+		.setURL('https://www.youtube.com/channel/UCMz30Ljl5eD-YnJQB9VaE8A')
+		.setColor('#6e0000')
+		.setDescription('조사병단의 3반 반장, 달빠다')
+		.setThumbnail('https://cdn.discordapp.com/attachments/815765657458049044/833622888539488306/KakaoTalk_20210418_2152410362.jpg')
+		.addField('<:kain:833972454648446986> 나이', '18', true)
+		.addField('<:kain:833972454648446986> 성별', '남자', true)
+		.addField('<:kain:833972454648446986> 신체', '176 | 52.9 | A형', true)
+		.addField('<:kain:833972454648446986> 출생', '668년 2월 4일, 월 마리아', true)
+		.addField('<:kain:833972454648446986> 직책', '조사병단 반장', true)
+		.addField('<:kain:833972454648446986> 훈장', '훈장은 먹는 것이다', true)
+		.setImage('https://media.discordapp.net/attachments/815765657458049044/833325314029518848/KakaoTalk_20210418_214927436.gif')
+		.setFooter('A.Kain', 'https://cdn.discordapp.com/attachments/815765657458049044/833622888539488306/KakaoTalk_20210418_2152410362.jpg')
+		.setTimestamp()
+		message.channel.send(embed)
+	}
 });
 
 // 도움말

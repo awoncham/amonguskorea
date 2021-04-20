@@ -6,9 +6,8 @@ module.exports = {
     description: "가위 바위 보 게임",
     run: async(client, message, args) => {
         let embed = new Discord.MessageEmbed()
-        .setTitle("조사병단 가위바위보")
 				.setColor('RANDOM')
-        .setDescription("가위 (✌️) 바위 (✊) 보 (🖐) 중 자신이 내고 싶은 이모트를 클릭하세요!")
+        .setDescription("자 그러면 시작할께요,, 안 내면 진다 **가위, 바위**..")
         let msg = await message.channel.send(embed)
         await msg.react("✊")
         await msg.react("✌️")
@@ -24,14 +23,14 @@ module.exports = {
             async(collected) => {
                 const reaction = collected.first()
                 let result = new Discord.MessageEmbed()
-                .setDescription(`당신：${reaction.emoji.name}\n조사병단：${me}`)
+                .setDescription(`${me}...`)
 								.setColor('RANDOM')
             await msg.edit(result)
                 if ((me === "✊" && reaction.emoji.name === "✌️") ||
                 (me === "🖐" && reaction.emoji.name === "✊") ||
                 (me === "✌️" && reaction.emoji.name === "🖐")) {
 									const embed2 = new Discord.MessageEmbed()
-									.setDescription('제가 이겼군요! 😝')
+									.setDescription('당신이 졌어요! 😝')
 									.setColor('RANDOM')
                     message.channel.send(embed2);
             } else if (me === reaction.emoji.name) {
