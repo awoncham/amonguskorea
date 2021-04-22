@@ -450,6 +450,7 @@ client.on('message', message => {
 			
 			<@&703096881403658250>：벽외조사에 참가하기 위해 훈련 중인 병사들이다. 훈련병단의 훈련병 신분이며, 조사병단 입단 필기시험을 합격한 후에 정식 조사병단원이 될 수 있다.`
 			)
+			message.channel.send(embed);
 	}
 	// 조사병단 팀스피크
 	if (message.content === `${prefix}팀스피크`) {
