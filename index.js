@@ -414,8 +414,8 @@ client.on('message', message => {
 	// 명령어 색깔
 	if (message.content === `${prefix}색깔`) {
 		const embed = new Discord.MessageEmbed()
-		.setDescription('<@&701403514160545792>：조사병단 작전통제권 지휘자 **[3300FF]**\n<@&701403526433341531>：4 ~ 6명을 이끄는 분대 통솔자 **[FFFF33]**\n<@&701403575070490716>：3 ~ 4명을 이끄는 반 통솔자 **[FF0000]**\n<@&701403592195702814>：위에 있는 역할 외에 모든 병사들 **[FFFFFF]**')
-		.setImage('https://media.discordapp.net/attachments/832482884127424543/833193545446719523/1.PNG')
+		.setDescription('<@&701403514160545792>：조사병단 작전통제권 지휘자 **[3300FF]** <:color1:834675089022255114>\n<@&701403526433341531>：4 ~ 6명을 이끄는 분대 통솔자 **[FFFF33]** <:color2:834675089202741268>\n<@&701403575070490716>：3 ~ 4명을 이끄는 반 통솔자 **[FF0000]** <:color3:834675087528689664>\n<@&701403592195702814>：위에 있는 역할 외에 모든 병사들 **[FFFFFF]** <:color4:834675087142813707>')
+		.setImage('https://media.discordapp.net/attachments/832482884127424543/834672919841603594/1.PNG')
 		message.channel.send(embed)
 	}
 	// 명령어 팀스피크
