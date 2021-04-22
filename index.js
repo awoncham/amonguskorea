@@ -245,9 +245,9 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}인물정보 애플` || message.content === `${prefix}인물정보 Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple` || message.content === `${prefix}인물정보 Red_Orange_Green_Purple_apple_G`) { // 애플
+	if (message.content === `${prefix}인물정보 애플` || message.content === `${prefix}인물정보 Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G` || message.content === `${prefix}인물정보 Red_Orange_Green_Purple_apple_G`) { // 애플
 		const embed = new Discord.MessageEmbed()
-		.setTitle('애플 (Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple)')
+		.setTitle('애플 (Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G)')
 		.setURL('https://www.youtube.com/channel/UCZTRt2K-MY3pB6WxfKQuGvg')
 		.setColor('#00ff40')
 		.setDescription('그딴 거 없다')
