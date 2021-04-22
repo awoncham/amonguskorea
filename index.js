@@ -20,6 +20,7 @@ client.on("error", console.error);
 client.on("message", async message => {
 
   if(message.author.bot) return;
+	
 	if(message.channel.type === 'dm') return;
 
   if(message.content.startsWith(prefix)) {
@@ -148,7 +149,9 @@ client.on('messageDelete', message => {
 //음식추천
 client.on('message', message => {
         
-    if (message.channel.type === 'dm') return;
+  if(message.author.bot) return;
+	
+	if(message.channel.type === 'dm') return;
         
     
     let foods = ["지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
@@ -164,7 +167,9 @@ client.on('message', message => {
 //오늘의 운세
 client.on('message', message => {
         
-    if (message.channel.type === 'dm') return;
+  if(message.author.bot) return;
+	
+	if(message.channel.type === 'dm') return;
         
     
     let luck = [
@@ -184,7 +189,9 @@ client.on('message', message => {
 //게임추천
 client.on('message', message => {
         
-    if (message.channel.type === 'dm') return;
+  if(message.author.bot) return;
+	
+	if(message.channel.type === 'dm') return;
         
     
     let games = ["AoTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "원신", "아원참이랑 놀아주기"]
@@ -209,6 +216,11 @@ client.on('message', message => {
 
 // 인물 정보
 client.on('message', message => {
+
+  if(message.author.bot) return;
+	
+	if(message.channel.type === 'dm') return;
+
 	if (message.content === `${prefix}인물정보 아원참` || message.content === `${prefix}인물정보 awoncham`) { // 아원참
 		const embed = new Discord.MessageEmbed()
 		.setTitle('아원참 (awoncham)')
@@ -391,6 +403,11 @@ client.on('message', message => {
 
 // 도움말
 client.on('message', message => {
+
+	if(message.author.bot) return;
+	
+	if(message.channel.type === 'dm') return;
+
 	// 기본 도움말
 	if (message.content === `${prefix}도움말`) {
 		const embed = new Discord.MessageEmbed()
@@ -496,7 +513,9 @@ client.on('message', message => {
 // 조사병단 관련 명령어
 client.on('message', message => {
     
-    if (message.channel.type === 'dm') return;
+  if(message.author.bot) return;
+	
+	if(message.channel.type === 'dm') return;
         
     // 연결한 정도를 알려줍니다
     if(message.content.startsWith(`${prefix}핑`)) {
