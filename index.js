@@ -151,7 +151,10 @@ client.on('message', message => {
         
   if(message.author.bot) return;
 	
-	if(message.channel.type === 'dm') return;
+	const dmchat = new Discord.MessageEmbed()
+	.setColor('#FF0000')
+	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
+	if(message.channel.type === 'dm') return message.channel.send(dmchat);
         
     
     let foods = ["지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
@@ -169,7 +172,10 @@ client.on('message', message => {
         
   if(message.author.bot) return;
 	
-	if(message.channel.type === 'dm') return;
+	const dmchat = new Discord.MessageEmbed()
+	.setColor('#FF0000')
+	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
+	if(message.channel.type === 'dm') return message.channel.send(dmchat);
         
     
     let luck = [
@@ -191,7 +197,10 @@ client.on('message', message => {
         
   if(message.author.bot) return;
 	
-	if(message.channel.type === 'dm') return;
+	const dmchat = new Discord.MessageEmbed()
+	.setColor('#FF0000')
+	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
+	if(message.channel.type === 'dm') return message.channel.send(dmchat);
         
     
     let games = ["AoTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "원신", "아원참이랑 놀아주기"]
@@ -219,7 +228,10 @@ client.on('message', message => {
 
   if(message.author.bot) return;
 	
-	if(message.channel.type === 'dm') return;
+	const dmchat = new Discord.MessageEmbed()
+	.setColor('#FF0000')
+	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
+	if(message.channel.type === 'dm') return message.channel.send(dmchat);
 
 	if (message.content === `${prefix}인물정보 아원참` || message.content === `${prefix}인물정보 awoncham`) { // 아원참
 		const embed = new Discord.MessageEmbed()
@@ -399,6 +411,24 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
+	if (message.content === `${prefix}인물정보 하쿠` || message.content === `${prefix}인물정보 HAKU`) { // 하쿠님
+		const embed = new Discord.MessageEmbed()
+		.setTitle('하쿠 (HAKU)')
+		.setColor('#e13458')
+		.setDescription('정의의 사도가 되기위해 지구랑 계약한 수호자')
+		.setURL('https://www.youtube.com/channel/UC-skqWsNNSQkxRFG-ouRi_g')
+		.setThumbnail('https://media.discordapp.net/attachments/829985000015003658/835399354818101248/haku1.png?width=676&height=676')
+		.addField('<:HAKU:835395834044350474> 나이', '17', true)
+		.addField('<:HAKU:835395834044350474> 성별', '남자', true)
+		.addField('<:HAKU:835395834044350474> 신체', '172 | 63 | A형', true)
+		.addField('<:HAKU:835395834044350474> 출생', '819년 7월 5일, 월 시나 지하도시', true)
+		.addField('<:HAKU:835395834044350474> 직책', '조사병단 베테랑', true)
+		.addField('<:HAKU:835395834044350474> 훈장', '에밀리아 훈장 보유', true)
+		.setImage('https://media.discordapp.net/attachments/829985000015003658/835399420006760448/1501704854_bf5cd8e4f1a47307d403e4ca51ce083cae94c64e_hq.gif')
+		.setFooter('HAKU', 'https://media.discordapp.net/attachments/829985000015003658/835399354818101248/haku1.png?width=676&height=676')
+		.setTimestamp()
+		message.channel.send(embed)
+	}
 });
 
 // 도움말
@@ -406,7 +436,10 @@ client.on('message', message => {
 
 	if(message.author.bot) return;
 	
-	if(message.channel.type === 'dm') return;
+	const dmchat = new Discord.MessageEmbed()
+	.setColor('#FF0000')
+	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
+	if(message.channel.type === 'dm') return message.channel.send(dmchat);
 
 	// 기본 도움말
 	if (message.content === `${prefix}도움말`) {
@@ -419,8 +452,8 @@ client.on('message', message => {
 		.addField('**기타**', '`!도움말 기타`', true)
 		message.channel.send(embed)
 	}
-	// 명령어 도움말
-	if (message.content === `${prefix}도움말 명령어`) {
+	// 조사병단 도움말
+	if (message.content === `${prefix}도움말 조사병단`) {
 		const embed = new Discord.MessageEmbed()
 		.setTitle('조사병단 플러그인')
 		.addField('`!색깔`', '벽외조사 할 때에 사용해야 하는 닉네임 색깔코드', false)
@@ -515,7 +548,10 @@ client.on('message', message => {
     
   if(message.author.bot) return;
 	
-	if(message.channel.type === 'dm') return;
+	const dmchat = new Discord.MessageEmbed()
+	.setColor('#FF0000')
+	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
+	if(message.channel.type === 'dm') return message.channel.send(dmchat);
         
     // 연결한 정도를 알려줍니다
     if(message.content.startsWith(`${prefix}핑`)) {
@@ -524,7 +560,7 @@ client.on('message', message => {
         message.channel.send(embed)
     }
     // 해당 유저의 프로필을 보여줍니다
-    if (message.content.startsWith(`${prefix}프로필`)) {
+    if (message.content.startsWith(`${prefix}아바타`)) {
         const user = message.mentions.users.first() || message.author;
         const avatarEmbed = new Discord.MessageEmbed()
             .setDescription('`' + user.username + '`' + ' 님의 프로필')
@@ -561,6 +597,9 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
+
+
+
 		// 조사병단 봇 정보
 		// if(message.content === `${prefix}정보`){
 		// 	const embed = new Discord.MessageEmbed()
@@ -571,6 +610,40 @@ client.on('message', message => {
 		// message.channel.send(embed)
 		// }
 });
+
+// client.on('message', async message => {
+
+// 	if (message.author.bot || message.channel.type === 'dm') return;
+
+// 	const messageArray = message.content.split(' ');
+// 	const cmd = messageArray[0];
+// 	const args = messageArray.slice(1);
+
+// 	if (cmd === `${prefix}벽외조사`) {
+
+// 		const warnc = new Discord.MessageEmbed()
+// 		.setDescription('<:error:832821274719551529> 당신은 이 명령어를 사용할 권한이 없습니다!')
+// 		.setColor('#FF0000')
+// 		if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send(warnc);
+
+// 		let surveychannel = message.mentions.channels.first();
+// 		let surveyDescription = args.slice(1).join(' ');
+
+// 		const embed = new Discord.MessageEmbed()
+// 		.setDescription(surveyDescription)
+// 		.addField('`⚙️ 지휘분대`', `-`, true)
+// 		.addField('`1️⃣ 제1분대`', `-`, true)
+// 		.addField('`2️⃣ 제2분대`', `-`, true)
+// 		.addField('`3️⃣ 제3분대`', `-`, true)
+// 		.setColor('#008972')
+
+// 		let msgembed = await surveychannel.send(embed);
+// 		await msgembed.react('⚙️')
+// 		await msgembed.react('1️⃣')
+// 		await msgembed.react('2️⃣')
+// 		await msgembed.react('3️⃣')
+// 	}
+// })
 
 
 client.login(process.env.token);
