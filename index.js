@@ -429,6 +429,12 @@ client.on('message', message => {
 		.setTimestamp()
 		message.channel.send(embed)
 	}
+	if (message.content === `${prefix}쿠키` || message.content === `${prefix}KuKi`) { //쿠키님
+		const embed = new Discord.MessageEmbed()
+		.setDescription('<:error:832821274719551529> 해당 유저는 비공개 유저입니다!')
+		.setColor('#FF0000')
+		message.channel.send(embed)
+	}
 });
 
 // 도움말
