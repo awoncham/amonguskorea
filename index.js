@@ -19,9 +19,11 @@ client.on("error", console.error);
 
 client.on("message", async message => {
 
-  if(message.author.bot) return;
-	
+	if(message.author.bot) return;
 	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+	};
 
   if(message.content.startsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -67,7 +69,7 @@ client.on('guildMemberAdd', member => {
       .setDescription(`<:SurveyCorps:832772562123489280> ${member} 님께서 **\`조사병단\`** 서버에 들어오셨습니다`)
 		const embed1 = new Discord.MessageEmbed()
 			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 디스코드에 오신 것을 환영합니다!')
-			.setDescription('**You Have to check the English manual**\n\n질문사항이 있다면 단장의 개인 DM보단 디스코드 내의 질문채널을 이용해 주세요\n\n질문을 하시기 전에 <#713752285393453147> 채널에서 먼저 확인 후에 질문을 해주세요\n\n필독 규칙 읽어주신 후, [여기](https://docs.google.com/forms/d/e/1FAIpQLSft32i7tCfBMzzehQpvHjZ3fUFBrfsSEIAPdVrXRFtxjlkYdg/viewform)를 클릭하여 입단신청서를 작성해주세요\n\n입단신청서를 작성 완료한 후 <#767285361319346186> 채널에 들어가 아래 내용을 기재해주시면 심사 후에 입단 허가 해드립니다')
+			.setDescription('**You Have to check the <#715046268593897482>**\n\n질문사항이 있다면 단장의 개인 DM보단 디스코드 내의 질문채널을 이용해 주세요\n\n질문을 하시기 전에 <#713752285393453147> 채널에서 먼저 확인 후에 질문을 해주세요\n\n필독 규칙 읽어주신 후, [여기](https://docs.google.com/forms/d/e/1FAIpQLSft32i7tCfBMzzehQpvHjZ3fUFBrfsSEIAPdVrXRFtxjlkYdg/viewform)를 클릭하여 입단신청서를 작성해주세요\n\n입단신청서를 작성 완료한 후 <#767285361319346186> 채널에 들어가 아래 내용을 기재해주시면 심사 후에 입단 허가 해드립니다')
 			.setImage('https://media.discordapp.net/attachments/832482884127424543/832932732442116096/unknown.png')
 			.setFooter('입단신청서를 보낸 후 신청서 메시지를 제거하지 말아주세요')
       channel.send(embed)
@@ -149,13 +151,11 @@ client.on('messageDelete', message => {
 //음식추천
 client.on('message', message => {
         
-  if(message.author.bot) return;
-	
-	const dmchat = new Discord.MessageEmbed()
-	.setColor('#FF0000')
-	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
-	if(message.channel.type === 'dm') return message.channel.send(dmchat);
-        
+	if(message.author.bot) return;
+	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+	};        
     
     let foods = ["지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
 
@@ -170,12 +170,11 @@ client.on('message', message => {
 //오늘의 운세
 client.on('message', message => {
         
-  if(message.author.bot) return;
-	
-	const dmchat = new Discord.MessageEmbed()
-	.setColor('#FF0000')
-	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
-	if(message.channel.type === 'dm') return message.channel.send(dmchat);
+	if(message.author.bot) return;
+	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+	};
         
     
     let luck = [
@@ -195,12 +194,11 @@ client.on('message', message => {
 //게임추천
 client.on('message', message => {
         
-  if(message.author.bot) return;
-	
-	const dmchat = new Discord.MessageEmbed()
-	.setColor('#FF0000')
-	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
-	if(message.channel.type === 'dm') return message.channel.send(dmchat);
+	if(message.author.bot) return;
+	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+	};
         
     
     let games = ["AoTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "원신", "아원참이랑 놀아주기"]
@@ -226,12 +224,11 @@ client.on('message', message => {
 // 인물 정보
 client.on('message', message => {
 
-  if(message.author.bot) return;
-	
-	const dmchat = new Discord.MessageEmbed()
-	.setColor('#FF0000')
-	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
-	if(message.channel.type === 'dm') return message.channel.send(dmchat);
+	if(message.author.bot) return;
+	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+	};
 
 	if (message.content === `${prefix}인물정보 아원참` || message.content === `${prefix}인물정보 awoncham`) { // 아원참
 		const embed = new Discord.MessageEmbed()
@@ -441,11 +438,10 @@ client.on('message', message => {
 client.on('message', message => {
 
 	if(message.author.bot) return;
-	
-	const dmchat = new Discord.MessageEmbed()
-	.setColor('#FF0000')
-	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
-	if(message.channel.type === 'dm') return message.channel.send(dmchat);
+	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+	};
 
 	// 기본 도움말
 	if (message.content === `${prefix}도움말`) {
@@ -508,6 +504,18 @@ client.on('message', message => {
 			)
 			message.channel.send(embed);
 	}
+	if (message.content === `${prefix}연막탄`) {
+		const embed = new Discord.MessageEmbed()
+		.setDescription('연막탄 가이드 <:smoke:838358026963779585>')
+		.addField('녹색 <:color5:838358884292231198>', '진형의 방향을 결정하는 연막탄이며, 분대장 및 반장이 발사할 수 없을 시, 다른 대원이 발사한다', false)
+		.addField('적색 <:color3:834675087528689664>', '거인이 접근할 시 오는 방향으로 발사해야 할 연막탄이다. 거인을 단순히 발견했을 때는 지나치고 거인이 진형으로 접근중일때만 발사하여 지휘분대에 알린다', false)
+		.addField('흑색 <:color6:838359769029935125>', '기행종을 발견할 시 발사해야 할 연막탄이다. 적색과 달리 발견하자마자 발사해야 하며, 크롤러나 특이행동을 보이는 거인일 때 발사하여 알린다. 일반 거인부터 달리는 거인, 점퍼, 펑크는 벽외조사에서 기행종이 아니다', false)
+		.addField('황색 <:color2:834675089202741268>', '거인과 교전할 수 없거나 굉장히 어려운 상황에 봉착했을 때 발사하는 연막탄. 노란 연막탄을 확인한다면 인근분대가 지원해줄 것이다', false)
+		.addField('보라색 <:color7:838360513985118219>', '단장만 발사 가능한 연막탄이며, 단장이 진형을 다시 맞추기 위해서 발사하는 연막탄. 이 연막탄이 발사된다면 전부 보라색 연막탄의 위치를 확인하고 각자의 포메이션 위치로 이동해야 한다. 교전 중이거나 먼저 앞에 있더라도 즉시 진형으로 복귀. 분대장 및 반장들은 보라색 연막탄 방향과 똑같이 녹색 연막탄을 발사해야 한다', false)
+		.addField('청색 <:color1:834675089022255114>', '진형을 좁히기 위해 결정하는 연막탄이다. 단장이 발사 했을 경우 반장들은 진형을 좁혀야 한다. 곧 문이나 다리를 지나갈 일이 있을 경우 발사된다', false)
+		.setImage('https://media.discordapp.net/attachments/832478811522072618/838358344849817620/Signal_Flare.gif')
+		message.channel.send(embed)
+	}
 	// 조사병단 팀스피크
 	if (message.content === `${prefix}팀스피크`) {
 		const embed = new Discord.MessageEmbed()
@@ -552,12 +560,11 @@ client.on('message', message => {
 // 조사병단 관련 명령어
 client.on('message', message => {
     
-  if(message.author.bot) return;
-	
-	const dmchat = new Discord.MessageEmbed()
-	.setColor('#FF0000')
-	.setDescription('<:error:832821274719551529> 개인 메시지로 조사병단 봇을 이용하실 수 없습니다')
-	if(message.channel.type === 'dm') return message.channel.send(dmchat);
+	if(message.author.bot) return;
+	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+	};
         
     // 연결한 정도를 알려줍니다
     if(message.content.startsWith(`${prefix}핑`)) {
@@ -652,4 +659,4 @@ client.on('message', message => {
 // })
 
 
-client.login(process.env.token);
+client.login("ODE1NDI5MDczNDc0OTQ1MDI1.YDsRgQ.Co_uRSafkq4SKVfAOHQpXwR_Cdk");
