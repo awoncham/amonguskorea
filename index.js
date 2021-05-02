@@ -462,6 +462,7 @@ client.on('message', message => {
 		.addField('`!계급`', '조사병단에 있는 역할들을 설명해줍니다', false)
 		.addField('`!팀스피크`', '팀스피크 다운 혹은 사용 방법', false)
 		.addField('`!초대`', '조사병단 영구 초대코드를 확인해보세요', false)
+		.addField('`!연막탄`', '조사병단 연막탄 가이드를 확인할 수 있다', false)
 		message.channel.send(embed)
 	}
 	// 조사병단 색깔
@@ -506,7 +507,7 @@ client.on('message', message => {
 	}
 	if (message.content === `${prefix}연막탄`) {
 		const embed = new Discord.MessageEmbed()
-		.setDescription('연막탄 가이드 <:smoke:838358026963779585>')
+		.setDescription('**`연막탄 가이드`** <:smoke:838358026963779585>')
 		.addField('녹색 <:color5:838358884292231198>', '진형의 방향을 결정하는 연막탄이며, 분대장 및 반장이 발사할 수 없을 시, 다른 대원이 발사한다', false)
 		.addField('적색 <:color3:834675087528689664>', '거인이 접근할 시 오는 방향으로 발사해야 할 연막탄이다. 거인을 단순히 발견했을 때는 지나치고 거인이 진형으로 접근중일때만 발사하여 지휘분대에 알린다', false)
 		.addField('흑색 <:color6:838359769029935125>', '기행종을 발견할 시 발사해야 할 연막탄이다. 적색과 달리 발견하자마자 발사해야 하며, 크롤러나 특이행동을 보이는 거인일 때 발사하여 알린다. 일반 거인부터 달리는 거인, 점퍼, 펑크는 벽외조사에서 기행종이 아니다', false)
