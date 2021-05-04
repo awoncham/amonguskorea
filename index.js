@@ -472,6 +472,12 @@ client.on('message', message => {
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/834672919841603594/1.PNG')
 		message.channel.send(embed)
 	}
+	if (message.content === `${prefix}훈장`) {
+		const embed = new Discord.MessageEmbed()
+		.setDescription('**`훈장 획득 조건`**\n**1.** 특수거인(여성형, 초대형, 갑옷, 로드 레이스 등등) 토벌 또는 한 벽외조사에서 15구 토벌 후 생존\n**2.** 훈장은 총 7개 등급으로 구성되어 있으며, 최고등급 훈장을 수여받을 시에는 엘리트 등급으로 승진 가능\n\n**`훈장 등급표`**\n**1.** 앙헬무공훈장：인류 최초로 거인을 잡은 \'앙헬\'을 기억하는, 첫 번째 훈장\n**2.** 마리아무공훈장：유미르의 세 자녀 중 하나인 마리아\n**3.** 로제무공훈장：유미르의 세 자녀 중 하나인 로제\n**2.** 시나무공훈장：유미르의 세 자녀 중 하나인 시나\n**5.** 자유무공훈장：자유의 의지를 보여준 자에게 수여되는 훈장\n**6.** 총통무공훈장：3개 병단을 통솔하는 충통이 수여하는 훈장\n**7.** 여왕무공훈장：파라디 섬의 최고 통솔자, 여왕이 직접 수여하는 훈장')
+		.setImage('https://media.discordapp.net/attachments/832478811522072618/839052363398381568/Shingeki_no_Kyojin_S3_-_Episode_59_END_-_Hange_Receives_Medal.gif')
+		message.channel.send(embed)
+	}
 	// 조사병단 계급
 	if (message.content === `${prefix}계급`) {
 		const embed = new Discord.MessageEmbed()
