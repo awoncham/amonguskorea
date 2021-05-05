@@ -148,6 +148,31 @@ client.on('messageDelete', message => {
 // }
 // );
 
+//금지어
+client.on('message', async message => {
+    
+    if (message.channel.type === 'dm') return; // 보낸 메시지 채널이 DM일 때 되돌리기
+
+		if(message.member.hasPermission('ADMINISTRATOR')) return; // 보낸 사람이 관리자일 때는 되돌리기
+        
+
+    let blacklisted = ["https://discord.gg/", "http://discord.gg/"]
+
+    let foundInText = false;
+    for (var i in blacklisted) { 
+      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true
+    }
+
+    if (foundInText) {
+        const user = message.author.id;
+        const embed = new Discord.MessageEmbed()
+        .setColor('#FF0000')
+        .setDescription(`<:error:832821274719551529> <@${user}> 님 타 디스코드 주소를 뿌리지 말아주세요!`);
+        message.channel.send(embed)
+}
+}
+);
+
 //음식추천
 client.on('message', message => {
         
@@ -211,15 +236,20 @@ client.on('message', message => {
     }
 });
 
-// //태그 메시지
-// client.on('message', message => {
-//     let replaceStr = message.content.replace(/[^0-9]/g, "")
-//     if(replaceStr === client.user.id) {
-// 		const embed = new Discord.MessageEmbed()
-// 		.setDescription
-//         message.channel.send(embed)
-//     }
-// })
+//태그 메시지
+client.on('message', message => {
+    let replaceStr = message.content.replace(/[^0-9]/g, "")
+    if(replaceStr === client.user.id) {
+		const embed = new Discord.MessageEmbed()
+		.setColor('#FF0000')
+		.setDescription('<:error:832821274719551529> `!도움말` 이라고 입력해주세요, 조사병단 봇을 활용하는 방법이 나와있습니다!')
+        message.channel.send(embed)
+				.then(message => {
+					message.delete({ timeout: 5000 })
+					console.log('[✅] 태그 메시지 삭제를 성공하였습니다')
+			})
+    }
+})
 
 // 인물 정보
 client.on('message', message => {
@@ -236,7 +266,7 @@ client.on('message', message => {
 		.setURL('https://www.youtube.com/channel/UCDKwZRPOZ9YCnJDAO4GmPYA')
 		.setColor('#FF6161')
 		.setDescription('조사병단 봇을 만든 인물이며, 벽외조사에서도 뛰어난 활약을 하고 있다')
-		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/832891814159450112/2.png?width=676&height=676')
+		.setThumbnail('https://media.discordapp.net/attachments/808951741592371224/839055354301120553/9.png?width=676&height=676')
 		.addField('<:awoncham:832894731427643422> 나이', '15', true)
 		.addField('<:awoncham:832894731427643422> 성별', '남자', true)
 		.addField('<:awoncham:832894731427643422> 신체', '165 | 57 | A형', true)
@@ -244,7 +274,7 @@ client.on('message', message => {
 		.addField('<:awoncham:832894731427643422> 직책', '조사병단 숙련병', true)
 		.addField('<:awoncham:832894731427643422> 훈장', '총 1개 보유', true)
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/832893679756115978/5.png?width=1203&height=676')
-		.setFooter('awoncham', 'https://media.discordapp.net/attachments/832482884127424543/832891814159450112/2.png?width=676&height=676')
+		.setFooter('awoncham', 'https://media.discordapp.net/attachments/808951741592371224/839055354301120553/9.png?width=676&height=676')
 		.setTimestamp()
 		message.channel.send(embed)
 	}
@@ -463,6 +493,7 @@ client.on('message', message => {
 		.addField('`!팀스피크`', '팀스피크 다운 혹은 사용 방법', false)
 		.addField('`!초대`', '조사병단 영구 초대코드를 확인해보세요', false)
 		.addField('`!연막탄`', '조사병단 연막탄 가이드를 확인할 수 있다', false)
+		.addField('`!훈장`', '조사병단 훈장 획득 조건 혹은 어떤 훈장이 있는지 확인해보세요', false)
 		message.channel.send(embed)
 	}
 	// 조사병단 색깔
@@ -474,7 +505,7 @@ client.on('message', message => {
 	}
 	if (message.content === `${prefix}훈장`) {
 		const embed = new Discord.MessageEmbed()
-		.setDescription('**`훈장 획득 조건`**\n**1.** 특수거인(여성형, 초대형, 갑옷, 로드 레이스 등등) 토벌 또는 한 벽외조사에서 15구 토벌 후 생존\n**2.** 훈장은 총 7개 등급으로 구성되어 있으며, 최고등급 훈장을 수여받을 시에는 엘리트 등급으로 승진 가능\n\n**`훈장 등급표`**\n**1.** 앙헬무공훈장：인류 최초로 거인을 잡은 \'앙헬\'을 기억하는, 첫 번째 훈장\n**2.** 마리아무공훈장：유미르의 세 자녀 중 하나인 마리아\n**3.** 로제무공훈장：유미르의 세 자녀 중 하나인 로제\n**2.** 시나무공훈장：유미르의 세 자녀 중 하나인 시나\n**5.** 자유무공훈장：자유의 의지를 보여준 자에게 수여되는 훈장\n**6.** 총통무공훈장：3개 병단을 통솔하는 충통이 수여하는 훈장\n**7.** 여왕무공훈장：파라디 섬의 최고 통솔자, 여왕이 직접 수여하는 훈장')
+		.setDescription('**`훈장 획득 조건`**\n\n**1.** 특수거인(여성형, 초대형, 갑옷, 로드 레이스 등등) 토벌 또는 한 벽외조사에서 15구 토벌 후 생존\n**2.** 훈장은 총 7개 등급으로 구성되어 있으며, 최고등급 훈장을 수여받을 시에는 엘리트 등급으로 승진 가능\n\n**`훈장 등급표`**\n\n**1.** 앙헬무공훈장：인류 최초로 거인을 잡은 \'앙헬\'을 기억하는, 첫 번째 훈장\n**2.** 마리아무공훈장：유미르의 세 자녀 중 하나인 마리아\n**3.** 로제무공훈장：유미르의 세 자녀 중 하나인 로제\n**2.** 시나무공훈장：유미르의 세 자녀 중 하나인 시나\n**5.** 자유무공훈장：자유의 의지를 보여준 자에게 수여되는 훈장\n**6.** 총통무공훈장：3개 병단을 통솔하는 충통이 수여하는 훈장\n**7.** 여왕무공훈장：파라디 섬의 최고 통솔자, 여왕이 직접 수여하는 훈장')
 		.setImage('https://media.discordapp.net/attachments/832478811522072618/839052363398381568/Shingeki_no_Kyojin_S3_-_Episode_59_END_-_Hange_Receives_Medal.gif')
 		message.channel.send(embed)
 	}
@@ -544,6 +575,7 @@ client.on('message', message => {
 		.addField('`!게임추천`', '할 게임이 없을 때 한 번 사용해보세요', false)
 		.addField('`!오늘의운세`', '오늘은 과연 어떤 일이 일어날 지 확인해보세요', false)
 		.addField('`!가위바위보`', '조사병단 봇과 가위바위보를 한번 해보세요', false)
+		.addField('`!말하기`', '뒤에 한 말을 그대로 따라합니다', false)
 		message.channel.send(embed)
 	}
 	// 명령어 관리
@@ -557,9 +589,11 @@ client.on('message', message => {
 	if (message.content === `${prefix}도움말 기타`) {
 		const embed = new Discord.MessageEmbed()
 		.setTitle('기타 플러그인')
-		.addField('`!프로필 (@태그)`', '자신 혹은 다른 유저의 프로필을 확인하실 수 있습니다', false)
+		.addField('`!아바타 (@태그)`', '자신 혹은 다른 유저의 프로필을 확인하실 수 있습니다', false)
 		.addField('`!다운로드`', '많이 사용되는 Aottg 다운 사이트를 알려줍니다', false)
 		.addField('`!인물정보`', '조사병단의 있는 유저의 정보를 얻을 수 있어요', false)
+		.addField('`!계산`', '더하기, 빼기, 곱하기, 나누기 식을 계산해줍니다', false)
+		.addField('`!코로나`', '현재 대한민국 코로나 상태를 확인하실 수 있습니다', false)
 		message.channel.send(embed)
 	}
 })
@@ -590,7 +624,8 @@ client.on('message', message => {
 		// 명령어 입력
     if(message.content == `${prefix}명령어`) {
         const embed = new Discord.MessageEmbed()
-        .setDescription('`!도움말` 이라고 입력해주세요!')
+				.setColor('#FF0000')
+        .setDescription('<:error:832821274719551529> `!도움말` 이라고 입력해주세요, 조사병단 봇을 활용하는 방법이 나와있습니다!')
         message.channel.send(embed)
         .then(message => {
             message.delete({ timeout: 5000 })
@@ -666,4 +701,4 @@ client.on('message', message => {
 // })
 
 
-client.login(process.env.token);
+client.login("ODE1NDI5MDczNDc0OTQ1MDI1.YDsRgQ.HE23Wqn1n7eBMIbqoDPkoroGAHs");
