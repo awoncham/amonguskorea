@@ -271,7 +271,7 @@ client.on('message', message => {
 		.addField('<:awoncham:832894731427643422> 성별', '남자', true)
 		.addField('<:awoncham:832894731427643422> 신체', '165 | 57 | A형', true)
 		.addField('<:awoncham:832894731427643422> 출생', '820년대 7월 4일, 방벽 월 시나 지하도시', true)
-		.addField('<:awoncham:832894731427643422> 직책', '조사병단 숙련병', true)
+		.addField('<:awoncham:832894731427643422> 직책', '조사병단 베테랑', true)
 		.addField('<:awoncham:832894731427643422> 훈장', '총 1개 보유', true)
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/832893679756115978/5.png?width=1203&height=676')
 		.setFooter('awoncham', 'https://media.discordapp.net/attachments/808951741592371224/839055354301120553/9.png?width=676&height=676')
@@ -453,6 +453,23 @@ client.on('message', message => {
 		.addField('<:HAKU:835395834044350474> 훈장', '에밀리아 훈장 보유', true)
 		.setImage('https://media.discordapp.net/attachments/829985000015003658/835399420006760448/1501704854_bf5cd8e4f1a47307d403e4ca51ce083cae94c64e_hq.gif')
 		.setFooter('HAKU', 'https://media.discordapp.net/attachments/829985000015003658/835399354818101248/haku1.png?width=676&height=676')
+		.setTimestamp()
+		message.channel.send(embed)
+	}
+	if (message.content === `${prefix}인물정보 장발장` || message.content === `${prefix}인물정보 Abraham`) { // 장발장님
+		const embed = new Discord.MessageEmbed()
+		.setTitle('장발장 (Abraham)')
+		.setColor('#000000')
+		.setDescription('빵 알레르기가 있다')
+		.setThumbnail('https://media.discordapp.net/attachments/838752812102975498/840559077784551444/unnamed_2.jpg?width=676&height=676')
+		.addField('<:HAKU:835395834044350474> 나이', '17', true)
+		.addField('<:HAKU:835395834044350474> 성별', '남자', true)
+		.addField('<:HAKU:835395834044350474> 신체', '175 | 59 | O형', true)
+		.addField('<:HAKU:835395834044350474> 출생', '833년 6월 1일, 월 시나 야르케르 구', true)
+		.addField('<:HAKU:835395834044350474> 직책', '조사병단 신병', true)
+		.addField('<:HAKU:835395834044350474> 훈장', '총 0개 보유보유', true)
+		.setImage('https://media.discordapp.net/attachments/838752812102975498/840559076714610708/unnamed_1.jpg?width=1203&height=676')
+		.setFooter('Abraham', 'https://media.discordapp.net/attachments/838752812102975498/840559077784551444/unnamed_2.jpg?width=676&height=676')
 		.setTimestamp()
 		message.channel.send(embed)
 	}
@@ -701,4 +718,4 @@ client.on('message', message => {
 // })
 
 
-client.login(process.env.token);
+client.login("ODE1NDI5MDczNDc0OTQ1MDI1.YDsRgQ.e7fsXDsmaw0k1zCT7jUCkuKVRdw");
