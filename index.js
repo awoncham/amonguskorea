@@ -718,4 +718,4 @@ client.on('message', message => {
 // })
 
 
-client.login("ODE1NDI5MDczNDc0OTQ1MDI1.YDsRgQ.e7fsXDsmaw0k1zCT7jUCkuKVRdw");
+client.login(process.env.token);
