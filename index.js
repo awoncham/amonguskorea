@@ -23,7 +23,7 @@ client.on("message", async message => {
 	if(message.channel.type === 'dm') return;
 	if(message.guild !== null) {
     if(message.guild.id !== "701398748521300049") return;
-	};
+}; 
 
   if(message.content.startsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -49,14 +49,17 @@ client.on('ready', function() {
         let tips = ["조사병단에는 검찰청이 있습니다. 욕설, 비방, 벽외조사 유니폼 미착용, 보안유출 등 불법행위를 발견했을 시에는 <@688375427848470753>, <@703524055009198080> 검사에게 신고하시면 됩니다",
 										"<#702873267345817600> 에서 현재 예정되어 있는 벽외조사를 확인하고 <#702873366373204019> 에서 신청하실 수 있습니다",
 										"<@&746682677499002920>：27명 중 3명 생존이라는 극악의 난이도를 자랑했던 제 14회 벽외조사에 참여한 모든 병사들에게 수여되는 역할",
-										"<@&751703838477516910>：제 14회 벽외조사에서 **갑옷거인, 짐승거인, 초대형거인** 을 토벌한 병사에게 수여되는 역할"]
+										"<@&751703838477516910>：제 14회 벽외조사에서 **갑옷거인, 짐승거인, 초대형거인** 을 토벌한 병사에게 수여되는 역할",
+										"간부진이 되기 위해서는 간부진 심사 시험을 치러야 한다",
+										"조사병단 서버의 탄생일은 **2020년 4월 20일**이다"]
         let rand = Math.floor(Math.random() * tips.length);
         const channel = client.channels.cache.find(channel => channel.id === '742051945472065546')
         
         const embed = new Discord.MessageEmbed()
+				.setColor('RANDOM')
         .setDescription(`${tips[rand]}`)
         channel.send(embed)
-    }, 7200000); // 7200000
+    }, 14400000); // 4시간 | 2시간 7200000 / 1분 = 1000
 
 });
 
@@ -180,7 +183,7 @@ client.on('message', message => {
 	if(message.channel.type === 'dm') return;
 	if(message.guild !== null) {
     if(message.guild.id !== "701398748521300049") return;
-	};        
+};        
     
     let foods = ["지크 척수액", "족발", "피자", "치킨", "진라면", "짜파게티", "파스타", "스테이크", "마라흑당치즈민트초코칩쿠키", "크레이프 케이크", "짜장면", "짬뽕", "허니버터흑당마라치즈불닭민트초코순대국밥", "마라허니민트초코칩쿠키", "된장국", "보리밥", "산낙지", "도토리묵", "쭈꾸미", "참깨빵 위에 순 쇠고기 패티 두장, 특별한 소스 양상추 치즈 피클 양파까지", "포카칩", "부대찌개", "해리포터젤리빈", "도토리", "떡볶이", "곤드레비빔밥", "초밥"]
 
@@ -199,7 +202,7 @@ client.on('message', message => {
 	if(message.channel.type === 'dm') return;
 	if(message.guild !== null) {
     if(message.guild.id !== "701398748521300049") return;
-	};
+}; 
         
     
     let luck = [
@@ -223,7 +226,7 @@ client.on('message', message => {
 	if(message.channel.type === 'dm') return;
 	if(message.guild !== null) {
     if(message.guild.id !== "701398748521300049") return;
-	};
+}; 
         
     
     let games = ["AoTTG", "롤", "마인크래프트", "레포데", "더 포레스트", "어몽어스", "OSU", "오버워치", "배그", "피파온라인", "카트라이더", "브롤스타즈", "서튼어택", "메이플스토리", "GTA5", "테일즈런너", "로블록스", "거지 키우기", "원신", "아원참이랑 놀아주기"]
@@ -258,7 +261,7 @@ client.on('message', message => {
 	if(message.channel.type === 'dm') return;
 	if(message.guild !== null) {
     if(message.guild.id !== "701398748521300049") return;
-	};
+}; 
 
 	if (message.content === `${prefix}인물정보 아원참` || message.content === `${prefix}인물정보 awoncham`) { // 아원참
 		const embed = new Discord.MessageEmbed()
@@ -488,7 +491,7 @@ client.on('message', message => {
 	if(message.channel.type === 'dm') return;
 	if(message.guild !== null) {
     if(message.guild.id !== "701398748521300049") return;
-	};
+}; 
 
 	// 기본 도움말
 	if (message.content === `${prefix}도움말`) {
@@ -622,7 +625,7 @@ client.on('message', message => {
 	if(message.channel.type === 'dm') return;
 	if(message.guild !== null) {
     if(message.guild.id !== "701398748521300049") return;
-	};
+}; 
         
     // 연결한 정도를 알려줍니다
     if(message.content.startsWith(`${prefix}핑`)) {
@@ -669,53 +672,18 @@ client.on('message', message => {
         )
         message.channel.send(embed)
     }
-
-
-
-		// 조사병단 봇 정보
-		// if(message.content === `${prefix}정보`){
-		// 	const embed = new Discord.MessageEmbed()
-		// 	.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.3')
-		// 	.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
-		// 	.addField('추가된 명령어', '`다양한 인물정보`, `초대` 등', false)
-		// 	.setTimestamp()
-		// message.channel.send(embed)
-		// }
 });
 
-// client.on('message', async message => {
-
-// 	if (message.author.bot || message.channel.type === 'dm') return;
-
-// 	const messageArray = message.content.split(' ');
-// 	const cmd = messageArray[0];
-// 	const args = messageArray.slice(1);
-
-// 	if (cmd === `${prefix}벽외조사`) {
-
-// 		const warnc = new Discord.MessageEmbed()
-// 		.setDescription('<:error:832821274719551529> 당신은 이 명령어를 사용할 권한이 없습니다!')
-// 		.setColor('#FF0000')
-// 		if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send(warnc);
-
-// 		let surveychannel = message.mentions.channels.first();
-// 		let surveyDescription = args.slice(1).join(' ');
-
-// 		const embed = new Discord.MessageEmbed()
-// 		.setDescription(surveyDescription)
-// 		.addField('`⚙️ 지휘분대`', `-`, true)
-// 		.addField('`1️⃣ 제1분대`', `-`, true)
-// 		.addField('`2️⃣ 제2분대`', `-`, true)
-// 		.addField('`3️⃣ 제3분대`', `-`, true)
-// 		.setColor('#008972')
-
-// 		let msgembed = await surveychannel.send(embed);
-// 		await msgembed.react('⚙️')
-// 		await msgembed.react('1️⃣')
-// 		await msgembed.react('2️⃣')
-// 		await msgembed.react('3️⃣')
-// 	}
+// client.on('message', message => {
+// 		// 조사병단 봇 정보
+// 		if(message.content === `${prefix}정보`){
+// 			const embed = new Discord.MessageEmbed()
+// 			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.4')
+// 			.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
+// 			.addField('📢 패치노트', '- 랜덤 타임 메시지 시간이 2시간에서 4시간으로 올라갔습니다\n- 코로나 관련 기능이 추가되었습니다\n- 벽외조사 관련 기능이 제작 중에 있습니다\n- 랜덤 타임 메시지, TMI와 관련된 메시지가 추가되었습니다', false)
+// 			.setTimestamp()
+// 		message.channel.send(embed)
+// 		}
 // })
-
 
 client.login(process.env.token);
