@@ -57,7 +57,7 @@ client.on('ready', function() {
         
         const embed = new Discord.MessageEmbed()
 				.setColor('RANDOM')
-        .setDescription(`${tips[rand]}`)
+        .setDescription(`\`\`\`md\n\n${tips[rand]}\`\`\``)
         channel.send(embed)
     }, 14400000); // 4시간 | 2시간 7200000 / 1분 = 1000
 
@@ -151,31 +151,6 @@ client.on('messageDelete', message => {
 // }
 // );
 
-//금지어
-client.on('message', async message => {
-    
-    if (message.channel.type === 'dm') return; // 보낸 메시지 채널이 DM일 때 되돌리기
-
-		if(message.member.hasPermission('ADMINISTRATOR')) return; // 보낸 사람이 관리자일 때는 되돌리기
-        
-
-    let blacklisted = ["https://discord.gg/", "http://discord.gg/"]
-
-    let foundInText = false;
-    for (var i in blacklisted) { 
-      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true
-    }
-
-    if (foundInText) {
-        const user = message.author.id;
-        const embed = new Discord.MessageEmbed()
-        .setColor('#FF0000')
-        .setDescription(`<:error:832821274719551529> <@${user}> 님 타 디스코드 주소를 뿌리지 말아주세요!`);
-        message.channel.send(embed)
-}
-}
-);
-
 //음식추천
 client.on('message', message => {
         
@@ -206,15 +181,19 @@ client.on('message', message => {
         
     
     let luck = [
-        "오늘은 스피드런 신기록을 찍을 것이다", "오늘은 데미지런 신기록을 찍을 것이다", "기행종이 많이 나타날 것이다", "펑크가 너를 기달리고 있다", "죽음이 따라오는 날", 
-        "와이어가 잘 안 쏴지는 날", "와이어를 잘 발사하는 날", "거의 안 죽는 날", "게임이 많이 튕길 것이다", "어택님과 많이하게 될 것이다", "엄청 못해지는 날", "거인에게 자주 잡힌다", "거인에게 10번 몸이 찢겨 나갈 것이다",
-        "나무에 많이 박을 것이다", "킬딸만 오지게 당할 것이다"
-            ]
+								"스피드런 신기록을 찍을 것입니다",
+								"데미지런 신기록을 찍을 것입니다",
+								"와이어가 잘 안 쏴지는 날입니다",
+								"게임이 많이 튕길 것입니다",
+								"나무에 많이 박을 것입니다",
+								"거인들이 당신을 기달리고 있습니다",
+								"엄청 못해지는 날입니다"
+            	 ]
 
     if (message.content === `${prefix}오늘의운세`) {
         let rand = Math.floor(Math.random() * luck.length);
         const embed = new Discord.MessageEmbed()
-        .setDescription(`**\`오늘의 운세\`**\n\n${luck[rand]}`)
+        .setDescription(`\`\`\`md\n\n${luck[rand]}\`\`\``)
         message.channel.send(embed)
     }
 });
@@ -496,8 +475,8 @@ client.on('message', message => {
 	// 기본 도움말
 	if (message.content === `${prefix}도움말`) {
 		const embed = new Discord.MessageEmbed()
-		.setAuthor('조사병단 도움말', 'https://media.discordapp.net/attachments/832482884127424543/833185091613622302/7a1222a50c50bf3a14ec1c50721e74e5.png')
-		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/833185091613622302/7a1222a50c50bf3a14ec1c50721e74e5.png')
+		.setAuthor('조사병단 도움말', 'https://media.discordapp.net/attachments/832482884127424543/843326112301580318/c6a249645d46209f337279cd2ca998c7.png')
+		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/843326112301580318/c6a249645d46209f337279cd2ca998c7.png')
 		.addField('**조사병단**', '`!도움말 조사병단`', true)
 		.addField('**놀이**', '`!도움말 놀이`', true)
 		.addField('**관리**', '`!도움말 관리`', true)
@@ -523,16 +502,27 @@ client.on('message', message => {
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/834672919841603594/1.PNG')
 		message.channel.send(embed)
 	}
+	// 조사병단 훈장
 	if (message.content === `${prefix}훈장`) {
 		const embed = new Discord.MessageEmbed()
 		.setDescription('**`훈장 획득 조건`**\n\n**1.** 특수거인(여성형, 초대형, 갑옷, 로드 레이스 등등) 토벌 또는 한 벽외조사에서 15구 토벌 후 생존\n**2.** 훈장은 총 7개 등급으로 구성되어 있으며, 최고등급 훈장을 수여받을 시에는 엘리트 등급으로 승진 가능\n\n**`훈장 등급표`**\n\n**1.** 앙헬무공훈장：인류 최초로 거인을 잡은 \'앙헬\'을 기억하는, 첫 번째 훈장\n**2.** 마리아무공훈장：유미르의 세 자녀 중 하나인 마리아\n**3.** 로제무공훈장：유미르의 세 자녀 중 하나인 로제\n**2.** 시나무공훈장：유미르의 세 자녀 중 하나인 시나\n**5.** 자유무공훈장：자유의 의지를 보여준 자에게 수여되는 훈장\n**6.** 총통무공훈장：3개 병단을 통솔하는 충통이 수여하는 훈장\n**7.** 여왕무공훈장：파라디 섬의 최고 통솔자, 여왕이 직접 수여하는 훈장')
 		.setImage('https://media.discordapp.net/attachments/832478811522072618/839052363398381568/Shingeki_no_Kyojin_S3_-_Episode_59_END_-_Hange_Receives_Medal.gif')
 		message.channel.send(embed)
 	}
+	// 조사병단 유니폼
+	if (message.content === `${prefix}유니폼`) {
+		const embed = new Discord.MessageEmbed() 
+		.setTitle('<:SurveyCorps:832772562123489280> 조사병단 공식 유니폼')
+		.setDescription('**• 망토**\nhttps://i.imgur.com/HQjo5mK.png\n\n**• 남성용 제복**\nhttps://i.imgur.com/555gO79.png\n\n**• 여성용 제복**\nhttps://i.imgur.com/SIEizIT.png\n\n**• 가스**\nhttps://i.imgur.com/luEXJBS.png')
+		.setColor('#079951')
+		.setFooter('위에 있는 사진은 착용 시 캐릭터 모습입니다')
+		.setImage('https://media.discordapp.net/attachments/832482884127424543/843320765091807252/unknown.png')
+		message.channel.send(embed)
+	}
 	// 조사병단 계급
 	if (message.content === `${prefix}계급`) {
 		const embed = new Discord.MessageEmbed()
-		.setTitle('조사병단 계급 배치도')
+		.setTitle('<:SurveyCorps:832772562123489280> 조사병단 계급 배치도')
 		.setDescription(
 			`<@&701403514160545792>：조사병단의 총괄 책임자 및 최고 지휘관이다. 장거리 수색 진형 전체를 컨트롤하며 작전 목표 수행을 위한 모든 책임을 진다. 2 ~ 40명 또는 합동 벽외조사에서는 6 ~ 70명까지 통솔해야 하는 만큼 뛰어난 통솔력을 가지고 전반적인 벽외조사의 이해도를 가지고 있어야 한다.
 			

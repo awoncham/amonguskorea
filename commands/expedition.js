@@ -1,75 +1,70 @@
-// const Discord = require('discord.js');
+// const Discord = require('discord.js')
 
+// module.exports = {
+// 	name: "벽외조사",
+// 	async run (_client, message, args) {
 
-// module.exports =  {
-//     name: "벽외조사",
+// 			let msg = args.join(" ");
 
-// 		async run (_client, message, args) {
+// 			const Filter = (reaction, user) => {
+// 				return (['⚙️', '1️⃣', '2️⃣', '3️⃣'].includes(reaction.emoji.name) && user.id === message.author.id);
+// 			};
 
-// 				let msg = args.join(" ");
+// 			const expedition = new Discord.MessageEmbed()
+// 			.setDescription(msg)
+// 			.addField('⚙️ 지휘분대', `-`, false)
+// 			.addField('1️⃣ 제1분대', `-`, false)
+// 			.addField('2️⃣ 제2분대', `-`, false)
+// 			.addField('3️⃣ 제3분대', `-`, false)
+// 			message.channel.send(expedition).then((th) => {
+// 					th.react("⚙️")
+// 					th.react("1️⃣")
+// 					th.react("2️⃣")
+// 					th.react("3️⃣")
+// 					th.awaitReactions(Filter, {
+// 							max: 1,
+// 					}).then((collected) => {
 
-//         const reactionMessage = await message.channel.send(new Discord.MessageEmbed().setDescription(msg)
-//         .addField('`지휘분대`', `-`, false)
-//         .addField('`제1분대`', `-`, false)
-//         .addField('`제2분대`', `-`, false)
-//         .addField('`제3분대`', `-`, false));
-    
-//         try {
-//             await reactionMessage.react("⚙️");
-//             await reactionMessage.react("1️⃣");
-//             await reactionMessage.react("2️⃣");
-//             await reactionMessage.react("3️⃣");
-//         } catch (err) {
-//             console.log('이모티콘 보내기를 실패하였습니다!');
-//             throw err;
-//         }
-    
-//         const collector = reactionMessage.createReactionCollector(
-//             (reaction, user) => message.guild.members.cache.find((member) => member.id === user.id),
-//             { dispose: true }
-//         );
+// 							const reaction = collected.first();
 
-        
-    
-//         collector.on("collect", (reaction, user) => {
-//             switch (reaction.emoji.name) {
-//             case "⚙️":
-//                 const editMessage = new Discord.MessageEmbed()
-//                 .setDescription(msg)
-//                 .addField('`지휘분대`', `강원참`, false) // 태그 #${collected.array()[0].users.cache.array()[1].discriminator}
-//                 .addField('`제1분대`', `-`, false)
-//                 .addField('`제2분대`', `-`, false)
-//                 .addField('`제3분대`', `-`, false);
-//                 reactionMessage.edit(editMessage)
-//                 break;
-//             case "1️⃣":
-//                 const editMessage1 = new Discord.MessageEmbed()
-//                 .setDescription(msg)
-//                 .addField('`지휘분대`', `-`, false) // 태그 #${collected.array()[0].users.cache.array()[1].discriminator}
-//                 .addField('`제1분대`', `강원참`, false)
-//                 .addField('`제2분대`', `-`, false)
-//                 .addField('`제3분대`', `-`, false);
-//                 reactionMessage.edit(editMessage1)
-//                 break;
-//             case "2️⃣":
-//                 const editMessage2 = new Discord.MessageEmbed()
-//                 .setDescription(msg)
-//                 .addField('`지휘분대`', `-`, false) // 태그 #${collected.array()[0].users.cache.array()[1].discriminator}
-//                 .addField('`제1분대`', `-`, false)
-//                 .addField('`제2분대`', `강원참`, false)
-//                 .addField('`제3분대`', `-`, false);
-//                 reactionMessage.edit(editMessage2)
-//                 break;
-//             case "3️⃣":
-//                 const editMessage3 = new Discord.MessageEmbed()
-//                 .setDescription(msg)
-//                 .addField('`지휘분대`', `-`, false) // 태그 #${collected.array()[0].users.cache.array()[1].discriminator}
-//                 .addField('`제1분대`', `-`, false)
-//                 .addField('`제2분대`', `-`, false)
-//                 .addField('`제3분대`', `강원참`, false);
-//                 reactionMessage.edit(editMessage3)
-//                 break;
-//             }
-//         });
-//     },
-//   };
+// 							if (reaction.emoji.name === "⚙️") {
+// 								const CommanderMessage = new Discord.MessageEmbed()
+// 								.setDescription(msg)
+// 								.addField('⚙️ 지휘분대', `${reaction.users.cache.array()[1].username}`, false) // 태그 #${reaction.users.cache.array()[1].discriminator}
+// 								.addField('1️⃣ 제1분대', `${reaction.users.cache.array()[2].username}`, false)
+// 								.addField('2️⃣ 제2분대', `${reaction.users.cache.array()[3].username}`, false)
+// 								.addField('3️⃣ 제3분대', `${reaction.users.cache.array()[4].username}`, false)
+// 									th.edit(CommanderMessage)
+// 									return th.reactions.removeAll()
+// 							} else if (reaction.emoji.name === '1️⃣') {
+// 								const oneMessage = new Discord.MessageEmbed()
+// 								.setDescription(msg)
+// 								.addField('⚙️ 지휘분대', `${reaction.users.cache.array()[1].username}`, false) // 태그 #${reaction.users.cache.array()[1].discriminator}
+// 								.addField('1️⃣ 제1분대', `${reaction.users.cache.array()[2].username}`, false)
+// 								.addField('2️⃣ 제2분대', `${reaction.users.cache.array()[3].username}`, false)
+// 								.addField('3️⃣ 제3분대', `${reaction.users.cache.array()[4].username}`, false)
+// 									th.edit(oneMessage)
+// 									return th.reactions.removeAll()
+// 							} else if (reaction.emoji.name === '2️⃣') {
+// 								const oneMessage = new Discord.MessageEmbed()
+// 								.setDescription(msg)
+// 								.addField('⚙️ 지휘분대', `${reaction.users.cache.array()[1].username}`, false) // 태그 #${reaction.users.cache.array()[1].discriminator}
+// 								.addField('1️⃣ 제1분대', `${reaction.users.cache.array()[2].username}`, false)
+// 								.addField('2️⃣ 제2분대', `${reaction.users.cache.array()[3].username}`, false)
+// 								.addField('3️⃣ 제3분대', `${reaction.users.cache.array()[4].username}`, false)
+// 									th.edit(oneMessage)
+// 									return th.reactions.removeAll()
+// 							} else if (reaction.emoji.name === '3️⃣') {
+// 								const oneMessage = new Discord.MessageEmbed()
+// 								.setDescription(msg)
+// 								.addField('⚙️ 지휘분대', `${reaction.users.cache.array()[1].username}`, false) // 태그 #${reaction.users.cache.array()[1].discriminator}
+// 								.addField('1️⃣ 제1분대', `${reaction.users.cache.array()[2].username}`, false)
+// 								.addField('2️⃣ 제2분대', `${reaction.users.cache.array()[3].username}`, false)
+// 								.addField('3️⃣ 제3분대', `${reaction.users.cache.array()[4].username}`, false)
+// 									th.edit(oneMessage)
+// 									return th.reactions.removeAll()
+// 							}
+// 					}) // 여기까지
+// 			})
+// 	},
+// }

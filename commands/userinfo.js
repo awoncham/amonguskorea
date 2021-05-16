@@ -1,22 +1,31 @@
-// const Discord = require('discord.js')
+const Discord = require('discord.js')
+const moment = require('moment')
 
-// module.exports = {
-// 	name: "유저정보",
-// 	async run (client, message){
+module.exports = {
+	name: "유저정보",
+	async run (client, message){
 
-// 		const embed = new Discord.MessageEmbed()
-// 		.setColor('#FF0000')
-// 		.setDescription('<:error:832821274719551529> 유저 정보를 볼 유저를 멘션해주세요!')
-// 		if(!message.mentions.members.first()) return message.channel.send(embed);
+		const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
 
-// 		const user = message.mentions.users.first() || message.author;
-// 		const userinfo = new Discord.MessageEmbed()
-// 		.setTitle(`${user.tag}`)
-// 		.setThumbnail(user.displayAvatarURL())
-// 		.addField("👤 아이디", `${user.id}`)
-// 		.addField("⏱️ 가입 날짜", `${new Date(user.createdTimestamp).toLocaleDateString()}`)
-// 		.addField("🌎 서버 가입 날짜", `${new Date(user.joinedTimestamp).toLocaleDateString()}`)
-// 		.addField("⚔️ 역할 수", `${user.roles.cache.size - 1}`)
-// 		message.channel.send(userinfo)
-// 	}
-// }
+		const roles = member.roles.cache
+		.sort((a, b) => b.position - a.position)
+		.map(role => role.toString())
+		.slice(0, -1);
+
+		const embed = new Discord.MessageEmbed()
+		.setColor('#FF0000')
+		.setDescription('<:error:832821274719551529> 유저 정보를 볼 유저를 멘션해주세요!')
+		if(!message.mentions.members.first()) return message.channel.send(embed);
+
+		const user = message.mentions.users.first() || message.author;
+		const userinfo = new Discord.MessageEmbed()
+		.setTitle(`${user.tag}`)
+		.setThumbnail(user.displayAvatarURL())
+		.setColor('RANDOM')
+		.addField("👤 아이디", `${user.id}`, true)
+		.addField("⏱️ 가입 날짜", `${moment(member.user.createdTimestamp).locale('ko').format('ll dddd LTS')}`, true)
+		.addField("🌎 서버 가입 날짜", `${moment(member.joinedAt).locale('ko').format('LL LTS')}`, true)
+		.addField("⚔️ 역할 수", `${roles.length}`, true)
+		message.channel.send(userinfo)
+	}
+}

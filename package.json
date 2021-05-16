@@ -11,6 +11,7 @@
     "discord.js": "^12.3.1",
     "discord.js-v11": "^12.1.1",
     "mathjs": "^9.3.2",
+    "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "reaction-role": "^2.1.6",
     "request": "^2.88.2"
