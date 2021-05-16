@@ -51,13 +51,13 @@ client.on('ready', function() {
 										"<@&746682677499002920>：27명 중 3명 생존이라는 극악의 난이도를 자랑했던 제 14회 벽외조사에 참여한 모든 병사들에게 수여되는 역할",
 										"<@&751703838477516910>：제 14회 벽외조사에서 **갑옷거인, 짐승거인, 초대형거인** 을 토벌한 병사에게 수여되는 역할",
 										"간부진이 되기 위해서는 간부진 심사 시험을 치러야 한다",
-										"조사병단 서버의 탄생일은 **2020년 4월 20일**이다"]
+										"조사병단 서버의 탄생일은 **2020년 4월 19일**이다"]
         let rand = Math.floor(Math.random() * tips.length);
         const channel = client.channels.cache.find(channel => channel.id === '742051945472065546')
         
         const embed = new Discord.MessageEmbed()
 				.setColor('RANDOM')
-        .setDescription(`\`\`\`md\n\n${tips[rand]}\`\`\``)
+        .setDescription(`${tips[rand]}`)
         channel.send(embed)
     }, 14400000); // 4시간 | 2시간 7200000 / 1분 = 1000
 
@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
       .setDescription(`<:SurveyCorps:832772562123489280> ${member} 님께서 **\`조사병단\`** 서버에 들어오셨습니다`)
 		const embed1 = new Discord.MessageEmbed()
 			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 디스코드에 오신 것을 환영합니다!')
-			.setDescription('**You Have to check the <#715046268593897482>**\n\n질문사항이 있다면 단장의 개인 DM보단 디스코드 내의 질문채널을 이용해 주세요\n\n질문을 하시기 전에 <#713752285393453147> 채널에서 먼저 확인 후에 질문을 해주세요\n\n필독 규칙 읽어주신 후, [여기](https://docs.google.com/forms/d/e/1FAIpQLSft32i7tCfBMzzehQpvHjZ3fUFBrfsSEIAPdVrXRFtxjlkYdg/viewform)를 클릭하여 입단신청서를 작성해주세요\n\n입단신청서를 작성 완료한 후 <#767285361319346186> 채널에 들어가 아래 내용을 기재해주시면 심사 후에 입단 허가 해드립니다')
+			.setDescription('**You Have to check the <#715046268593897482>**\n\n질문사항이 있다면 단장의 개인 DM보단 디스코드 내의 질문채널을 이용해 주세요\n\n질문을 하시기 전에 <#713752285393453147> 채널에서 먼저 확인 후에 질문을 해주세요\n\n필독 규칙 읽어주신 후, [여기](https://docs.google.com/forms/d/e/1FAIpQLSft32i7tCfBMzzehQpvHjZ3fUFBrfsSEIAPdVrXRFtxjlkYdg/viewform)를 클릭하여 입단신청서를 작성해주세요\n\n입단신청서를 작성 완료한 후 <#767285361319346186> 채널에 들어가 아래 내용을 기재해주시면 심사 후에 입단 허가 해드립니다\n(입단 허가가 되려면 최소 1시간 이상 기달려야 합니다)')
 			.setImage('https://media.discordapp.net/attachments/832482884127424543/832932732442116096/unknown.png')
 			.setFooter('입단신청서를 보낸 후 신청서 메시지를 제거하지 말아주세요')
       channel.send(embed)
@@ -187,13 +187,15 @@ client.on('message', message => {
 								"게임이 많이 튕길 것입니다",
 								"나무에 많이 박을 것입니다",
 								"거인들이 당신을 기달리고 있습니다",
-								"엄청 못해지는 날입니다"
+								"엄청 못해지는 날입니다",
+								"아원참을 존경하게 될 것입니다",
+								"벽외조사를 하고 싶어하게 될 것입니다"
             	 ]
 
     if (message.content === `${prefix}오늘의운세`) {
         let rand = Math.floor(Math.random() * luck.length);
         const embed = new Discord.MessageEmbed()
-        .setDescription(`\`\`\`md\n\n${luck[rand]}\`\`\``)
+        .setDescription(`\`\`\`md\n#오늘의 운세\n\n${luck[rand]}\`\`\``)
         message.channel.send(embed)
     }
 });
@@ -222,14 +224,14 @@ client.on('message', message => {
 client.on('message', message => {
     let replaceStr = message.content.replace(/[^0-9]/g, "")
     if(replaceStr === client.user.id) {
-		const embed = new Discord.MessageEmbed()
-		.setColor('#FF0000')
-		.setDescription('<:error:832821274719551529> `!도움말` 이라고 입력해주세요, 조사병단 봇을 활용하는 방법이 나와있습니다!')
-        message.channel.send(embed)
-				.then(message => {
-					message.delete({ timeout: 5000 })
-					console.log('[✅] 태그 메시지 삭제를 성공하였습니다')
-			})
+			const embed = new Discord.MessageEmbed()
+			.setAuthor('조사병단 도움말', 'https://media.discordapp.net/attachments/832482884127424543/843326112301580318/c6a249645d46209f337279cd2ca998c7.png')
+			.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/843326112301580318/c6a249645d46209f337279cd2ca998c7.png')
+			.addField('**조사병단**', '`!도움말 조사병단`', true)
+			.addField('**놀이**', '`!도움말 놀이`', true)
+			.addField('**관리**', '`!도움말 관리`', true)
+			.addField('**기타**', '`!도움말 기타`', true)
+			message.channel.send(embed)
     }
 })
 
