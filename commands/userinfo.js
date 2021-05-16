@@ -22,10 +22,10 @@ module.exports = {
 		.setTitle(`${user.tag}`)
 		.setThumbnail(user.displayAvatarURL())
 		.setColor('RANDOM')
-		.addField("👤 아이디", `${user.id}`, true)
-		.addField("⏱️ 가입 날짜", `${moment(member.user.createdTimestamp).locale('ko').format('ll dddd LTS')}`, true)
-		.addField("🌎 서버 가입 날짜", `${moment(member.joinedAt).locale('ko').format('LL LTS')}`, true)
-		.addField("⚔️ 역할 수", `${roles.length}`, true)
+		.addField("👤 아이디", `${user.id}`, false)
+		.addField("⏱️ 가입 날짜", `${moment(member.user.createdTimestamp).locale('ko').format('ll dddd LTS')}`, false)
+		.addField("🌎 서버 가입 날짜", `${moment(member.joinedAt).locale('ko').format('LL LTS')}`, false)
+		.addField("⚔️ 역할 수", `${roles.length}`, false)
 		message.channel.send(userinfo)
 	}
 }

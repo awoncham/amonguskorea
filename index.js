@@ -513,7 +513,7 @@ client.on('message', message => {
 	if (message.content === `${prefix}유니폼`) {
 		const embed = new Discord.MessageEmbed() 
 		.setTitle('<:SurveyCorps:832772562123489280> 조사병단 공식 유니폼')
-		.setDescription('**• 망토**\nhttps://i.imgur.com/HQjo5mK.png\n\n**• 남성용 제복**\nhttps://i.imgur.com/555gO79.png\n\n**• 여성용 제복**\nhttps://i.imgur.com/SIEizIT.png\n\n**• 가스**\nhttps://i.imgur.com/luEXJBS.png')
+		.setDescription('<#702415058768101488>')
 		.setColor('#079951')
 		.setFooter('위에 있는 사진은 착용 시 캐릭터 모습입니다')
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/843320765091807252/unknown.png')
