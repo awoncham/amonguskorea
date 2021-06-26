@@ -20,7 +20,7 @@ module.exports =  {
         const Message = await Channel.send(new Discord.MessageEmbed().setDescription(msg)
         .setFooter(`한 번 선택한 분대를 취소할 수 없습니다｜자신의 맞는 분대에 클릭하세요`)
 				.setTitle('<:SurveyCorps:832772562123489280>｜조사병단 벽외조사 공지')
-				.setColor('#93BD8C')
+				.setColor('#43b581')
         .addField('⚙️ 지휘분대', `-`, false)
         .addField('1️⃣ 제1분대', `-`, false)
         .addField('2️⃣ 제2분대', `-`, false)
