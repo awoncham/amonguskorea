@@ -19,7 +19,7 @@ module.exports =  {
         let msg = message.content.slice(`!벽외조사 ${args[0]} `.length).trim()
         const Message = await Channel.send(new Discord.MessageEmbed().setDescription(msg)
         .setFooter(`한 번 선택한 분대를 취소할 수 없습니다｜자신의 맞는 분대에 클릭하세요`)
-				.setTitle('<:SurveyCorps:832772562123489280>｜대규모 벽외조사 공지')
+				.setTitle('<:SurveyCorps:832772562123489280>｜조사병단 벽외조사 공지')
 				.setColor('#93BD8C')
         .addField('⚙️ 지휘분대', `-`, false)
         .addField('1️⃣ 제1분대', `-`, false)
@@ -116,7 +116,7 @@ module.exports =  {
 
             const editMessage = new Discord.MessageEmbed()
             .setDescription(msg)
-						.setTitle('<:SurveyCorps:832772562123489280>｜대규모 벽외조사 공지')
+						.setTitle('<:SurveyCorps:832772562123489280>｜조사병단 벽외조사 공지')
             .setFooter(`한 번 선택한 분대를 취소할 수 없습니다｜자신의 맞는 분대에 클릭하세요`)
 						.setColor('#43b581')
             .addField('⚙️ 지휘분대', `${result_0}`, false)
@@ -192,7 +192,7 @@ module.exports =  {
 
             const editMessage = new Discord.MessageEmbed()
             .setDescription(msg)
-						.setTitle('<:SurveyCorps:832772562123489280>｜대규모 벽외조사 공지')
+						.setTitle('<:SurveyCorps:832772562123489280>｜조사병단 벽외조사 공지')
             .setFooter(`한 번 선택한 분대를 취소할 수 없습니다｜자신의 맞는 분대에 클릭하세요`)
 						.setColor('#43b581')
             .addField('⚙️ 지휘분대', `${result_0}`, false)
@@ -268,7 +268,7 @@ module.exports =  {
 
             const editMessage = new Discord.MessageEmbed()
             .setDescription(msg)
-						.setTitle('<:SurveyCorps:832772562123489280>｜대규모 벽외조사 공지')
+						.setTitle('<:SurveyCorps:832772562123489280>｜조사병단 벽외조사 공지')
             .setFooter(`한 번 선택한 분대를 취소할 수 없습니다｜자신의 맞는 분대에 클릭하세요`)
 						.setColor('#43b581')
             .addField('⚙️ 지휘분대', `${result_0}`, false)
@@ -344,7 +344,7 @@ module.exports =  {
 
             const editMessage = new Discord.MessageEmbed()
             .setDescription(msg)
-						.setTitle('<:SurveyCorps:832772562123489280>｜대규모 벽외조사 공지')
+						.setTitle('<:SurveyCorps:832772562123489280>｜조사병단 벽외조사 공지')
             .setFooter(`한 번 선택한 분대를 취소할 수 없습니다｜자신의 맞는 분대에 클릭하세요`)
 						.setColor('#43b581')
             .addField('⚙️ 지휘분대', `${result_0}`, false)

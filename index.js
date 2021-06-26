@@ -19,11 +19,11 @@ client.on("error", console.error);
 
 client.on("message", async message => {
 
-// 	if(message.author.bot) return;
-// 	if(message.channel.type === 'dm') return;
-// 	if(message.guild !== null) {
-//     if(message.guild.id !== "701398748521300049") return;
-// }; 
+	if(message.author.bot) return;
+	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+}; 
 
   if(message.content.startsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
