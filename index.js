@@ -490,6 +490,7 @@ client.on('message', message => {
 		const embed = new Discord.MessageEmbed()
 		.setTitle('조사병단 플러그인')
 		.addField('`!색깔`', '벽외조사 할 때에 사용해야 하는 닉네임 색깔코드', false)
+		.addField('`!벽외조사 <#채널> <내용>`', '벽외조사 공지를 띄울 수 있습니다 ', false)
 		.addField('`!계급`', '조사병단에 있는 역할들을 설명해줍니다', false)
 		.addField('`!팀스피크`', '팀스피크 다운 혹은 사용 방법', false)
 		.addField('`!초대`', '조사병단 영구 초대코드를 확인해보세요', false)
@@ -605,6 +606,7 @@ client.on('message', message => {
 		.addField('`!다운로드`', '많이 사용되는 Aottg 다운 사이트를 알려줍니다', false)
 		.addField('`!인물정보`', '조사병단의 있는 유저의 정보를 얻을 수 있어요', false)
 		.addField('`!계산`', '더하기, 빼기, 곱하기, 나누기 식을 계산해줍니다', false)
+		.addField('`!전송 (@태그) (내용)`', '관리자만 사용할 수 있는 명령어입니다', false)
 		.addField('`!코로나`', '현재 대한민국 코로나 상태를 확인하실 수 있습니다', false)
 		message.channel.send(embed)
 	}
@@ -666,16 +668,43 @@ client.on('message', message => {
     }
 });
 
-// client.on('message', message => {
-// 		// 조사병단 봇 정보
-// 		if(message.content === `${prefix}정보`){
-// 			const embed = new Discord.MessageEmbed()
-// 			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.5')
-// 			.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
-// 			.addField('📢 패치노트', '- 벽외조사 공지 기능이 생겼습니다 분대 이모티콘을 클릭하면 수정해서 올라갑니다\n```!벽외조사 <#채널> <내용>```', false)
-// 			.setTimestamp()
-// 		message.channel.send(embed)
-// 		}
-// })
+client.on('message', message => {
+		// // 조사병단 봇 정보
+		// if(message.content === `${prefix}정보`){
+		// 	const embed = new Discord.MessageEmbed()
+		// 	.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.5')
+		// 	.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
+		// 	.addField('📢 패치노트', '- 벽외조사 공지 기능이 생겼습니다 분대 이모티콘을 클릭하면 수정해서 올라갑니다\n```!벽외조사 <#채널> <내용>```', false)
+		// 	.setTimestamp()
+		// message.channel.send(embed)
+		// }
+		if (message.content.startsWith(`${prefix}전송`)) {
+			const user = message.mentions.users.first()
+			const embed = new Discord.MessageEmbed()
+			.setColor('#FF0000')
+			.setDescription('<:error:832821274719551529> 당신은 이 명령어를 사용할 권한이 없습니다!')
+			if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(embed);
+			try{
+				let content = message.content.slice(`${prefix}전송`	.length);
+				const embed2 = new Discord.MessageEmbed()
+				.setTitle("<:SurveyCorps:832772562123489280>｜조사병단")
+				.setDescription(`**조사병단 공식 서버**에서 온 메시지입니다\n\n${content}`)
+				.setFooter(`전송자｜${message.author.username}`)
+				.setTimestamp()
+				.setColor('RANDOM')
+				user.send(embed2)
+				const embed3 = new Discord.MessageEmbed()
+				.setColor('#43b581')
+				.setDescription('<:check:832821047215521802> 성공적으로 메시지가 전송되었습니다!')
+				message.channel.send(embed3)
+			}catch(err) {
+				console.log(err)
+				const embed4 = new Discord.MessageEmbed()
+				.setColor('#FF0000')
+				.setDescription('<:error:832821274719551529> 어딘가에서 오류가 발생하였습니다!')
+				message.channel.send(embed4)
+			}
+		}
+})
 
 client.login(process.env.token);
