@@ -46,12 +46,13 @@ client.on('ready', function() {
 		client.user.setActivity('조사병단 | !도움말')
     
     setInterval(() => {
-        let tips = ["조사병단에는 검찰청이 있습니다. 욕설, 비방, 벽외조사 유니폼 미착용, 보안유출 등 불법행위를 발견했을 시에는 <@688375427848470753>, <@703524055009198080> 검사에게 신고하시면 됩니다",
+        let tips = [
 										"<#702873267345817600> 에서 현재 예정되어 있는 벽외조사를 확인하고 <#702873366373204019> 에서 신청하실 수 있습니다",
 										"<@&746682677499002920>：27명 중 3명 생존이라는 극악의 난이도를 자랑했던 제 14회 벽외조사에 참여한 모든 병사들에게 수여되는 역할",
 										"<@&751703838477516910>：제 14회 벽외조사에서 **갑옷거인, 짐승거인, 초대형거인** 을 토벌한 병사에게 수여되는 역할",
-										"간부진이 되기 위해서는 간부진 심사 시험을 치러야 한다",
-										"조사병단 서버의 탄생일은 **2020년 4월 19일**이다"]
+										"AOTTG2 및 조사병단 공식 카페가 개설되었습니다, [여기](https://cafe.naver.com/aottg2)를 클릭하여 카페에 접속해보세요",
+										"조사병단의 설립일은 **2020년 4월 19일**입니다"
+									]
         let rand = Math.floor(Math.random() * tips.length);
         const channel = client.channels.cache.find(channel => channel.id === '742051945472065546')
         
@@ -68,8 +69,11 @@ client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
-      .setColor('#00FF00')
-      .setDescription(`<:SurveyCorps:832772562123489280> ${member} 님께서 **\`조사병단\`** 서버에 들어오셨습니다`)
+      .setColor('#a4d166')
+			.setAuthor('https://media.discordapp.net/attachments/832482884127424543/865738397308813332/plus.png', '조사병단')
+      .setDescription(`${member}, **조사병단** 서버에 오신 것을 환영합니다. 저희와 함께 벽외조사를 하실 분들은 <#701406223999959062> 에서 규칙을 읽어주시고 개인 메시지로 온 입단신청서를 작성하여 보내주세요`)
+			.setImage('https://media.tenor.co/videos/8fefbb376663bbb4d0af871194dd502a/mp4')
+			.setTimestamp()
 		const embed1 = new Discord.MessageEmbed()
 			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 디스코드에 오신 것을 환영합니다!')
 			.setDescription('**You Have to check the <#715046268593897482>**\n\n질문사항이 있다면 단장의 개인 DM보단 디스코드 내의 질문채널을 이용해 주세요\n\n질문을 하시기 전에 <#713752285393453147> 채널에서 먼저 확인 후에 질문을 해주세요\n\n필독 규칙 읽어주신 후, [여기](https://docs.google.com/forms/d/e/1FAIpQLSft32i7tCfBMzzehQpvHjZ3fUFBrfsSEIAPdVrXRFtxjlkYdg/viewform)를 클릭하여 입단신청서를 작성해주세요\n\n입단신청서를 작성 완료한 후 <#767285361319346186> 채널에 들어가 아래 내용을 기재해주시면 심사 후에 입단 허가 해드립니다\n(입단 허가가 되려면 최소 1시간 이상 기달려야 합니다)')
@@ -84,8 +88,11 @@ client.on('guildMemberRemove', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
-      .setColor('#FF0000')
-      .setDescription(`<:SurveyCorps:832772562123489280> ${member} 님께서 **\`조사병단\`** 서버를 떠나셨습니다`)
+      .setColor('#db5b5b')
+			.setAuthor('https://media.discordapp.net/attachments/832482884127424543/865738395794800651/minus_1.png', '조사병단')
+      .setDescription(`${member}, **조사병단** 서버를 나가셨습니다. 언제든 환영이니 다시 들어올 생각이 있으시면 다시 들어와요!`)
+			.setTimestamp()
+			.setImage('https://media.discordapp.net/attachments/832482884127424543/865740768282148884/25bc9054e83f3b0537b0c52b9a60ba88.gif')
       channel.send(embed)
   });
 
@@ -188,7 +195,6 @@ client.on('message', message => {
 								"나무에 많이 박을 것입니다",
 								"거인들이 당신을 기달리고 있습니다",
 								"엄청 못해지는 날입니다",
-								"아원참을 존경하게 될 것입니다",
 								"벽외조사를 하고 싶어하게 될 것입니다"
             	 ]
 
@@ -605,9 +611,16 @@ client.on('message', message => {
 		.addField('`!아바타 (@태그)`', '자신 혹은 다른 유저의 프로필을 확인하실 수 있습니다', false)
 		.addField('`!다운로드`', '많이 사용되는 Aottg 다운 사이트를 알려줍니다', false)
 		.addField('`!인물정보`', '조사병단의 있는 유저의 정보를 얻을 수 있어요', false)
+		.addField('`!특성카드`', '조사병단에 있는 관리진 및 봇 관리자 관계자들의 카드를 볼 수 있어요')
 		.addField('`!계산`', '더하기, 빼기, 곱하기, 나누기 식을 계산해줍니다', false)
 		.addField('`!전송 (@태그) (내용)`', '관리자만 사용할 수 있는 명령어입니다', false)
 		.addField('`!코로나`', '현재 대한민국 코로나 상태를 확인하실 수 있습니다', false)
+		message.channel.send(embed)
+	}
+	// 특성카드
+	if (message.content === `${prefix}특성카드 아원참`) {
+		const embed = new Discord.MessageEmbed()
+		.setImage('https://media.discordapp.net/attachments/832482884127424543/865727580678389770/4cc82fcfbcf43717.png?width=1009&height=567')
 		message.channel.send(embed)
 	}
 })
