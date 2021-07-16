@@ -621,6 +621,7 @@ client.on('message', message => {
 	if (message.content === `${prefix}특성카드 아원참`) {
 		const embed = new Discord.MessageEmbed()
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/865727580678389770/4cc82fcfbcf43717.png?width=1009&height=567')
+		.setColor('#FF0000')
 		message.channel.send(embed)
 	}
 })
