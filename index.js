@@ -636,6 +636,18 @@ client.on('message', message => {
 		.setColor('#a07add')
 		message.channel.send(embed)
 	}
+	if (message.content === `${prefix}특성카드 오카츠키`) {
+		const embed = new Discord.MessageEmbed()
+		.setImage('https://media.discordapp.net/attachments/742051945472065546/865919957762179092/9e9cdc0da4fb94c1.png?width=1009&height=567')
+		.setColor('#cbb100')
+		message.channel.send(embed)
+	}
+	if (message.content === `${prefix}특성카드 결백`) {
+		const embed = new Discord.MessageEmbed()
+		.setImage('https://media.discordapp.net/attachments/832482884127424543/865925357550305290/37178300c6477022.png?width=1009&height=567')
+		.setColor('#FF0000')
+		message.channel.send(embed)
+	}
 })
 
 // 조사병단 관련 명령어
