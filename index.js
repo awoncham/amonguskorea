@@ -19,11 +19,11 @@ client.on("error", console.error);
 
 client.on("message", async message => {
 
-// 	if(message.author.bot) return;
-// 	if(message.channel.type === 'dm') return;
-// 	if(message.guild !== null) {
-//     if(message.guild.id !== "701398748521300049") return;
-// }; 
+	if(message.author.bot) return;
+	if(message.channel.type === 'dm') return;
+	if(message.guild !== null) {
+    if(message.guild.id !== "701398748521300049") return;
+}; 
 
   if(message.content.startsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
@@ -70,9 +70,9 @@ client.on('guildMemberAdd', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#a4d166')
-			.setAuthor('https://media.discordapp.net/attachments/832482884127424543/865738397308813332/plus.png', '조사병단')
+			.setAuthor('조사병단', 'https://media.discordapp.net/attachments/832482884127424543/865738397308813332/plus.png')
       .setDescription(`${member}, **조사병단** 서버에 오신 것을 환영합니다. 저희와 함께 벽외조사를 하실 분들은 <#701406223999959062> 에서 규칙을 읽어주시고 개인 메시지로 온 입단신청서를 작성하여 보내주세요`)
-			.setImage('https://media.tenor.co/videos/8fefbb376663bbb4d0af871194dd502a/mp4')
+			.setImage('https://media.discordapp.net/attachments/832482884127424543/865745871941795870/35dd8767712ac023b57d7345e502635d.gif')
 			.setTimestamp()
 		const embed1 = new Discord.MessageEmbed()
 			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 디스코드에 오신 것을 환영합니다!')
@@ -89,7 +89,7 @@ client.on('guildMemberRemove', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#db5b5b')
-			.setAuthor('https://media.discordapp.net/attachments/832482884127424543/865738395794800651/minus_1.png', '조사병단')
+			.setAuthor('조사병단', 'https://media.discordapp.net/attachments/832482884127424543/865738395794800651/minus_1.png')
       .setDescription(`${member}, **조사병단** 서버를 나가셨습니다. 언제든 환영이니 다시 들어올 생각이 있으시면 다시 들어와요!`)
 			.setTimestamp()
 			.setImage('https://media.discordapp.net/attachments/832482884127424543/865740768282148884/25bc9054e83f3b0537b0c52b9a60ba88.gif')
@@ -686,9 +686,9 @@ client.on('message', message => {
 		// // 조사병단 봇 정보
 		// if(message.content === `${prefix}정보`){
 		// 	const embed = new Discord.MessageEmbed()
-		// 	.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.5')
+		// 	.setTitle('<:SurveyCorps:832772562123489280> 조사병단 v0.0.6')
 		// 	.setDescription('[여기](https://discord.com/api/oauth2/authorize?client_id=815429073474945025&permissions=8&scope=bot)를 클릭하여 봇을 초대할 수 있습니다')
-		// 	.addField('📢 패치노트', '- 벽외조사 공지 기능이 생겼습니다 분대 이모티콘을 클릭하면 수정해서 올라갑니다\n```!벽외조사 <#채널> <내용>```', false)
+		// 	.addField('📢 패치노트', '- 수정해달라는 부분 다 수정하였습니다\n- 특성카드 명령어가 추가되었습니다\n- 입퇴장 메시지가 더 세련되게 변경되었습니다', false)
 		// 	.setTimestamp()
 		// message.channel.send(embed)
 		// }
