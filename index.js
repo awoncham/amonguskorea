@@ -624,13 +624,13 @@ client.on('message', message => {
 		.setColor('#FF0000')
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}애플`) {
+	if (message.content === `${prefix}특성카드 애플`) {
 		const embed = new Discord.MessageEmbed()
 		.setImage('https://media.discordapp.net/attachments/742051945472065546/865809028609212426/199d4ff29dcd09de.png?width=1014&height=570')
 		.setColor('#00FF40')
 		message.channel.send(embed)
 	}
-	if (message.content === `${prefix}나물`) {
+	if (message.content === `${prefix}특성카드 나물`) {
 		const embed = new Discord.MessageEmbed()
 		.setImage('https://media.discordapp.net/attachments/742051945472065546/865809260025741342/e59bdd9ac8bc1c49.png?width=1014&height=570')
 		.setColor('#a07add')
