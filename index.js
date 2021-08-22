@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
+const quiz = require("./quiz.json");
 
 const { readdirSync } = require('fs');
 const { join } = require('path');
@@ -51,7 +52,8 @@ client.on('ready', function() {
 										"<@&746682677499002920>：27명 중 3명 생존이라는 극악의 난이도를 자랑했던 제 14회 벽외조사에 참여한 모든 병사들에게 수여되는 역할",
 										"<@&751703838477516910>：제 14회 벽외조사에서 **갑옷거인, 짐승거인, 초대형거인** 을 토벌한 병사에게 수여되는 역할",
 										"AOTTG2 및 조사병단 공식 카페가 개설되었습니다, [여기](https://cafe.naver.com/aottg2)를 클릭하여 카페에 접속해보세요",
-										"조사병단의 설립일은 **2020년 4월 19일**입니다"
+										"조사병단의 설립일은 **2020년 4월 19일**입니다",
+										"`!도움말` 을 입력하시면 조사병단 봇의 명령어를 한 눈에 보실 수 있습니다"
 									]
         let rand = Math.floor(Math.random() * tips.length);
         const channel = client.channels.cache.find(channel => channel.id === '742051945472065546')
@@ -60,7 +62,7 @@ client.on('ready', function() {
 				.setColor('RANDOM')
         .setDescription(`${tips[rand]}`)
         channel.send(embed)
-    }, 14400000); // 4시간 | 2시간 7200000 / 1분 = 1000
+    }, 43200000); // 4시간 | 2시간 7200000 / 1분 = 1000
 
 });
 
@@ -743,6 +745,32 @@ client.on('message', message => {
 				message.channel.send(embed4)
 			}
 		}
+})
+
+client.on('message', (message) => {
+	if (message.author.bot) return;
+	if (message.author.id === client.user.id) return;
+
+	if (message.content === `${prefix}퀴즈`) {
+
+		const item = quiz[Math.floor(Math.random() * quiz.length)];
+		const limit = 3;
+
+		const filter = (response) => {
+			return item.answer.some((answer) => answer === response.content);
+		}
+
+		message.channel.send(`${item.question} (제한시간: ${limit} 초)`)
+		.then(() => {
+			message.channel.awaitMessages(filter, { max: 1, time: limit * 1000})
+			.then(() => {
+				message.channel.send(`${collected.first().author} 👈 정답!`)
+			})
+			.catch((err) => {
+				message.channel.send("제한시간이 지났습니다😅")
+			})
+		})
+	}
 })
 
 client.login(process.env.token);
