@@ -763,7 +763,7 @@ client.on('message', (message) => {
 		message.channel.send(`${item.question} (제한시간: ${limit} 초)`)
 		.then(() => {
 			message.channel.awaitMessages(filter, { max: 1, time: limit * 1000})
-			.then(() => {
+			.then((collected) => {
 				message.channel.send(`${collected.first().author} 👈 정답!`)
 			})
 			.catch((err) => {
