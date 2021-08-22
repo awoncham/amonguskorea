@@ -754,7 +754,7 @@ client.on('message', (message) => {
 	if (message.content === `${prefix}퀴즈`) {
 
 		const item = quiz[Math.floor(Math.random() * quiz.length)];
-		const limit = 3;
+		const limit = 10;
 
 		const filter = (response) => {
 			return item.answer.some((answer) => answer === response.content);
