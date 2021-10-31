@@ -72,9 +72,7 @@ client.on('guildMemberAdd', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#a4d166')
-			.setAuthor('조사병단', 'https://media.discordapp.net/attachments/832482884127424543/865738397308813332/plus.png')
-      .setDescription(`${member}, **조사병단** 서버에 오신 것을 환영합니다. 저희와 함께 벽외조사를 하실 분들은 <#701406223999959062> 에서 규칙을 읽어주시고 개인 메시지로 온 입단신청서를 작성하여 보내주세요`)
-			.setImage('https://media.discordapp.net/attachments/832482884127424543/865745871941795870/35dd8767712ac023b57d7345e502635d.gif')
+      .setDescription(`${member}, **\`조사병단\`** 서버에 오신 것을 환영합니다`)
 			.setTimestamp()
 		const embed1 = new Discord.MessageEmbed()
 			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 디스코드에 오신 것을 환영합니다!')
@@ -82,6 +80,7 @@ client.on('guildMemberAdd', member => {
 			.setImage('https://media.discordapp.net/attachments/832482884127424543/832932732442116096/unknown.png')
 			.setFooter('입단신청서를 보낸 후 신청서 메시지를 제거하지 말아주세요')
       channel.send(embed)
+			message.react('👋');
 			member.send(embed1)
     });
 
@@ -91,11 +90,11 @@ client.on('guildMemberRemove', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#db5b5b')
-			.setAuthor('조사병단', 'https://media.discordapp.net/attachments/832482884127424543/865738395794800651/minus_1.png')
-      .setDescription(`${member}, **조사병단** 서버를 나가셨습니다. 언제든 환영이니 다시 들어올 생각이 있으시면 다시 들어와요!`)
+      .setDescription(`${member}, **\`조사병단\`** 서버를 나가셨습니다.`)
 			.setTimestamp()
 			.setImage('https://media.discordapp.net/attachments/832482884127424543/865740768282148884/25bc9054e83f3b0537b0c52b9a60ba88.gif')
       channel.send(embed)
+			message.react('😭')
   });
 
 //메시지 수정
@@ -261,7 +260,7 @@ client.on('message', message => {
 		.setThumbnail('https://media.discordapp.net/attachments/808951741592371224/839055354301120553/9.png?width=676&height=676')
 		.addField('<:awoncham:832894731427643422> 나이', '15', true)
 		.addField('<:awoncham:832894731427643422> 성별', '남자', true)
-		.addField('<:awoncham:832894731427643422> 신체', '168 | 57 | A형', true)
+		.addField('<:awoncham:832894731427643422> 신체', '170 | 57 | A형', true)
 		.addField('<:awoncham:832894731427643422> 출생', '820년대 7월 4일, 방벽 월 시나 지하도시', true)
 		.addField('<:awoncham:832894731427643422> 직책', '조사병단 엘리트', true)
 		.addField('<:awoncham:832894731427643422> 훈장', '총 7개 보유', true)

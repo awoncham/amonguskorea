@@ -10,11 +10,16 @@
     "12": "^1.0.2",
     "discord.js": "^12.3.1",
     "discord.js-v11": "^12.1.1",
+    "ffmpeg-static": "^3.0.0",
     "fs": "0.0.1-security",
     "mathjs": "^9.3.2",
     "moment": "^2.29.1",
+    "node": "^17.0.1",
     "node-fetch": "^2.6.1",
+    "node.js": "^0.0.1-security",
     "reaction-role": "^2.1.6",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "yt-search": "^2.10.2",
+    "ytdl-core": "^4.9.1"
   }
 }
