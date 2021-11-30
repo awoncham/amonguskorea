@@ -92,7 +92,6 @@ client.on('guildMemberRemove', member => {
       .setColor('#db5b5b')
       .setDescription(`${member}, **\`조사병단\`** 서버를 나가셨습니다.`)
 			.setTimestamp()
-			.setImage('https://media.discordapp.net/attachments/832482884127424543/865740768282148884/25bc9054e83f3b0537b0c52b9a60ba88.gif')
       channel.send(embed)
 			message.react('😭')
   });
