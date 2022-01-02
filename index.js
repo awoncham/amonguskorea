@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#a4d166')
-      .setDescription(`${member}, **\`조사병단\`** 서버에 오신 것을 환영합니다`)
+      .setDescription(`${member} 님께서 **\`조사병단\`** 서버를 들어오셨습니다.`)
 			.setTimestamp()
 		const embed1 = new Discord.MessageEmbed()
 			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 디스코드에 오신 것을 환영합니다!')
@@ -90,7 +90,7 @@ client.on('guildMemberRemove', member => {
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
       .setColor('#db5b5b')
-      .setDescription(`${member}, **\`조사병단\`** 서버를 나가셨습니다.`)
+      .setDescription(`${member} 님께서 **\`조사병단\`** 서버를 나가셨습니다.`)
 			.setTimestamp()
       channel.send(embed)
 			message.react('😭')
@@ -232,6 +232,7 @@ client.on('message', message => {
     if(replaceStr === client.user.id) {
 			const embed = new Discord.MessageEmbed()
 			.setAuthor('조사병단 도움말', 'https://media.discordapp.net/attachments/832482884127424543/843326112301580318/c6a249645d46209f337279cd2ca998c7.png')
+			.setColor('#002060')
 			.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/843326112301580318/c6a249645d46209f337279cd2ca998c7.png')
 			.addField('**조사병단**', '`!도움말 조사병단`', true)
 			.addField('**놀이**', '`!도움말 놀이`', true)
@@ -257,7 +258,7 @@ client.on('message', message => {
 		.setColor('#FF6161')
 		.setDescription('조사병단 봇을 만든 인물이며, 벽외조사에서도 뛰어난 활약을 하고 있다')
 		.setThumbnail('https://media.discordapp.net/attachments/808951741592371224/839055354301120553/9.png?width=676&height=676')
-		.addField('<:awoncham:832894731427643422> 나이', '15', true)
+		.addField('<:awoncham:832894731427643422> 나이', '16', true)
 		.addField('<:awoncham:832894731427643422> 성별', '남자', true)
 		.addField('<:awoncham:832894731427643422> 신체', '170 | 57 | A형', true)
 		.addField('<:awoncham:832894731427643422> 출생', '820년대 7월 4일, 방벽 월 시나 지하도시', true)
@@ -275,12 +276,12 @@ client.on('message', message => {
 		.setColor('#d2d23d')
 		.setDescription('한때 오버워치를 즐겼던 흔한 즐겜러')
 		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/832899833110593536/fa9a1388f39a6b33e90eae6a8f19d132.png')
-		.addField('<:pharahuser:832900205837680640> 나이', '20', true)
+		.addField('<:pharahuser:832900205837680640> 나이', '21', true)
 		.addField('<:pharahuser:832900205837680640> 성별', '남자', true)
 		.addField('<:pharahuser:832900205837680640> 신체', '186 | 76 | AB형', true)
 		.addField('<:pharahuser:832900205837680640> 출생', '830년 11월 30일, 월로제 크로르바 구', true)
 		.addField('<:pharahuser:832900205837680640> 직책', '조사병단 분대장', true)
-		.addField('<:pharahuser:832900205837680640> 훈장', '총 0개 보유', true)
+		.addField('<:pharahuser:832900205837680640> 훈장', '총 1개 보유', true)
 		.setImage('https://media.discordapp.net/attachments/809302876445868072/832898106424426496/maxresdefault.png?width=926&height=521')
 		.setFooter('PharahUser', 'https://media.discordapp.net/attachments/832482884127424543/832899833110593536/fa9a1388f39a6b33e90eae6a8f19d132.png')
 		.setTimestamp()
@@ -293,13 +294,13 @@ client.on('message', message => {
 		.setColor('#00ff40')
 		.setDescription('그딴 거 없다')
 		.setThumbnail('https://media.discordapp.net/attachments/803107763428261888/832899807176949790/e_9678530497_630996b5daaf665a9c7d0566369bbe8a425d770a.png')
-		.addField('<:apple:832901945576128523> 나이', '15', true)
+		.addField('<:apple:832901945576128523> 나이', '16', true)
 		.addField('<:apple:832901945576128523> 성별', '남자', true)
 		.addField('<:apple:832901945576128523> 신체', '170 | 80 | AB형', true)
 		.addField('<:apple:832901945576128523> 출생', '100년 4월 13일, 미트라스 왕도', true)
 		.addField('<:apple:832901945576128523> 직책', '조사병단 병사장', true)
-		.addField('<:apple:832901945576128523> 훈장', '총 5개 보유', true)
-		.setImage('https://images-ext-1.discordapp.net/external/6A_ZYeOugupXGzVU7wr4zJnM2disiTePPMsveT7NRtE/https/media.discordapp.net/attachments/810906802396463145/825208095340363836/1615285570265.gif')
+		.addField('<:apple:832901945576128523> 훈장', '총 7개 보유', true)
+		.setImage('https://cdn.discordapp.com/attachments/742051945472065546/927039046981652490/aaacf25274896c8a031047909b8a7603.gif')
 		.setFooter('Red_apple', 'https://media.discordapp.net/attachments/803107763428261888/832899807176949790/e_9678530497_630996b5daaf665a9c7d0566369bbe8a425d770a.png')
 		.setTimestamp()
 		message.channel.send(embed)
@@ -311,7 +312,7 @@ client.on('message', message => {
 		.setColor('#5665aa')
 		.setDescription('조사병단 창단자이자, 제1 대 단장')
 		.setThumbnail('https://media.discordapp.net/attachments/803793832528314418/832904155487404042/-1.png?width=676&height=676')
-		.addField('<:ph6400:832905025972994078> 나이', '24', true)
+		.addField('<:ph6400:832905025972994078> 나이', '25', true)
 		.addField('<:ph6400:832905025972994078> 성별', '남자', true)
 		.addField('<:ph6400:832905025972994078> 신체', '182 | 64 | O형', true)
 		.addField('<:ph6400:832905025972994078> 출생', '827년 8월 29일, 월 시나', true)
@@ -329,7 +330,7 @@ client.on('message', message => {
 		.setColor('#9A2EFE')
 		.setDescription('조사병단의 최초의 여성 단장')
 		.setThumbnail('https://media.discordapp.net/attachments/802761275507343370/832918660321640468/d202a0bb59bcdd29.png?width=676&height=676')
-		.addField('<:namull:832910275517743124> 나이', '16', true)
+		.addField('<:namull:832910275517743124> 나이', '17', true)
 		.addField('<:namull:832910275517743124> 성별', '다들 남자라고 오해하지만 여자다', true)
 		.addField('<:namull:832910275517743124> 신체', '157 | 45 | A형', true)
 		.addField('<:namull:832910275517743124> 출생', '836년 1월 2일, 월시나 에르미하구', true)
@@ -347,7 +348,7 @@ client.on('message', message => {
 		.setColor('#FF6161')
 		.setDescription('나는 조사병단에서 허당을 맡고 있다')
 		.setThumbnail('https://media.discordapp.net/attachments/828203987185958912/833571140281827328/123213123123.png?width=676&height=676')
-		.addField('<:awoncham:832894731427643422> 나이', '15', true)
+		.addField('<:awoncham:832894731427643422> 나이', '16', true)
 		.addField('<:awoncham:832894731427643422> 성별', '남자', true)
 		.addField('<:awoncham:832894731427643422> 신체', '167 | 63 | B형', true)
 		.addField('<:awoncham:832894731427643422> 출생', '807년대 11월 2일, 월 마리아', true)
@@ -365,7 +366,7 @@ client.on('message', message => {
 		.setColor('#FF6699')
 		.setDescription('한 때는 초절인기 유튜버, 지금은 씹퇴물련')
 		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/833605684859371520/734778676104790096.png')
-		.addField('<:TitanTV:833606765819723826> 나이', '27', true)
+		.addField('<:TitanTV:833606765819723826> 나이', '28', true)
 		.addField('<:TitanTV:833606765819723826> 성별', '남자', true)
 		.addField('<:TitanTV:833606765819723826> 신체', '177 | 58 | B형', true)
 		.addField('<:TitanTV:833606765819723826> 출생', '895년 5월 15일, 월 시나 공작가', true)
@@ -383,7 +384,7 @@ client.on('message', message => {
 		.setColor('#6e0000')
 		.setDescription('조사병단의 3반 반장, 달빠다')
 		.setThumbnail('https://cdn.discordapp.com/attachments/815765657458049044/833622888539488306/KakaoTalk_20210418_2152410362.jpg')
-		.addField('<:kain:833972454648446986> 나이', '18', true)
+		.addField('<:kain:833972454648446986> 나이', '19', true)
 		.addField('<:kain:833972454648446986> 성별', '남자', true)
 		.addField('<:kain:833972454648446986> 신체', '176 | 52.9 | A형', true)
 		.addField('<:kain:833972454648446986> 출생', '668년 2월 4일, 월 마리아', true)
@@ -400,7 +401,7 @@ client.on('message', message => {
 		.setColor('#fff990')
 		.setDescription('네임 말고 나메다')
 		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/833975455325093898/93b40f5e447856a093ab37dbc8451eb0.gif')
-		.addField('<:NoName:833974404223336468> 나이', '16', true)
+		.addField('<:NoName:833974404223336468> 나이', '17', true)
 		.addField('<:NoName:833974404223336468> 성별', '남자', true)
 		.addField('<:NoName:833974404223336468> 신체', '173 | 80 | A형', true)
 		.addField('<:NoName:833974404223336468> 출생', '834년 3월 8일, 월 로제', true)
@@ -418,7 +419,7 @@ client.on('message', message => {
 		.setDescription('정의의 사도가 되기위해 지구랑 계약한 수호자')
 		.setURL('https://www.youtube.com/channel/UC-skqWsNNSQkxRFG-ouRi_g')
 		.setThumbnail('https://media.discordapp.net/attachments/829985000015003658/835399354818101248/haku1.png?width=676&height=676')
-		.addField('<:HAKU:835395834044350474> 나이', '17', true)
+		.addField('<:HAKU:835395834044350474> 나이', '18', true)
 		.addField('<:HAKU:835395834044350474> 성별', '남자', true)
 		.addField('<:HAKU:835395834044350474> 신체', '172 | 63 | A형', true)
 		.addField('<:HAKU:835395834044350474> 출생', '819년 7월 5일, 월 시나 지하도시', true)
@@ -435,7 +436,7 @@ client.on('message', message => {
 		.setColor('#000000')
 		.setDescription('빵 알레르기가 있다')
 		.setThumbnail('https://media.discordapp.net/attachments/838752812102975498/840559077784551444/unnamed_2.jpg?width=676&height=676')
-		.addField('<:jbj:840566887272546354> 나이', '17', true)
+		.addField('<:jbj:840566887272546354> 나이', '18', true)
 		.addField('<:jbj:840566887272546354> 성별', '남자', true)
 		.addField('<:jbj:840566887272546354> 신체', '175 | 59 | O형', true)
 		.addField('<:jbj:840566887272546354> 출생', '833년 6월 1일, 월 시나 야르케르 구', true)
@@ -468,10 +469,11 @@ client.on('message', message => {
 		const embed = new Discord.MessageEmbed()
 		.setAuthor('조사병단 도움말', 'https://media.discordapp.net/attachments/832482884127424543/843326112301580318/c6a249645d46209f337279cd2ca998c7.png')
 		.setThumbnail('https://media.discordapp.net/attachments/832482884127424543/843326112301580318/c6a249645d46209f337279cd2ca998c7.png')
-		.addField('**조사병단**', '`!도움말 조사병단`', true)
-		.addField('**놀이**', '`!도움말 놀이`', true)
-		.addField('**관리**', '`!도움말 관리`', true)
-		.addField('**기타**', '`!도움말 기타`', true)
+		.addField('조사병단', '`!도움말 조사병단`', true)
+		.addField('놀이', '`!도움말 놀이`', true)
+		.addField('관리', '`!도움말 관리`', true)
+		.addField('기타', '`!도움말 기타`', true)
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 조사병단 도움말
@@ -485,6 +487,7 @@ client.on('message', message => {
 		.addField('`!초대`', '조사병단 영구 초대코드를 확인해보세요', false)
 		.addField('`!연막탄`', '조사병단 연막탄 가이드를 확인할 수 있다', false)
 		.addField('`!훈장`', '조사병단 훈장 획득 조건 혹은 어떤 훈장이 있는지 확인해보세요', false)
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 조사병단 색깔
@@ -492,6 +495,7 @@ client.on('message', message => {
 		const embed = new Discord.MessageEmbed()
 		.setDescription('<@&701403514160545792>：조사병단 작전통제권 지휘자 **[3300FF]** <:color1:834675089022255114>\n<@&701403526433341531>：4 ~ 6명을 이끄는 분대 통솔자 **[FFFF33]** <:color2:834675089202741268>\n<@&701403575070490716>：3 ~ 4명을 이끄는 반 통솔자 **[FF0000]** <:color3:834675087528689664>\n<@&701403592195702814>：위에 있는 역할 외에 모든 병사들 **[FFFFFF]** <:color4:834675087142813707>')
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/834672919841603594/1.PNG')
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 조사병단 훈장
@@ -499,6 +503,7 @@ client.on('message', message => {
 		const embed = new Discord.MessageEmbed()
 		.setDescription('**`훈장 획득 조건`**\n\n**1.** 특수거인(여성형, 초대형, 갑옷, 로드 레이스 등등) 토벌 또는 한 벽외조사에서 15구 토벌 후 생존\n**2.** 훈장은 총 7개 등급으로 구성되어 있으며, 최고등급 훈장을 수여받을 시에는 엘리트 등급으로 승진 가능\n\n**`훈장 등급표`**\n\n**1.** 앙헬무공훈장：인류 최초로 거인을 잡은 \'앙헬\'을 기억하는, 첫 번째 훈장\n**2.** 마리아무공훈장：유미르의 세 자녀 중 하나인 마리아\n**3.** 로제무공훈장：유미르의 세 자녀 중 하나인 로제\n**2.** 시나무공훈장：유미르의 세 자녀 중 하나인 시나\n**5.** 자유무공훈장：자유의 의지를 보여준 자에게 수여되는 훈장\n**6.** 총통무공훈장：3개 병단을 통솔하는 충통이 수여하는 훈장\n**7.** 여왕무공훈장：파라디 섬의 최고 통솔자, 여왕이 직접 수여하는 훈장')
 		.setImage('https://media.discordapp.net/attachments/832478811522072618/839052363398381568/Shingeki_no_Kyojin_S3_-_Episode_59_END_-_Hange_Receives_Medal.gif')
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 조사병단 유니폼
@@ -542,6 +547,7 @@ client.on('message', message => {
 			
 			<@&703096881403658250>：벽외조사에 참가하기 위해 훈련 중인 병사들이다. 훈련병단의 훈련병 신분이며, 조사병단 입단 필기시험을 합격한 후에 정식 조사병단원이 될 수 있다.`
 			)
+			.setColor('#002060')
 			message.channel.send(embed);
 	}
 	if (message.content === `${prefix}연막탄`) {
@@ -554,18 +560,21 @@ client.on('message', message => {
 		.addField('보라색 <:color7:838360513985118219>', '**-** 단장만 발사 가능한 연막탄이며, 단장이 진형을 다시 맞추기 위해서 발사하는 연막탄. 이 연막탄이 발사된다면 전부 보라색 연막탄의 위치를 확인하고 각자의 포메이션 위치로 이동해야 한다. 교전 중이거나 먼저 앞에 있더라도 즉시 진형으로 복귀. 분대장 및 반장들은 보라색 연막탄 방향과 똑같이 녹색 연막탄을 발사해야 한다', false)
 		.addField('청색 <:color1:834675089022255114>', '**-** 진형을 좁히기 위해 결정하는 연막탄이다. 단장이 발사 했을 경우 반장들은 진형을 좁혀야 한다. 곧 문이나 다리를 지나갈 일이 있을 경우 발사된다', false)
 		.setImage('https://media.discordapp.net/attachments/832478811522072618/838358344849817620/Signal_Flare.gif')
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 조사병단 팀스피크
 	if (message.content === `${prefix}팀스피크`) {
 		const embed = new Discord.MessageEmbed()
 		.setDescription('[여기](https://www.teamspeak3.com/)를 클릭하여 다운로드 **(일반 병사들 제외)**\n\n**1.** 왼쪽 상단에 connections에서 serverlist를 클릭\n**2.** 서버 중 [NPIX] Public Teamspeak server를 찾아서 더블클릭\n**3.** 창을 close하면 서버에 들어와져 있는데 맨 밑에 Survey Corps를 더블클릭\n**4.** 다시 상단 위에 tools가 있는데 들어가서 capture에 들어가 push to talk를 설정')
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 조사병단 영구 초대 코드
 	if (message.content === `${prefix}초대`) {
 		const embed = new Discord.MessageEmbed()
 		.setDescription('**https://discord.gg/K9s7XpZaaM**')
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 명령어 놀이
@@ -578,6 +587,8 @@ client.on('message', message => {
 		.addField('`!오늘의운세`', '오늘은 과연 어떤 일이 일어날 지 확인해보세요', false)
 		.addField('`!가위바위보`', '조사병단 봇과 가위바위보를 한번 해보세요', false)
 		.addField('`!말하기`', '뒤에 한 말을 그대로 따라합니다', false)
+		.addField('`!퀴즈`', '심심할 때 넌센스 퀴즈를 풀어보세요', false)
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 명령어 관리
@@ -585,6 +596,7 @@ client.on('message', message => {
 		const embed = new Discord.MessageEmbed()
 		.setTitle('관리 플러그인')
 		.addField('`!청소 (1 ~ 99)`', '1 ~ 99까지의 메시지를 삭제할 수 있습니다 (관리자만)', false)
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 명령어 기타
@@ -598,6 +610,7 @@ client.on('message', message => {
 		.addField('`!계산`', '더하기, 빼기, 곱하기, 나누기 식을 계산해줍니다', false)
 		.addField('`!전송 (@태그) (내용)`', '관리자만 사용할 수 있는 명령어입니다', false)
 		.addField('`!코로나`', '현재 대한민국 코로나 상태를 확인하실 수 있습니다', false)
+		.setColor('#002060')
 		message.channel.send(embed)
 	}
 	// 특성카드
@@ -646,6 +659,7 @@ client.on('message', message => {
     if(message.content.startsWith(`${prefix}핑`)) {
         const embed = new Discord.MessageEmbed()
         .setDescription(`🏓 퐁, 당신의 핑：**${Date.now() - message.createdTimestamp}**ms`)
+				.setColor('#002060')
         message.channel.send(embed)
     }
     // 해당 유저의 프로필을 보여줍니다
@@ -653,7 +667,8 @@ client.on('message', message => {
         const user = message.mentions.users.first() || message.author;
         const avatarEmbed = new Discord.MessageEmbed()
             .setDescription('`' + user.username + '`' + ' 님의 프로필')
-            .setImage(user.displayAvatarURL());
+            .setImage(user.displayAvatarURL())
+						.setColor('#002060');
         message.channel.send(avatarEmbed);
     }
 		// 명령어 입력
@@ -675,6 +690,7 @@ client.on('message', message => {
             { name: 'RRC MOD', value: '[다운로드](http://asq.kr/wCTW34208gOa)', inline: false },
             { name: 'ANARCHY MOD', value: '[다운로드](https://url.kr/Ne7YZ5)', inline: false }
         )
+				.setColor('#002060')
         message.channel.send(embed)
     }
 		//AOTTG 게임 다운로드
@@ -685,6 +701,7 @@ client.on('message', message => {
             { name: 'RRC MOD', value: '[다운로드](http://asq.kr/wCTW34208gOa)', inline: false },
             { name: 'ANARCHY MOD', value: '[다운로드](https://url.kr/Ne7YZ5)', inline: false }
         )
+				.setColor('#002060')
         message.channel.send(embed)
     }
 });
@@ -699,33 +716,33 @@ client.on('message', message => {
 		// 	.setTimestamp()
 		// message.channel.send(embed)
 		// }
-		if (message.content.startsWith(`${prefix}전송`)) {
-			const user = message.mentions.users.first()
-			const embed = new Discord.MessageEmbed()
-			.setColor('#FF0000')
-			.setDescription('<:error:832821274719551529> 당신은 이 명령어를 사용할 권한이 없습니다!')
-			if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(embed);
-			try{
-				let content = message.content.slice(`${prefix}전송`	.length);
-				const embed2 = new Discord.MessageEmbed()
-				.setTitle("<:SurveyCorps:832772562123489280>｜조사병단")
-				.setDescription(`**조사병단 공식 서버**에서 온 메시지입니다\n\n${content}`)
-				.setFooter(`전송자｜${message.author.username}`)
-				.setTimestamp()
-				.setColor('RANDOM')
-				user.send(embed2)
-				const embed3 = new Discord.MessageEmbed()
-				.setColor('#43b581')
-				.setDescription('<:check:832821047215521802> 성공적으로 메시지가 전송되었습니다!')
-				message.channel.send(embed3)
-			}catch(err) {
-				console.log(err)
-				const embed4 = new Discord.MessageEmbed()
-				.setColor('#FF0000')
-				.setDescription('<:error:832821274719551529> 어딘가에서 오류가 발생하였습니다!')
-				message.channel.send(embed4)
-			}
-		}
+		// if (message.content.startsWith(`${prefix}전송`)) {
+		// 	const user = message.mentions.users.first()
+		// 	const embed = new Discord.MessageEmbed()
+		// 	.setColor('#FF0000')
+		// 	.setDescription('<:error:832821274719551529> 당신은 이 명령어를 사용할 권한이 없습니다!')
+		// 	if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(embed);
+		// 	try{
+		// 		let content = message.content.slice(`${prefix}전송`	.length);
+		// 		const embed2 = new Discord.MessageEmbed()
+		// 		.setTitle("<:SurveyCorps:832772562123489280>｜조사병단")
+		// 		.setDescription(`**조사병단 공식 서버**에서 온 메시지입니다\n\n${content}`)
+		// 		.setFooter(`전송자｜${message.author.username}`)
+		// 		.setTimestamp()
+		// 		.setColor('RANDOM')
+		// 		user.send(embed2)
+		// 		const embed3 = new Discord.MessageEmbed()
+		// 		.setColor('#43b581')
+		// 		.setDescription('<:check:832821047215521802> 성공적으로 메시지가 전송되었습니다!')
+		// 		message.channel.send(embed3)
+		// 	}catch(err) {
+		// 		console.log(err)
+		// 		const embed4 = new Discord.MessageEmbed()
+		// 		.setColor('#FF0000')
+		// 		.setDescription('<:error:832821274719551529> 어딘가에서 오류가 발생하였습니다!')
+		// 		message.channel.send(embed4)
+		// 	}
+		// }
 })
 
 client.on('message', (message) => {
