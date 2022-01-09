@@ -71,17 +71,15 @@ client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
-      .setColor('#a4d166')
-      .setDescription(`${member} 님께서 **\`조사병단\`** 서버를 들어오셨습니다.`)
-			.setTimestamp()
+    .setColor('#a4d166')
+    .setDescription(`${member} 님께서 **\`조사병단\`** 서버를 들어오셨습니다.`)
 		const embed1 = new Discord.MessageEmbed()
-			.setTitle('<:SurveyCorps:832772562123489280> 조사병단 디스코드에 오신 것을 환영합니다!')
-			.setDescription('**You Have to check the <#715046268593897482>**\n\n질문사항이 있다면 단장의 개인 DM보단 디스코드 내의 질문채널을 이용해 주세요\n\n질문을 하시기 전에 <#713752285393453147> 채널에서 먼저 확인 후에 질문을 해주세요\n\n필독 규칙 읽어주신 후, [여기](https://docs.google.com/forms/d/e/1FAIpQLSft32i7tCfBMzzehQpvHjZ3fUFBrfsSEIAPdVrXRFtxjlkYdg/viewform)를 클릭하여 입단신청서를 작성해주세요\n\n입단신청서를 작성 완료한 후 <#767285361319346186> 채널에 들어가 아래 내용을 기재해주시면 심사 후에 입단 허가 해드립니다\n(입단 허가가 되려면 최소 1시간 이상 기달려야 합니다)')
-			.setImage('https://media.discordapp.net/attachments/832482884127424543/832932732442116096/unknown.png')
-			.setFooter('입단신청서를 보낸 후 신청서 메시지를 제거하지 말아주세요')
-      channel.send(embed)
-			message.react('👋');
-			member.send(embed1)
+		.setTitle('<:SurveyCorps:832772562123489280> 조사병단 디스코드에 오신 것을 환영합니다!')
+		.setDescription('**You Have to check the <#715046268593897482>**\n\n질문사항이 있다면 단장의 개인 DM보단 디스코드 내의 질문채널을 이용해 주세요\n\n질문을 하시기 전에 <#713752285393453147> 채널에서 먼저 확인 후에 질문을 해주세요\n\n필독 규칙 읽어주신 후, [여기](https://docs.google.com/forms/d/e/1FAIpQLSft32i7tCfBMzzehQpvHjZ3fUFBrfsSEIAPdVrXRFtxjlkYdg/viewform)를 클릭하여 입단신청서를 작성해주세요\n\n입단신청서를 작성 완료한 후 <#767285361319346186> 채널에 들어가 아래 내용을 기재해주시면 심사 후에 입단 허가 해드립니다\n(입단 허가가 되려면 최소 1시간 이상 기달려야 합니다)')
+		.setImage('https://media.discordapp.net/attachments/832482884127424543/832932732442116096/unknown.png')
+		.setFooter('입단신청서를 보낸 후 신청서 메시지를 제거하지 말아주세요')
+    channel.send(embed)
+		member.send(embed1)
     });
 
 // 서버 퇴장 메시지
@@ -89,11 +87,9 @@ client.on('guildMemberRemove', member => {
     const channel = member.guild.channels.cache.find(ch => ch.id === '702744515802300466');
     if(!channel) return;
     const embed = new Discord.MessageEmbed()
-      .setColor('#db5b5b')
-      .setDescription(`${member} 님께서 **\`조사병단\`** 서버를 나가셨습니다.`)
-			.setTimestamp()
-      channel.send(embed)
-			message.react('😭')
+    .setColor('#db5b5b')
+    .setDescription(`${member} 님께서 **\`조사병단\`** 서버를 나가셨습니다.`)
+    channel.send(embed)
   });
 
 //메시지 수정
@@ -195,7 +191,8 @@ client.on('message', message => {
 								"나무에 많이 박을 것입니다",
 								"거인들이 당신을 기달리고 있습니다",
 								"엄청 못해지는 날입니다",
-								"벽외조사를 하고 싶어하게 될 것입니다"
+								"벽외조사를 하고 싶어하게 될 것입니다",
+								"벽외조사에서 킬을 많이 할 것입니다"
             	 ]
 
     if (message.content === `${prefix}오늘의운세`) {
@@ -251,9 +248,9 @@ client.on('message', message => {
     if(message.guild.id !== "701398748521300049") return;
 }; 
 
-	if (message.content === `${prefix}인물정보 아원참` || message.content === `${prefix}인물정보 awoncham`) { // 아원참
+	if (message.content === `${prefix}인물정보 아원참` || message.content === `${prefix}인물정보 cham` || message.content === `${prefix}인물정보 awocnham`) { // 아원참
 		const embed = new Discord.MessageEmbed()
-		.setTitle('아원참 (awoncham)')
+		.setTitle('아원참 (Cham)')
 		.setURL('https://www.youtube.com/channel/UCDKwZRPOZ9YCnJDAO4GmPYA')
 		.setColor('#FF6161')
 		.setDescription('조사병단 봇을 만든 인물이며, 벽외조사에서도 뛰어난 활약을 하고 있다')
@@ -262,10 +259,10 @@ client.on('message', message => {
 		.addField('<:awoncham:832894731427643422> 성별', '남자', true)
 		.addField('<:awoncham:832894731427643422> 신체', '170 | 57 | A형', true)
 		.addField('<:awoncham:832894731427643422> 출생', '820년대 7월 4일, 방벽 월 시나 지하도시', true)
-		.addField('<:awoncham:832894731427643422> 직책', '조사병단 엘리트', true)
+		.addField('<:awoncham:832894731427643422> 직책', '조사병단 병사장', true)
 		.addField('<:awoncham:832894731427643422> 훈장', '총 7개 보유', true)
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/832893679756115978/5.png?width=1203&height=676')
-		.setFooter('awoncham', 'https://media.discordapp.net/attachments/808951741592371224/839055354301120553/9.png?width=676&height=676')
+		.setFooter('Cham', 'https://media.discordapp.net/attachments/808951741592371224/839055354301120553/9.png?width=676&height=676')
 		.setTimestamp()
 		message.channel.send(embed)
 	}
@@ -280,7 +277,7 @@ client.on('message', message => {
 		.addField('<:pharahuser:832900205837680640> 성별', '남자', true)
 		.addField('<:pharahuser:832900205837680640> 신체', '186 | 76 | AB형', true)
 		.addField('<:pharahuser:832900205837680640> 출생', '830년 11월 30일, 월로제 크로르바 구', true)
-		.addField('<:pharahuser:832900205837680640> 직책', '조사병단 분대장', true)
+		.addField('<:pharahuser:832900205837680640> 직책', '조사병단 베테랑', true)
 		.addField('<:pharahuser:832900205837680640> 훈장', '총 1개 보유', true)
 		.setImage('https://media.discordapp.net/attachments/809302876445868072/832898106424426496/maxresdefault.png?width=926&height=521')
 		.setFooter('PharahUser', 'https://media.discordapp.net/attachments/832482884127424543/832899833110593536/fa9a1388f39a6b33e90eae6a8f19d132.png')
@@ -292,13 +289,13 @@ client.on('message', message => {
 		.setTitle('애플 (Red_Orange_Yellow_Green_Blue_Purple_Black_White_apple_G)')
 		.setURL('https://www.youtube.com/channel/UCZTRt2K-MY3pB6WxfKQuGvg')
 		.setColor('#00ff40')
-		.setDescription('그딴 거 없다')
-		.setThumbnail('https://media.discordapp.net/attachments/803107763428261888/832899807176949790/e_9678530497_630996b5daaf665a9c7d0566369bbe8a425d770a.png')
+		.setDescription('하, 나 애플은 매순간 원신을 하고 있다고')
+		.setThumbnail('https://cdn.discordapp.com/attachments/742051945472065546/929575168521695302/FuijJG.png')
 		.addField('<:apple:832901945576128523> 나이', '16', true)
 		.addField('<:apple:832901945576128523> 성별', '남자', true)
 		.addField('<:apple:832901945576128523> 신체', '170 | 80 | AB형', true)
 		.addField('<:apple:832901945576128523> 출생', '100년 4월 13일, 미트라스 왕도', true)
-		.addField('<:apple:832901945576128523> 직책', '조사병단 병사장', true)
+		.addField('<:apple:832901945576128523> 직책', '조사병단 엘리트', true)
 		.addField('<:apple:832901945576128523> 훈장', '총 7개 보유', true)
 		.setImage('https://cdn.discordapp.com/attachments/742051945472065546/927039046981652490/aaacf25274896c8a031047909b8a7603.gif')
 		.setFooter('Red_apple', 'https://media.discordapp.net/attachments/803107763428261888/832899807176949790/e_9678530497_630996b5daaf665a9c7d0566369bbe8a425d770a.png')
@@ -352,7 +349,7 @@ client.on('message', message => {
 		.addField('<:awoncham:832894731427643422> 성별', '남자', true)
 		.addField('<:awoncham:832894731427643422> 신체', '167 | 63 | B형', true)
 		.addField('<:awoncham:832894731427643422> 출생', '807년대 11월 2일, 월 마리아', true)
-		.addField('<:awoncham:832894731427643422> 직책', '조사병단 숙련병', true)
+		.addField('<:awoncham:832894731427643422> 직책', '조사병단 반장', true)
 		.addField('<:awoncham:832894731427643422> 훈장', '총 1개 보유', true)
 		.setImage('https://media.discordapp.net/attachments/828203987185958912/833560769173651486/1231233.PNG?width=1203&height=676')
 		.setFooter('GYEOL_BAEG', 'https://media.discordapp.net/attachments/828203987185958912/833571140281827328/123213123123.png?width=676&height=676')
@@ -493,6 +490,7 @@ client.on('message', message => {
 	// 조사병단 색깔
 	if (message.content === `${prefix}색깔`) {
 		const embed = new Discord.MessageEmbed()
+		.setTitle('색상 이름 적용하는 법')
 		.setDescription('<@&701403514160545792>：조사병단 작전통제권 지휘자 **[3300FF]** <:color1:834675089022255114>\n<@&701403526433341531>：4 ~ 6명을 이끄는 분대 통솔자 **[FFFF33]** <:color2:834675089202741268>\n<@&701403575070490716>：3 ~ 4명을 이끄는 반 통솔자 **[FF0000]** <:color3:834675087528689664>\n<@&701403592195702814>：위에 있는 역할 외에 모든 병사들 **[FFFFFF]** <:color4:834675087142813707>')
 		.setImage('https://media.discordapp.net/attachments/832482884127424543/834672919841603594/1.PNG')
 		.setColor('#002060')
@@ -683,18 +681,7 @@ client.on('message', message => {
         })
     }
 		//AOTTG 게임 다운로드
-    if (message.content === `${prefix}다운로드`) {
-        const embed = new Discord.MessageEmbed()
-        .addFields(
-            { name: 'RC MOD', value: '[다운로드](http://aotrc.weebly.com/)', inline: false },
-            { name: 'RRC MOD', value: '[다운로드](http://asq.kr/wCTW34208gOa)', inline: false },
-            { name: 'ANARCHY MOD', value: '[다운로드](https://url.kr/Ne7YZ5)', inline: false }
-        )
-				.setColor('#002060')
-        message.channel.send(embed)
-    }
-		//AOTTG 게임 다운로드
-    if (message.content === `${prefix}다운`) {
+    if (message.content === `${prefix}다운로드` || message.content === `${prefix}다운`) {
         const embed = new Discord.MessageEmbed()
         .addFields(
             { name: 'RC MOD', value: '[다운로드](http://aotrc.weebly.com/)', inline: false },
